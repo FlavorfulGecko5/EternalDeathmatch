@@ -1,0 +1,15 @@
+{
+	edit = {
+		sound_pickup = "Play_Mega_Armor_Pickup";
+		sound_pickupUpgrade = "Play_Mega_Armor_Pickup";
+		componentTypeInfo = "idUseableHealthComponent";
+		pickupEffect = "FX_PICKUP_ARMOR_LARGE";
+		healItems = {
+			num = 1;
+			item[0] = {
+				componentToHeal = "PLAYER_HEALTH_COMPONENT_ARMOR";
+				amountToHeal = 50;
+			}
+		}
+	}
+}

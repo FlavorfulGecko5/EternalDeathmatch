@@ -11,7 +11,8 @@
             "EternalMod/strings/"
         ],
 
-        "e1m3_cult_patch3/": [
+        "e1m3_cult_patch3/": 
+        [
             "EternalMod/assetsinfo/e1m3_cult.json"
         ]
     },

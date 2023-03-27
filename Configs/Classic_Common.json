@@ -1,3 +1,35 @@
 {
-    "!About": "Configuration/Propagation data used by BOTH versions of Classic Mode"
+    "!About": "Configuration/Propagation data used by BOTH versions of Classic Mode",
+
+    "Propagate": {
+        "e1m3_cult_patch3/generated/decls/": 
+        [
+            "prophealth/mega_armor.decl"
+        ],
+
+        "e1m4_boss_patch2/generated/decls/": 
+        [
+            "prophealth/mega_armor.decl"
+        ],
+
+        "e2m2_base_patch3/generated/decls/": 
+        [
+            "prophealth/mega_armor.decl"
+        ],
+
+        "e2m4_boss_patch2/generated/decls/": 
+        [
+            "prophealth/mega_armor.decl"
+        ],
+
+        "e4m3_mcity_patch2/generated/decls/": 
+        [
+            "prophealth/mega_armor.decl"
+        ],
+
+        "e5m1_spear_patch2/generated/decls/": 
+        [
+            "prophealth/mega_armor.decl"
+        ]
+    }
 }
