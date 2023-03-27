@@ -9,6 +9,10 @@
         "gameresources_patch1/": 
         [
             "EternalMod/strings/"
+        ],
+
+        "e1m3_cult_patch3/": [
+            "EternalMod/assetsinfo/e1m3_cult.json"
         ]
     },
 
