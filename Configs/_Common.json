@@ -4,7 +4,12 @@
     "ModVersion": "4.2",
     "InjectorVersion": 20,
 
-    "Propagate": {
+    "Propagate": 
+    {
+        "gameresources_patch1/": 
+        [
+            "EternalMod/strings/"
+        ]
     },
 
     "StringExpressions": false

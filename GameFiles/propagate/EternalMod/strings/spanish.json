@@ -1,0 +1,321 @@
+$emb_toggle# ClassicMode & ~AirControl $
+{
+  "strings": [
+    {
+      "name": "#str_decl_loading_tip_pvp_start_countdown_title_GHOST62134",
+      "text": "CLASSIC DEATHMATCH",
+    },
+    {
+      "name": "#str_decl_loading_tip_pvp_battlemode_pro_tips_desc_4_GHOST54944",
+      "text": "DEATHMATCH supports ^52 Slayers^7 and ^51 Spectator^7.\n\nRounds are won by killing the ^5all members^7 of the opposing team.\n^5Resource pickups^7 will spawn throughout the map.\n\nWin ^53 rounds^7 to claim victory.",
+    },
+    {
+      "name": "#str_code_mainmenu_play_online_name",
+      "text": "CLASSIC DEATHMATCH",
+    },
+    {
+      "name": "#str_decl_live_tile_battlemode_2_0_header",
+      "text": "CLASSIC DEATHMATCH",
+    },
+    {
+      "name": "#str_code__GHOST31007",
+      "text": "CLASSIC DEATHMATCH",
+    },
+    {
+      "name": "#str_code_mainmenu_battle_arena_name",
+      "text": "CLASSIC DEATHMATCH",
+    },
+    {
+      "name": "#str_code_settings_battlemode",
+      "text": "CLASSIC DEATHMATCH",
+    },
+    {
+      "name": "#str_code_settings_battlemode_title_GHOST55161",
+      "text": "CLASSIC DEATHMATCH",
+    },
+    {
+      "name": "#str_code_settings_section_battlemode",
+      "text": "CLASSIC DEATHMATCH",
+    },
+    {
+      "name": "#str_decl_mapinfo_skybox_8_title_GHOST57428",
+      "text": "CLASSIC DEATHMATCH",
+    },
+    {
+      "name": "#str_decl_pvp_battlemode_name_GHOST54272",
+      "text": "CLASSIC DEATHMATCH",
+    },
+    {
+      "name": "#str_swf_bethnet_infotile1_header_GHOST67931",
+      "text": "CLASSIC DEATHMATCH",
+    },
+    {
+      "name": "#str_decl_actormodifier_become_slayer_name_GHOST53519",
+      "text": "^2SLAYER^7",
+    },
+    {
+      "name": "#str_decl_actormodifier_become_painelemental_name_GHOST53515",
+      "text": "^5SPECTATOR^7",
+    },
+    {
+      "name": "#str_decl_deathmatch_upgrade_hammer_desc",
+      "text": "Gain access to the Sentinel Hammer. Chainsaw or Glory Kill demons two times to recharge.",
+    },
+    {
+      "name": "#str_decl_deathmatch_upgrade_hammer_desc_data",
+      "text": "Deals area damage on impact. Instantly kills fodder. Does not give ammo.",
+    },
+    {
+      "name": "#str_decl_deathmatch_upgrade_unmaykr_desc",
+      "text": "Gain access to the Unmaykr. Blood Punch fodder to replenish Unmaykr ammo.",
+    },
+    {
+      "name": "#str_decl_deathmatch_upgrade_unmaykr_desc_data",
+      "text": "A devastating rapid-fire weapon with a wide spread.",
+    }
+  ]
+}
+$emb_toggle_end$
+
+
+
+$emb_toggle# ClassicMode & AirControl $
+{
+  "strings": [
+    {
+      "name": "#str_decl_loading_tip_pvp_start_countdown_title_GHOST62134",
+      "text": "CLASSIC DEATHMATCH: AC",
+    },
+    {
+      "name": "#str_decl_loading_tip_pvp_battlemode_pro_tips_desc_4_GHOST54944",
+      "text": "DEATHMATCH supports ^52 Slayers^7 and ^51 Spectator^7.\n\nRounds are won by killing the ^5all members^7 of the opposing team.\n^5Resource pickups^7 will spawn throughout the map.\n\nWin ^53 rounds^7 to claim victory.",
+    },
+    {
+      "name": "#str_code_mainmenu_play_online_name",
+      "text": "CLASSIC DEATHMATCH: AC",
+    },
+    {
+      "name": "#str_decl_live_tile_battlemode_2_0_header",
+      "text": "CLASSIC DEATHMATCH: AC",
+    },
+    {
+      "name": "#str_code__GHOST31007",
+      "text": "CLASSIC DEATHMATCH: AC",
+    },
+    {
+      "name": "#str_code_mainmenu_battle_arena_name",
+      "text": "CLASSIC DEATHMATCH: AC",
+    },
+    {
+      "name": "#str_code_settings_battlemode",
+      "text": "CLASSIC DEATHMATCH: AC",
+    },
+    {
+      "name": "#str_code_settings_battlemode_title_GHOST55161",
+      "text": "CLASSIC DEATHMATCH: AC",
+    },
+    {
+      "name": "#str_code_settings_section_battlemode",
+      "text": "CLASSIC DEATHMATCH: AC",
+    },
+    {
+      "name": "#str_decl_mapinfo_skybox_8_title_GHOST57428",
+      "text": "CLASSIC DEATHMATCH: AC",
+    },
+    {
+      "name": "#str_decl_pvp_battlemode_name_GHOST54272",
+      "text": "CLASSIC DEATHMATCH: AC",
+    },
+    {
+      "name": "#str_swf_bethnet_infotile1_header_GHOST67931",
+      "text": "CLASSIC DEATHMATCH: AC",
+    },
+    {
+      "name": "#str_decl_actormodifier_become_slayer_name_GHOST53519",
+      "text": "^2SLAYER^7",
+    },
+    {
+      "name": "#str_decl_actormodifier_become_painelemental_name_GHOST53515",
+      "text": "^5SPECTATOR^7",
+    },
+    {
+      "name": "#str_decl_deathmatch_upgrade_hammer_desc",
+      "text": "Gain access to the Sentinel Hammer. Chainsaw or Glory Kill demons two times to recharge.",
+    },
+    {
+      "name": "#str_decl_deathmatch_upgrade_hammer_desc_data",
+      "text": "Deals area damage on impact. Instantly kills fodder. Does not give ammo.",
+    },
+    {
+      "name": "#str_decl_deathmatch_upgrade_unmaykr_desc",
+      "text": "Gain access to the Unmaykr. Blood Punch fodder to replenish Unmaykr ammo.",
+    },
+    {
+      "name": "#str_decl_deathmatch_upgrade_unmaykr_desc_data",
+      "text": "A devastating rapid-fire weapon with a wide spread.",
+    }
+  ]
+}
+$emb_toggle_end$
+
+
+
+$emb_toggle# ~ClassicMode & ~AirControl $
+{
+  "strings": [
+    {
+      "name": "#str_decl_loading_tip_pvp_start_countdown_title_GHOST62134",
+      "text": "DEATHMATCH",
+    },
+    {
+      "name": "#str_decl_loading_tip_pvp_battlemode_pro_tips_desc_4_GHOST54944",
+      "text": "DEATHMATCH supports ^52 Slayers^7 and ^51 Spectator^7.\n\nRounds are won by killing the ^5all members^7 of the opposing team.\nUpgrades are unlocked at the ^5end of each round^7.\n\nWin ^53 rounds^7 to claim victory.",
+    },
+    {
+      "name": "#str_code_mainmenu_play_online_name",
+      "text": "DEATHMATCH",
+    },
+    {
+      "name": "#str_decl_live_tile_battlemode_2_0_header",
+      "text": "DEATHMATCH",
+    },
+    {
+      "name": "#str_code__GHOST31007",
+      "text": "DEATHMATCH",
+    },
+    {
+      "name": "#str_code_mainmenu_battle_arena_name",
+      "text": "DEATHMATCH",
+    },
+    {
+      "name": "#str_code_settings_battlemode",
+      "text": "DEATHMATCH",
+    },
+    {
+      "name": "#str_code_settings_battlemode_title_GHOST55161",
+      "text": "DEATHMATCH",
+    },
+    {
+      "name": "#str_code_settings_section_battlemode",
+      "text": "DEATHMATCH",
+    },
+    {
+      "name": "#str_decl_mapinfo_skybox_8_title_GHOST57428",
+      "text": "DEATHMATCH",
+    },
+    {
+      "name": "#str_decl_pvp_battlemode_name_GHOST54272",
+      "text": "DEATHMATCH",
+    },
+    {
+      "name": "#str_swf_bethnet_infotile1_header_GHOST67931",
+      "text": "DEATHMATCH",
+    },
+    {
+      "name": "#str_decl_actormodifier_become_slayer_name_GHOST53519",
+      "text": "^2SLAYER^7",
+    },
+    {
+      "name": "#str_decl_actormodifier_become_painelemental_name_GHOST53515",
+      "text": "^5SPECTATOR^7",
+    },
+    {
+      "name": "#str_decl_deathmatch_upgrade_hammer_desc",
+      "text": "Gain access to the Sentinel Hammer. Chainsaw or Glory Kill demons two times to recharge.",
+    },
+    {
+      "name": "#str_decl_deathmatch_upgrade_hammer_desc_data",
+      "text": "Deals area damage on impact. Instantly kills fodder. Does not give ammo.",
+    },
+    {
+      "name": "#str_decl_deathmatch_upgrade_unmaykr_desc",
+      "text": "Gain access to the Unmaykr. Blood Punch fodder to replenish Unmaykr ammo.",
+    },
+    {
+      "name": "#str_decl_deathmatch_upgrade_unmaykr_desc_data",
+      "text": "A devastating rapid-fire weapon with a wide spread.",
+    }
+  ]
+}
+$emb_toggle_end$
+
+
+
+$emb_toggle# ~ClassicMode & AirControl $
+{
+  "strings": [
+    {
+      "name": "#str_decl_loading_tip_pvp_start_countdown_title_GHOST62134",
+      "text": "DEATHMATCH: AC",
+    },
+    {
+      "name": "#str_decl_loading_tip_pvp_battlemode_pro_tips_desc_4_GHOST54944",
+      "text": "DEATHMATCH supports ^52 Slayers^7 and ^51 Spectator^7.\n\nRounds are won by killing the ^5all members^7 of the opposing team.\nUpgrades are unlocked at the ^5end of each round^7.\n\nWin ^53 rounds^7 to claim victory.",
+    },
+    {
+      "name": "#str_code_mainmenu_play_online_name",
+      "text": "DEATHMATCH: AC",
+    },
+    {
+      "name": "#str_decl_live_tile_battlemode_2_0_header",
+      "text": "DEATHMATCH: AC",
+    },
+    {
+      "name": "#str_code__GHOST31007",
+      "text": "DEATHMATCH: AC",
+    },
+    {
+      "name": "#str_code_mainmenu_battle_arena_name",
+      "text": "DEATHMATCH: AC",
+    },
+    {
+      "name": "#str_code_settings_battlemode",
+      "text": "DEATHMATCH: AC",
+    },
+    {
+      "name": "#str_code_settings_battlemode_title_GHOST55161",
+      "text": "DEATHMATCH: AC",
+    },
+    {
+      "name": "#str_code_settings_section_battlemode",
+      "text": "DEATHMATCH: AC",
+    },
+    {
+      "name": "#str_decl_mapinfo_skybox_8_title_GHOST57428",
+      "text": "DEATHMATCH: AC",
+    },
+    {
+      "name": "#str_decl_pvp_battlemode_name_GHOST54272",
+      "text": "DEATHMATCH: AC",
+    },
+    {
+      "name": "#str_swf_bethnet_infotile1_header_GHOST67931",
+      "text": "DEATHMATCH: AC",
+    },
+    {
+      "name": "#str_decl_actormodifier_become_slayer_name_GHOST53519",
+      "text": "^2SLAYER^7",
+    },
+    {
+      "name": "#str_decl_actormodifier_become_painelemental_name_GHOST53515",
+      "text": "^5SPECTATOR^7",
+    },
+    {
+      "name": "#str_decl_deathmatch_upgrade_hammer_desc",
+      "text": "Gain access to the Sentinel Hammer. Chainsaw or Glory Kill demons two times to recharge.",
+    },
+    {
+      "name": "#str_decl_deathmatch_upgrade_hammer_desc_data",
+      "text": "Deals area damage on impact. Instantly kills fodder. Does not give ammo.",
+    },
+    {
+      "name": "#str_decl_deathmatch_upgrade_unmaykr_desc",
+      "text": "Gain access to the Unmaykr. Blood Punch fodder to replenish Unmaykr ammo.",
+    },
+    {
+      "name": "#str_decl_deathmatch_upgrade_unmaykr_desc_data",
+      "text": "A devastating rapid-fire weapon with a wide spread.",
+    }
+  ]
+}
+$emb_toggle_end$
