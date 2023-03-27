@@ -1,0 +1,6 @@
+{
+    "!About": "Configuration/Propagation data for Classic Deathmatch with Air Control",
+
+    "ClassicMode": true,
+    "AirControl": true
+}

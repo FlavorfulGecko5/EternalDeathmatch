@@ -1,0 +1,11 @@
+{
+    "!About": "Configuration/Propagation data for ALL versions of Deathmatch",
+
+    "ModVersion": "4.2",
+    "InjectorVersion": 20,
+
+    "Propagate": {
+    },
+
+    "StringExpressions": false
+}

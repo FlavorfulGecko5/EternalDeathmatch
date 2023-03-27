@@ -1,0 +1,29 @@
+$emb_toggle# ClassicMode & ~AirControl ${
+	"name":"Classic Deathmatch",
+	"author":"Velser & Alby",
+	"description":"Engage in Slayer vs Slayer combat within BATTLEMODE & CAMPAIGN maps.\nWin 3 rounds to claim victory or participate in endless rounds.\nHealth, Armor, & Ammo pickups will respawn throughout each map.",
+	"version":"$emb_var# ModVersion $",
+	"requiredVersion":$emb_var# InjectorVersion $,
+	"loadPriority":-9996
+}$emb_toggle_end$$emb_toggle# ClassicMode & AirControl ${
+	"name":"Classic Deathmatch - Air Control",
+	"author":"Velser & Alby",
+	"description":"Same as Classic Deathmatch except your Slayer has the Air Control rune equipped.",
+	"version":"$emb_var# ModVersion $",
+	"requiredVersion":$emb_var# InjectorVersion $,
+	"loadPriority":-9996
+}$emb_toggle_end$$emb_toggle# ~ClassicMode & ~AirControl ${
+	"name":"Eternal Deathmatch",
+	"author":"Velser & Alby",
+	"description":"Engage in Slayer vs Slayer combat within BATTLEMODE & CAMPAIGN maps.\nWin 3 rounds to claim victory or participate in endless rounds.\nFarm AI fodder demons for resources and choose upgrades between rounds.",
+	"version":"$emb_var# ModVersion $",
+	"requiredVersion":$emb_var# InjectorVersion $,
+	"loadPriority":-9995
+}$emb_toggle_end$$emb_toggle# ~ClassicMode & AirControl ${
+	"name":"Eternal Deathmatch - Air Control",
+	"author":"Velser & Alby",
+	"description":"Same as Eternal Deathmatch except your Slayer has the Air Control rune equipped.",
+	"version":"$emb_var# ModVersion $",
+	"requiredVersion":$emb_var# InjectorVersion $,
+	"loadPriority":-9995
+}$emb_toggle_end$
