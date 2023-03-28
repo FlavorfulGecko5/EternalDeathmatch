@@ -1,0 +1,65 @@
+{
+	edit = {
+		displayName = "#str_decl_actormodifier_become_slayer_name_GHOST53519";
+		inGameEntityDef = "player/demonplayer_archvile";
+		outOfGameEntityDef = "podiums/avatars/doom_marine";
+		cinematicEntityDef = "func/scene_director_animated";
+		standInEntityDef = "podiums/avatars/photomode_standin";
+		abilityUIInfo = {
+			num = 4;
+			item[0] = {
+				icon = "textures/guis/icons/abilities/slayer/dash";
+				title = "#str_swf_guis_slayer_dash_ability_title_GHOST43463";
+				description = "#str_swf_guis_slayer_dash_ability_desc_GHOST43464";
+				color = "DEMON_HUD_COLOR_SLAYER_GREEN";
+			}
+			item[1] = {
+				icon = "art/ui/icons/challenges/glorykills";
+				title = "#str_swf_guis_slayer_glory_kill_title_GHOST78051";
+				description = "#str_swf_guis_slayer_glory_kill_desc_GHOST78052";
+				color = "DEMON_HUD_COLOR_SLAYER_GREEN";
+			}
+			item[2] = {
+				icon = "art/ui/weapon/equipment_frag_grenade";
+				title = "#str_swf_guis_slayer_frag_grenade_title_GHOST78053";
+				description = "#str_swf_guis_slayer_frag_grenade_desc_GHOST78054";
+				color = "DEMON_HUD_COLOR_SLAYER_GREEN";
+			}
+			item[3] = {
+				icon = "textures/guis/icons/abilities/slayer/flame_belch";
+				title = "#str_swf_guis_slayer_flame_belch_ability_title_GHOST43471";
+				description = "#str_swf_guis_slayer_flame_belch_ability_desc_GHOST43472";
+				color = "DEMON_HUD_COLOR_SLAYER_GREEN";
+			}
+		}
+		actionUIInfo = {
+			num = 4;
+			item[0] = {
+				icon = "textures/guis/icons/abilities/slayer/fireweapon";
+				title = "#str_swf_guis_slayer_fire_ability_title_GHOST43465";
+				description = "#str_swf_guis_slayer_fire_ability_desc_GHOST43466";
+				color = "DEMON_HUD_COLOR_SLAYER_GREEN";
+			}
+			item[1] = {
+				icon = "textures/guis/icons/abilities/slayer/change_weapon";
+				title = "#str_swf_guis_slayer_change_weapon_ability_title_GHOST43469";
+				description = "#str_swf_guis_slayer_change_weapon_ability_desc_GHOST43470";
+				color = "DEMON_HUD_COLOR_SLAYER_GREEN";
+			}
+			item[2] = {
+				icon = "textures/guis/icons/abilities/slayer/weaponmod";
+				title = "#str_swf_guis_slayer_use_mod_ability_title_GHOST43467";
+				description = "#str_swf_guis_slayer_use_mod_ability_desc_GHOST43468";
+				color = "DEMON_HUD_COLOR_SLAYER_GREEN";
+			}
+			item[3] = {
+				icon = "textures/guis/icons/abilities/slayer/chainsaw";
+				title = "#str_swf_guis_slayer_chainsaw_ability_title_GHOST43473";
+				description = "#str_swf_guis_slayer_chainsaw_ability_desc_GHOST43474";
+				color = "DEMON_HUD_COLOR_SLAYER_GREEN";
+			}
+		}
+		arrivalFX = "fx/podium/spawn_in";
+		usesWeaponSkins = true;
+	}
+}

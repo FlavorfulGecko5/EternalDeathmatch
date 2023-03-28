@@ -1,0 +1,42 @@
+{
+	inherit = "projectile/base/bullet";
+	edit = {
+		fireSoundLoopStart = "play_chaingun_turret_start";
+		fireSoundStop = "stop_chaingun_turret_stop";
+		impactEffectTable = "impacteffect/projectiles/weapons/chaingun";
+		damageDecl = "damage/firearm/chaingun_turret";
+		spawnCount = 4;
+		impactEffectSpawnCount = 1;
+		tracerInfo = {
+			tracerMtr = NULL;
+			doRandomTracers = false;
+			tracerLength = 2.477;
+			tracerHeight = 0.5;
+			sndTracer = "projectile/mp_bullet_passby";
+			ribbon2Decls = {
+				num = 3;
+				item[0] = {
+					ribbonDecl = "chaingun_tracer_base";
+					offset = {
+						x = -0.324999988;
+					}
+					thirdPersonOffset = {
+						x = -0.324999988;
+					}
+				}
+				item[1] = {
+					ribbonDecl = "chaingun_tracer_base_90";
+					offset = {
+						x = -0.324999988;
+					}
+					thirdPersonOffset = {
+						x = -0.324999988;
+					}
+				}
+				item[2] = {
+					ribbonDecl = "chaingun_tracer_base_solid";
+				}
+			}
+		}
+	}
+}

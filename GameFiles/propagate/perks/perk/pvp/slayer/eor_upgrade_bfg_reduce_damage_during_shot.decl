@@ -1,0 +1,6 @@
+{
+	edit = {
+		item = "weapon/player/unmaykr";
+		addItemtoInventory = true;
+	}
+}

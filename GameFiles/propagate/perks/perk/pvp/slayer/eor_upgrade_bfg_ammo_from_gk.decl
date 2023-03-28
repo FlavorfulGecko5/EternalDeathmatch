@@ -1,0 +1,6 @@
+{
+	edit = {
+		item = "weapon/player/hammer";
+		addItemtoInventory = true;
+	}
+}

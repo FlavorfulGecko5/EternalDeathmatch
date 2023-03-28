@@ -1,0 +1,125 @@
+{
+	inherit = "upgrade/default";
+	edit = {
+		modifiersWeapon = {
+			num = 6;
+			item[0] = {
+				priority = 1;
+				type = "WMT_WEAPON_CHAINGUN_MOVEMENT_SPEED_SCALE_FIRING_FORWARD";
+				data = {
+					valueFloat = 1;
+				}
+				fireMode = "WEAPONFIREMODE_SECONDARY";
+			}
+			item[1] = {
+				priority = 1;
+				type = "WMT_WEAPON_CHAINGUN_MOVEMENT_SPEED_SCALE_FIRING_BACK";
+				data = {
+					valueFloat = 1;
+				}
+				fireMode = "WEAPONFIREMODE_SECONDARY";
+			}
+			item[2] = {
+				priority = 1;
+				type = "WMT_WEAPON_CHAINGUN_MOVEMENT_SPEED_SCALE_FIRING_STRAFE";
+				data = {
+					valueFloat = 1;
+				}
+				fireMode = "WEAPONFIREMODE_SECONDARY";
+			}
+			item[3] = {
+				priority = 1;
+				type = "WMT_WEAPON_CHAINGUN_MOVEMENT_SPEED_SCALE_NOT_FIRING_FORWARD";
+				data = {
+					valueFloat = 1;
+				}
+				fireMode = "WEAPONFIREMODE_SECONDARY";
+			}
+			item[4] = {
+				priority = 1;
+				type = "WMT_WEAPON_CHAINGUN_MOVEMENT_SPEED_SCALE_NOT_FIRING_BACK";
+				data = {
+					valueFloat = 1;
+				}
+				fireMode = "WEAPONFIREMODE_SECONDARY";
+			}
+			item[5] = {
+				priority = 1;
+				type = "WMT_WEAPON_CHAINGUN_MOVEMENT_SPEED_SCALE_NOT_FIRING_STRAFE";
+				data = {
+					valueFloat = 1;
+				}
+				fireMode = "WEAPONFIREMODE_SECONDARY";
+			}
+		}
+		skillPointCost = 2;
+		showHideMeshInfo = {
+			meshesToHide = {
+				num = 10;
+				item[0] = "nonturret";
+				item[1] = "auger";
+				item[2] = "default";
+				item[3] = "chaingun_base_handle_rear";
+				item[4] = "chaingun_base_barrel_ammo_01";
+				item[5] = "chaingun_base_barrel_ammo_02";
+				item[6] = "chaingun_base_barrel_ammo_03";
+				item[7] = "chaingun_base_barrel_ammo_04";
+				item[8] = "chaingun_base_barrel_ammo_24";
+				item[9] = "chaingun_base_barrel_ammo_23";
+			}
+			meshesToShow = {
+				num = 16;
+				item[0] = "constant";
+				item[1] = "turret";
+				item[2] = "chaingun_turret_ammo_left_16";
+				item[3] = "chaingun_turret_ammo_left_17";
+				item[4] = "chaingun_turret_ammo_left_18";
+				item[5] = "chaingun_turret_ammo_left_19";
+				item[6] = "chaingun_turret_ammo_left_20";
+				item[7] = "chaingun_turret_ammo_left_01";
+				item[8] = "chaingun_turret_ammo_left_02";
+				item[9] = "chaingun_turret_ammo_right_05";
+				item[10] = "chaingun_turret_ammo_right_04";
+				item[11] = "chaingun_turret_ammo_right_03";
+				item[12] = "chaingun_turret_ammo_right_02";
+				item[13] = "chaingun_turret_ammo_right_01";
+				item[14] = "chaingun_turret_ammo_right_20";
+				item[15] = "chaingun_turret_ammo_right_19";
+			}
+		}
+		showHideMeshInfo3rd = {
+			meshesToHide = {
+				num = 10;
+				item[0] = "nonturret";
+				item[1] = "auger";
+				item[2] = "default";
+				item[3] = "chaingun_base_handle_rear";
+				item[4] = "chaingun_base_barrel_ammo_01";
+				item[5] = "chaingun_base_barrel_ammo_02";
+				item[6] = "chaingun_base_barrel_ammo_03";
+				item[7] = "chaingun_base_barrel_ammo_04";
+				item[8] = "chaingun_base_barrel_ammo_24";
+				item[9] = "chaingun_base_barrel_ammo_23";
+			}
+			meshesToShow = {
+				num = 16;
+				item[0] = "constant";
+				item[1] = "turret";
+				item[2] = "chaingun_turret_ammo_left_16";
+				item[3] = "chaingun_turret_ammo_left_17";
+				item[4] = "chaingun_turret_ammo_left_18";
+				item[5] = "chaingun_turret_ammo_left_19";
+				item[6] = "chaingun_turret_ammo_left_20";
+				item[7] = "chaingun_turret_ammo_left_01";
+				item[8] = "chaingun_turret_ammo_left_02";
+				item[9] = "chaingun_turret_ammo_right_05";
+				item[10] = "chaingun_turret_ammo_right_04";
+				item[11] = "chaingun_turret_ammo_right_03";
+				item[12] = "chaingun_turret_ammo_right_02";
+				item[13] = "chaingun_turret_ammo_right_01";
+				item[14] = "chaingun_turret_ammo_right_20";
+				item[15] = "chaingun_turret_ammo_right_19";
+			}
+		}
+	}
+}

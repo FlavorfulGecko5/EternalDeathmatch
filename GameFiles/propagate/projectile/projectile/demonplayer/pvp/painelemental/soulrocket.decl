@@ -1,0 +1,37 @@
+{
+	edit = {
+		hitscan = false;
+		projectilePlaysFireSound = true;
+		fireSoundStart = "play_painelemental_primaryattack";
+		fireViewShakeDecl = "advancedscreenviewshake/demonplayer/painelemental_soulrocket";
+		aiDodgeType = "AI_DODGE_TYPE_HEAVY_MEDIUM_RANGE";
+		impactEffectTable = "impacteffect/projectiles/demon_player/painelemental_lostsoul";
+		fxDecl = "demon_player/pain_elemental/lostsoul_rocket";
+		notHitscanInfo = {
+			removeAtMaxRange = true;
+			entityDef = "projectile_ent/demonplayer/pvp/painelemental/soulrocket";
+			physicsProperties = {
+				motionProperties = {
+					gravityFactor = 0;
+				}
+				noGravity = true;
+				actorClipRadius = 0.666000009;
+			}
+			grenadeInfo = {
+				minDetonationDelay = 10;
+				maxDetonationDelay = 10;
+				bounceShortensDetonation = true;
+				minSpeed = 1;
+				maxSpeed = 1;
+				useSimplePhysics = false;
+			}
+			explodeSound = "play_burst_rocket_explosion";
+			altExplodeSound = "play_burst_rocket_explosion";
+			speed = 1;
+			explodeOnImpact = true;
+			clientAuthoritative = true;
+		}
+		damageDecl = "damage/demonplayer/pvp/painelemental/lostsoul";
+		splashDamageDecl = "damage/demonplayer/pvp/painelemental/lostsoul_splash";
+	}
+}

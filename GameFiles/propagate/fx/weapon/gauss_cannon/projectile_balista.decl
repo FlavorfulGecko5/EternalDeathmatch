@@ -1,0 +1,306 @@
+{
+	edit = {
+		editEvents = {
+			num = 12;
+			item[0] = {
+				name = "BulletParticles_Attached";
+				group = "projectile";
+				type = "FX_PARTICLE";
+				duration = 0;
+				looping = true;
+				color = {
+					y = 0.13013652;
+					z = 0.0273208916;
+				}
+				tagNames = {
+					num = 1;
+					item[0] = "exhaust";
+				}
+				startCondition = {
+					num = 1;
+					item[0] = "FX_PROJECTILE_TRAIL";
+				}
+				stopCondition = {
+					num = 2;
+					item[0] = "FX_PROJECTILE_STUCK";
+					item[1] = "FX_PROJECTILE_STOP";
+				}
+				originType = "FX_ORG_TRACK_POS";
+				rotationType = "FX_ROT_TRACK_AXIS";
+				rotOffsetAngles = {
+					roll = -90;
+				}
+				particleParms = {
+					declPrt = "weapons/gauss_rifle/projectile_balista";
+				}
+			}
+			item[1] = {
+				name = "mg_ribbon_lightning";
+				group = "projectile";
+				type = "FX_RIBBON_2";
+				tagNames = {
+					num = 1;
+					item[0] = "exhaust";
+				}
+				startCondition = {
+					num = 1;
+					item[0] = "FX_PROJECTILE_TRAIL";
+				}
+				stopCondition = {
+					num = 1;
+					item[0] = "FX_PROJECTILE_EXPLODE";
+				}
+				originType = "FX_ORG_TRACK_POS";
+				ribbon2Parms = {
+					declRibbon = "gauss_canon/gauss_canon_balista";
+					speedMultiplier = 0;
+				}
+			}
+			item[2] = {
+				name = "explosion";
+				group = "projectile";
+				type = "FX_PARTICLE";
+				duration = 0;
+				looping = true;
+				color = {
+					y = 0.13013652;
+					z = 0.0273208916;
+				}
+				startCondition = {
+					num = 1;
+					item[0] = "FX_PROJECTILE_EXPLODE";
+				}
+				stopCondition = {
+					num = 1;
+					item[0] = "FX_NONE";
+				}
+				originType = "FX_ORG_TRACK_POS";
+				rotationType = "FX_ROT_EXPLICIT_ANGLES";
+				particleParms = {
+					declPrt = "weapons/gauss_rifle/explosion_balista";
+				}
+			}
+			item[3] = {
+				name = "projectile_stuck";
+				group = "projectile";
+				type = "FX_PARTICLE";
+				duration = 1000;
+				size = 0.5;
+				tagNames = {
+					num = 1;
+					item[0] = "exhaust";
+				}
+				startCondition = {
+					num = 2;
+					item[0] = "FX_PROJECTILE_STUCK";
+					item[1] = "FX_PROJECTILE_STUCK_WEAK_POINT";
+				}
+				stopCondition = {
+					num = 1;
+					item[0] = "FX_PROJECTILE_EXPLODE";
+				}
+				originType = "FX_ORG_TRACK_POS";
+				rotationType = "FX_ROT_TRACK_AXIS";
+				particleParms = {
+					declPrt = "weapons/gauss_rifle/ballista_projectile_stuck";
+				}
+			}
+			item[4] = {
+				name = "mg_ribbon_glow";
+				group = "projectile";
+				type = "FX_RIBBON_2";
+				tagNames = {
+					num = 1;
+					item[0] = "exhaust";
+				}
+				startCondition = {
+					num = 1;
+					item[0] = "FX_PROJECTILE_TRAIL";
+				}
+				stopCondition = {
+					num = 1;
+					item[0] = "FX_PROJECTILE_EXPLODE";
+				}
+				originType = "FX_ORG_TRACK_POS";
+				ribbon2Parms = {
+					declRibbon = "gauss_canon/gauss_canon_balista_glow";
+					speedMultiplier = 0;
+				}
+			}
+			item[5] = {
+				name = "explosion_decal";
+				group = "projectile";
+				type = "FX_DECAL";
+				duration = 3000;
+				fadeOutTime = 500;
+				size = 2.3499999;
+				color = {
+					y = 0.155926496;
+					z = 0;
+				}
+				startCondition = {
+					num = 6;
+					item[0] = "FX_PROJECTILE_EXPLODE";
+					item[1] = "FX_PROJECTILE_EXPLODE_DEFAULT";
+					item[2] = "FX_PROJECTILE_EXPLODE_STONE";
+					item[3] = "FX_PROJECTILE_EXPLODE_DIRT";
+					item[4] = "FX_PROJECTILE_EXPLODE_METAL";
+					item[5] = "FX_PROJECTILE_EXPLODE_ASPHALT";
+				}
+				stopCondition = {
+					num = 1;
+					item[0] = "FX_NONE";
+				}
+				originType = "FX_ORG_TRACK_POS";
+				rotationType = "FX_ROT_EXPLICIT_CODE";
+				decalParms = {
+					depth = 0.319999993;
+					emissiveLifetime = 1500;
+					emissiveTint = {
+						x = 1;
+						y = 0.150000006;
+						w = 1;
+					}
+					decalMtr = "effect/decal/impact/bullethole_concrete_large";
+				}
+			}
+			item[6] = {
+				name = "mg_ribbon_smoke";
+				group = "projectile";
+				enabled = false;
+				type = "FX_RIBBON_2";
+				tagNames = {
+					num = 1;
+					item[0] = "exhaust";
+				}
+				startCondition = {
+					num = 1;
+					item[0] = "FX_PROJECTILE_TRAIL";
+				}
+				stopCondition = {
+					num = 1;
+					item[0] = "FX_PROJECTILE_EXPLODE";
+				}
+				originType = "FX_ORG_TRACK_POS";
+				ribbon2Parms = {
+					declRibbon = "gauss_canon/gauss_canon_balista_smoke";
+				}
+			}
+			item[7] = {
+				name = "rock_debris";
+				group = "projectile";
+				type = "FX_DESTRUCTIBLE";
+				startCondition = {
+					num = 7;
+					item[0] = "FX_PROJECTILE_EXPLODE_DIRT";
+					item[1] = "FX_PROJECTILE_EXPLODE_PLASTIC";
+					item[2] = "FX_PROJECTILE_EXPLODE_WOOD";
+					item[3] = "FX_PROJECTILE_EXPLODE_STONE";
+					item[4] = "FX_PROJECTILE_EXPLODE_METAL";
+					item[5] = "FX_PROJECTILE_EXPLODE_DEFAULT";
+					item[6] = "FX_PROJECTILE_EXPLODE_ASPHALT";
+				}
+				stopCondition = {
+					num = 1;
+					item[0] = "FX_NONE";
+				}
+				rotationType = "FX_ROT_EXPLICIT_ANGLES";
+				destructibleParms = {
+					destructible = "destructible/generic/debris_rock";
+				}
+			}
+			item[8] = {
+				name = "explosion_weakpoint";
+				group = "projectile";
+				type = "FX_PARTICLE";
+				duration = 0;
+				looping = true;
+				color = {
+					y = 0.13013652;
+					z = 0.0273208916;
+				}
+				startCondition = {
+					num = 1;
+					item[0] = "FX_PROJECTILE_EXPLODE_WEAK_POINT";
+				}
+				stopCondition = {
+					num = 1;
+					item[0] = "FX_NONE";
+				}
+				originType = "FX_ORG_TRACK_POS";
+				rotationType = "FX_ROT_EXPLICIT_ANGLES";
+				particleParms = {
+					declPrt = "weapons/gauss_rifle/explosion_balista";
+				}
+			}
+			item[9] = {
+				name = "mg_ribbon_distortion";
+				group = "projectile";
+				type = "FX_RIBBON_2";
+				tagNames = {
+					num = 1;
+					item[0] = "exhaust";
+				}
+				startCondition = {
+					num = 1;
+					item[0] = "FX_PROJECTILE_TRAIL";
+				}
+				stopCondition = {
+					num = 1;
+					item[0] = "FX_PROJECTILE_EXPLODE";
+				}
+				originType = "FX_ORG_TRACK_POS";
+				ribbon2Parms = {
+					declRibbon = "weapon/distortion";
+				}
+			}
+			item[10] = {
+				name = "explosion_shake";
+				group = "projectile";
+				type = "FX_SCREEN_SHAKE";
+				duration = 1000;
+				fadeStartDistance = 2;
+				distance = 10;
+				color = {
+					y = 0.386429518;
+					z = 0.0908417329;
+				}
+				startCondition = {
+					num = 2;
+					item[0] = "FX_PROJECTILE_EXPLODE";
+					item[1] = "FX_PROJECTILE_EXPLODE_ALT";
+				}
+				stopCondition = {
+					num = 1;
+					item[0] = "FX_NONE";
+				}
+				screenShakeParms = {
+					magnitude = 0.100000001;
+					advancedShakeDecl = "advancedscreenviewshake/loadout/adv_shake_l";
+				}
+			}
+			item[11] = {
+				name = "mg_ribbon_lightning_thin";
+				group = "projectile";
+				type = "FX_RIBBON_2";
+				tagNames = {
+					num = 1;
+					item[0] = "exhaust";
+				}
+				startCondition = {
+					num = 1;
+					item[0] = "FX_PROJECTILE_TRAIL";
+				}
+				stopCondition = {
+					num = 1;
+					item[0] = "FX_PROJECTILE_EXPLODE";
+				}
+				originType = "FX_ORG_TRACK_POS";
+				ribbon2Parms = {
+					declRibbon = "gauss_canon/gauss_canon_balista_thin";
+					speedMultiplier = 0;
+				}
+			}
+		}
+	}
+}

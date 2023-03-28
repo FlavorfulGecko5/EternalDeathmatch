@@ -1,0 +1,13 @@
+{
+	inherit = "projectile/player/double_barrel_meat_hook";
+	edit = {
+		fireSoundStart = "play_wpn_shotgun_double_meathook_master_fire";
+		fxDecl = "weapon/meathook/meathook_projectile_mastery";
+		notHitscanInfo = {
+			entityDef = "projectile_ent/throwable/player/flaming_meat_hook";
+			clientAuthoritative = false;
+		}
+		projectilePlaysFireSound = true;
+		spawnEntLocally = true;
+	}
+}

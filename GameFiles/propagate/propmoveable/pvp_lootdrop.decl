@@ -1,0 +1,10 @@
+{
+	inherit = "lootdrop";
+	edit = {
+		attactMovement = {
+			attractRadius = 3.5;
+			attractDelayMS = 50;
+			cheatBufferRadius = 3.5;
+		}
+	}
+}

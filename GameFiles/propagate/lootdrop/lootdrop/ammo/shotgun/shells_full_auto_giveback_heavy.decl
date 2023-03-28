@@ -1,0 +1,17 @@
+{
+	inherit = "lootdrop/lootdefault";
+	edit = {
+		dropMode = "LOOT_DROPMODE_ALWAYS";
+		dropRestriction = "LOOT_DROP_RESTRICTION_SHOTGUN_AUTO_MASTERY";
+		value_MaxConditional = 101;
+		itemType = "LOOT_AMMO";
+		entityDef = "prop/lootdrops/ammo/ammo_shotgun_1";
+		item_amt_calc = "LOOT_ITEM_AMT_CALC_EXPLICIT";
+		item_maxDrop = 6;
+		item_dropChanceMin = 100;
+		item_dropChanceMax = 100;
+		item_removalTimeMS = 3500;
+		decl = "propitem/ammo/shotgun_1";
+		ammoItemMaxCount = 10;
+	}
+}

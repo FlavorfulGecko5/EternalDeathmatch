@@ -1,0 +1,33 @@
+{
+	edit = {
+		displayName = "#str_decl_actormodifier_become_painelemental_name_GHOST53515";
+		inGameEntityDef = "player/demonplayer_painelemental";
+		outOfGameEntityDef = "podiums/avatars/pain_elemental";
+		allowedDemonDecks = {
+			num = 1;
+			item[0] = "demoncarddeck/pvp/painelemental/deck_1";
+		}
+		abilityUIInfo = {
+			num = 3;
+			item[0] = {
+				icon = "textures/guis/icons/abilities/pain_elemental/fly_up";
+				title = "#str_swf_guis_pain_elemental_fly_up_ability_title_GHOST43505";
+				description = "#str_swf_guis_pain_elemental_fly_up_ability_desc_GHOST43506";
+				color = "DEMON_HUD_COLOR_YELLOW";
+			}
+			item[1] = {
+				icon = "textures/guis/icons/abilities/pain_elemental/fly_down";
+				title = "#str_swf_guis_pain_elemental_fly_down_ability_title_GHOST43507";
+				description = "#str_swf_guis_pain_elemental_fly_down_ability_desc_GHOST43508";
+				color = "DEMON_HUD_COLOR_YELLOW";
+			}
+			item[2] = {
+				icon = "textures/guis/icons/abilities/pain_elemental/aerial_dash";
+				title = "#str_swf_guis_pain_elemental_dash_ability_title_GHOST43509";
+				description = "#str_swf_guis_pain_elemental_dash_ability_desc_GHOST43510";
+				color = "DEMON_HUD_COLOR_YELLOW";
+			}
+		}
+		arrivalFX = "fx/podium/spawn_in";
+	}
+}

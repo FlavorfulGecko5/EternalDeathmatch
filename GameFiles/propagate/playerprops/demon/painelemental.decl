@@ -1,0 +1,16 @@
+{
+	edit = {
+		sounds = {
+			sndDeath = "";
+			sndPainMedium = "";
+			sndPainLarge = "";
+			sndLowHealth = "";
+			sndLowHealthRecovery = "";
+		}
+		damageFeedback = {
+			healthToStartFullScreenFlash = 0;
+			lowDamageFXValue = 0;
+			reallyLowDamageFXValue = 0;
+		}
+	}
+}

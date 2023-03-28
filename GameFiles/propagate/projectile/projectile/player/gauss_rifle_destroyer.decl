@@ -1,0 +1,46 @@
+{
+	edit = {
+		thirdPersonMD6 = "md6def/objects/projectiles/player/gauss_destroyer.md6";
+		hitscan = false;
+		fireSoundStart = "play_gauss_destroyer_fire";
+		aiDodgeType = "AI_DODGE_TYPE_HEAVY_MEDIUM_RANGE";
+		impactEffectTable = "impacteffect/projectiles/weapons/gauss_rifle_destroyer";
+		fxDecl = "weapon/gauss_cannon/projectile_destroyer";
+		notHitscanInfo = {
+			entityDef = "projectile_ent/player/gauss_cannon_destroyer";
+			attachRenderModels = {
+				num = 9;
+				item[0] = "effect/model/weapon/gauss_destroyer_blade_piece01_max.lwo";
+				item[1] = "effect/model/weapon/gauss_destroyer_blade_piece02_max.lwo";
+				item[2] = "effect/model/weapon/gauss_destroyer_blade_piece03_max.lwo";
+				item[3] = "effect/model/weapon/gauss_destroyer_blade_piece04_max.lwo";
+				item[4] = "effect/model/weapon/gauss_destroyer_blade_piece05_max.lwo";
+				item[5] = "effect/model/weapon/gauss_destroyer_blade_piece06_max.lwo";
+				item[6] = "effect/model/weapon/gauss_destroyer_blade_piece07_max.lwo";
+				item[7] = "effect/model/weapon/gauss_destroyer_blade_piece08_max.lwo";
+				item[8] = "effect/model/weapon/gauss_destroyer_blade_piece09_max.lwo";
+			}
+			physicsProperties = {
+				noGravity = true;
+				actorClipRadius = 0.300000012;
+				noClipModel = true;
+			}
+			explodeSound = "play_destroyer_explosion";
+			flySound = "play_gauss_fire_blade_projectile";
+			speed = 60;
+			flightAnim = "projectile/idle";
+			grenadeInfo = {
+				minDetonationDelay = 10000;
+				maxDetonationDelay = 10000;
+				bouncesBeforeDetonationTimerStart = 1;
+			}
+			minTrajectoryTime = 0.300000012;
+			maxTrajectoryTime = 1;
+			clientAuthoritative = false;
+		}
+		damageDecl = "damage/firearm/gauss_rifle_destroyer";
+		maxRange = 78.029007;
+		projectilePlaysFireSound = true;
+		spawnEntLocally = true;
+	}
+}

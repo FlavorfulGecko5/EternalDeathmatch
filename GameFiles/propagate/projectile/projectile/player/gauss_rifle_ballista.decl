@@ -1,0 +1,32 @@
+{
+	inherit = "projectile/player/rocket_launcher";
+	edit = {
+		fireSoundStart = "play_gauss_ballista_fire";
+		fireViewShakeDecl = "advancedscreenviewshake/gauss_rifle";
+		impactEffectTable = "impacteffect/projectiles/weapons/gauss_rifle";
+		impactEffectTableQuad = NULL;
+		fxDecl = "weapon/gauss_cannon/projectile_balista";
+		notHitscanInfo = {
+			entityDef = "projectile_ent/player/gauss_cannon_ballista";
+			physicsProperties = {
+				actorClipRadius = 0.150000006;
+			}
+			explodeSound = NULL;
+			altExplodeSound = NULL;
+			speed = 133.350006;
+			grenadeInfo = {
+				minDetonationDelay = -1;
+				maxDetonationDelay = -1;
+				bouncesBeforeDetonationTimerStart = 1;
+				warningSound = "play_balista_warning_beep_1";
+				canDetonateWithAltTrigger = false;
+			}
+			clientAuthoritative = false;
+		}
+		damageDecl = "damage/firearm/gauss_rifle_ballista";
+		splashDamageDecl = "damage/firearm/gauss_rifle_ballista_splash";
+		altSplashDamageDecl = NULL;
+		projectilePlaysFireSound = true;
+		spawnEntLocally = true;
+	}
+}

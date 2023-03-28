@@ -1,0 +1,285 @@
+{
+	edit = {
+		editEvents = {
+			num = 9;
+			item[0] = {
+				name = "ambient_light";
+				group = "idle_Copy";
+				type = "FX_LIGHT";
+				looping = true;
+				color = {
+					x = 0.187820807;
+					y = 0.212230787;
+					z = 0.215860531;
+				}
+				tagNames = {
+					num = 1;
+					item[0] = "muzzle";
+				}
+				startCondition = {
+					num = 1;
+					item[0] = "FX_NONE";
+				}
+				stopCondition = {
+					num = 1;
+					item[0] = "FX_NONE";
+				}
+				originType = "FX_ORG_TRACK_POS";
+				offset = {
+					z = -0.349999994;
+				}
+				rotationType = "FX_ROT_TRACK_AXIS";
+				lightParms = {
+					radius = {
+						x = 0.150000006;
+						y = 0.200000003;
+						z = 0.5;
+					}
+					falloff = 10;
+					intensity = 30;
+					dynamicOnly = true;
+					lightMtr = "lights/defaultparallellight";
+					lightCenter = {
+						x = -5;
+						y = 3;
+						z = 6;
+					}
+				}
+			}
+			item[1] = {
+				name = "muzzle_flash_primary";
+				group = "fire_microwave";
+				type = "FX_PARTICLE";
+				duration = 500;
+				fadeOutTime = 500;
+				color = {
+					x = 0.0451862141;
+					y = 0.254152179;
+				}
+				tagNames = {
+					num = 1;
+					item[0] = "fx_muzzle_z_barrel";
+				}
+				startCondition = {
+					num = 1;
+					item[0] = "";
+				}
+				stopCondition = {
+					num = 1;
+					item[0] = "";
+				}
+				originType = "FX_ORG_TRACK_POS";
+				rotationType = "FX_ROT_TRACK_AXIS";
+				particleParms = {
+					declPrt = "";
+				}
+			}
+			item[2] = {
+				name = "fx_onslaught_glow_ON";
+				group = "status_effects";
+				type = "FX_RENDERPARM";
+				duration = 150;
+				color = {
+					x = 0.147027299;
+					y = 0.141263321;
+					z = 0.514917791;
+				}
+				startCondition = {
+					num = 1;
+					item[0] = "FX_PLAYER_STATUS2_START";
+				}
+				stopCondition = {
+					num = 1;
+					item[0] = "FX_NONE";
+				}
+				renderParmParms = {
+					declRenderParm = "powerup";
+					parmType = "FX_PARM_VEC4";
+					vec4 = {
+						x = 0.147027299;
+						y = 0.141263321;
+						z = 0.514917791;
+					}
+				}
+			}
+			item[3] = {
+				name = "fx_onslaught_glow_OFF";
+				group = "status_effects";
+				type = "FX_RENDERPARM";
+				duration = 150;
+				fadeInTime = 150;
+				color = {
+					x = 0;
+					y = 0;
+					z = 0;
+					w = 0;
+				}
+				startCondition = {
+					num = 1;
+					item[0] = "FX_PLAYER_STATUS2_STOP";
+				}
+				stopCondition = {
+					num = 1;
+					item[0] = "FX_NONE";
+				}
+				renderParmParms = {
+					declRenderParm = "powerup";
+					parmType = "FX_PARM_VEC4";
+					vec4 = {
+						x = 0;
+						y = 0;
+						z = 0;
+						w = 0;
+					}
+					forceValueWhenStopped = true;
+				}
+			}
+			item[4] = {
+				name = "fx_overdrive_glow_ON";
+				group = "status_effects";
+				type = "FX_RENDERPARM";
+				duration = 150;
+				color = {
+					x = 0.745404482;
+					y = 0.238397658;
+					z = 0.0137020806;
+				}
+				startCondition = {
+					num = 1;
+					item[0] = "FX_PLAYER_STATUS5_START";
+				}
+				stopCondition = {
+					num = 1;
+					item[0] = "FX_NONE";
+				}
+				renderParmParms = {
+					declRenderParm = "powerup";
+					parmType = "FX_PARM_VEC4";
+					vec4 = {
+						x = 0.745404482;
+						y = 0.238397658;
+						z = 0.0137020806;
+					}
+				}
+			}
+			item[5] = {
+				name = "fx_overdrive_glow_OFF";
+				group = "status_effects";
+				type = "FX_RENDERPARM";
+				duration = 150;
+				fadeInTime = 150;
+				color = {
+					x = 0;
+					y = 0;
+					z = 0;
+					w = 0;
+				}
+				startCondition = {
+					num = 1;
+					item[0] = "FX_PLAYER_STATUS5_STOP";
+				}
+				stopCondition = {
+					num = 1;
+					item[0] = "FX_NONE";
+				}
+				renderParmParms = {
+					declRenderParm = "powerup";
+					parmType = "FX_PARM_VEC4";
+					vec4 = {
+						x = 0;
+						y = 0;
+						z = 0;
+						w = 0;
+					}
+					forceValueWhenStopped = true;
+				}
+			}
+			item[6] = {
+				name = "fx_berserk_glow_ON";
+				group = "status_effects";
+				type = "FX_RENDERPARM";
+				duration = 150;
+				color = {
+					x = 0.467783839;
+					y = 0;
+					z = 0.00273174304;
+				}
+				startCondition = {
+					num = 1;
+					item[0] = "FX_ZIPLINE_SPEED_SLOW";
+				}
+				stopCondition = {
+					num = 1;
+					item[0] = "FX_NONE";
+				}
+				renderParmParms = {
+					declRenderParm = "powerup";
+					parmType = "FX_PARM_VEC4";
+					vec4 = {
+						x = 0.467783839;
+						y = 0;
+						z = 0.00273174304;
+					}
+				}
+			}
+			item[7] = {
+				name = "fx_berserk_glow_OFF";
+				group = "status_effects";
+				type = "FX_RENDERPARM";
+				duration = 150;
+				fadeInTime = 150;
+				color = {
+					x = 0;
+					y = 0;
+					z = 0;
+					w = 0;
+				}
+				startCondition = {
+					num = 1;
+					item[0] = "FX_ZIPLINE_SPEED_SLOW_REVERSE";
+				}
+				stopCondition = {
+					num = 1;
+					item[0] = "FX_NONE";
+				}
+				renderParmParms = {
+					declRenderParm = "powerup";
+					parmType = "FX_PARM_VEC4";
+					vec4 = {
+						x = 0;
+						y = 0;
+						z = 0;
+						w = 0;
+					}
+					forceValueWhenStopped = true;
+				}
+			}
+			item[8] = {
+				name = "explosion_shake";
+				group = "fire_microwave";
+				type = "FX_SCREEN_SHAKE";
+				duration = 1000;
+				fadeStartDistance = 10;
+				distance = 60;
+				color = {
+					y = 0.386429518;
+					z = 0.0908417329;
+				}
+				startCondition = {
+					num = 2;
+					item[0] = "FX_PROJECTILE_EXPLODE";
+					item[1] = "FX_PROJECTILE_EXPLODE_ALT";
+				}
+				stopCondition = {
+					num = 1;
+					item[0] = "FX_NONE";
+				}
+				screenShakeParms = {
+					magnitude = 0.100000001;
+					advancedShakeDecl = "advancedscreenviewshake/loadout/adv_shake_m";
+				}
+			}
+		}
+		cycleConditionMax = 6750324;
+	}
+}

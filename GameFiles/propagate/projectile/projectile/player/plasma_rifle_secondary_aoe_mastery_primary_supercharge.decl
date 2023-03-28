@@ -1,0 +1,16 @@
+{
+	inherit = "projectile/player/plasma_rifle";
+	edit = {
+		fireSoundStart = "play_plasma_shot_heated_ghost_switch";
+		impactEffectTable = "impacteffect/projectiles/weapons/plasma_rifle_supercharged";
+		fxDecl = "weapon/plasma_rifle/plasma_rifle_progectile_supercharged";
+		notHitscanInfo = {
+			entityDef = "projectile_ent/player/plasma_rifle_secondary_aoe_mastery_primary_supercharge";
+			clientAuthoritative = false;
+		}
+		damageDecl = "damage/firearm/plasma_rifle_secondary_aoe_mastery_primary_supercharge";
+		splashDamageDecl = "damage/firearm/plasma_rifle_secondary_aoe_mastery_primary_supercharge_splash";
+		projectilePlaysFireSound = true;
+		spawnEntLocally = true;
+	}
+}

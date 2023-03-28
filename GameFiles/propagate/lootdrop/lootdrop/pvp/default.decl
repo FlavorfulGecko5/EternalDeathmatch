@@ -1,0 +1,10 @@
+{
+	inherit = "lootdrop/lootdefault";
+	edit = {
+		dropRestriction = "LOOT_DROP_RESTRICTION_INVALID";
+		item_amt_calc = "LOOT_ITEM_AMT_CALC_EXPLICIT";
+		item_dropChanceMin = 100;
+		item_dropChanceMax = 100;
+		item_removalTimeMS = 3500;
+	}
+}

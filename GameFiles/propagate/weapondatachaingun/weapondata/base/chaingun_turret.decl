@@ -1,0 +1,24 @@
+{
+	edit = {
+		spinUpTimeMS = 0;
+		barrelAlignDegsPerSec = 1200;
+		barrelAlignSectors = 3;
+		resetBarrelAngleOnFireModeChange = true;
+		barrelResetAccel = 3000;
+		numBarrels = 3;
+		barrelAnim = "turretmode_barrel_spin";
+		barrel_accel_sound = "play_chaingun_turret_mech_overheated";
+		barrel_stop_sound = "stop_chaingun_barrel";
+		barrel_spin_sound_pitch_min = -2;
+		barrel_spin_sound_pitch_max = 15;
+		movementSpeedScaleFiringForward = 1;
+		movementSpeedScaleFiringBack = 1;
+		movementSpeedScaleFiringStrafe = 1;
+		movementSpeedScaleNotFiringForward = 1;
+		movementSpeedScaleNotFiringBack = 1;
+		movementSpeedScaleNotFiringStrafe = 1;
+		sensitivityWhileFiring = 0.550000012;
+		sensitivityWhileSpinning = 0.550000012;
+		minBarrelVelT_ToFire = 0;
+	}
+}

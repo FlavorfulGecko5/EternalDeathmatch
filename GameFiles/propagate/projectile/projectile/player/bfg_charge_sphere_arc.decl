@@ -1,0 +1,24 @@
+{
+	edit = {
+		hitscan = false;
+		fireSoundStart = "play_bfg_fire";
+		impactEffectTable = "impacteffect/projectiles/weapons/bfg";
+		fxDecl = "weapon/bfg/projectile";
+		notHitscanInfo = {
+			entityDef = "projectile_ent/player/bfg_charge_sphere_arc";
+			physicsProperties = {
+				noGravity = true;
+			}
+			passThroughFriendlies = true;
+			passThroughFriendliesMaxDistance = 13.335001;
+			explodeSound = "play_bfg_explosion";
+			flySound = "play_bfg_projectile_loop";
+			speed = 28.5;
+			isRetrievable = false;
+			clientAuthoritative = true;
+		}
+		damageDecl = "damage/firearm/bfg_charge_sphere_arc";
+		splashDamageDecl = "damage/firearm/bfg_charge_sphere_arc_splash";
+		concussiveDamageDecl = "damage/firearm/bfg_charge_sphere_arc_splash_demonplayer";
+	}
+}

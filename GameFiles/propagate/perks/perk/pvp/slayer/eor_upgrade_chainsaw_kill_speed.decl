@@ -1,0 +1,10 @@
+{
+	edit = {
+		upgrades = {
+			num = 2;
+			item[0] = "upgrade/pvp/slayer/eor_chainsaw_kill_speed";
+			item[1] = "upgrade/runes/glory_kill_speed";
+		}
+		autoActivate = true;
+	}
+}

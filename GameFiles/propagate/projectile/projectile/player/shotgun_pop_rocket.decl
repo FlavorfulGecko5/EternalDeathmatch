@@ -1,0 +1,42 @@
+{
+	inherit = "projectile/player/assault_rifle_assaultrifle_secondary";
+	edit = {
+		fireSoundStart = "play_shotgun_pop_rocket_fire";
+		impactEffectTable = "impacteffect/projectiles/weapons/shotgun_poprocket";
+		fxDecl = "weapon/combat_shotgun/sticky_bomb_projectile";
+		notHitscanInfo = {
+			entityDef = "projectile_ent/player/shotgun_pop_rocket";
+			physicsProperties = {
+				bounciness = 0;
+				actorClipRadius = 0.400000006;
+			}
+			explodeSound = "play_sticky_bomb_explosion";
+			flySound = "play_rocket_fly_loop";
+			whizBySound = "play_sfx_rocket_passby";
+			whizByDist = 5.71500015;
+			isRetrievable = false;
+			adjustFireAngle = -4;
+			grenadeInfo = {
+				minDetonationDelay = 500;
+				maxDetonationDelay = 500;
+				countDownOnThrow = false;
+				bouncesBeforeDetonationTimerStart = 1;
+				warningSound = "play_cs_sticky_bomb_timer_1_mono";
+				minSpeed = 52.3880043;
+				maxSpeed = 52.3880043;
+				useSimplePhysics = false;
+			}
+			swallowInfo = {
+				canBeSwallowed = true;
+				explodeDamageDelayMS = 1500;
+				swallowStat = "STAT_WEAKPOINT_CACODEMON_MOUTH";
+			}
+			clientAuthoritative = false;
+		}
+		damageDecl = "damage/firearm/pop_rocket";
+		splashDamageDecl = "damage/firearm/pop_rocket_splash";
+		splashDoesntIgnoreDirectHitTarget = true;
+		projectilePlaysFireSound = true;
+		spawnEntLocally = true;
+	}
+}

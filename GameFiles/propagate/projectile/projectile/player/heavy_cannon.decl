@@ -1,0 +1,48 @@
+{
+	inherit = "projectile/base/bullet";
+	edit = {
+		hitscan = true;
+		ribbonEffect = true;
+		fireSoundStart = "play_wpn_sp_heavy_cannon_fire";
+		fireViewShakeDecl = "advancedscreenviewshake/heavy_cannon";
+		impactEffectTable = "impacteffect/projectiles/weapons/heavy_cannon";
+		impactEffectTableQuad = "impacteffect/projectiles/weapons/heavy_cannon";
+		fxDecl = "weapon/heavy_cannon/projectile";
+		notHitscanInfo = {
+			entityDef = "projectile_ent/player/heavy_cannon";
+			physicsProperties = {
+				massProperties = {
+					value = 836.932007;
+				}
+				density = 900;
+				noGravity = true;
+				actorClipRadius = 0.0799999982;
+			}
+			whizBySound = "play_bullet_passby";
+			whizByDist = 5;
+			speed = 250;
+			clientAuthoritative = true;
+			grenadeInfo = {
+				countDownOnThrow = false;
+			}
+		}
+		cylindricalDamageDecl = "damage/firearm/heavy_cannon";
+		splashDamageDecl = "damage/firearm/heavy_cannon_splash";
+		tracerInfo = {
+			tracerMtr = NULL;
+			tracerSpeed = 133.350006;
+			tracerLength = 8.57299995;
+			tracerHeight = 0.5;
+			tracerLifetime = 700;
+			ribbon2Decls = {
+				num = 2;
+				item[0] = {
+					ribbonDecl = "weapon/heavy_cannon_bolt_action_smoke_blurred";
+				}
+				item[1] = {
+					ribbonDecl = "weapon/heavy_cannon_bolt_action_smoke_dissolving";
+				}
+			}
+		}
+	}
+}

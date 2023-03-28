@@ -1,0 +1,80 @@
+{
+	edit = {
+		editEvents = {
+			num = 3;
+			item[0] = {
+				name = "rock_debris";
+				group = "explosion";
+				type = "FX_DESTRUCTIBLE";
+				color = {
+					y = 0.13013652;
+					z = 0.0273208916;
+				}
+				startCondition = {
+					num = 7;
+					item[0] = "FX_PROJECTILE_EXPLODE_DIRT";
+					item[1] = "FX_PROJECTILE_EXPLODE_PLASTIC";
+					item[2] = "FX_PROJECTILE_EXPLODE_WOOD";
+					item[3] = "FX_PROJECTILE_EXPLODE_STONE";
+					item[4] = "FX_PROJECTILE_EXPLODE_METAL";
+					item[5] = "FX_PROJECTILE_EXPLODE_DEFAULT";
+					item[6] = "FX_PROJECTILE_EXPLODE_ASPHALT";
+				}
+				stopCondition = {
+					num = 1;
+					item[0] = "FX_NONE";
+				}
+				rotationType = "FX_ROT_EXPLICIT_ANGLES";
+				destructibleParms = {
+					destructible = "";
+				}
+			}
+			item[1] = {
+				name = "explosion_shake";
+				group = "explosion";
+				type = "FX_SCREEN_SHAKE";
+				duration = 3;
+				fadeStartDistance = 1.90499997;
+				distance = 9.52500057;
+				color = {
+					y = 0.13013652;
+					z = 0.0273208916;
+				}
+				startCondition = {
+					num = 1;
+					item[0] = "FX_PROJECTILE_EXPLODE";
+				}
+				stopCondition = {
+					num = 1;
+					item[0] = "FX_NONE";
+				}
+				screenShakeParms = {
+					advancedShakeDecl = "advancedscreenviewshake/loadout/adv_shake_l";
+				}
+			}
+			item[2] = {
+				name = "explosion_piece_1";
+				group = "explosion";
+				type = "FX_PARTICLE";
+				duration = 1000;
+				looping = true;
+				color = {
+					y = 0.13013652;
+					z = 0.0273208916;
+				}
+				startCondition = {
+					num = 1;
+					item[0] = "FX_PROJECTILE_EXPLODE_PIECE_1";
+				}
+				stopCondition = {
+					num = 1;
+					item[0] = "FX_NONE";
+				}
+				rotationType = "FX_ROT_TRACK_AXIS";
+				particleParms = {
+					declPrt = "";
+				}
+			}
+		}
+	}
+}

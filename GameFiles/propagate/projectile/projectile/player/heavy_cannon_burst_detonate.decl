@@ -1,0 +1,36 @@
+{
+	inherit = "projectile/player/heavy_cannon";
+	edit = {
+		hitscan = false;
+		thirdPersonMD6 = "md6def/objects/weapons/explosives/micro_missile.md6";
+		fireSoundStart = "play_heavy_cannon_micro_missile_fire";
+		impactEffectTable = "impacteffect/projectiles/weapons/heavy_cannon_burst_detonate";
+		fxDecl = "projectile/heavy_cannon/detonate_rocket";
+		notHitscanInfo = {
+			entityDef = "projectile_ent/player/heavy_cannon_burst_detonate";
+			explodeSound = "play_micro_missile_explosion";
+			altExplodeSound = "play_micro_missile_explosion";
+			whizBySound = "play_bullet_passby";
+			speed = 72.390007;
+			grenadeInfo = {
+				minDetonationDelay = -1;
+				maxDetonationDelay = -1;
+			}
+			clientAuthoritative = false;
+		}
+		damageDecl = "damage/firearm/heavy_cannon_burst_detonate";
+		splashDamageDecl = "damage/firearm/heavy_cannon_burst_detonate_splash";
+		projectilePlaysFireSound = true;
+		spawnEntLocally = true;
+		tracerInfo = {
+			tracerMtr = NULL;
+			tracerSpeed = 133.350006;
+			tracerLength = 8.57299995;
+			tracerHeight = 0.0759999976;
+			tracerLifetime = 700;
+			ribbon2Decls = {
+				num = 0;
+			}
+		}
+	}
+}

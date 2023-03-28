@@ -1,0 +1,27 @@
+{
+	inherit = "projectile/base/rocket";
+	edit = {
+		fireSoundStart = "play_lock_on_fire";
+		impactEffectTable = "impacteffect/projectiles/weapons/rocket_lock_on";
+		fxDecl = "weapon/rocket_launcher/projectile_lockon";
+		notHitscanInfo = {
+			entityDef = "projectile_ent/player/rocket_launcher_lockon";
+			physicsProperties = {
+				actorClipRadius = 0.200000003;
+			}
+			explodeSound = "play_player_rocket_explosion_burst";
+			speed = 47.6250038;
+			startSpeed = 24.7650013;
+			minStartSpeed = 19.0500011;
+			grenadeInfo = {
+				minDetonationDelay = 10000;
+				maxDetonationDelay = 10000;
+			}
+			clientAuthoritative = false;
+		}
+		damageDecl = "damage/firearm/rocket_launcher_lockon";
+		splashDamageDecl = "damage/firearm/rocket_launcher_lockon_splash";
+		projectilePlaysFireSound = true;
+		spawnEntLocally = true;
+	}
+}

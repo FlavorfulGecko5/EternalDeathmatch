@@ -1,0 +1,177 @@
+{
+	edit = {
+		editEvents = {
+			num = 6;
+			item[0] = {
+				name = "explosion_alt";
+				group = "Ungrouped_Copy";
+				type = "FX_PARTICLE";
+				duration = 3000;
+				color = {
+					y = 0.258182913;
+					z = 0.0409152098;
+				}
+				multiTagUseType = "FX_MULTI_TAG_USE_ALL";
+				startCondition = {
+					num = 2;
+					item[0] = "FX_PROJECTILE_EXPLODE_ALT";
+					item[1] = "FX_PROJECTILE_EXPLODE";
+				}
+				stopCondition = {
+					num = 1;
+					item[0] = "FX_OUTLINE_OFF";
+				}
+				rndRotX = {
+					x = -180;
+					y = 180;
+				}
+				rndRotY = {
+					x = -180;
+					y = 180;
+				}
+				rndRotZ = {
+					x = -180;
+					y = 180;
+				}
+				particleParms = {
+					declPrtList = {
+						num = 4;
+						item[0] = "weapon_impacts/heavy_cannon_impact_micromissile";
+						item[1] = "weapon_impacts/heavy_cannon_impact_micromissile_var01";
+						item[2] = "weapon_impacts/heavy_cannon_impact_micromissile_var02";
+						item[3] = "weapon_impacts/heavy_cannon_impact_micromissile_var03";
+					}
+				}
+			}
+			item[1] = {
+				name = "RocketTrail_Attached";
+				group = "Ungrouped_Copy";
+				type = "FX_PARTICLE";
+				duration = 0;
+				looping = true;
+				color = {
+					y = 0.450785846;
+					z = 0.068478182;
+				}
+				tagNames = {
+					num = 1;
+					item[0] = "exhaust";
+				}
+				startCondition = {
+					num = 1;
+					item[0] = "FX_PROJECTILE_TRAIL";
+				}
+				stopCondition = {
+					num = 4;
+					item[0] = "FX_PROJECTILE_EXPLODE";
+					item[1] = "FX_PROJECTILE_STOP";
+					item[2] = "FX_PROJECTILE_STUCK";
+					item[3] = "FX_PROJECTILE_EXPLODE_ALT";
+				}
+				originType = "FX_ORG_TRACK_POS";
+				rotationType = "FX_ROT_TRACK_AXIS";
+				particleParms = {
+					declPrt = "weapons/har/projectile";
+				}
+			}
+			item[2] = {
+				name = "micromissle_trail_fire";
+				group = "Ungrouped_Copy";
+				type = "FX_RIBBON_2";
+				startCondition = {
+					num = 1;
+					item[0] = "FX_PROJECTILE_TRAIL";
+				}
+				stopCondition = {
+					num = 2;
+					item[0] = "FX_PROJECTILE_EXPLODE";
+					item[1] = "FX_PROJECTILE_EXPLODE_ALT";
+				}
+				ribbon2Parms = {
+					declRibbon = "heavy_cannon/micromissle";
+				}
+			}
+			item[3] = {
+				name = "micromissle_trail_smoke";
+				group = "Ungrouped_Copy";
+				type = "FX_RIBBON_2";
+				startCondition = {
+					num = 1;
+					item[0] = "FX_PROJECTILE_TRAIL";
+				}
+				stopCondition = {
+					num = 2;
+					item[0] = "FX_PROJECTILE_EXPLODE";
+					item[1] = "FX_PROJECTILE_EXPLODE_ALT";
+				}
+				ribbon2Parms = {
+					declRibbon = "heavy_cannon/micromissle_smoke";
+				}
+			}
+			item[4] = {
+				name = "projectile_stuck";
+				group = "Ungrouped_Copy";
+				type = "FX_PARTICLE";
+				duration = 750;
+				size = 0.5;
+				tagNames = {
+					num = 1;
+					item[0] = "exhaust";
+				}
+				startCondition = {
+					num = 2;
+					item[0] = "FX_PROJECTILE_STUCK";
+					item[1] = "FX_PROJECTILE_STUCK_WEAK_POINT";
+				}
+				stopCondition = {
+					num = 1;
+					item[0] = "FX_PROJECTILE_EXPLODE";
+				}
+				originType = "FX_ORG_TRACK_POS";
+				rotationType = "FX_ROT_TRACK_AXIS";
+				particleParms = {
+					declPrt = "weapons/har/detonate_rocket_stuck";
+				}
+			}
+			item[5] = {
+				name = "explosion_decal";
+				group = "Ungrouped_Copy";
+				type = "FX_DECAL";
+				duration = 2500;
+				delayMin = 200;
+				delayMax = 200;
+				fadeOutTime = 1000;
+				size = 1.5;
+				color = {
+					y = 0.70837605;
+					z = 0.132868364;
+				}
+				startCondition = {
+					num = 6;
+					item[0] = "FX_PROJECTILE_EXPLODE";
+					item[1] = "FX_PROJECTILE_EXPLODE_DEFAULT";
+					item[2] = "FX_PROJECTILE_EXPLODE_STONE";
+					item[3] = "FX_PROJECTILE_EXPLODE_DIRT";
+					item[4] = "FX_PROJECTILE_EXPLODE_METAL";
+					item[5] = "FX_PROJECTILE_EXPLODE_ASPHALT";
+				}
+				stopCondition = {
+					num = 1;
+					item[0] = "FX_PROJECTILE_EXPLODE";
+				}
+				originType = "FX_ORG_TRACK_POS";
+				rotationType = "FX_ROT_EXPLICIT_CODE";
+				decalParms = {
+					depth = 0.319999993;
+					emissiveLifetime = 100;
+					emissiveTint = {
+						x = 0.5;
+						y = 0.150000006;
+						w = 1;
+					}
+					decalMtr = "effect/decal/impact/bullethole_concrete_large";
+				}
+			}
+		}
+	}
+}
