@@ -1,0 +1,36 @@
+$emb_toggle# ClassicMode ${
+	"resources":
+	[
+		{
+			"name":"e2m2_base.resources"
+		},
+		{
+			"name":"e5m1_spear.resources"
+		},
+		{
+			"name":"e5m1_spear_patch1.resources"
+		},
+		{
+			"name":"e5m1_spear_patch2.resources"
+		}
+	]
+}$emb_toggle_end$$emb_toggle# ~ClassicMode ${
+	"resources":
+	[
+		{
+			"name":"e1m3_cult.resources"
+		},
+		{
+			"name":"e2m2_base.resources"
+		},
+		{
+			"name":"e5m1_spear.resources"
+		},
+		{
+			"name":"e5m1_spear_patch1.resources"
+		},
+		{
+			"name":"e5m1_spear_patch2.resources"
+		}
+	]
+}$emb_toggle_end$

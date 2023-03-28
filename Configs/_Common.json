@@ -29,6 +29,7 @@
         "pvp_inferno_patch1/": ["EternalMod/assetsinfo/pvp_inferno.json"],
         "pvp_laser_patch1/": ["EternalMod/assetsinfo/pvp_laser.json"],
         "pvp_shrapnel_patch1/": ["EternalMod/assetsinfo/pvp_shrapnel.json"],
+        "pvp_sideswipe_patch1/": ["EternalMod/assetsinfo/pvp_sideswipe.json"],
         "pvp_thunder_patch1/": ["EternalMod/assetsinfo/pvp_thunder.json"],
         "pvp_zap_patch1/": ["EternalMod/assetsinfo/pvp_zap.json"],
 
