@@ -1,0 +1,67 @@
+{
+	edit = {
+		mapSelectList = {
+			num = 15;
+			item[0] = {
+				mapName = "maps/game/pvp/pvp_laser/pvp_laser.map";
+				mapInfo = "game/pvp/pvp_laser/pvp_laser";
+			}
+			item[1] = {
+				mapName = "maps/game/pvp/pvp_deathvalley/pvp_deathvalley.map";
+				mapInfo = "game/pvp/pvp_deathvalley/pvp_deathvalley";
+			}
+			item[2] = {
+				mapName = "maps/game/pvp/pvp_inferno/pvp_inferno.map";
+				mapInfo = "game/pvp/pvp_inferno/pvp_inferno";
+			}
+			item[3] = {
+				mapName = "maps/game/pvp/pvp_thunder/pvp_thunder.map";
+				mapInfo = "game/pvp/pvp_thunder/pvp_thunder";
+			}
+			item[4] = {
+				mapName = "maps/game/pvp/pvp_zap/pvp_zap.map";
+				mapInfo = "game/pvp/pvp_zap/pvp_zap";
+			}
+			item[5] = {
+				mapName = "maps/game/pvp/pvp_bronco/pvp_bronco.map";
+				mapInfo = "game/pvp/pvp_bronco/pvp_bronco";
+			}
+			item[6] = {
+				mapName = "maps/game/pvp/pvp_shrapnel/pvp_shrapnel.map";
+				mapInfo = "game/pvp/pvp_shrapnel/pvp_shrapnel";
+			}
+			item[7] = {
+				mapName = "maps/game/pvp/pvp_darkmetal/pvp_darkmetal.map";
+				mapInfo = "game/pvp/pvp_darkmetal/pvp_darkmetal";
+			}
+			item[8] = {
+				mapName = "maps/game/pvp/pvp_sideswipe/pvp_sideswipe.map";
+				mapInfo = "game/pvp/pvp_sideswipe/pvp_sideswipe";
+			}
+			item[9] = {
+				mapName = "maps/game/sp/e1m3_cult/e1m3_cult.map";
+				mapInfo = "game/sp/e1m3_cult/e1m3_cult";
+			}
+			item[10] = {
+				mapName = "maps/game/sp/e1m4_boss/e1m4_boss.map";
+				mapInfo = "game/sp/e1m4_boss/e1m4_boss";
+			}
+			item[11] = {
+				mapName = "maps/game/sp/e2m2_base/e2m2_base.map";
+				mapInfo = "game/sp/e2m2_base/e2m2_base";
+			}
+			item[12] = {
+				mapName = "maps/game/sp/e2m4_boss/e2m4_boss.map";
+				mapInfo = "game/sp/e2m4_boss/e2m4_boss";
+			}
+			item[13] = {
+				mapName = "maps/game/dlc/e4m3_mcity/e4m3_mcity.map";
+				mapInfo = "game/dlc/e4m3_mcity/e4m3_mcity";
+			}
+			item[14] = {
+				mapName = "maps/game/dlc2/e5m1_spear/e5m1_spear.map";
+				mapInfo = "game/dlc2/e5m1_spear/e5m1_spear";
+			}
+		}
+	}
+}

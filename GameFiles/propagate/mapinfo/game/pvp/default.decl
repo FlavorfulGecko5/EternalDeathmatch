@@ -1,0 +1,26 @@
+{
+	edit = {
+		baseTipDisplayTime = 900000000;
+		checkPointGroups = {
+			num = 1;
+			item[0] = {
+				checkpointId = "MAPTIP_CHECKPOINT_00";
+				gameModeGroup = {
+					num = 1;
+					item[0] = {
+						gameMode = "MAPTIP_MODE_BATTLE";
+						gameTips = {
+							num = 1;
+							item[0] = {
+								image = "textures/guis/loading_screen/pvp/img_loading_pvp_slayer_1";
+								headingText = "#str_decl_loading_tip_pvp_start_countdown_title_GHOST62134";
+								subHeadingText = "";
+								descText = "#str_decl_loading_tip_pvp_battlemode_pro_tips_desc_4_GHOST54944";
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

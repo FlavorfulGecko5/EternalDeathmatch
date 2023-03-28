@@ -1,0 +1,224 @@
+{
+	inherit = "weapon/base/shotgun";
+	edit = {
+		thirdPersonMD6 = "md6def/objects/weapons/shotguns/shotgun_3p.md6";
+		thirdPersonAttachTag = "left_hand";
+		handsFovScale = 0.819999993;
+		displayName = "#str_decl_weapon_shotgun";
+		description = "#str_decl_weapon_shotgun_desc";
+		notificationSubtext = "#str_decl_callout_weapon_shotgun_acquired_GHOST81674";
+		notificationOverrideIcon = "art/ui/weapon/shotgun";
+		giveableByCommand = true;
+		noPickupMessage = true;
+		weaponFX = "weapon/combat_shotgun/combat_shotgun_1st";
+		perkGroups = {
+			num = 1;
+			item[0] = "perkgroups/weapons/shotgun";
+		}
+		perkCombos = {
+			num = 1;
+			item[0] = {
+				perksNeeded = {
+					num = 2;
+					item[0] = "perk/player/weapons/shotgun/pop_rocket_weakpoint_hit";
+					item[1] = "perk/player/weapons/shotgun/pop_rocket_larger_explosion";
+				}
+				comboPerk = "perk/player/weapons/shotgun/pop_rocket_weakpoint_hit_larger_explosion";
+			}
+		}
+		chargeInfo = {
+			minChargeRequiredToDischarge = 1;
+			chargeWhileUnequipped = true;
+		}
+		animatedSpinnyThing = {
+			additiveAnim = "additive_barrel_rotation";
+			maxDegsPerSecond = 100000;
+			perShotDegsPerSecond = 600;
+			perShotDelayMS = 600;
+			fireModeChangeDegsPerSecond = 467;
+			zeroOnFire = true;
+			inhibitFireAndModeChangeWhileActive = true;
+		}
+		initialAmmoDecl = "ammo/player/shotgun";
+		validAmmoClips = {
+			num = 5;
+			item[0] = {
+				validAmmoDecl = "ammo/player/shotgun";
+				clipType = "AMMOCLIP_SHOTGUN";
+				clipSize = 50;
+				ammoPerReload = 50;
+			}
+			item[1] = {
+				validAmmoDecl = "ammo/player/shotgun_full_auto";
+				clipType = "AMMOCLIP_SHOTGUN";
+				clipSize = 50;
+				ammoPerReload = 50;
+			}
+			item[2] = {
+				validAmmoDecl = "ammo/player/shotgun_pop_rocket";
+				clipType = "AMMOCLIP_SHOTGUN";
+				clipSize = 50;
+				ammoPerReload = 50;
+			}
+			item[3] = {
+				validAmmoDecl = "ammo/player/shotgun_pop_rocket_direct_hit_power";
+				clipType = "AMMOCLIP_SHOTGUN";
+				clipSize = 50;
+				ammoPerReload = 50;
+			}
+			item[4] = {
+				validAmmoDecl = "ammo/player/shotgun_full_auto_ammo_giveback";
+				clipType = "AMMOCLIP_SHOTGUN";
+				clipSize = 50;
+				ammoPerReload = 50;
+			}
+		}
+		weaponEntityDef = "weapon_ent/shotgun";
+		noAmmoCache = true;
+		killStat = "STAT_WEAPON_SHOTGUN_KILLS";
+		firingInterval = 850;
+		hasIntroAccentBringup = true;
+		interruptibleAtFireFinished = false;
+		weaponAnimSet = "WEAPONANIM_SHOTGUN";
+		meleeTraceBoundsType = "BOUNDS_48x48";
+		meleeTraceDamageType = "MELEE_FIRST_PLUS_ACTOR";
+		meleeTraceDamageCap = 1;
+		showHideMeshInfo = {
+			meshesToHide = {
+				num = 17;
+				item[0] = "combatshotgun_poprocket";
+				item[1] = "combatshotgun_poprocket_pump";
+				item[2] = "combatshotgun_poprocket_ammo_loader";
+				item[3] = "combatshotgun_poprocket_ammo";
+				item[4] = "combatshotgun_poprocket_barrel";
+				item[5] = "combatshotgun_tripleburst_barrel";
+				item[6] = "combatshotgun_tripleburst_ammo_helper";
+				item[7] = "combatshotgun_tripleburst_ammo_a";
+				item[8] = "combatshotgun_tripleburst_ammo_b";
+				item[9] = "combatshotgun_tripleburst_ammo_c";
+				item[10] = "combatshotgun_tripleburst_ammo_d";
+				item[11] = "combatshotgun_tripleburst_ammo_e";
+				item[12] = "combatshotgun_tripleburst_hatch";
+				item[13] = "combatshotgun_tripleburst_barrel_lock";
+				item[14] = "combatshotgun_tripleburst_barrel_helper";
+				item[15] = "combatshotgun_tripleburst";
+				item[16] = "combatshotgun_tripleburst_pump";
+			}
+			meshesToShow = {
+				num = 4;
+				item[0] = "combatshotgun_base_barrel";
+				item[1] = "combatshotgun_base_guts";
+				item[2] = "combatshotgun_pump";
+				item[3] = "combatshotgun_base_barrel_knob";
+			}
+		}
+		showHideMeshInfo3rd = {
+			meshesToHide = {
+				num = 4;
+				item[0] = "combatshotgun_poprocket_ammo";
+				item[1] = "combatshotgun_poprocket_barrel";
+				item[2] = "combatshotgun_tripleburst_ammo_e";
+				item[3] = "combatshotgun_tripleburst_pump";
+			}
+			meshesToShow = {
+				num = 2;
+				item[0] = "combatshotgun_base_barrel_knob";
+				item[1] = "combatshotgun_base_guts";
+			}
+		}
+		ironSightZoom = {
+			zoomedFOV = 0;
+			canZoomWhileJumping = true;
+			sensitivity_scale_controller = 0.449999988;
+			sensitivity_scale_mouse = 0.449999988;
+			zoomDelay = 0;
+			zoomTime = 400;
+			zoomBlendTime = 100;
+		}
+		zoomMode = "ZOOM_NONE";
+		postSprintFirePenaltyMS = 0;
+		postSprintADSFirePenaltyMS = 0;
+		zoomInSound = NULL;
+		zoomOutSound = "play_shotgun_zoom_out";
+		spreadParams = {
+			spread = 2.5;
+			spreadBaseZoom = 2.5;
+			spreadBaseCrouch = 3.5;
+			spreadBaseZoomCrouch = 2.5;
+			spreadIncreasedByMovement = 0;
+			spreadIncreasedByMovementZoom = 0;
+			spreadIncreasedByAiming = 0;
+			spreadAdditionPerShotMoving = 0;
+			spreadAdditionPerShotZoomMoving = 0;
+			spreadReturnDelay = 1;
+			spreadReturnTime = 1;
+			verticalSpreadScale = 0.5;
+			horizontalSpreadScaleEvenSpacingLerp = 1;
+			verticalSpreadScaleEvenSpacingLerp = 0;
+		}
+		weaponFeedBack = {
+			doUniqueKick = false;
+			doSmoothKick = false;
+			pitchKickAmount = 60;
+			pitchKickAmountDelta = 0;
+			pitchKickTopBound = 7;
+			pitchKickSpeedInto = 80;
+			pitchKickSpeedIntoMin = 100;
+			pitchKickSpeedIntoPerShot = 100;
+			pitchKickSpeedFrom = 20;
+			yawKickSpeedFrom = 40;
+			kickRecoveryDelay = 75;
+			useNewKickSystem = true;
+			kickYaw = {
+				kick = 1;
+				maxKick = 1;
+				recoilMS = 64;
+				recoveryMS = 500;
+				recoveryDelayMS = 100;
+			}
+			kickPitch = {
+				type = "KICK_ONLY_POSITIVE";
+				kick = 15;
+				maxKick = 15;
+				recoilMS = 24;
+				recoveryMS = 700;
+				recoveryDelayMS = 75;
+			}
+			kickFov = {
+				type = "KICK_ONLY_NEGATIVE";
+				kick = 1.5;
+				maxKick = 1.5;
+				recoilMS = 64;
+				recoveryMS = 48;
+				recoveryDelayMS = 32;
+			}
+			controllerShakeHighMag = 0.800000012;
+			controllerShakeHighTime = 75;
+			controllerShakeLowMag = 0.600000024;
+		}
+		thirdPersonWeaponFX = "weapon/combat_shotgun/combat_shotgun_3rd";
+		zoomBlur = {
+			maxBlur = 2;
+			distance = 0.200000003;
+		}
+		declAimAssist = "aimassist/combat_shotgun";
+		guiDisplay = {
+			scale = 0.0649999976;
+			offset = {
+				x = 0.0250000004;
+				y = -0.00230000005;
+				z = 0.00600000005;
+			}
+			animation = "intro";
+		}
+		modUpgradeCost = {
+			num = 3;
+			item[0] = 1;
+			item[1] = 3;
+			item[2] = 5;
+		}
+		dossierIcon = "textures/guis/icons/weapons/dossier/shotgun";
+		dossierImage = "textures/guis/weaponimages/shotgun_default";
+		mastered = "campaign/master_combat_shotgun";
+	}
+}

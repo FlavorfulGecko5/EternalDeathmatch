@@ -98,7 +98,20 @@
             "lootdropcomponent/ai/default_heavy_pvp.decl",
             "lootdropcomponent/ai/default_medium_pvp.decl",
             "lootdropcomponent/ai/default_pvp.decl",
-            "lootdropcomponent/ai/default_superheavy_pvp.decl"
+            "lootdropcomponent/ai/default_superheavy_pvp.decl",
+            "mapinfo/game/dlc/e4m3_mcity/e4m3_mcity.decl",
+            "mapinfo/game/dlc2/e5m1_spear/e5m1_spear.decl",
+            "mapinfo/game/pvp/default.decl",
+            "mapinfo/game/sp/e2m2_base/e2m2_base.decl",
+            "menuelement/main_menu/screens/battle_arena_lobby_weapon_wheel.decl",
+            "playerprops/player/default.decl",
+            "pvpmapselectinfolist/casualbattlearenamaplist.decl",
+            "upgrade/upgrade/pvp/slayer/eor_bullet_ammo_capacity_upgrade.decl",
+            "weapon/weapon/player/double_barrel_primary_lockon.decl",
+            "weapon/weapon/player/heavy_cannon_bolt_action.decl",
+            "weapon/weapon/player/shotgun.decl",
+            "weapon/weapon/player/shotgun_secondary_full_auto.decl",
+            "weapon/weapon/player/unmaykr.decl"
         ],
 
         "e1m3_cult_patch3/": ["EternalMod/assetsinfo/e1m3_cult.json"],

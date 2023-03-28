@@ -1,0 +1,273 @@
+{
+	inherit = "weapon/base/double_barrel";
+	edit = {
+		inventoryClass = "idDoubleBarrelShotgun";
+		handsFovScale = 0.600000024;
+		displayName = "#str_decl_weapon_double_barrel";
+		giveableByCommand = true;
+		noPickupMessage = true;
+		weaponFX = "weapon/double_barrel/double_barrel_1st";
+		perkGroups = {
+			num = 1;
+			item[0] = "perkgroups/weapons/double_barrel";
+		}
+		weaponHaptics = {
+			settings = {
+				settings[0] = {
+					startPercent = "HTP_SIXTY_PERCENT";
+					endPercent = "HTP_EIGHTY_PERCENT";
+					strength = "HFS_VERY_HIGH";
+				}
+				settings[1] = {
+					startPercent = "HTP_FORTY_PERCENT";
+					endPercent = "HTP_SEVENTY_PERCENT";
+				}
+			}
+		}
+		initialAmmoDecl = "ammo/player/double_barrel";
+		validAmmoClips = {
+			num = 7;
+			item[0] = {
+				validAmmoDecl = "ammo/player/double_barrel";
+				clipSize = 8;
+			}
+			item[1] = {
+				validAmmoDecl = "ammo/player/double_barrel_bullet_penetration";
+				clipSize = 8;
+			}
+			item[2] = {
+				validAmmoDecl = "ammo/player/double_barrel_mastery";
+				clipSize = 8;
+				ammoPerShot = 2;
+			}
+			item[3] = {
+				validAmmoDecl = "ammo/player/double_barrel_meat_hook";
+				clipSize = 8;
+				ammoPerShot = 2;
+			}
+			item[4] = {
+				validAmmoDecl = "ammo/player/double_barrel_meat_hook_ammo_return";
+				clipSize = 8;
+				ammoPerShot = 2;
+			}
+			item[5] = {
+				validAmmoDecl = "ammo/player/double_barrel_meat_hook_mastery_supercharge";
+				clipSize = 8;
+				ammoPerShot = 2;
+			}
+			item[6] = {
+				validAmmoDecl = "ammo/player/double_barrel_meat_hook_mastery_flame";
+				clipSize = 20;
+				ammoPerShot = 2;
+			}
+		}
+		skipSecondaryPressUpdateOnTransition = true;
+		noAmmoCache = true;
+		killStat = "STAT_WEAPON_DBL_SHOTGUN_KILLS";
+		modCompletionScale = 0;
+		firingInterval = 1800;
+		noPerkSwitcher = true;
+		hasIntroBringup = true;
+		desiredReloadDurationMS = 1800;
+		singleTapFire = true;
+		interruptibleAtFireFinished = false;
+		hasReloadFromEmpty = true;
+		aiInfo = {
+			reloadInterval = 1500;
+		}
+		meleeSprintProjectile = "projectile/player/sprint_melee";
+		meleeTraceBoundsType = "BOUNDS_48x48";
+		meleeTraceDamageType = "MELEE_FIRST_PLUS_ACTOR";
+		meleeTraceDamageCap = 1;
+		targetLockNormal = {
+			canLock = true;
+			aimPointType = "AIMPOINT_MEAT_HOOK";
+			lockFOV = 20;
+			entityTypeFOVData = {
+				num = 1;
+				item[0] = {
+					entityClass = "idTarget_SmartAIProxy";
+					lockFOV = 35;
+				}
+			}
+			lockMaxDist = 25;
+			lockTime = 0;
+			lockTimeout = 0;
+			unlockTime = -1;
+			outOfFovTime = 0;
+			outOfLOSTime = 0;
+			acquiringLockLOSFOVTime = 0;
+			automaticallyInitiateLock = true;
+			loseLockOnFire = true;
+			collisionBlocksLineOfSight = true;
+			lockPOI = "lockon_meathook";
+			canTargetWhenEmpty = true;
+			canTargetInvisiblePlayers = false;
+		}
+		weaponData = "weapondata/double_barrel_shotgun";
+		showHideMeshInfo = {
+			meshesToHide = {
+				num = 6;
+				item[0] = "non_mod_hinge";
+				item[1] = "mastery_hammer_base_left";
+				item[2] = "mastery_grip_part";
+				item[3] = "mastery_hammer_left";
+				item[4] = "mastery_hammer_right";
+				item[5] = "sight_nomod";
+			}
+			meshesToShow = {
+				num = 18;
+				item[0] = "barrel_part";
+				item[1] = "mod_wheel";
+				item[2] = "mod_cog_retainer";
+				item[3] = "shell_ejector";
+				item[4] = "shell_left";
+				item[5] = "break_lever";
+				item[6] = "mod_chain_a";
+				item[7] = "mod_blade_right";
+				item[8] = "mod_barrelpiece";
+				item[9] = "shell_right_spent";
+				item[10] = "mod_blade_left";
+				item[11] = "shell_right";
+				item[12] = "grip_part";
+				item[13] = "mod_ironsight";
+				item[14] = "mod_hook_container";
+				item[15] = "mod_barrel_slider";
+				item[16] = "shell_left_spent";
+				item[17] = "mod_blade_hook";
+			}
+		}
+		showHideMeshInfo3rd = {
+			meshesToHide = {
+				num = 4;
+				item[0] = "mastery_hammer_right";
+				item[1] = "mod_chain_a";
+				item[2] = "mod_hook_container";
+				item[3] = "shell_right_spent";
+			}
+			meshesToShow = {
+				num = 2;
+				item[0] = "non_mod_hinge";
+				item[1] = "mastery_grip_part";
+			}
+		}
+		lockOn = "play_sfx_meathook_lockon";
+		ironSightZoom = {
+			zoomedHandsFOV = 40;
+			zoomTime = 198;
+			zoomBlendTime = 198;
+		}
+		postSprintFirePenaltyMS = 0;
+		postSprintADSFirePenaltyMS = 0;
+		zoomInSound = "play_shotgun_zoom_in";
+		zoomOutSound = "play_shotgun_zoom_out";
+		spreadParams = {
+			spread = 2;
+			spreadBaseZoom = 2;
+			spreadBaseCrouch = 2;
+			spreadBaseZoomCrouch = 2;
+			spreadIncreasedByMovement = 0;
+			spreadIncreasedByMovementZoom = 0;
+			spreadIncreasedByAiming = 0;
+			spreadAdditionPerShot = 0;
+			spreadAdditionMax = 0;
+			spreadAdditionPerShotZoom = 0;
+			spreadAdditionPerShotMoving = 0;
+			spreadAdditionPerShotZoomMoving = 0;
+			spreadAdditionMaxZoom = 0;
+			horizontalSpreadScale = 2;
+			verticalSpreadScale = 0.5;
+			horizontalSpreadScaleEvenSpacingLerp = 1;
+			verticalSpreadScaleEvenSpacingLerp = 0;
+		}
+		weaponFeedBack = {
+			useNewKickSystem = true;
+			kickYaw = {
+				kick = 0.5;
+				maxKick = 0.5;
+				recoilMS = 64;
+				recoveryMS = 500;
+				recoveryDelayMS = 100;
+			}
+			kickPitch = {
+				type = "KICK_ONLY_POSITIVE";
+				kick = 13;
+				maxKick = 13;
+				recoilMS = 48;
+				recoveryMS = 500;
+				recoveryDelayMS = 45;
+			}
+			kickRoll = {
+				kick = 0.200000003;
+				maxKick = 0.200000003;
+				recoilMS = 32;
+				recoveryMS = 32;
+			}
+			kickFov = {
+				type = "KICK_ONLY_NEGATIVE";
+				kick = 2.5;
+				maxKick = 2.5;
+				recoilMS = 64;
+				recoveryMS = 64;
+				recoveryDelayMS = 48;
+			}
+			controllerShakeHighTime = 100;
+			controllerShakeLowMag = 0.5;
+			controllerShakeLowTime = 150;
+			controllerLTriggerShakeMag = 0.649999976;
+			controllerLTriggerShakeTime = 100;
+			controllerRTriggerShakeMag = 0.5;
+			controllerRTriggerShakeTime = 150;
+		}
+		weaponFeedBackLarge = {
+			useNewKickSystem = true;
+			kickYaw = {
+				kick = 0.5;
+				maxKick = 0.5;
+				recoilMS = 64;
+				recoveryMS = 500;
+				recoveryDelayMS = 100;
+			}
+			kickPitch = {
+				type = "KICK_ONLY_POSITIVE";
+				kick = 9;
+				maxKick = 9;
+				recoilMS = 48;
+				recoveryMS = 500;
+				recoveryDelayMS = 45;
+			}
+			kickRoll = {
+				kick = 0.200000003;
+				maxKick = 0.200000003;
+				recoilMS = 32;
+				recoveryMS = 32;
+			}
+			kickFov = {
+				type = "KICK_ONLY_NEGATIVE";
+				kick = 2;
+				maxKick = 2;
+				recoilMS = 32;
+				recoveryMS = 64;
+			}
+			controllerShakeHighTime = 100;
+			controllerShakeLowMag = 0.5;
+			controllerShakeLowTime = 150;
+			controllerRTriggerShakeMag = 0.5;
+		}
+		thirdPersonWeaponFX = "weapon/double_barrel/double_barrel_3rd";
+		declAimAssist = "aimassist/double_barrel_shotgun";
+		reticle = "weaponreticle/shotgun_db_meathook";
+		guiDisplay = {
+			offset = {
+				z = -1;
+			}
+			animation = "shoot_delay";
+		}
+		modUpgradeCost = {
+			num = 2;
+			item[0] = 3;
+			item[1] = 6;
+		}
+		weaponCategory = "WEAPON_CATEGORY_DBL_BARREL_SHOTGUN";
+	}
+}

@@ -1,0 +1,38 @@
+{
+	inherit = "default_notransition";
+	edit = {
+		swfInfo = {
+			swf = "swf/hud/menus/battle_arena/custom_wheel_default_mods.swf";
+		}
+		class = "idLobbyMenu_BattleArena_LobbyWeaponWheel";
+		displayName = "#str_decl_actormodifier_become_slayer_name_GHOST53519";
+		wheelData = {
+			numWedges = 6;
+			radius = 0;
+			rootWidget = "weaponWheel";
+			wheelDefinitions = {
+				num = 3;
+				item[0] = {
+					numberWedges = 4;
+					wedgeUIComponent = "wedge4_form";
+					wedgeOffset = 465;
+					wedgeOffsetSelected = 50;
+					wedgeWeaponInfoOffset = 25;
+				}
+				item[1] = {
+					numberWedges = 6;
+					wedgeUIComponent = "wedge6_form";
+					wedgeOffset = 507;
+					wedgeOffsetSelected = 50;
+					wedgeWeaponInfoOffset = 15;
+				}
+				item[2] = {
+					numberWedges = 8;
+					wedgeUIComponent = "wedge8_form";
+					wedgeOffset = 516;
+					wedgeOffsetSelected = 50;
+				}
+			}
+		}
+	}
+}

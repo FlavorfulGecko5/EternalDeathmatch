@@ -1,0 +1,161 @@
+{
+	inherit = "weapon/base/assault_rifle";
+	edit = {
+		weaponFX = "weapon/heavy_cannon/heavy_cannon_1st";
+		perkGroups = {
+			num = 1;
+			item[0] = "perkgroups/weapons/heavy_cannon";
+		}
+		chargeInfo = {
+			dischargeTimeoutMS = 1500;
+			dischargeFireMode = "WEAPONFIREMODE_SECONDARY";
+			dischargeTimeoutDebugBar = true;
+			startFullyCharged = true;
+			readySound = "play_bolt_ready";
+			chargeItems = {
+				num = 1;
+				item[0] = {
+					chargeProperty = "CHARGE_PROPERTY_CHARGE_LEVEL";
+					valueMax = 1;
+				}
+			}
+			minChargeRequiredToDischarge = 1;
+			startChargedIfPutAwayCharged = true;
+		}
+		weaponHaptics = {
+			settings = {
+				settings[0] = {
+					startPercent = "HTP_ZERO";
+					strength = "HFS_VERY_LOW";
+				}
+				settings[1] = {
+					startPercent = "HTP_NINETY_PERCENT";
+				}
+			}
+		}
+		triggerMode = "WEAPONTRIGGERMODE_SECONDARY_HOLD_PRIMARY_PRESS";
+		initialAmmoDecl = "ammo/player/heavy_cannon_bolt_action";
+		validAmmoClips = {
+			num = 7;
+			item[1] = {
+				ammoPerShot = 6;
+				pvpAmmoPerShot = 10;
+			}
+			item[4] = {
+				validAmmoDecl = "ammo/player/heavy_cannon_bolt_action_supercharge";
+				clipSize = 90;
+				ammoPerShot = 6;
+				pvpAmmoPerShot = 10;
+			}
+			item[5] = {
+				validAmmoDecl = "ammo/player/heavy_cannon_bolt_action_weakpoint_bonus";
+				clipSize = 90;
+				ammoPerShot = 6;
+				pvpAmmoPerShot = 10;
+			}
+			item[6] = {
+				validAmmoDecl = "ammo/player/heavy_cannon_bolt_action_mastery";
+				clipSize = 90;
+				ammoPerShot = 6;
+				pvpAmmoPerShot = 10;
+			}
+		}
+		killStatMod = "STAT_WEAPON_ASS_RIFLE_ZOOM_KILLS";
+		firingInterval = 1500;
+		otherFireModeFiringInterval = 400;
+		singleTapFire = true;
+		singleTapFireADS = true;
+		allowShootWhenHidden = true;
+		subweb_normal = "heavy_cannon";
+		ironSightZoom = {
+			zoomedFOV = 45;
+			sensitivity_scale_controller = 0.400000006;
+			sensitivity_scale_mouse = 0.5;
+			zoomTime = 75;
+			zoomBlendTime = 75;
+			hideHandsOnZoomDelay = 74;
+			hideReticleWhenHandsAreHidden = false;
+			scopeGuiNum = "SCOPE_RIFLE";
+			showCrosshair = true;
+			zoomFXPercent = 0.899999976;
+			zoomFXForceExtraCond = "FX_EXTRA_COND_PRIMARY_FIRE";
+		}
+		zoomInSound = "play_heavy_cannon_zoom_in";
+		zoomOutSound = "play_heavy_cannon_zoom_out";
+		spreadParams = {
+			spread = 0;
+			spreadBaseCrouch = 0;
+			spreadIncreasedByMovement = 0;
+			spreadIncreasedByMovementZoom = 0;
+			spreadAdditionPerShot = 0;
+			spreadAdditionMax = 0;
+			spreadAdditionPerShotZoom = 0;
+			spreadAdditionPerShotMoving = 0;
+			spreadAdditionPerShotZoomMoving = 0;
+			spreadAdditionMaxZoom = 0;
+			spreadReturnTime = 180;
+		}
+		weaponFeedBack = {
+			pitchKickAmount = 5;
+			pitchKickTopBound = 20;
+			kickYaw = {
+				kick = 5;
+				recoilMS = 16;
+			}
+			kickPitch = {
+				kick = 0.200000003;
+				recoveryDelayMS = 50;
+			}
+			kickFov = {
+				kick = 0;
+				maxKick = 0;
+				recoilMS = 16;
+				recoveryMS = 16;
+			}
+			controllerLTriggerShakeTime = 25;
+			controllerRTriggerShakeTime = 100;
+		}
+		weaponFeedBackADS = {
+			kickYaw = {
+				kick = 0.300000012;
+				maxKick = 50;
+				recoilMS = 64;
+				recoveryMS = 48;
+				recoveryDelayMS = 150;
+			}
+			kickPitch = {
+				kick = 3;
+				delayMS = 64;
+				recoilMS = 32;
+				recoveryMS = 500;
+				recoveryDelayMS = 64;
+			}
+			kickRoll = {
+				kick = 0.400000006;
+				maxKick = 1.20000005;
+				recoilMS = 32;
+				recoveryMS = 64;
+			}
+			kickFov = {
+				kick = 1;
+				maxKick = 1;
+				recoveryMS = 100;
+				recoveryDelayMS = 32;
+			}
+			controllerShakeHighMag = 0.649999976;
+			controllerShakeHighTime = 100;
+			controllerShakeLowMag = 0.5;
+			controllerShakeLowTime = 150;
+			controllerRTriggerShakeMag = 0.0900000036;
+			controllerRTriggerShakeTime = 150;
+		}
+		thirdPersonWeaponFX = "weapon/heavy_cannon/heavy_cannon_bolt_action_3rd";
+		declAimAssist = "aimassist/heavy_cannon_bolt_action";
+		onWeaponTagStrClassic = "gui_display_classic";
+		onWeaponDisplayType = "WEAPON_GUIDISPLAY_ARSHOTS";
+		onWeaponDisplayMaxZoomPct = 1;
+		reticle = "weaponreticle/heavy_cannon_bolt_action";
+		reticleWhenZoomed = "weaponreticle/heavy_cannon_bolt_action_zoomed";
+		movementSpeedScaleZoomed = 0.850000024;
+	}
+}

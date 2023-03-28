@@ -1,0 +1,9 @@
+{
+	inherit = "game/pvp/default";
+	edit = {
+		mapName = "#str_decl_mapinfo_e5m1_name";
+		loadingImage = "art/ui/loadscreen_images/game/sp/e5m1_spear/e5m1_spear";
+		menuImage = "art/ui/map_menu_images/campaign/e5m1_spear";
+		chunkId = 4;
+	}
+}

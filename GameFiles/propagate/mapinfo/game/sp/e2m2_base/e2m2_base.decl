@@ -1,0 +1,9 @@
+{
+	inherit = "game/pvp/default";
+	edit = {
+		mapName = "#str_decl_mapinfo_e2m2_name";
+		loadingImage = "art/ui/loadscreen_images/game/sp/e2m2_base/e2m2_base";
+		menuImage = "art/ui/map_menu_images/campaign/e2m2_base";
+		chunkId = 4;
+	}
+}

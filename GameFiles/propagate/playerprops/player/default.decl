@@ -1,0 +1,448 @@
+{
+	edit = {
+		sounds = {
+			sndObjectiveAdded = "play_ui_current_objective_01";
+			sndObjectiveCompleted = "play_ui_objective_complete_01";
+			sndMainObjectiveAdded = "play_ui_mission_name_01";
+			sndMainObjectiveCompleted = "play_ui_objective_complete_01";
+			sndMapUpdated = "play_ui_map_updated_01";
+			sndTutorialStart = "play_bottom_block_ui_on";
+			sndUseStart = "play_chainsawduck";
+			sndUseEnd = "play_chainsawresume";
+			sndAlmostDead = "player/effects/deathdrone";
+			sndCantUseItem = "ui/empty_error";
+			sndCheckpointSaved = "ui/coop/poi/poi_oneshot_generic";
+			sndOutOfItems = "play_eqipment_launcher_fail";
+			sndPickup = "ui/pickup/item";
+			sndButtonBad = "gui/menu/shared/error";
+			sndWeaponNoSecondary = "play_wpn_no_alt";
+			sndCantLootEntity = "player/looting/noloot";
+			sndClickDown = "play_ui_dn";
+			sndClickUp = "play_ui_up";
+			sndDeath = "play_death";
+			sndDisassemble = "npc/sentrybot/death_slump";
+			sndEnterWater = "play_player_enter_water";
+			sndExitWater = "play_player_exit_water";
+			sndJump = "play_foley_jump";
+			sndCrouch = "play_foley_crouch";
+			sndStandUp = "play_foley_stand";
+			sndFallingLargeLandingStart = "play_falling_wind_foley";
+			sndFallingLargeLandingStop = "stop_falling_wind_foley";
+			sndFallingFatal = "play_sfx_falling_death_sting";
+			sndLowHealth = "play_low_health";
+			sndLowHealthRecovery = "play_health_restored";
+			minLowHealthSoundsRepeatMS = 5;
+			sndLegsCrossing = "player/foley/foley_walk";
+			sndLegsCrossingCrouched = "play_foley_default";
+			sndPainSmall = "play_pain_small";
+			sndPainMedium = "play_pain_med";
+			sndPainLarge = "play_pain_large";
+			sndSelfPainSmall = "play_pain_small";
+			sndSelfPainMedium = "play_pain_med";
+			sndSelfPainLarge = "play_pain_large";
+			veryLowSoundsHealthThreshold = 59;
+			sndVeryLowPain = "play_pain_very_low_health";
+			sndSelfArmorDepleted = "play_armor_break";
+			sndDmgDealtFeedback = "play_hitbeep";
+			sndDmgDealtToArmorFeedback = "play_hitbeep_armor";
+			sndHeadShotDmgDealtFeedback = "play_hitbeep_headshot";
+			sndEndQuadDamage = "items/authority/damage_weapon_ending";
+			sndRadiationWarning = "play_sfx_hud_fire_warning";
+			sndRadiationDamage = "ui/radsuit/radiation_loop";
+			sndFireWarning = "play_sfx_hud_fire_warning";
+			sndFireDamage = "ui/radsuit/radiation_loop";
+			sndBioWarning = "play_sfx_hud_fire_warning";
+			sndBioDamage = "ui/radsuit/radiation_loop";
+			sndLavaWarning = "play_sfx_hud_fire_warning";
+			sndLavaDamage = "ui/radsuit/radiation_loop";
+			sndDodgeInitiate = "play_double_jump";
+			sndDodgeEnd = "player/bodyfalls/concrete/s01";
+			sndDodgeBackstab = "projectile/impacts/crossbow_bolt/default";
+			sndChallengeComplete = "play_hackmodule_activate";
+			sndChallengeUpdate = "play_selection_made";
+			sndSecretFound = "play_secret_compass_final";
+			sndSuitSlotUnlock = "play_sfx_hud_power";
+			sndDossierPurchaseUpgrade = "play_ui_weaponmodupgrade_activateconfirm";
+			sndDossierBeginPurchase = "play_ui_weaponmodupgrade_startactivate";
+			sndDossierCancelPurchase = "play_ui_weaponmodupgrade_activatecancel";
+			sndDossierGetMastery = "play_ui_weaponmodupgrade_mastery";
+			sndGainWeaponMod = "play_ui_weaponmodupgrade_pickup";
+			secretHintLevelFast = "play_muutliplier_3";
+			secretHintLevelMedium = "play_muutliplier_2";
+			secretHintLevelSlow = "play_muutliplier_1";
+			sndCodexGained = "play_codex_entry";
+			sndEOLVisor = "play_endoflevel_visor";
+			sndEOLCombatScore = "play_endoflevel_combat_score_01";
+			sndEOLChallenges = "play_endoflevel_challenges_01";
+			sndEOLCollectables = "play_endoflevel_collectables";
+			sndEOLContinue = "play_endoflevel_continue";
+			sndPhotoModePause = "play_pause_photomode";
+			sndPhotoModeUnpause = "play_unpause_photomode";
+			sndEquipmentChargedAndReadyFrag = "play_ui_grenade_frag_cooldown";
+			sndEquipmentChargedAndReadyIceBomb = "play_ui_grenade_ice_cooldown";
+			sndEquipmentChargedAndReadyFlameBelch = "play_flame_belch_ready";
+			sndChainsawChargedAndReady = "play_pickup_ammo_chainsaw";
+			sndOutOfChainsawFuel = "play_chainsaw_insufficient_fuel";
+			sndOutOfCrucibleFuel = "play_crucible_no_energy";
+			lockedOnSounds = {
+				num = 2;
+				item[0] = {
+					monsterType = "AI_MONSTER_DOOM_HUNTER";
+				}
+				item[1] = {
+					monsterType = "AI_MONSTER_REVENANT";
+					sndLockedOn = "play_revenant_lock_warning";
+				}
+			}
+		}
+		pain = {
+			pain_delay = 500;
+			pain_heavyDamageAmount = 40;
+		}
+		damageFeedback = {
+			centerIndicatorDecay = 0.0160000008;
+			spikeIndicatorOffset = -0.100000001;
+			spikeIndicatorWidth = 1.5;
+			spikeIndicatorDecay = 0.0799999982;
+			spikeIndicatorMinAlpha = 5;
+			spikeIndicatorMaxAlpha = 128;
+			healthToStartFullScreenFlash = 69;
+			lowDamageFXValue = 79;
+			reallyLowDamageFXValue = 59;
+			worldFadeTable = "playerdamage/worldwoundfade";
+		}
+		baseDamageMitigation = {
+			lowDamageFXHealthMitigationScaleSP = 0.800000012;
+			reallyLowDamageFXHealthMitigationScaleSP = 0.600000024;
+			brinkOfDeathThreshold = 20;
+			brinkOfDeathCap = 5;
+		}
+		damageMitigationList = {
+			num = 4;
+			item[0] = {
+				gameDifficulty = "DIFFICULTY_EASY";
+				lowDamageFXHealthMitigationScaleSP = 0.899999976;
+				reallyLowDamageFXHealthMitigationScaleSP = 0.699999988;
+				rearwardDamageMitigation = 0.899999976;
+				brinkOfDeathCooldown = 5000;
+				postDamageInvulnerabilityMS = 500;
+				brinkOfDeathThreshold = 20;
+				brinkOfDeathCap = 5;
+			}
+			item[1] = {
+				gameDifficulty = "DIFFICULTY_MEDIUM";
+				lowDamageFXHealthMitigationScaleSP = 0.75;
+				reallyLowDamageFXHealthMitigationScaleSP = 0.5;
+				rearwardDamageMitigation = 0.875;
+				brinkOfDeathCooldown = 5000;
+				postDamageInvulnerabilityMS = 500;
+				brinkOfDeathThreshold = 20;
+				brinkOfDeathCap = 5;
+				spiritMicrowaveMitigationScale = 1;
+			}
+			item[2] = {
+				gameDifficulty = "DIFFICULTY_HARD";
+				lowDamageFXHealthMitigationScaleSP = 0.800000012;
+				reallyLowDamageFXHealthMitigationScaleSP = 0.600000024;
+				rearwardDamageMitigation = 0.850000024;
+				brinkOfDeathCooldown = 7500;
+				postDamageInvulnerabilityMS = 300;
+				brinkOfDeathThreshold = 20;
+				brinkOfDeathCap = 5;
+				spiritMicrowaveMitigationScale = 1;
+			}
+			item[3] = {
+				gameDifficulty = "DIFFICULTY_NIGHTMARE";
+				lowDamageFXHealthMitigationScaleSP = 0.699999988;
+				reallyLowDamageFXHealthMitigationScaleSP = 0.5;
+				rearwardDamageMitigation = 0.75;
+				postDamageInvulnerabilityMS = 300;
+				brinkOfDeathThreshold = 20;
+				brinkOfDeathCap = 5;
+				spiritMicrowaveMitigationScale = 1;
+			}
+		}
+		brinkOfDeathExemptionList = {
+			num = 4;
+			item[0] = "damage/ai/mancubus/flame";
+			item[1] = "damage/ai/mancubus_goo/mortar_splash_overtime";
+			item[2] = "damage/ai/pinky/charge";
+			item[3] = "damage/ai/zombie/flame";
+		}
+		lootDropRestrictionDamageDecls = {
+			num = 4;
+			item[0] = {
+				lootDropRestrictionDamageDecls = "LOOT_DROP_RESTRICTION_GLORY_KILL";
+				damageDecl = "damage/melee/sync_kill";
+			}
+			item[1] = {
+				lootDropRestrictionDamageDecls = "LOOT_DROP_RESTRICTION_CHAINSAW_KILL";
+				damageDecl = "damage/melee/sync_kill_chainsaw";
+			}
+			item[2] = {
+				lootDropRestrictionDamageDecls = "LOOT_DROP_RESTRICTION_BERZERK_KILL";
+				damageDecl = "damage/melee/sync_kill_berserk";
+			}
+			item[3] = {
+				lootDropRestrictionDamageDecls = "LOOT_DROP_RESTRICTION_CRUCIBLE_KILL";
+				damageDecl = "damage/melee/sync_kill_crucible";
+			}
+		}
+		playerCheckpointDeathInventoryList = {
+			num = 5;
+			item[0] = {
+				gameDifficulty = "DIFFICULTY_ULTRA_NIGHTMARE";
+				ammoInventoryList = {
+					num = 2;
+					item[0] = {
+						ammoType = "AMMO_CRUCIBLE";
+						declAmmo = "ammo/sharedammopool/crucible";
+						ammoCount = 2;
+					}
+					item[1] = {
+						ammoType = "AMMO_FUEL";
+						declAmmo = "ammo/sharedammopool/fuel";
+						ammoCount = 1;
+					}
+				}
+				healthCount = 50;
+				armorCount = 0;
+			}
+			item[1] = {
+				gameDifficulty = "DIFFICULTY_NIGHTMARE";
+				ammoInventoryList = {
+					num = 2;
+					item[0] = {
+						ammoType = "AMMO_CRUCIBLE";
+						declAmmo = "ammo/sharedammopool/crucible";
+						ammoCount = 2;
+					}
+					item[1] = {
+						ammoType = "AMMO_FUEL";
+						declAmmo = "ammo/sharedammopool/fuel";
+						ammoCount = 1;
+					}
+				}
+				healthCount = 50;
+				armorCount = 0;
+			}
+			item[2] = {
+				gameDifficulty = "DIFFICULTY_HARD";
+				ammoInventoryList = {
+					num = 2;
+					item[0] = {
+						ammoType = "AMMO_CRUCIBLE";
+						declAmmo = "ammo/sharedammopool/crucible";
+						ammoCount = 2;
+					}
+					item[1] = {
+						ammoType = "AMMO_FUEL";
+						declAmmo = "ammo/sharedammopool/fuel";
+						ammoCount = 1;
+					}
+				}
+				healthCount = 60;
+				armorCount = 0;
+			}
+			item[3] = {
+				gameDifficulty = "DIFFICULTY_MEDIUM";
+				ammoInventoryList = {
+					num = 2;
+					item[0] = {
+						ammoType = "AMMO_CRUCIBLE";
+						declAmmo = "ammo/sharedammopool/crucible";
+						ammoCount = 2;
+					}
+					item[1] = {
+						ammoType = "AMMO_FUEL";
+						declAmmo = "ammo/sharedammopool/fuel";
+						ammoCount = 1;
+					}
+				}
+				healthCount = 75;
+				armorCount = 0;
+			}
+			item[4] = {
+				gameDifficulty = "DIFFICULTY_EASY";
+				ammoInventoryList = {
+					num = 2;
+					item[0] = {
+						ammoType = "AMMO_CRUCIBLE";
+						declAmmo = "ammo/sharedammopool/crucible";
+						ammoCount = 2;
+					}
+					item[1] = {
+						ammoType = "AMMO_FUEL";
+						declAmmo = "ammo/sharedammopool/fuel";
+						ammoCount = 1;
+					}
+				}
+				healthCount = 100;
+				armorCount = 0;
+			}
+		}
+		playerFalling = {
+			smallLandingReactionDistance = 5;
+			mediumLandingReactionDistance = 15;
+			largeLandingReactionDistance = 25;
+			extraLargeLandingReactionDistance = 35;
+			noGroundKillPlayerFallDist = 28.5750008;
+		}
+		controllerRumble = {
+			singleJump = {
+				highMagnitude = 0.200000003;
+				highDuration = 25;
+				lowMagnitude = 0.200000003;
+				lowDuration = 100;
+			}
+			doubleJump = {
+				highMagnitude = 0.300000012;
+				highDuration = 25;
+				lowMagnitude = 0.300000012;
+				lowDuration = 100;
+			}
+			ledgeGrab = {
+				highMagnitude = 0.600000024;
+				highDuration = 50;
+				lowMagnitude = 0.400000006;
+				lowDuration = 120;
+			}
+			landing = {
+				highMagnitude = 0.5;
+				highDuration = 50;
+				lowMagnitude = 0.300000012;
+				lowDuration = 85;
+			}
+			landingFatal = {
+				highDuration = 300;
+				lowDuration = 600;
+			}
+			lightDamageRumble = {
+				highMagnitude = 0.0599999987;
+				highDuration = 70;
+				lowMagnitude = 0.200000003;
+				lowDuration = 50;
+			}
+			mediumDamageRumble = {
+				highMagnitude = 0.800000012;
+				highDuration = 75;
+				lowMagnitude = 0.600000024;
+				lowDuration = 100;
+			}
+			heavyDamageRumble = {
+				highMagnitude = 0.800000012;
+				lowMagnitude = 0.5;
+				lowDuration = 150;
+			}
+			lightDamage = 1;
+			mediumDamage = 20;
+			heavyDamage = 40;
+		}
+		xpEvents = {
+			completedBountyXP = 10;
+			combatWeaponPointXP = 12;
+			secretWeaponPointXP = 10;
+			slayerGateWeaponPointXP = 40;
+			modStationXP = 25;
+			gainWeaponMasteryTokenXP = 0;
+			weaponUpgradeXP = 10;
+			weaponModMasteryXP = 20;
+			runeAcquiredXP = 25;
+			gainRuneMasteryTokenXP = 0;
+			runeMasteryXP = 20;
+			argentCellXP = 30;
+			hubRoomUnlockXP = 10;
+			gainUnmaykrTokenXP = 0;
+			crucibleUpgradeXP = 0;
+			gainEquipmentLauncherXP = 0;
+			firstLevelCompletionXP = 400;
+			firstMissionChallengeXP = 25;
+			repeatLevelCompletionXP = 700;
+			invasionMatchXP = 100;
+			battleArenaMatchXP = 300;
+		}
+		defaultKillCameraTrigger = "cameratrigger/kill_last_ai_test";
+		challengeGateDecl = "map_objects/challenge_gate";
+		switchToFistsWhenOutOfAllAmmo = true;
+		fxRadiationDamage = "FX_PLAYERDAMAGE_RADIATION_SIDE";
+		firstBountyCodexDecl = "codex/tutorials/empowered_demon";
+		secretHintLevelFast = "rumble/secrethint/heavy";
+		secretHintLevelMedium = "rumble/secrethint/medium";
+		secretHintLevelSlow = "rumble/secrethint/light";
+		currencyMaterials = {
+			ptr = {
+				ptr[0] = "art/ui/icons/currency/ico_combat_point";
+				ptr[1] = "art/ui/icons/currency/ico_praetor_suit_token";
+				ptr[2] = "art/ui/icons/currency/ico_weapon_mastery_token";
+				ptr[3] = "art/ui/icons/currency/ico_rune_mastery_token";
+				ptr[4] = "art/ui/icons/currency/ico_sentinel_battery";
+				ptr[5] = "art/ui/icons/currency/ico_emperion_shard";
+			}
+		}
+		modUpgradeIcons = {
+			num = 4;
+			item[0] = {
+				pointAmount = 3;
+				icon = "art/ui/icons/currency/ico_combat_point_3_stack";
+			}
+			item[1] = {
+				pointAmount = 5;
+				icon = "art/ui/icons/currency/ico_combat_point_5_stack";
+			}
+			item[2] = {
+				pointAmount = 10;
+				icon = "art/ui/icons/currency/ico_combat_point_10_stack";
+			}
+			item[3] = {
+				pointAmount = 2;
+				icon = "art/ui/icons/currency/ico_combat_point_stack";
+			}
+		}
+		equipmentCooldownTimeMS = 1000;
+		fragGrenadeCooldownTimeMS = 30000;
+		fragGrenadeRightLaunchDelayMS = 20;
+		iceBombCooldownTimeMS = 45000;
+		iceBombRightLaunchDelayMS = 50;
+		flameBelchCooldownTimeMS = 25000;
+		validEquipmentList = {
+			num = 4;
+			item[0] = {
+				item = "throwable/player/frag_grenade";
+				type = "EQUIPMENT_FRAG_GRENADE";
+			}
+			item[1] = {
+				item = "throwable/player/ice_bomb";
+				type = "EQUIPMENT_ICE_BOMB";
+			}
+			item[2] = {
+				item = "weapon/player/equipment_flame_belch";
+				selectable = false;
+				type = "EQUIPMENT_FLAME_BELCH";
+			}
+			item[3] = {
+				item = "weapon/player/equipment_flame_belch_right";
+				selectable = false;
+				type = "EQUIPMENT_FLAME_BELCH";
+			}
+		}
+		equipmentMinUseDelayMS = 700;
+		argentUpgrades = {
+			health = "argent/health_upgrade";
+			armor = "argent/armor_upgrade";
+			ammo = "argent/ammo_upgrade";
+		}
+		doom1Material = "textures/guis/codex_images/hud_notifications/classic/doom1";
+		doom2Material = "textures/guis/codex_images/hud_notifications/classic/doom2";
+		dashDecl = "ability_dash";
+		playerSpeedClamping = {
+			ledgeGrabClampScale = 1.64999998;
+			weaponSwitchClampScale = 0.300000012;
+			weaponModSwitchClampScale = 0.200000003;
+		}
+		playerFastTravelParameters = {
+			lockControls = 3000;
+			warpFadeOut = 500;
+			warpFadeIn = 250;
+		}
+	}
+}

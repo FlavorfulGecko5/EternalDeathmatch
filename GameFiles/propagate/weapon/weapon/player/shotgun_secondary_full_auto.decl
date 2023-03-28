@@ -1,0 +1,257 @@
+{
+	inherit = "weapon/base/shotgun";
+	edit = {
+		handsFovScale = 0.819999993;
+		weaponFX = "weapon/shotgun/shotgun_trippleburst_1st";
+		chargeInfo = {
+			chargeTimeMS = 300;
+			dischargeTimeoutMS = 300;
+			dischargeFireMode = "WEAPONFIREMODE_SECONDARY";
+			dischargeTimeoutDebugBar = true;
+			dischargePercentPerShot = 0;
+			fullyChargedSound = "play_cs_full_auto_fullycharged";
+			notReadySound = "stop_cs_full_auto_click_out_loop";
+			chargeItems = {
+				num = 1;
+				item[0] = {
+					chargeProperty = "CHARGE_PROPERTY_DAMAGE_SCALE";
+					valueMax = 1;
+				}
+			}
+			chargeAnimStateName = "charge";
+			minChargeRequiredToDischarge = 1;
+			timeoutBlocksOtherFireMode = true;
+		}
+		weaponHaptics = {
+			settings = {
+				settings[1] = {
+					endPercent = "HTP_THIRTY_PERCENT";
+				}
+			}
+		}
+		animatedSpinnyThing = {
+			additiveAnim = "additive_barrel_rotation";
+			maxDegsPerSecond = 100000;
+			perShotDegs = 120;
+			perShotDegsPerSecond = 800;
+			fireModeChangeDegs = 240;
+			fireModeChangeDegsPerSecond = 720;
+			forceFireModeChangeStartDegs = true;
+			fireModeChangeStartDegs = 120;
+			suspendDuringModChange = true;
+		}
+		triggerMode = "WEAPONTRIGGERMODE_SECONDARY_HOLD_PRIMARY_PRESS";
+		initialAmmoDecl = "ammo/player/shotgun_full_auto";
+		validAmmoClips = {
+			num = 5;
+			item[0] = {
+				validAmmoDecl = "ammo/player/shotgun";
+				clipType = "AMMOCLIP_SHOTGUN";
+				clipSize = 50;
+				ammoPerReload = 50;
+			}
+			item[1] = {
+				validAmmoDecl = "ammo/player/shotgun_full_auto";
+				clipType = "AMMOCLIP_SHOTGUN";
+				clipSize = 50;
+				ammoPerReload = 50;
+			}
+			item[2] = {
+				validAmmoDecl = "ammo/player/shotgun_pop_rocket";
+				clipType = "AMMOCLIP_SHOTGUN";
+				clipSize = 50;
+				ammoPerReload = 50;
+			}
+			item[3] = {
+				validAmmoDecl = "ammo/player/shotgun_pop_rocket_direct_hit_power";
+				clipType = "AMMOCLIP_SHOTGUN";
+				clipSize = 50;
+				ammoPerReload = 50;
+			}
+			item[4] = {
+				validAmmoDecl = "ammo/player/shotgun_full_auto_ammo_giveback";
+				clipType = "AMMOCLIP_SHOTGUN";
+				clipSize = 50;
+				ammoPerReload = 50;
+			}
+		}
+		noAmmoCache = true;
+		killStat = "STAT_WEAPON_SHOTGUN_KILLS";
+		killStatMod = "STAT_WEAPON_SHOTGUN_TRIPLE_BURST_KILLS";
+		firingInterval = 160;
+		otherFireModeFiringInterval = 300;
+		usePrimaryFireButton = true;
+		hasIntroBringup = false;
+		hasAltShoot = true;
+		scaleShootAnimToFiringInterval = true;
+		weaponAnimSet = "WEAPONANIM_SHOTGUN";
+		shootDelayDurationMS = 100;
+		clearShootDelayScaleWhenFiringEnds = true;
+		meleeTraceDamageType = "MELEE_FIRST_PLUS_ACTOR";
+		meleeTraceDamageCap = 1;
+		showHideBulletData = {
+			chamberedBulletIsVisible = true;
+			meshNames = {
+				num = 5;
+				item[0] = "combatshotgun_tripleburst_ammo_b";
+				item[1] = "combatshotgun_tripleburst_ammo_a";
+				item[2] = "combatshotgun_tripleburst_ammo_e";
+				item[3] = "combatshotgun_tripleburst_ammo_d";
+				item[4] = "combatshotgun_tripleburst_ammo_c";
+			}
+			overridePrimary = true;
+		}
+		additiveOffsetZoomAnim = "shotguns/shotgun/additive_triple_burst_pose";
+		additiveOffsetZoomAnim_Classic = "shotguns/shotgun/additive_triple_burst_pose_classic";
+		showHideMeshInfo = {
+			meshesToHide = {
+				num = 8;
+				item[0] = "combatshotgun_base_barrel";
+				item[1] = "combatshotgun_pump";
+				item[2] = "combatshotgun_base_barrel_knob";
+				item[3] = "combatshotgun_poprocket";
+				item[4] = "combatshotgun_poprocket_pump";
+				item[5] = "combatshotgun_poprocket_ammo_loader";
+				item[6] = "combatshotgun_poprocket_ammo";
+				item[7] = "combatshotgun_poprocket_barrel";
+			}
+			meshesToShow = {
+				num = 13;
+				item[0] = "combatshotgun_tripleburst_barrel";
+				item[1] = "combatshotgun_tripleburst_ammo_helper";
+				item[2] = "combatshotgun_tripleburst_ammo_a";
+				item[3] = "combatshotgun_tripleburst_ammo_b";
+				item[4] = "combatshotgun_tripleburst_ammo_c";
+				item[5] = "combatshotgun_tripleburst_ammo_d";
+				item[6] = "combatshotgun_tripleburst_ammo_e";
+				item[7] = "combatshotgun_tripleburst_hatch";
+				item[8] = "combatshotgun_tripleburst_barrel_lock";
+				item[9] = "combatshotgun_tripleburst_barrel_helper";
+				item[10] = "combatshotgun_tripleburst";
+				item[11] = "combatshotgun_tripleburst_pump";
+				item[12] = "combatshotgun_base_guts";
+			}
+		}
+		ironSightZoom = {
+			zoomedFOV = 90;
+			zoomedHandsFOV = 77;
+			canZoomWhileJumping = true;
+			sensitivity_scale_controller = 1;
+			sensitivity_scale_mouse = 1;
+			zoomDelay = 0;
+			zoomTime = 300;
+			hasBlendedZoom = false;
+			zoomBlendTime = 300;
+		}
+		zoomMode = "ZOOM_WEAPON_NO_HANDANIM";
+		zoomInSound = "play_cs_barrel_normal_in";
+		zoomOutSound = "play_cs_barrel_normal_out";
+		spreadParams = {
+			spread = 1.5;
+			spreadBaseZoom = 1.5;
+			spreadBaseCrouch = 1.5;
+			spreadBaseZoomCrouch = 1.5;
+			spreadIncreasedByMovement = 0;
+			spreadIncreasedByMovementZoom = 0;
+			spreadIncreasedByAiming = 0;
+			spreadAdditionPerShotMoving = 0;
+			spreadAdditionPerShotZoomMoving = 0;
+			spreadReturnDelay = 1;
+			spreadReturnTime = 1;
+		}
+		weaponFeedBack = {
+			doUniqueKick = false;
+			pitchKickAmount = 3;
+			pitchKickAmountDelta = 0.75;
+			pitchKickTopBound = 13;
+			yawKickAmount = 1;
+			yawKickAmountDelta = 0.5;
+			pitchKickSpeedInto = 35;
+			pitchKickSpeedIntoPerShot = 10;
+			pitchKickSpeedFrom = 15;
+			yawKickSpeedInto = 70;
+			yawKickSpeedFrom = 60;
+			useNewKickSystem = true;
+			kickYaw = {
+				kick = 0.200000003;
+				maxKick = 0.600000024;
+				recoilMS = 64;
+				recoveryMS = 200;
+			}
+			kickPitch = {
+				type = "KICK_ONLY_POSITIVE";
+				kick = 2.8499999;
+				maxKick = 100;
+				recoilMS = 96;
+				recoveryMS = 500;
+			}
+			kickRoll = {
+				kick = 0.300000012;
+				maxKick = 0.300000012;
+				recoveryMS = 32;
+			}
+			kickFov = {
+				type = "KICK_ONLY_NEGATIVE";
+				kick = 0.25;
+				maxKick = 0.25;
+				recoilMS = 32;
+				recoveryMS = 32;
+			}
+			controllerShakeHighMag = 0.699999988;
+			controllerShakeHighTime = 75;
+			controllerShakeLowMag = 0.550000012;
+			controllerShakeLowTime = 125;
+			controllerRTriggerShakeMag = 0.100000001;
+			controllerRTriggerShakeTime = 50;
+		}
+		weaponFeedBackADS = {
+			pitchKickAmount = 3;
+			pitchKickAmountDelta = 0.75;
+			pitchKickTopBound = 13;
+			yawKickAmount = 1;
+			yawKickAmountDelta = 0.5;
+			pitchKickSpeedInto = 35;
+			pitchKickSpeedIntoPerShot = 10;
+			pitchKickSpeedFrom = 15;
+			yawKickSpeedInto = 70;
+			yawKickSpeedFrom = 60;
+			useNewKickSystem = true;
+			kickYaw = {
+				kick = 0.200000003;
+				maxKick = 0.600000024;
+				recoilMS = 64;
+				recoveryMS = 500;
+				recoveryDelayMS = 100;
+			}
+			kickPitch = {
+				type = "KICK_ONLY_POSITIVE";
+				kick = 7;
+				maxKick = 500;
+				recoilMS = 64;
+				recoveryMS = 160;
+				recoveryDelayMS = 48;
+			}
+			kickRoll = {
+				kick = 0.100000001;
+				maxKick = 0.100000001;
+				recoilMS = 32;
+				recoveryMS = 48;
+			}
+			kickFov = {
+				type = "KICK_ONLY_NEGATIVE";
+				kick = 0.800000012;
+				maxKick = 0.800000012;
+				recoilMS = 32;
+				recoveryMS = 64;
+			}
+		}
+		zoomBlur = {
+			maxBlur = 2;
+			distance = 0.200000003;
+		}
+		sensitivityWhileFiring = 1;
+		declAimAssist = "aimassist/combat_shotgun";
+		reticle = "weaponreticle/shotgun_full_auto";
+		movementSpeedScaleZoomed = 1;
+	}
+}

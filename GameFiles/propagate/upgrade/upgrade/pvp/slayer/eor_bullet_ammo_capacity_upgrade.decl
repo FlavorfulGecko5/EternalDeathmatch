@@ -1,0 +1,16 @@
+{
+	edit = {
+		awardCondition = "UC_PERK";
+		modifiersWeapon = {
+			num = 1;
+			item[0] = {
+				type = "WMT_WEAPON_AMMO_UPGRADE_LEVEL";
+				opType = "MOD_OPERATOR_ADD";
+				data = {
+					valueInt = 40;
+				}
+			}
+		}
+		allFireModes = true;
+	}
+}
