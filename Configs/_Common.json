@@ -162,6 +162,7 @@
         
         "e5m1_spear/generated/decls/":
         [
+            "devinvloadout/devinvloadout/dlc/e4m1_rig.decl",
             "entitydef/pickup/extra_life/extra_life_1.decl",
             "entitydef/pickup/extra_life/extra_life_2up.decl",
             "entitydef/pickup/blood_punch_refill.decl",
