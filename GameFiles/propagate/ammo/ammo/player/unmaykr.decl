@@ -1,0 +1,12 @@
+{
+	edit = {
+		displayName = "#str_decl_ammo_bfg";
+		icon = "art/ui/icons/ammo/bfg";
+		maxCount = 60;
+		count = 0;
+		projectileDecl = "projectile/player/unmaykr";
+		sharedAmmoPoolDecl = "ammo/sharedammopool/bfg";
+		lowAmmoWarningCount = 30;
+		lowAmmoWarningSound = "ui/warning/low_ammo";
+	}
+}

@@ -9,7 +9,6 @@
         "e2m4_boss_patch2/": ["maps/game/sp/e2m4_boss/e2m4_boss.entities"],
         "e4m3_mcity_patch2/": ["maps/game/dlc/e4m3_mcity/e4m3_mcity.entities"],
         "e5m1_spear_patch1/": ["maps/game/dlc2/e5m1_spear/e5m1_spear.entities"],
-
         "pvp_bronco_patch1/": ["maps/game/pvp/pvp_bronco/pvp_bronco.entities"],
         "pvp_darkmetal_patch1/": ["maps/game/pvp/pvp_darkmetal/pvp_darkmetal.entities"],
         "pvp_deathvalley_patch1/": ["maps/game/pvp/pvp_deathvalley/pvp_deathvalley.entities"],
@@ -19,6 +18,14 @@
         "pvp_sideswipe/": ["maps/game/pvp/pvp_sideswipe/pvp_sideswipe.entities"],
         "pvp_thunder_patch1/": ["maps/game/pvp/pvp_thunder/pvp_thunder.entities"],
         "pvp_zap_patch1/": ["maps/game/pvp/pvp_zap/pvp_zap.entities"],
+
+
+        "gameresources/generated/decls": 
+        [
+            "actormodifier/actormodifier/pvp/slayer/default.decl",
+            "ammo/ammo/player/bfg.decl",
+            "ammo/ammo/player/unmaykr.decl"
+        ],
 
 
         "e1m3_cult_patch3/generated/decls/": ["prophealth/mega_armor.decl"],

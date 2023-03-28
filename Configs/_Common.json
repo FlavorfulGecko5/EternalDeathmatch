@@ -6,6 +6,12 @@
 
     "Propagate": 
     {
+        "gameresources/generated/decls":
+        [
+            "damage/damage/melee/sync_kill_chainsaw.decl",
+            "entitydef/pickup/default.decl"
+        ],
+
         "gameresources_patch1/": 
         [
             "EternalMod/strings/"
