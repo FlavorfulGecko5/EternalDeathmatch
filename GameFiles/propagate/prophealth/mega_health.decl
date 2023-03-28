@@ -1,0 +1,14 @@
+{
+	edit = {
+		sound_pickup = "play_pickup_mega_health";
+		sound_pickupUpgrade = "play_pickup_mega_health";
+		componentTypeInfo = "idUseableHealthComponent";
+		pickupEffect = "FX_PICKUP_HEALTH_LARGE";
+		healItems = {
+			num = 1;
+			item[0] = {
+				amountToHeal = 25;
+			}
+		}
+	}
+}

@@ -1,0 +1,35 @@
+{
+	class = "idTrigger";
+	networkReplicated = false;
+	editorVars {
+		rotatable = false;
+		showOrientation = false;
+		showFixedBox = false;
+		skipRenderModelInEditor = false;
+		showInRenderMode = false;
+		placeable = false;
+		color = ( 1, 1, 1, 1 );
+		size = ( 0, 0, 0 );
+		originOffset = ( 0, 0, 0 );
+		material = "";
+		translucent = false;
+		editorName = "";
+		description = "";
+	}
+	edit = {
+		flags = {
+			noknockback = false;
+		}
+		clipModelInfo = {
+			type = "CLIPMODEL_CYLINDER";
+			size = {
+				x = 2.1;
+				y = 2.1;
+				z = 2.1;
+			}
+			numSides = 8;
+		}
+		triggerOnce = false;
+		triggerOnEnter = true;
+	}
+}
