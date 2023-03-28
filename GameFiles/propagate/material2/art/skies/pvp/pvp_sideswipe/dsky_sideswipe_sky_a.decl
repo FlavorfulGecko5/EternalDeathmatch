@@ -1,0 +1,18 @@
+{
+	inherit = "template/skyhdr";
+	edit = {
+		Parms = {
+			skyflowfixeddirection = 92.6220016;
+			skyflowphaseoffsettiling = {
+				x = 0;
+				y = 0;
+			}
+			surfaceskyflowfrequency = 0;
+			surfaceskyflowamplitude = 0;
+			skyflowfixed = 1;
+			skymaphdr = {
+				filePath = "art/skies/textures/sams_base/gsky_sams_base_skydome.exr";
+			}
+		}
+	}
+}

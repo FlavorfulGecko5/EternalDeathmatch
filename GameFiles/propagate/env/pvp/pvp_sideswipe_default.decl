@@ -1,0 +1,62 @@
+{
+	inherit = "dlc2/e5m3_hell/e5m3_hell_default";
+	edit = {
+		parmBlock = {
+			wateriridescencespectrumscale = 2.5;
+			wateriridescencescale = 1;
+			wateremissive = {
+				x = 0.109803922;
+				y = 0.180392146;
+				z = 0.250980407;
+			}
+			watermaxabsorptiondepth = 0.5;
+			waterdepthabsorptioncompositek = 0.949999988;
+			waterabsorptionglobal = {
+				x = 0.117647059;
+				y = 0.443137288;
+				z = 0.607843161;
+				w = 0.850980461;
+			}
+			watersmoothnesschange = 0.300000012;
+			watersmoothness = 0.200000003;
+			watersmoothnessthresholdlow = 0.550000012;
+			watertimescale = 0.5;
+			waterwavechoppiness = 2;
+			waterwindspeed = 200;
+			autoexposuremax = 4;
+			hdrcolorfilter = {
+				x = 0.882353008;
+				y = 0.960784376;
+				z = 1;
+			}
+			lightscatteringviewdistfadelength = 40;
+			lightscatteringviewdistfadestart = 20;
+			shadowslicestep = 60;
+			sungoboscale = 1;
+			sungobomaterial = "lights/sun_projections/gsky_slayergate1_gobo";
+			radiusplanet = 5890;
+			scatteringdensityscale = 42;
+			mieanisotropy = -0.063000001;
+			miedensityscale = 0.224999994;
+			miecolor = {
+				x = 0.095122017;
+				y = 0.173869848;
+				z = 0.398000002;
+			}
+			mieheight = 4755.25;
+			rayleighheight = 3276.72998;
+			rayleighcolor = {
+				x = 0.35;
+				y = 0.05;
+				z = 0;
+			}
+			decouplesuncolorfromsky = 1;
+			suncolor = {
+				x = 0.839;
+				y = 0.709;
+				z = 0.839;
+			}
+		}
+		blendDuration = 0;
+	}
+}

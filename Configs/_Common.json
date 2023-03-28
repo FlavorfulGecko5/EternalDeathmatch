@@ -182,9 +182,16 @@
         "pvp_inferno/generated/decls": ["logicentity/maps/prefabs/pvp/podiums/level_stage_podiums/podiums_info_logic_stage_sequences.decl", "pvpprogressionscoring/battle_arena.decl"],
         "pvp_laser/generated/decls": ["logicentity/maps/prefabs/pvp/podiums/level_stage_podiums/podiums_info_logic_stage_sequences.decl", "pvpprogressionscoring/battle_arena.decl"],
         "pvp_shrapnel/generated/decls": ["logicentity/maps/prefabs/pvp/podiums/level_stage_podiums/podiums_info_logic_stage_sequences.decl", "pvpprogressionscoring/battle_arena.decl"],
-        "pvp_sideswipe/generated/decls": ["logicentity/maps/prefabs/pvp/podiums/level_stage_podiums/podiums_info_logic_stage_sequences.decl", "pvpprogressionscoring/battle_arena.decl"],
         "pvp_thunder/generated/decls": ["logicentity/maps/prefabs/pvp/podiums/level_stage_podiums/podiums_info_logic_stage_sequences.decl", "pvpprogressionscoring/battle_arena.decl"],
-        "pvp_zap/generated/decls": ["logicentity/maps/prefabs/pvp/podiums/level_stage_podiums/podiums_info_logic_stage_sequences.decl", "pvpprogressionscoring/battle_arena.decl"]
+        "pvp_zap/generated/decls": ["logicentity/maps/prefabs/pvp/podiums/level_stage_podiums/podiums_info_logic_stage_sequences.decl", "pvpprogressionscoring/battle_arena.decl"],
+        "pvp_sideswipe/generated/decls": 
+        [
+            "logicentity/maps/prefabs/pvp/podiums/level_stage_podiums/podiums_info_logic_stage_sequences.decl",
+            "pvpprogressionscoring/battle_arena.decl",
+
+            "env/pvp/pvp_sideswipe_default.decl",
+            "material2/art/skies/pvp/pvp_sideswipe/dsky_sideswipe_sky_a.decl"
+        ]
     },
 
     "StringExpressions": false
