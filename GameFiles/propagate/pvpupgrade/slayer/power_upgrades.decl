@@ -1,0 +1,107 @@
+{
+	edit = {
+		upgradeIcon = "art/ui/icons/pvp_mid_round_upgrades/ico_pvp_upg_main_0";
+		upgrades = {
+			num = 1;
+			item[0] = {
+				num = 5;
+				item[0] = {
+					upgradeTitle = "#str_decl_pvp_upgrade_GHOST45280";
+					upgradeDescription = "#str_decl_pvp_upgrade_GHOST45281_bp2";
+					icon = "art/ui/icons/pvp_mid_round_upgrades/new/icon_eom_bfg10k";
+					telemetryIdentifier = "upg_pow_bfg10k";
+					perks = {
+						num = 1;
+						item[0] = "perk/pvp/slayer/eor_upgrade_bfg_weapon_available";
+					}
+					descData = {
+						num = 2;
+						item[0] = {
+							description = "#str_decl_pvp_upgrade_desc_bfg_2_GHOST60382";
+							icon = "art/ui/icons/challenges/combat";
+						}
+						item[1] = {
+							description = "#str_decl_pvp_upgrade_desc_bfg_1_GHOST60381_bp";
+							icon = "art/ui/icons/challenges/glorykills";
+						}
+					}
+				}
+				item[1] = {
+					upgradeTitle = "#str_decl_pvp_upgrade_GHOST45282";
+					upgradeDescription = "#str_decl_pvp_upgrade_GHOST45283";
+					icon = "art/ui/icons/pvp_mid_round_upgrades/new/icon_eom_helpinghand";
+					telemetryIdentifier = "upg_pow_helpinghand";
+					perks = {
+						num = 3;
+						item[0] = "perk/player/equipment/frag_cluster_bombs";
+						item[1] = "perk/pvp/slayer/eor_upgrade_second_frag_on_use";
+						item[2] = "perk/pvp/slayer/eor_upgrade_frag_reduce_cooldown_level_2";
+					}
+					descData = {
+						num = 1;
+						item[0] = {
+							description = "#str_decl_pvp_upgrade_desc_helping_hand_1_GHOST60383";
+							icon = "art/ui/icons/equipment/ico_frag_pickup";
+						}
+					}
+				}
+				item[2] = {
+					upgradeTitle = "#str_decl_codex_slayer_arsenal_unmaykr";
+					upgradeDescription = "#str_decl_deathmatch_upgrade_unmaykr_desc";
+					icon = "textures/guis/hud/damage_icons/slayer/weapon/weapon_unmaykr";
+					telemetryIdentifier = "upg_pow_fistsoffury";
+					perks = {
+						num = 1;
+						item[0] = "perk/pvp/slayer/eor_upgrade_bfg_reduce_damage_during_shot";
+					}
+					descData = {
+						num = 2;
+						item[0] = {
+							description = "#str_decl_deathmatch_upgrade_unmaykr_desc_data";
+							icon = "art/ui/icons/challenges/combat";
+						}
+						item[1] = {
+							description = "#str_decl_pvp_upgrade_desc_bfg_1_GHOST60381_bp";
+							icon = "art/ui/icons/challenges/glorykills";
+						}
+					}
+				}
+				item[3] = {
+					upgradeTitle = "#str_decl_pvp_upgrade_GHOST45286";
+					upgradeDescription = "#str_decl_pvp_upgrade_GHOST45287_alt1";
+					icon = "art/ui/icons/pvp_mid_round_upgrades/new/icon_eom_endlessrage";
+					telemetryIdentifier = "upg_pow_endlessrage";
+					perks = {
+						num = 1;
+						item[0] = "perk/pvp/slayer/eor_upgrade_boost_damage_after_chainsaw";
+					}
+					descData = {
+						num = 1;
+						item[0] = {
+							description = "#str_decl_pvp_upgrade_desc_endless_rage_1_GHOST60384_alt1";
+							icon = "art/ui/icons/powerup/berserk";
+						}
+					}
+				}
+				item[4] = {
+					upgradeTitle = "#str_decl_pvp_upgrade_GHOST45288";
+					upgradeDescription = "#str_decl_pvp_upgrade_GHOST45289";
+					icon = "art/ui/icons/pvp_mid_round_upgrades/new/icon_eom_argentinfused";
+					telemetryIdentifier = "upg_pow_argentinfused";
+					perks = {
+						num = 2;
+						item[0] = "perk/player/argent/health_capacity_3";
+						item[1] = "perk/player/argent/armor_capacity_3";
+					}
+					descData = {
+						num = 1;
+						item[0] = {
+							description = "#str_decl_pvp_upgrade_desc_argent_infused_1_GHOST60385";
+							icon = "art/ui/icons/argent_cells_upgrade/bonus_upgrade_overhealth";
+						}
+					}
+				}
+			}
+		}
+	}
+}

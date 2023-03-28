@@ -1,0 +1,9 @@
+{
+	edit = {
+		inventoryItem = "abilities/environmentsuit";
+		item = {
+			perk = "perk/pvp/slayer/eor_upgrade_ammo_capacities";
+			equip = true;
+		}
+	}
+}
