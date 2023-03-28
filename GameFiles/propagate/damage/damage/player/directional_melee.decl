@@ -1,0 +1,59 @@
+{
+	edit = {
+		damageParms = {
+			doom5MeleeTest = {
+				impulseVelocity = {
+					x = 13.335001;
+					z = 3.80999994;
+				}
+				monsterImpulseScales = {
+					num = 3;
+					item[0] = {
+						monsterType = "AI_MONSTER_HELL_SOLDIER AI_MONSTER_SHOTGUN_SOLDIER";
+						value = 3268.20532;
+					}
+					item[1] = {
+						monsterType = "AI_MONSTER_HELLKNIGHT AI_MONSTER_SPECTRE AI_MONSTER_CACODEMON AI_MONSTER_REVENANT AI_MONSTER_ARCHVILE";
+						value = 12.2107735;
+					}
+					item[2] = {
+						monsterType = "AI_MONSTER_PINKY AI_MONSTER_MANCUBUS AI_MONSTER_CYBER_MANCUBUS AI_MONSTER_BARON";
+						value = 3.6302076e+12;
+					}
+				}
+				playerBotImpulseScale = 0.649999976;
+				viewShake = "advancedscreenviewshake/melee_strike";
+			}
+			damageName = "#str_decl_damage_melee_strike_GHOST53156";
+			damageSource = "DAMAGESRC_MELEE";
+			noFeedbackSound = true;
+			isMelee = true;
+			knockBack = 0.864108026;
+			ragdollImpulseMag = 4.32053995;
+			doubleVisionTime = {
+				value = 2000;
+			}
+			knocksOffArmor = false;
+			damageIcon = "textures/guis/hud/damage_icons/slayer/weapon/weapon_melee";
+			declGoreBehavior = "gorebehavior/melee";
+			skillshotHighlightInfo = {
+				fadeTime = 300;
+				color = {
+					r = 1;
+					a = 1;
+				}
+			}
+			ammoReturnOnDeath = {
+				num = 1;
+				item[0] = {
+					giveItemOverTime = {
+						decl = "ammo/sharedammopool/bfg";
+						count = 60;
+					}
+					aiType = "AI_MONSTER_ZOMBIE_TIER_1 AI_MONSTER_ZOMBIE_TIER_3 AI_MONSTER_ZOMBIE_MAYKR AI_MONSTER_IMP AI_MONSTER_GARGOYLE AI_MONSTER_PROWLER AI_MONSTER_HELL_SOLDIER AI_MONSTER_SHOTGUN_SOLDIER AI_MONSTER_CARCASS AI_MONSTER_LOSTSOUL AI_MONSTER_HELLKNIGHT AI_MONSTER_DREADKNIGHT AI_MONSTER_PINKY AI_MONSTER_SPECTRE AI_MONSTER_CACODEMON AI_MONSTER_PAIN_ELEMENTAL AI_MONSTER_MANCUBUS AI_MONSTER_CYBER_MANCUBUS AI_MONSTER_ARACHNOTRON AI_MONSTER_REVENANT AI_MONSTER_WHIPLASH AI_MONSTER_DOOM_HUNTER AI_MONSTER_MARAUDER AI_MONSTER_MARAUDER_WOLF AI_MONSTER_BARON AI_MONSTER_TYRANT AI_MONSTER_ARCHVILE AI_MONSTER_CUEBALL AI_MONSTER_BUFF_POD AI_MONSTER_TENTACLE AI_MONSTER_GLADIATOR AI_MONSTER_ICON_OF_SIN AI_MONSTER_MAYKR_ANGEL AI_MONSTER_ZOMBIE_T1_SCREECHER AI_MONSTER_STONE_IMP AI_MONSTER_CURSED_PROWLER AI_MONSTER_CHAINGUN_SOLDIER AI_MONSTER_BLOOD_ANGEL AI_MONSTER_ARMORED_BARON AI_MONSTER_SUPER_TENTACLE AI_MONSTER_SPIRIT AI_MONSTER_TURRET AI_MONSTER_DEMONIC_TROOPER AI_MONSTER_SAMUEL_BOSS AI_MONSTER_DARKLORD_BOSS";
+				}
+			}
+		}
+		pvpPlayerDamageScale = 0;
+	}
+}

@@ -1,0 +1,539 @@
+{
+	class = "idDemonPlayer_PainElemental";
+	networkReplicated = true;
+	disableAIPooling = false;
+	editorVars {
+		rotatable = false;
+		showOrientation = false;
+		showFixedBox = false;
+		skipRenderModelInEditor = false;
+		showInRenderMode = false;
+		placeable = false;
+		color = ( 1, 1, 1, 1 );
+		size = ( 0, 0, 0 );
+		originOffset = ( 0, 0, 0 );
+		material = "";
+		translucent = false;
+		editorName = "";
+		description = "";
+	}
+	edit = {
+		automapPropertiesDecl = "demonplayer_painelemental";
+		flags = {
+			takedamage = true;
+			skipRenderModelReplication = true;
+		}
+		renderModelInfo = {
+			model = "md6def/characters/monsters/painelemental_mp/base/painelemental_mp.md6";
+			scale = {
+				x = 0.1;
+				y = 0.1;
+				z = 0.1;
+			}
+		}
+		clipModelInfo = {
+			type = "CLIPMODEL_CYLINDER";
+			size = {
+				x = 0.45;
+				y = 0.45;
+				z = 0.85;
+			}
+			offset = {
+				z = -0.4;
+			}
+			contentsFilter = {
+				playerClip = false;
+				monsterClip = false;
+				moveableClip = false;
+				shotClip = false;
+				ikClip = false;
+				opaqueClip = false;
+				allTeamsShotClip = false;
+			}
+			numSides = 8;
+		}
+		validPlayerKillRecipient = false;
+		forcedAdditionalSphereContents = "CONTENTS_AIAWARE";
+		actorConstants = {
+			perception = {
+				eyeOffset = {
+					z = 0.625;
+				}
+				crouchedEyeOffset = {
+					z = 0.625;
+				}
+			}
+			actorSounds = {
+			}
+		}
+		afProperties = {
+			articulatedFigure = "characters/monsters/playable/painelemental";
+		}
+		deathImpulseScalar = 10;
+		actorEditable = {
+			entityDamageComponent = {
+				entityDamage = "player/demonplayer_painelemental";
+			}
+			radiusDamageJoints = {
+				num = 19;
+				item[0] = "horn_part03_lf";
+				item[1] = "horn_part03_rt";
+				item[2] = "jaw_part03_tp";
+				item[3] = "head_part01_md";
+				item[4] = "arm_lowerroll2_lf";
+				item[5] = "arm_lowerroll2_rt";
+				item[6] = "jawc_part04_lf";
+				item[7] = "jawc_part04_rt";
+				item[8] = "jawd_part02_lf";
+				item[9] = "jawd_part02_rt";
+				item[10] = "jawb_part03_lf";
+				item[11] = "jawb_part03_rt";
+				item[12] = "jawa_part02_lf";
+				item[13] = "jawa_part02_rt";
+				item[14] = "arm_upperroll2_lf";
+				item[15] = "arm_upperroll2_rt";
+				item[16] = "brow_part01_lf";
+				item[17] = "brow_part01_rt";
+				item[18] = "jaw_part01_bd";
+			}
+		}
+		pvpLootDropComponent = {
+		}
+		startingInventory = {
+			num = 2;
+			item[0] = {
+				startSlot = "EQUIPPED";
+				showHolstered = false;
+				inventoryDecl = "weapon/demonplayer/pvp/painelemental/soullauncher";
+			}
+			item[1] = {
+				startSlot = "EQUIPPED";
+				showHolstered = false;
+				inventoryDecl = "ammo/demonplayer/pvp/painelemental/soullauncher";
+			}
+		}
+		guiInfo = {
+			icon = "art/ui/pvp_playericons/ico_pvp_players_painelemental";
+			iconAlt = "art/ui/pvp_playericons/ico_pvp_players_painelemental_hud_dead";
+		}
+		lockonData = {
+		}
+		defaultPlayerMovementType = "PM_DEMON_HOVER";
+		walkSpeed = 16;
+		runSpeed = 16;
+		sprintSpeed = 16;
+		maxStepHeight = 0.0379999988;
+		maxJumpHeight = 2.43799996;
+		pencilCollisionAngle = 0;
+		pencilCollisionTaperRadius = 0;
+		stopAllFXOnDash = false;
+		thirdPersonWalkAnimDatabase = {
+			useWalkAnimDatabase = true;
+			states = {
+				ptr = {
+					ptr[0] = {
+						stateName = "moving";
+						subWebName = "Normal";
+						numWalkFrames = 45;
+						totalWalkDistance = 2.83200002;
+						numRunFrames = 19;
+						totalRunDistance = 6.86100101;
+					}
+					ptr[1] = {
+						stateName = "moving_back";
+						subWebName = "Normal";
+						numWalkFrames = 45;
+						totalWalkDistance = 2.83200002;
+						numRunFrames = 19;
+						totalRunDistance = 6.94799995;
+					}
+					ptr[2] = {
+						stateName = "strafe_left";
+						subWebName = "Normal";
+						numWalkFrames = 45;
+						totalWalkDistance = 2.83200002;
+						numRunFrames = 19;
+						totalRunDistance = 6.86100101;
+					}
+					ptr[3] = {
+						stateName = "strafe_right";
+						subWebName = "Normal";
+						numWalkFrames = 45;
+						totalWalkDistance = 2.83200002;
+						numRunFrames = 19;
+						totalRunDistance = 6.86100101;
+					}
+				}
+			}
+		}
+		turnAnimData = {
+			degThresholdStart = 20;
+			degThresholdEnd = 5;
+		}
+		headTrackingInfo = {
+			enable = true;
+			trackingGroupName = "aim";
+			focusTagName = "aim_focus";
+			minPitchClamp = -75;
+			maxPitchClamp = 75;
+			yawTurnRate = 360;
+		}
+		repulsorOriginOffset = {
+			z = 0;
+		}
+		friendlyRepulsorRadius = 0;
+		enemyRepulsorRadius = 0;
+		demonHorns = {
+			declModel = "md6def/player/monsters/painelemental_1p/base/painelemental_1p_horns.md6";
+			declAnimWeb = "animweb/characters/monsters/playable/painelemental_horns";
+			startSubWeb = "Normal";
+			startNode = "Idle";
+		}
+		demonHands = {
+			blendAliasList = {
+				num = 2;
+				item[0] = "core/melee_windup_r";
+				item[1] = "core/melee_windup_l";
+			}
+			declHandsModel = "md6def/player/monsters/painelemental_1p/base/painelemental_1p.md6";
+			declAnimWeb = "animweb/characters/monsters/playable/painelemental_hands";
+			startSubWeb = "Normal";
+			startNode = "bring_up";
+			handsBobCycleData = {
+				bobCycle_default = "demon/cacodemon";
+			}
+			handsBobMinSpeedForSprint = 5.71500015;
+			handsHitReactionData = {
+				animWebDecl = "animweb/characters/monsters/playable/painelemental_hands_hit_reactions";
+				defaultAnimWebState = "animweb/characters/monsters/playable/painElemental_hands_hit_reactions/default/idle";
+				reactions = {
+					num = 4;
+					item[0] = {
+						name = "generic_1";
+						animWebState = "animweb/characters/monsters/playable/painElemental_hands_hit_reactions/default/generic_1";
+						descriptor = {
+							anglePerturbDegs = 45;
+							allowWeaponAlphaOverride = false;
+						}
+					}
+					item[1] = {
+						name = "generic_1";
+						animWebState = "animweb/characters/monsters/playable/painElemental_hands_hit_reactions/default/generic_1";
+						descriptor = {
+							type = "HANDSHITREACTION_MELEE";
+							anglePerturbDegs = 45;
+							allowWeaponAlphaOverride = false;
+						}
+					}
+					item[2] = {
+						name = "generic_1";
+						animWebState = "animweb/characters/monsters/playable/painElemental_hands_hit_reactions/default/generic_1";
+						descriptor = {
+							type = "HANDSHITREACTION_EXPLOSIVE";
+							anglePerturbDegs = 45;
+							allowWeaponAlphaOverride = false;
+						}
+					}
+					item[3] = {
+						name = "generic_1";
+						animWebState = "animweb/characters/monsters/playable/painElemental_hands_hit_reactions/default/generic_1";
+						descriptor = {
+							type = "HANDSHITREACTION_FIRE";
+							anglePerturbDegs = 45;
+							allowWeaponAlphaOverride = false;
+						}
+					}
+				}
+			}
+			additiveLag = {
+				additiveLag[0] = {
+					handsLagData = {
+						lagYawK = 100;
+						lagYawMaxRate = 2;
+						lagPitchK = 25;
+						lagPitchMaxRate = 0.5;
+						lagForwardBackK = 50;
+						lagForwardBackMaxRate = 110;
+						lagStrafeK = 30;
+						lagStrafeMaxRate = 110;
+					}
+					additiveLagYaw = "additive/yawlag";
+					additiveLagPitch = "additive/pitchlag";
+					additiveLagForwardBack = "additive/forwardtobacklag";
+					additiveLagStrafe = "additive/lefttorightlag";
+				}
+				additiveLag[1] = {
+					handsLagData = {
+						lagYawK = 50;
+						lagYawMaxRate = 2;
+						lagPitchK = 25;
+						lagPitchMaxRate = 0.5;
+						lagForwardBackK = 25;
+						lagForwardBackMaxRate = 110;
+						lagStrafeK = 15;
+						lagStrafeMaxRate = 110;
+					}
+					additiveLagYaw = "additive/tongue/tongue_yawlag";
+					additiveLagPitch = "additive/tongue/tongue_pitchlag";
+					additiveLagForwardBack = "additive/tongue/tongue_forwardtobacklag";
+					additiveLagStrafe = "additive/tongue/tongue_lefttorightlag";
+				}
+			}
+			meleeTraceOffset = 1.90499997;
+			meleeFeedBack = {
+				controllerShakeHighMag = 0.25;
+				controllerShakeHighTime = 25;
+				controllerShakeLowMag = 0.600000024;
+				controllerShakeLowTime = 100;
+			}
+		}
+		thirdPersonBodyDef = "player/demonplayer_painelemental_tp_body";
+		demonCamera = {
+			pitchRange = {
+				minRange = -89;
+				maxRange = 89;
+			}
+			zOffsetMinDistance = 0.305000007;
+			zOffsetMaxDistance = 3.80999994;
+		}
+		animWeb = "animweb/characters/monsters/playable/painelemental_tp_body";
+		spawnAnimData = {
+			playerAnimNode = "demon_possession_mancubus";
+			scaleEnable = true;
+			scalePlayerEndScale = 1.20000005;
+			scaleDemonStartScale = 0.300000012;
+			spawnAnimAlias = "transformation/transformation_revenant";
+		}
+		torsoPrimaryFireAnimAlias = "combat/shoot_recoil_add";
+		twitchPain = "twitchpain/demonplayer_painelemental";
+		goreComponent = {
+		}
+		lowTimePulseSound = "object_event/typing/panel_keypress";
+		demonHandsDepthHackScaleFX = 0;
+		avatarKillerCardScale = 0.75;
+		avatarKillerCardOffset = {
+			z = 0.0949999988;
+		}
+		dashItemDecl = "ability_dash_painelemental";
+		dashCooldown = 1000;
+		dashAnimData = {
+			firstPersonAliasLeft = "additive/dash_left";
+			firstPersonAliasRight = "additive/dash_right";
+			firstPersonAliasForward = "additive/dash_forward";
+			firstPersonAliasBack = "additive/dash_back";
+			thirdPersonAliasLeft = "demonplayer/combat/additive/dash_left";
+			thirdPersonAliasRight = "demonplayer/combat/additive/dash_right";
+			thirdPersonAliasForward = "demonplayer/combat/additive/dash_forward";
+			thirdPersonAliasBack = "demonplayer/combat/additive/dash_back";
+		}
+		demonPlayerType = "AI_MONSTER_PLAYER_PAIN_ELEMENTAL";
+		playerProps = "demon/painelemental";
+		playerFov = 100;
+		inputBindset = "BINDSET_MULTIPLAYER_DEMON_02";
+		projectileClipSize = {
+			x = 0.381000012;
+			y = 0.381000012;
+			z = 0.381000012;
+		}
+		demonHealth = {
+			components = {
+				components[0] = {
+					max = 1;
+					starting = 1;
+				}
+			}
+		}
+		poiZOffset = 1.52400005;
+		playerHealthRTPC = "demon_health";
+		ghostingSpawnAsDemonButton = "BUTTON_ATTACK1";
+		warpToPlayerButton = "BUTTON_QUICK_0";
+		syncMelee = {
+			syncMeleeEntityDefs = {
+				num = 2;
+			}
+			syncGroups = {
+				num = 2;
+				item[0] = {
+					syncGroupName = "player_cacodemon_pvp";
+					syncDeathHealthRatio = 0.25;
+					syncInteractions = {
+						num = 6;
+					}
+				}
+				item[1] = {
+					syncGroupName = "player_cacodemon_pvp_chainsaw";
+					syncDeathHealthRatio = 0.25;
+					syncInteractions = {
+						num = 2;
+					}
+				}
+			}
+			randomizeSlideMoveOrder = false;
+			showOutlineDistance = 500;
+			neverSeeDefaultColor = true;
+			soundParms = {
+			}
+		}
+		ledgeGrabComponent = {
+			minGroundHeight = 0.572000027;
+			checkVerticalVelocityScalar = 0.800000012;
+			animAliases = {
+				ledgePullUp = "ledgeGrab/ledgePullUp";
+				ledgePullUpMantle = "ledgeGrab/ledgePullUpMantle";
+				ledgePullUpRounded = "ledgeGrab/ledgePullUp";
+				ledgePullUpMantleRounded = "ledgeGrab/ledgePullUpMantle";
+				ledgePullUpAngled = "ledgeGrab/ledgePullUp";
+				ledgePullUpMantleAngled = "ledgeGrab/ledgePullUpMantle";
+				ledgeClimbUp = "ledgeGrab/ledgeClimbUp";
+				railingPullUp = "ledgeGrab/railingPullUp";
+				railingPullUpMantle = "ledgeGrab/railingPullUpMantle";
+			}
+			thirdPersonAnimIndex = {
+				ledgePullUpMantle = 1;
+				ledgePullUpMantleRounded = 1;
+				ledgePullUpMantleAngled = 1;
+				ledgeClimbUp = 4;
+				ledgeClimbUpMantle = 5;
+				railingPullUp = 2;
+				railingPullUpMantle = 3;
+			}
+			cameraBlendMode = "BLEND_SMOOTH_SNAP_SMOOTH";
+			cameraBlendDurationMS = 100;
+			cameraMinConstraintAngles = {
+				yaw = -25;
+			}
+			cameraMaxConstraintAngles = {
+				pitch = 20;
+				yaw = 25;
+			}
+		}
+		presenceComponent = {
+			activationDistance = 51.4350014;
+			deactivationDistance = 55.2450027;
+			maxFXCount = 80;
+			minActivationFXCount = 12;
+			minFXDistanceToPlayer = 1.61899996;
+			maxFXDistanceToPlayer = 60.9600029;
+			maxFXDistanceToDemon = 51.4350014;
+			decalMaterialList = {
+				num = 4;
+			}
+			decalDepth = 1.21899998;
+			decalMinSize = 75;
+			decalMaxSize = 120;
+			decalMinLifetimeMs = 3000;
+			decalMaxLifetimeMs = 5000;
+			decalFadeInMs = 300;
+			decalFadeOutMs = 400;
+			postFXStartDistance = 33.3380013;
+			postFXFullDistance = 23.8120003;
+		}
+		killStat = "STAT_MP_DEMON_CACODEMON_KILLS";
+		killedStat = "STAT_MP_DEMON_CACODEMON_KILLED";
+		heightOffsetForPropAndDisguiseAction = 1.20000005;
+		spawnFromDisguiseDemonCard = "demoncard/invasion/spawn_from_disguise";
+		teleportToSlayerDemonCard = "demoncard/invasion/teleport_to_slayer";
+		becomeGhostDemonCard = "demoncard/invasion/become_ghost";
+		activateHazardCard = "demoncard/invasion/activate_hazard";
+		highlightLOSBoxDecl = "highlight_los_painelemental";
+		invisibilityRemovedOnDamage = false;
+		invisibilityRemovesHighlight = true;
+		damageScaleTableComponent = {
+			list = {
+				num = 5;
+				item[0] = {
+					declDamage = "damage/special/ability_dash";
+					declTable = "player/damage_volume_test";
+				}
+				item[1] = {
+					declDamage = "damage/hazard/bio";
+					declTable = "player/bio_hazard_damage";
+				}
+				item[2] = {
+					declDamage = "damage/hazard/lava";
+					declTable = "player/lava_hazard_damage";
+				}
+				item[3] = {
+					declDamage = "damage/hazard/slime";
+					declTable = "player/slime_hazard_damage";
+					resetTableOnExitTimeMS = 2000;
+				}
+				item[4] = {
+					declDamage = "damage/hazard/water_toxic";
+					declTable = "player/slime_hazard_damage";
+					resetTableOnExitTimeMS = 2000;
+				}
+			}
+		}
+		painElementalData = {
+			verticalFriction = 100;
+			verticalAccelRate = 15;
+			verticalSpeed = 15;
+			maximumSpeed = 15;
+			gravitySpeed = 0;
+			shieldSpeed = 15;
+			bobHeight = 0.125;
+		}
+		inputBindings = {
+		}
+		soulBarrier = {
+			fxDecl = "demon_player/pain_elemental/pain_elemental_hands";
+			effectiveAngle = 0;
+			maxHealth = 0;
+			lifetime = {
+				defaultValue = 0;
+				branchPairs = {
+					num = 1;
+					item[0] = {
+						branchKey = "CONTROLLERPAD_DECL";
+						branchResult = 0;
+					}
+				}
+			}
+			cooldown = {
+				defaultValue = 0;
+				branchPairs = {
+					num = 1;
+					item[0] = {
+						branchKey = "CONTROLLERPAD_DECL";
+						branchResult = 0;
+					}
+				}
+			}
+			numSoulsToSpawn = 0;
+			vulnerabilityPeriod = 0;
+			rotationSpeed = 50;
+			launchRadius = 1.14999998;
+			radius = 2.1500001;
+			allowMainFireWhenActive = true;
+			lostSoul = "projectile/demonplayer/pvp/painelemental/soulbarrier_launch";
+			lostSoulUpgraded = "projectile/demonplayer/pvp/painelemental/soulbarrier_launch_upgrade";
+			shieldSpawnRumble = "rumble/pvp/painelemental_soulbarrier";
+			controllerRumbleDecl = "rumble/pvp/painelemental_soulbarrier";
+			fireViewShakeDecl = "advancedscreenviewshake/demonplayer/painelemental_soulbarrier_launch";
+			shieldEntityDef = "player/playable_painelemental/soulbarrier_shield";
+			colorValues = {
+				num = 2;
+				item[0] = {
+					color = {
+						r = 0.25097999;
+						g = 0.698038995;
+					}
+				}
+				item[1] = {
+					health = 1;
+					color = {
+						r = 0.25097999;
+						g = 0.698038995;
+					}
+				}
+			}
+		}
+		lostSoulEntityDef = "projectile_ent/demonplayer/pvp/painelemental/lostsoul_held";
+		firstPersonShootAdditiveAnimAlias = "additive/shoot";
+		soulBarrierSummonAdditiveAnimAlias = "core/cast_shield";
+		soulBarrierSummonBlendTimeMS = 250;
+		dashHudColor = "DEMON_HUD_COLOR_ORANGE";
+		dashHudIcon = "textures/guis/icons/abilities/pain_elemental/aerial_dash";
+	}
+}

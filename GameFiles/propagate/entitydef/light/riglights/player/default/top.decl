@@ -1,0 +1,59 @@
+{
+	class = "idLight";
+	networkReplicated = false;
+	disableAIPooling = false;
+	editorVars {
+		rotatable = true;
+		showOrientation = false;
+		showFixedBox = true;
+		skipRenderModelInEditor = false;
+		showInRenderMode = false;
+		placeable = false;
+		color = ( 0, 0.800000012, 0, 1 );
+		size = ( 0.305000007, 0.305000007, 0.305000007 );
+		originOffset = ( 0, 0, 0 );
+		material = "";
+		translucent = false;
+		editorName = "";
+		description = "";
+	}
+	edit = {
+		spawnPosition = {
+			x = 0.0146076679;
+			y = -0.0962710381;
+			z = 1.23329365;
+		}
+		flags = {
+			canBecomeDormant = true;
+		}
+		lightColor = {
+			r = 0.8;
+			g = 1;
+			b = 0.8;
+		}
+		lightRadius = {
+			x = 2.4;
+			y = 2;
+			z = 2.4;
+		}
+		lightCenter = {
+			z = 2;
+		}
+		lightFalloff = 100;
+		clipVolumeFalloff = 100;
+		userClipVolume = true;
+		spotLight = {
+			lightRight = {
+				y = -2.99999976;
+			}
+			lightUp = {
+				z = 2.99999976;
+			}
+		}
+		scatteringMultiplier = 0;
+		dynamicOnly = true;
+		particleLightEffect = "LIGHTPARTICLE_NOPARTICLES";
+		particleLightScale = 0;
+		lightIntensity = 25;
+	}
+}

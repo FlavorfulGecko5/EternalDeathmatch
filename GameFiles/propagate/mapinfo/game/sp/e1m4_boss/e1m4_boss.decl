@@ -1,0 +1,9 @@
+{
+	inherit = "game/pvp/default";
+	edit = {
+		mapName = "#str_decl_mapinfo_e1m4_name";
+		loadingImage = "art/ui/loadscreen_images/game/sp/e1m4_boss/e1m4_boss";
+		menuImage = "art/ui/map_menu_images/campaign/e1m4_boss";
+		chunkId = 4;
+	}
+}

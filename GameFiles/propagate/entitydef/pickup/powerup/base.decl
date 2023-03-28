@@ -1,0 +1,58 @@
+{
+	class = "idProp2";
+	networkReplicated = true;
+	disableAIPooling = false;
+	editorVars {
+		rotatable = false;
+		showOrientation = false;
+		showFixedBox = false;
+		skipRenderModelInEditor = false;
+		showInRenderMode = false;
+		placeable = false;
+		color = ( 1, 1, 1, 1 );
+		size = ( 0, 0, 0 );
+		originOffset = ( 0, 0, 0 );
+		material = "";
+		translucent = false;
+		editorName = "";
+		description = "";
+	}
+	edit = {
+		whenToSave = "SGT_CHECKPOINT";
+		removeFlag = "RMV_CHECKPOINT_ALLOW_MS";
+		flags = {
+			canBecomeDormant = true;
+		}
+		renderModelInfo = {
+			contributesToLightProbeGen = false;
+			ignoreDesaturate = true;
+			fadeVisibilityOver = 400;
+			scale = {
+				x = 2;
+				y = 2;
+				z = 2;
+			}
+		}
+		dormancy = {
+			delay = 5;
+			distance = 2048;
+		}
+		spawn_statIncreases = {
+			num = 1;
+			item[0] = {
+				stat = "STAT_ITEMS_SPAWNED";
+				increase = 1;
+			}
+		}
+		isStatic = false;
+		equipOnPickup = true;
+		displayPickupMessage = false;
+		supportsShowingGui = false;
+		lootStyle = "LOOT_TOUCH_LOOK_USE";
+		triggerDef = "trigger/props/pickup_large";
+		updateFX = true;
+		canBePossessed = true;
+		sendNotableItemTelemetryEvent = true;
+		isLootDrop = true;
+	}
+}

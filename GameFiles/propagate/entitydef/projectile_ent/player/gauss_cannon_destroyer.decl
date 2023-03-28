@@ -1,0 +1,119 @@
+{
+	class = "idProjectile_Destroyer";
+	networkReplicated = true;
+	editorVars {
+		rotatable = false;
+		showOrientation = false;
+		showFixedBox = false;
+		skipRenderModelInEditor = false;
+		showInRenderMode = false;
+		placeable = false;
+		color = ( 1, 1, 1, 1 );
+		size = ( 0, 0, 0 );
+		originOffset = ( 0, 0, 0 );
+		material = "";
+		translucent = false;
+		editorName = "";
+		description = "";
+	}
+	edit = {
+		renderModelInfo = {
+			model = "md6def/objects/weapons/energy/gauss_rifle_destroyer_beam.md6";
+			noShadows = true;
+			scale = {
+				z = 0.5;
+			}
+		}
+		clipModelInfo = {
+			type = "CLIPMODEL_BOX";
+			size = {
+				x = 0.370000005;
+				y = 0.600000024;
+				z = 0.370000005;
+			}
+		}
+		targetingDecl = "projectiles/imp_fireball";
+		passThroughGore = true;
+		causesDamageOncePerTarget = true;
+		projectileDecl = "projectile/player/gauss_rifle_destroyer";
+		alignToVelocity = true;
+		acceleration = 0;
+		aiInteraction = {
+			falterAndStopOnHeavyAI = true;
+			gibAndPassthruFodderAI = true;
+			gibDamageDecl = "damage/firearm/gauss_rifle_destroyer_gib";
+		}
+		splinterParms = {
+			hitTestNum = 13;
+			splinterOnKill = false;
+			splinterMaxLevel = -1;
+			splinterDamageScaleMin = 800;
+			unsplinterEnabled = true;
+			unsplinterSpeed = 1000;
+			unsplinterMergeDist = 50;
+			attachmentScaleMinCharge = {
+				y = 0.119999997;
+			}
+			attachmentScaleMaxCharge = {
+				y = 0.100000001;
+			}
+			geoClipSize = 0.0500000007;
+			geoVFXSweepMultiplier = 4.5;
+			percHitQueriesToDestroyProjectile = 1;
+			hitGeoCooldown = 300;
+			middlePercentOfQueriesToConsiderToDestroyProjectile = 0;
+			fxParts = {
+				num = 3;
+				item[0] = {
+					fxEntityDef = "fx/weapons/destroyer_blade_tier_3_piece";
+					queryRange = {
+						maxRange = 4;
+					}
+					maxAngleToUseContactNormalDegrees = 100;
+				}
+				item[1] = {
+					fxEntityDef = "fx/weapons/destroyer_blade_tier_3_piece";
+					queryRange = {
+						minRange = 5;
+						maxRange = 8;
+					}
+					maxAngleToUseContactNormalDegrees = 100;
+				}
+				item[2] = {
+					fxEntityDef = "fx/weapons/destroyer_blade_tier_3_piece";
+					queryRange = {
+						minRange = 9;
+					}
+					maxAngleToUseContactNormalDegrees = 100;
+				}
+			}
+		}
+		collideWithContents = "CONTENTS_SHOTCLIP CONTENTS_AIAWARE CONTENTS_AI CONTENTS_PROJECTILE CONTENTS_BREAKABLE CONTENTS_PLAYER CONTENTS_OBSTACLE CONTENTS_SOLIDPUSHABLE";
+		explodeOnNonAISideDist = 10;
+		geoNoCollideMS = 10;
+		attachRenderModels = {
+			num = 9;
+			item[0] = "effect/model/weapon/gauss_destroyer_blade_piece01_max.lwo";
+			item[1] = "effect/model/weapon/gauss_destroyer_blade_piece02_max.lwo";
+			item[2] = "effect/model/weapon/gauss_destroyer_blade_piece03_max.lwo";
+			item[3] = "effect/model/weapon/gauss_destroyer_blade_piece04_max.lwo";
+			item[4] = "effect/model/weapon/gauss_destroyer_blade_piece05_max.lwo";
+			item[5] = "effect/model/weapon/gauss_destroyer_blade_piece06_max.lwo";
+			item[6] = "effect/model/weapon/gauss_destroyer_blade_piece07_max.lwo";
+			item[7] = "effect/model/weapon/gauss_destroyer_blade_piece08_max.lwo";
+			item[8] = "effect/model/weapon/gauss_destroyer_blade_piece09_max.lwo";
+		}
+		attachTags = {
+			num = 9;
+			item[0] = "attach01";
+			item[1] = "attach02";
+			item[2] = "attach03";
+			item[3] = "attach04";
+			item[4] = "attach05";
+			item[5] = "attach06";
+			item[6] = "attach07";
+			item[7] = "attach08";
+			item[8] = "attach09";
+		}
+	}
+}
