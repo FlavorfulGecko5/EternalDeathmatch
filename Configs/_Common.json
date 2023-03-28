@@ -86,6 +86,7 @@
             "damage/damage/pvp/zap_electrical.decl",
             "damage/damage/throwable/frag_grenade/frag_grenade_splash.decl",
             "demoncarddeck/demoncarddeck/pvp/painelemental/deck_1.decl",
+            "devmenuoption/devmenuoption/pvp.decl",
             "lobby/lobbysettings.decl",
             "lootdrop/lootdrop/pvp/health/base/fodder_high_hp_chainsaw_kill.decl",
             "lootdrop/lootdrop/pvp/health/base/fodder_high_hp_weapon_kill.decl",

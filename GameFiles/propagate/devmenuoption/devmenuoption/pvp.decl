@@ -1,0 +1,340 @@
+{
+	edit = {
+		devMenuList = {
+			num = 37;
+			item[0] = {
+				devMenuDisplayName = "PVP Box";
+				devMenuMapName = "maps/dev/online/pvp_box.map";
+				devMenuLoadMapAsMP = true;
+			}
+			item[1] = {
+				devMenuDisplayName = "Forsaken (Laser)";
+				devMenuMapName = "maps/game/pvp/pvp_laser/pvp_laser.map";
+				devMenuLoadMapAsMP = true;
+				devMenuActiveLayers = {
+					num = 1;
+					item[0] = "game/sp/e1m1_intro/cp_01";
+				}
+			}
+			item[2] = {
+				devMenuDisplayName = "Penance (Deathvalley)";
+				devMenuMapName = "maps/game/pvp/pvp_deathvalley/pvp_deathvalley.map";
+				devMenuLoadMapAsMP = true;
+				devMenuActiveLayers = {
+					num = 1;
+					item[0] = "game/sp/e1m1_intro/cp_01";
+				}
+			}
+			item[3] = {
+				devMenuDisplayName = "Tundra (Inferno)";
+				devMenuMapName = "maps/game/pvp/pvp_inferno/pvp_inferno.map";
+				devMenuLoadMapAsMP = true;
+				devMenuActiveLayers = {
+					num = 1;
+					item[0] = "game/sp/e1m1_intro/cp_01";
+				}
+			}
+			item[4] = {
+				devMenuDisplayName = "Armageddon (Thunder)";
+				devMenuMapName = "maps/game/pvp/pvp_thunder/pvp_thunder.map";
+				devMenuLoadMapAsMP = true;
+				devMenuActiveLayers = {
+					num = 1;
+					item[0] = "game/sp/e1m1_intro/cp_01";
+				}
+			}
+			item[5] = {
+				devMenuDisplayName = "Extraction (Zap)";
+				devMenuMapName = "maps/game/pvp/pvp_zap/pvp_zap.map";
+				devMenuLoadMapAsMP = true;
+				devMenuActiveLayers = {
+					num = 1;
+					item[0] = "game/sp/e1m1_intro/cp_01";
+				}
+			}
+			item[6] = {
+				devMenuDisplayName = "Celestial (Bronco)";
+				devMenuMapName = "maps/game/pvp/pvp_bronco/pvp_bronco.map";
+				devMenuLoadMapAsMP = true;
+				devMenuActiveLayers = {
+					num = 1;
+					item[0] = "game/sp/e1m1_intro/cp_01";
+				}
+			}
+			item[7] = {
+				devMenuDisplayName = "Torment (Shrapnel)";
+				devMenuMapName = "maps/game/pvp/pvp_shrapnel/pvp_shrapnel.map";
+				devMenuLoadMapAsMP = true;
+				devMenuActiveLayers = {
+					num = 1;
+					item[0] = "game/sp/e1m1_intro/cp_01";
+				}
+			}
+			item[8] = {
+				devMenuDisplayName = "Corrosion (Darkmetal)";
+				devMenuMapName = "maps/game/pvp/pvp_darkmetal/pvp_darkmetal.map";
+				devMenuLoadMapAsMP = true;
+				devMenuActiveLayers = {
+					num = 1;
+					item[0] = "game/sp/e1m1_intro/cp_01";
+				}
+			}
+			item[9] = {
+				devMenuDisplayName = "Stronghold (Sideswipe)";
+				devMenuMapName = "maps/game/pvp/pvp_sideswipe/pvp_sideswipe.map";
+				devMenuLoadMapAsMP = true;
+				devMenuActiveLayers = {
+					num = 1;
+					item[0] = "game/sp/e1m1_intro/cp_01";
+				}
+			}
+			item[10] = {
+				devMenuDisplayName = "Horde Box";
+				devMenuMapName = "maps/dev/online/pvp_box_horde.map";
+				devMenuLoadMapAsMP = true;
+			}
+			item[11] = {
+				devMenuDisplayName = "Forsaken (Laser) - Endless";
+				devMenuMapName = "maps/game/pvp/pvp_laser/pvp_laser.map";
+				devMenuLoadMapAsMP = true;
+				devMenuActiveLayers = {
+					num = 1;
+					item[0] = "game/sp/e1m1_intro/cp_02";
+				}
+				$emb_var# if( ~ClassicMode, 'devMenuInventoryLoadout = "devinvloadout/dlc/e4m2_swamp";' , '')  $
+			}
+			item[12] = {
+				devMenuDisplayName = "Penance (Deathvalley) - Endless";
+				devMenuMapName = "maps/game/pvp/pvp_deathvalley/pvp_deathvalley.map";
+				devMenuLoadMapAsMP = true;
+				devMenuActiveLayers = {
+					num = 1;
+					item[0] = "game/sp/e1m1_intro/cp_02";
+				}
+				$emb_var# if( ~ClassicMode, 'devMenuInventoryLoadout = "devinvloadout/dlc/e4m2_swamp";' , '')  $
+			}
+			item[13] = {
+				devMenuDisplayName = "Tundra (Inferno) - Endless";
+				devMenuMapName = "maps/game/pvp/pvp_inferno/pvp_inferno.map";
+				devMenuLoadMapAsMP = true;
+				devMenuActiveLayers = {
+					num = 1;
+					item[0] = "game/sp/e1m1_intro/cp_02";
+				}
+				$emb_var# if( ~ClassicMode, 'devMenuInventoryLoadout = "devinvloadout/dlc/e4m2_swamp";' , '')  $
+			}
+			item[14] = {
+				devMenuDisplayName = "Armageddon (Thunder) - Endless";
+				devMenuMapName = "maps/game/pvp/pvp_thunder/pvp_thunder.map";
+				devMenuLoadMapAsMP = true;
+				devMenuActiveLayers = {
+					num = 1;
+					item[0] = "game/sp/e1m1_intro/cp_02";
+				}
+				$emb_var# if( ~ClassicMode, 'devMenuInventoryLoadout = "devinvloadout/dlc/e4m2_swamp";' , '')  $
+			}
+			item[15] = {
+				devMenuDisplayName = "Extraction (Zap) - Endless";
+				devMenuMapName = "maps/game/pvp/pvp_zap/pvp_zap.map";
+				devMenuLoadMapAsMP = true;
+				devMenuActiveLayers = {
+					num = 1;
+					item[0] = "game/sp/e1m1_intro/cp_02";
+				}
+				$emb_var# if( ~ClassicMode, 'devMenuInventoryLoadout = "devinvloadout/dlc/e4m2_swamp";' , '')  $
+			}
+			item[16] = {
+				devMenuDisplayName = "Celestial (Bronco) - Endless";
+				devMenuMapName = "maps/game/pvp/pvp_bronco/pvp_bronco.map";
+				devMenuLoadMapAsMP = true;
+				devMenuActiveLayers = {
+					num = 1;
+					item[0] = "game/sp/e1m1_intro/cp_02";
+				}
+				$emb_var# if( ~ClassicMode, 'devMenuInventoryLoadout = "devinvloadout/dlc/e4m2_swamp";' , '')  $
+			}
+			item[17] = {
+				devMenuDisplayName = "Torment (Shrapnel) - Endless";
+				devMenuMapName = "maps/game/pvp/pvp_shrapnel/pvp_shrapnel.map";
+				devMenuLoadMapAsMP = true;
+				devMenuActiveLayers = {
+					num = 1;
+					item[0] = "game/sp/e1m1_intro/cp_02";
+				}
+				$emb_var# if( ~ClassicMode, 'devMenuInventoryLoadout = "devinvloadout/dlc/e4m2_swamp";' , '')  $
+			}
+			item[18] = {
+				devMenuDisplayName = "Corrosion (Darkmetal) - Endless";
+				devMenuMapName = "maps/game/pvp/pvp_darkmetal/pvp_darkmetal.map";
+				devMenuLoadMapAsMP = true;
+				devMenuActiveLayers = {
+					num = 1;
+					item[0] = "game/sp/e1m1_intro/cp_02";
+				}
+				$emb_var# if( ~ClassicMode, 'devMenuInventoryLoadout = "devinvloadout/dlc/e4m2_swamp";' , '')  $
+			}
+			item[19] = {
+				devMenuDisplayName = "Stronghold (Sideswipe) - Endless";
+				devMenuMapName = "maps/game/pvp/pvp_sideswipe/pvp_sideswipe.map";
+				devMenuLoadMapAsMP = true;
+				devMenuActiveLayers = {
+					num = 1;
+					item[0] = "game/sp/e1m1_intro/cp_02";
+				}
+				$emb_var# if( ~ClassicMode, 'devMenuInventoryLoadout = "devinvloadout/dlc/e4m2_swamp";' , '')  $
+			}
+			item[20] = {
+				devMenuDisplayName = "Cultist Base (Gates)";
+				devMenuMapName = "maps/game/sp/e1m3_cult/e1m3_cult.map";
+				devMenuLoadMapAsMP = true;
+				devMenuActiveLayers = {
+					num = 1;
+					item[0] = "game/sp/e1m1_intro/cp_01";
+				}
+			}
+			item[21] = {
+				devMenuDisplayName = "DOOM Hunter Base (Chapel)";
+				devMenuMapName = "maps/game/sp/e1m4_boss/e1m4_boss.map";
+				devMenuLoadMapAsMP = true;
+				devMenuActiveLayers = {
+					num = 2;
+					item[0] = "game/sp/e1m1_intro/cp_01";
+					item[1] = "game/sp/e1m4_boss/main_level";
+				}
+			}
+			item[22] = {
+				devMenuDisplayName = "DOOM Hunter Base (Ruins)";
+				devMenuMapName = "maps/game/sp/e1m4_boss/e1m4_boss.map";
+				devMenuLoadMapAsMP = true;
+				devMenuActiveLayers = {
+					num = 2;
+					item[0] = "game/sp/e1m1_intro/cp_01";
+					item[1] = "game/sp/e1m4_boss/master_level";
+				}
+			}
+			item[23] = {
+				devMenuDisplayName = "Arc Complex (Warehouse)";
+				devMenuMapName = "maps/game/sp/e2m2_base/e2m2_base.map";
+				devMenuLoadMapAsMP = true;
+				devMenuActiveLayers = {
+					num = 1;
+					item[0] = "game/sp/e1m1_intro/cp_01";
+				}
+			}
+			item[24] = {
+				devMenuDisplayName = "Sentinel Prime (Gladiator)";
+				devMenuMapName = "maps/game/sp/e2m4_boss/e2m4_boss.map";
+				devMenuLoadMapAsMP = true;
+				devMenuActiveLayers = {
+					num = 1;
+					item[0] = "game/sp/e1m1_intro/cp_01";
+				}
+			}
+			item[25] = {
+				devMenuDisplayName = "The Holt (City)";
+				devMenuMapName = "maps/game/dlc/e4m3_mcity/e4m3_mcity.map";
+				devMenuLoadMapAsMP = true;
+				devMenuActiveLayers = {
+					num = 1;
+					item[0] = "game/sp/e1m1_intro/cp_01";
+				}
+			}
+			item[26] = {
+				devMenuDisplayName = "The World Spear (Catacombs)";
+				devMenuMapName = "maps/game/dlc2/e5m1_spear/e5m1_spear.map";
+				devMenuLoadMapAsMP = true;
+				devMenuActiveLayers = {
+					num = 1;
+					item[0] = "game/sp/e1m1_intro/cp_01";
+				}
+			}
+			item[27] = {
+				devMenuDisplayName = "PVP Box";
+				devMenuMapName = "maps/dev/online/pvp_box.map";
+				devMenuLoadMapAsMP = true;
+			}
+			item[28] = {
+				devMenuDisplayName = "PVP Box";
+				devMenuMapName = "maps/dev/online/pvp_box.map";
+				devMenuLoadMapAsMP = true;
+			}
+			item[29] = {
+				devMenuDisplayName = "PVP Box";
+				devMenuMapName = "maps/dev/online/pvp_box.map";
+				devMenuLoadMapAsMP = true;
+			}
+			item[30] = {
+				devMenuDisplayName = "Cultist Base (Gates) - Endless";
+				devMenuMapName = "maps/game/sp/e1m3_cult/e1m3_cult.map";
+				devMenuLoadMapAsMP = true;
+				devMenuActiveLayers = {
+					num = 1;
+					item[0] = "game/sp/e1m1_intro/cp_02";
+				}
+				$emb_var# if( ~ClassicMode, 'devMenuInventoryLoadout = "devinvloadout/dlc/e4m2_swamp";' , '')  $
+			}
+			item[31] = {
+				devMenuDisplayName = "DOOM Hunter Base (Chapel) - Endless";
+				devMenuMapName = "maps/game/sp/e1m4_boss/e1m4_boss.map";
+				devMenuLoadMapAsMP = true;
+				devMenuActiveLayers = {
+					num = 2;
+					item[0] = "game/sp/e1m1_intro/cp_02";
+					item[1] = "game/sp/e1m4_boss/main_level";
+				}
+				$emb_var# if( ~ClassicMode, 'devMenuInventoryLoadout = "devinvloadout/dlc/e4m2_swamp";' , '')  $
+			}
+			item[32] = {
+				devMenuDisplayName = "DOOM Hunter Base (Ruins) - Endless";
+				devMenuMapName = "maps/game/sp/e1m4_boss/e1m4_boss.map";
+				devMenuLoadMapAsMP = true;
+				devMenuActiveLayers = {
+					num = 2;
+					item[0] = "game/sp/e1m1_intro/cp_02";
+					item[1] = "game/sp/e1m4_boss/master_level";
+				}
+				$emb_var# if( ~ClassicMode, 'devMenuInventoryLoadout = "devinvloadout/dlc/e4m2_swamp";' , '')  $
+			}
+			item[33] = {
+				devMenuDisplayName = "Arc Complex (Warehouse) - Endless";
+				devMenuMapName = "maps/game/sp/e2m2_base/e2m2_base.map";
+				devMenuLoadMapAsMP = true;
+				devMenuActiveLayers = {
+					num = 1;
+					item[0] = "game/sp/e1m1_intro/cp_02";
+				}
+				$emb_var# if( ~ClassicMode, 'devMenuInventoryLoadout = "devinvloadout/dlc/e4m2_swamp";' , '')  $
+			}
+			item[34] = {
+				devMenuDisplayName = "Sentinel Prime (Gladiator) - Endless";
+				devMenuMapName = "maps/game/sp/e2m4_boss/e2m4_boss.map";
+				devMenuLoadMapAsMP = true;
+				devMenuActiveLayers = {
+					num = 1;
+					item[0] = "game/sp/e1m1_intro/cp_02";
+				}
+				$emb_var# if( ~ClassicMode, 'devMenuInventoryLoadout = "devinvloadout/dlc/e4m2_swamp";' , '')  $
+			}
+			item[35] = {
+				devMenuDisplayName = "The Holt (City) - Endless";
+				devMenuMapName = "maps/game/dlc/e4m3_mcity/e4m3_mcity.map";
+				devMenuLoadMapAsMP = true;
+				devMenuActiveLayers = {
+					num = 1;
+					item[0] = "game/sp/e1m1_intro/cp_02";
+				}
+				$emb_var# if( ~ClassicMode, 'devMenuInventoryLoadout = "devinvloadout/dlc/e4m2_swamp";' , '')  $
+			}
+			item[36] = {
+				devMenuDisplayName = "The World Spear (Catacombs) - Endless";
+				devMenuMapName = "maps/game/dlc2/e5m1_spear/e5m1_spear.map";
+				devMenuLoadMapAsMP = true;
+				devMenuActiveLayers = {
+					num = 1;
+					item[0] = "game/sp/e1m1_intro/cp_02";
+				}
+				$emb_var# if( ~ClassicMode, 'devMenuInventoryLoadout = "devinvloadout/dlc/e4m2_swamp";' , '')  $
+			}
+		}
+	}
+}
