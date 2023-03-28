@@ -2,6 +2,10 @@
     "!About": "Configuration/Propagation data used by BOTH versions of Classic Mode",
 
     "Propagate": {
+
+        "e1m3_cult_patch3/": ["maps/game/sp/e1m3_cult/e1m3_cult.entities"],
+
+
         "e1m3_cult_patch3/generated/decls/": 
         [
             "prophealth/mega_armor.decl"

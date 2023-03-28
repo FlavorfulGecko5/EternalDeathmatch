@@ -14,9 +14,7 @@
         "e1m3_cult_patch3/": 
         [
             "EternalMod/assetsinfo/e1m3_cult.json"
-        ],
-
-        "e1m3_cult_patch3/maps/game/sp/e1m3_cult": ["e1m3_cult.entities"]
+        ]
     },
 
     "StringExpressions": false

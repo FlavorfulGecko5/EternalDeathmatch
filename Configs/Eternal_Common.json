@@ -1,3 +1,7 @@
 {
-    "!About": "Configuraiton/Propagation data used by BOTH versions of Eternal Mode."
+    "!About": "Configuraiton/Propagation data used by BOTH versions of Eternal Mode.",
+
+    "Propagate": {
+        "e1m3_cult_patch3/maps/game/sp/e1m3_cult": ["e1m3_cult.entities"]
+    }
 }

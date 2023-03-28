@@ -226,7 +226,6 @@ entity {
 				entranceAnimPath = "animweb/characters/monsters/zombie_tier_1/spawn/teleport_entrance";
 				spawnFXEntityDef = "fx/spawn_in_fodder";
 				teleportDelayMS = 750;
-				initialState = "AIOVERRIDE_TELEPORT";
 			}
 		}
 		aiHealth = {
@@ -500,7 +499,6 @@ entity {
 				entranceAnimPath = "animweb/characters/monsters/soldier_blaster/spawn/teleport_entrance";
 				spawnFXEntityDef = "fx/spawn_in_fodder";
 				teleportDelayMS = 750;
-				initialState = "AIOVERRIDE_TELEPORT";
 			}
 			demonTeamInfo = {
 				canHostLostSouls = true;
@@ -789,7 +787,7 @@ entity {
 				entranceAnimPath = "animweb/characters/monsters/imp/spawn/teleport_entrance";
 				spawnFXEntityDef = "fx/spawn_in_fodder";
 				teleportDelayMS = 750;
-				initialState = "AIOVERRIDE_TELEPORT";
+				initialState = "AIOVERRIDE_FORCE_AWARENESS_OF_PLAYER";
 			}
 			freeze = {
 				damageThreshold = 2;
@@ -44603,6 +44601,7872 @@ entity {
 }
 }
 entity {
+	entityDef deathmatch_pickup_mega_health_1_respawn_timeline {
+	inherit = "target/timeline";
+	class = "idTarget_Timeline";
+	expandInheritance = false;
+	poolCount = 0;
+	poolGranularity = 2;
+	networkReplicated = true;
+	disableAIPooling = false;
+	edit = {
+		flags = {
+			noFlood = true;
+		}
+		networkSerializeTransforms = false;
+		count = 1;
+		spawnPosition = {
+			x = 1;
+			y = 1;
+			z = 1;
+		}
+		componentTimeLine = {
+			entityEvents = {
+				num = 1;
+				item[0] = {
+					entity = "deathmatch_pickup_mega_health_1_respawn_relay";
+					events = {
+						num = 1;
+						item[0] = {
+							eventTime = 15000;
+							eventCall = {
+								eventDef = "activate";
+								args = {
+									num = 1;
+									item[0] = {
+										entity = "";
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		repeat = true;
+		allowClientsToStart = true;
+		renderModelInfo = {
+			scale = {
+				x = 1;
+				y = 1;
+				z = 1;
+			}
+		}
+	}
+}
+}
+entity {
+	entityDef deathmatch_pickup_mega_health_1_respawn_relay {
+	inherit = "target/relay";
+	class = "idTarget_Count";
+	expandInheritance = false;
+	poolCount = 0;
+	poolGranularity = 2;
+	networkReplicated = false;
+	disableAIPooling = false;
+	edit = {
+		flags = {
+			noFlood = true;
+		}
+		networkSerializeTransforms = false;
+		count = 1;
+		spawnPosition = {
+			x = 1;
+			y = 1;
+			z = 1;
+		}
+		targets = {
+			num = 1;
+			item[0] = "deathmatch_pickup_mega_health_1_respawn_timeline_2";
+		}
+		repeat = true;
+	}
+}
+}
+entity {
+	entityDef deathmatch_pickup_mega_health_1_respawn_timeline_2 {
+	inherit = "target/timeline";
+	class = "idTarget_Timeline";
+	expandInheritance = false;
+	poolCount = 0;
+	poolGranularity = 2;
+	networkReplicated = true;
+	disableAIPooling = false;
+	edit = {
+		flags = {
+			noFlood = true;
+		}
+		networkSerializeTransforms = false;
+		count = 1;
+		spawnPosition = {
+			x = 1;
+			y = 1;
+			z = 1;
+		}
+		componentTimeLine = {
+			entityEvents = {
+				num = 1;
+				item[0] = {
+					entity = "deathmatch_pickup_mega_health_1_respawn";
+					events = {
+						num = 1;
+						item[0] = {
+							eventTime = 100;
+							eventCall = {
+								eventDef = "activate";
+								args = {
+									num = 1;
+									item[0] = {
+										entity = "";
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		repeat = true;
+		allowClientsToStart = true;
+		renderModelInfo = {
+			scale = {
+				x = 1;
+				y = 1;
+				z = 1;
+			}
+		}
+	}
+}
+}
+entity {
+	entityDef deathmatch_pickup_mega_health_1_respawn {
+	inherit = "target/spawn";
+	class = "idTarget_Spawn";
+	expandInheritance = false;
+	poolCount = 0;
+	poolGranularity = 2;
+	networkReplicated = false;
+	disableAIPooling = false;
+	edit = {
+		flags = {
+			noFlood = true;
+		}
+		spawnConditions = {
+			maxCount = 0;
+			reuseDelaySec = 0;
+			doBoundsTest = false;
+			boundsTestType = "BOUNDSTEST_NONE";
+			fovCheck = 0;
+			minDistance = 0;
+			maxDistance = 0;
+			neighborSpawnerDistance = -1;
+			LOS_Test = "LOS_NONE";
+			playerToTest = "PLAYER_SP";
+			conditionProxy = "";
+		}
+		spawnEditableShared = {
+			groupName = "";
+			deathTrigger = "";
+			coverRadius = 0;
+			maxEnemyCoverDistance = 0;
+		}
+		entityDefs = {
+		num = 1;
+		item[0] = {
+			name = "deathmatch_pickup_mega_health_1_x";
+		}
+}
+		conductorEntityAIType = "SPAWN_AI_TYPE_ANY";
+		initialEntityDefs = {
+			num = 0;
+		}
+		spawnEditable = {
+			spawnAt = "";
+			copyTargets = false;
+			additionalTargets = {
+				num = 0;
+			}
+			overwriteTraversalFlags = true;
+			traversalClassFlags = "CLASS_A";
+			combatHintClass = "CLASS_ALL";
+			spawnAnim = "";
+			aiStateOverride = "AIOVERRIDE_TELEPORT";
+			initialTargetOverride = "";
+		}
+		portal = "";
+		targetSpawnParent = "";
+		disablePooling = false;
+		spawnPosition = {
+			x = 15.68;
+			y = -171.77;
+			z = 25.21;
+		}
+		spawnOrientation = {
+			mat = {
+				mat[0] = {
+					x = -0.7;
+					y = -0.7;
+					z = 0;
+				}
+				mat[1] = {
+					x = 0.7;
+					y = -0.7;
+					z = 0;
+				}
+			}
+		}
+		targets = {
+			num = 1;
+			item[0] = "deathmatch_pickup_mega_health_1_x";
+		}
+	}
+}
+}
+entity {
+	entityDef deathmatch_pickup_mega_health_1_x {
+	inherit = "pickup/health/large";
+	class = "idProp2";
+	expandInheritance = false;
+	poolCount = 0;
+	poolGranularity = 2;
+	networkReplicated = true;
+	disableAIPooling = false;
+	edit = {
+		renderModelInfo = {
+			model = "art/pickups/health/megaHealth_head_a.lwo";
+			contributesToLightProbeGen = false;
+			noAmbient = true;
+			scale = {
+				x = 1;
+				y = 1;
+				z = 1;
+			}
+			emissiveColor = {
+				r = 0;
+				g = 0.913725019;
+			}
+			emissiveScale = 3;
+		}
+		spawn_statIncreases = {
+			num = 1;
+			item[0] = {
+				stat = "STAT_ITEMS_SPAWNED";
+				increase = 1;
+			}
+		}
+		equipOnPickup = true;
+		lootStyle = "LOOT_TOUCH";
+		triggerDef = "trigger/props/megahealth";
+		isStatic = true;
+		canBePossessed = true;
+		fxDecl = "pickups/megahealth_head";
+		useableComponentDecl = "mega_health";
+		sound_spawn = "play_pickup_loop_05";
+		sound_stop = "stop_pickup_loop_05";
+		pickup_statIncreases = {
+			num = 1;
+			item[0] = {
+				stat = "STAT_HEALTH_PICKUP";
+				increase = 1;
+			}
+		}
+		spawnPosition = {
+			x = 0;
+			y = 0;
+			z = -999;
+		}
+		targets = {
+			num = 1;
+			item[0] = "deathmatch_pickup_mega_health_1_respawn_timeline";
+		}
+		isLootDrop = true;
+	}
+}
+}
+entity {
+	entityDef deathmatch_pickup_mega_health_1 {
+	inherit = "pickup/health/large";
+	class = "idProp2";
+	expandInheritance = false;
+	poolCount = 0;
+	poolGranularity = 2;
+	networkReplicated = true;
+	disableAIPooling = false;
+	edit = {
+		renderModelInfo = {
+			model = "art/pickups/health/megaHealth_head_a.lwo";
+			contributesToLightProbeGen = false;
+			noAmbient = true;
+			scale = {
+				x = 1;
+				y = 1;
+				z = 1;
+			}
+			emissiveColor = {
+				r = 0;
+				g = 0.913725019;
+			}
+			emissiveScale = 3;
+		}
+		spawn_statIncreases = {
+			num = 1;
+			item[0] = {
+				stat = "STAT_ITEMS_SPAWNED";
+				increase = 1;
+			}
+		}
+		equipOnPickup = true;
+		lootStyle = "LOOT_TOUCH";
+		triggerDef = "trigger/props/megahealth";
+		isStatic = true;
+		canBePossessed = true;
+		fxDecl = "pickups/megahealth_head";
+		useableComponentDecl = "mega_health";
+		sound_spawn = "play_pickup_loop_05";
+		sound_stop = "stop_pickup_loop_05";
+		pickup_statIncreases = {
+			num = 1;
+			item[0] = {
+				stat = "STAT_HEALTH_PICKUP";
+				increase = 1;
+			}
+		}
+		spawnPosition = {
+			x = 15.68;
+			y = -171.77;
+			z = 25.21;
+		}
+		spawnOrientation = {
+			mat = {
+				mat[0] = {
+					x = -0.7;
+					y = -0.7;
+					z = 0;
+				}
+				mat[1] = {
+					x = 0.7;
+					y = -0.7;
+					z = 0;
+				}
+			}
+		}
+		targets = {
+			num = 1;
+			item[0] = "deathmatch_pickup_mega_health_1_respawn_timeline";
+		}
+		isLootDrop = true;
+	}
+}
+}
+entity {
+	entityDef deathmatch_pickup_mega_health_2_respawn_timeline {
+	inherit = "target/timeline";
+	class = "idTarget_Timeline";
+	expandInheritance = false;
+	poolCount = 0;
+	poolGranularity = 2;
+	networkReplicated = true;
+	disableAIPooling = false;
+	edit = {
+		flags = {
+			noFlood = true;
+		}
+		networkSerializeTransforms = false;
+		count = 1;
+		spawnPosition = {
+			x = 1;
+			y = 1;
+			z = 1;
+		}
+		componentTimeLine = {
+			entityEvents = {
+				num = 1;
+				item[0] = {
+					entity = "deathmatch_pickup_mega_health_2_respawn_relay";
+					events = {
+						num = 1;
+						item[0] = {
+							eventTime = 15000;
+							eventCall = {
+								eventDef = "activate";
+								args = {
+									num = 1;
+									item[0] = {
+										entity = "";
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		repeat = true;
+		allowClientsToStart = true;
+		renderModelInfo = {
+			scale = {
+				x = 1;
+				y = 1;
+				z = 1;
+			}
+		}
+	}
+}
+}
+entity {
+	entityDef deathmatch_pickup_mega_health_2_respawn_relay {
+	inherit = "target/relay";
+	class = "idTarget_Count";
+	expandInheritance = false;
+	poolCount = 0;
+	poolGranularity = 2;
+	networkReplicated = false;
+	disableAIPooling = false;
+	edit = {
+		flags = {
+			noFlood = true;
+		}
+		networkSerializeTransforms = false;
+		count = 1;
+		spawnPosition = {
+			x = 1;
+			y = 1;
+			z = 1;
+		}
+		targets = {
+			num = 1;
+			item[0] = "deathmatch_pickup_mega_health_2_respawn_timeline_2";
+		}
+		repeat = true;
+	}
+}
+}
+entity {
+	entityDef deathmatch_pickup_mega_health_2_respawn_timeline_2 {
+	inherit = "target/timeline";
+	class = "idTarget_Timeline";
+	expandInheritance = false;
+	poolCount = 0;
+	poolGranularity = 2;
+	networkReplicated = true;
+	disableAIPooling = false;
+	edit = {
+		flags = {
+			noFlood = true;
+		}
+		networkSerializeTransforms = false;
+		count = 1;
+		spawnPosition = {
+			x = 1;
+			y = 1;
+			z = 1;
+		}
+		componentTimeLine = {
+			entityEvents = {
+				num = 1;
+				item[0] = {
+					entity = "deathmatch_pickup_mega_health_2_respawn";
+					events = {
+						num = 1;
+						item[0] = {
+							eventTime = 100;
+							eventCall = {
+								eventDef = "activate";
+								args = {
+									num = 1;
+									item[0] = {
+										entity = "";
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		repeat = true;
+		allowClientsToStart = true;
+		renderModelInfo = {
+			scale = {
+				x = 1;
+				y = 1;
+				z = 1;
+			}
+		}
+	}
+}
+}
+entity {
+	entityDef deathmatch_pickup_mega_health_2_respawn {
+	inherit = "target/spawn";
+	class = "idTarget_Spawn";
+	expandInheritance = false;
+	poolCount = 0;
+	poolGranularity = 2;
+	networkReplicated = false;
+	disableAIPooling = false;
+	edit = {
+		flags = {
+			noFlood = true;
+		}
+		spawnConditions = {
+			maxCount = 0;
+			reuseDelaySec = 0;
+			doBoundsTest = false;
+			boundsTestType = "BOUNDSTEST_NONE";
+			fovCheck = 0;
+			minDistance = 0;
+			maxDistance = 0;
+			neighborSpawnerDistance = -1;
+			LOS_Test = "LOS_NONE";
+			playerToTest = "PLAYER_SP";
+			conditionProxy = "";
+		}
+		spawnEditableShared = {
+			groupName = "";
+			deathTrigger = "";
+			coverRadius = 0;
+			maxEnemyCoverDistance = 0;
+		}
+		entityDefs = {
+		num = 1;
+		item[0] = {
+			name = "deathmatch_pickup_mega_health_2_x";
+		}
+}
+		conductorEntityAIType = "SPAWN_AI_TYPE_ANY";
+		initialEntityDefs = {
+			num = 0;
+		}
+		spawnEditable = {
+			spawnAt = "";
+			copyTargets = false;
+			additionalTargets = {
+				num = 0;
+			}
+			overwriteTraversalFlags = true;
+			traversalClassFlags = "CLASS_A";
+			combatHintClass = "CLASS_ALL";
+			spawnAnim = "";
+			aiStateOverride = "AIOVERRIDE_TELEPORT";
+			initialTargetOverride = "";
+		}
+		portal = "";
+		targetSpawnParent = "";
+		disablePooling = false;
+		spawnPosition = {
+			x = 0.71;
+			y = -153.71;
+			z = 16.39;
+		}
+		spawnOrientation = {
+			mat = {
+				mat[0] = {
+					x = 0.99;
+					y = 0.01;
+					z = 0;
+				}
+				mat[1] = {
+					x = 0.01;
+					y = 0.99;
+					z = 0;
+				}
+			}
+		}
+		targets = {
+			num = 1;
+			item[0] = "deathmatch_pickup_mega_health_2_x";
+		}
+	}
+}
+}
+entity {
+	entityDef deathmatch_pickup_mega_health_2_x {
+	inherit = "pickup/health/large";
+	class = "idProp2";
+	expandInheritance = false;
+	poolCount = 0;
+	poolGranularity = 2;
+	networkReplicated = true;
+	disableAIPooling = false;
+	edit = {
+		renderModelInfo = {
+			model = "art/pickups/health/megaHealth_head_a.lwo";
+			contributesToLightProbeGen = false;
+			noAmbient = true;
+			scale = {
+				x = 1;
+				y = 1;
+				z = 1;
+			}
+			emissiveColor = {
+				r = 0;
+				g = 0.913725019;
+			}
+			emissiveScale = 3;
+		}
+		spawn_statIncreases = {
+			num = 1;
+			item[0] = {
+				stat = "STAT_ITEMS_SPAWNED";
+				increase = 1;
+			}
+		}
+		equipOnPickup = true;
+		lootStyle = "LOOT_TOUCH";
+		triggerDef = "trigger/props/megahealth";
+		isStatic = true;
+		canBePossessed = true;
+		fxDecl = "pickups/megahealth_head";
+		useableComponentDecl = "mega_health";
+		sound_spawn = "play_pickup_loop_05";
+		sound_stop = "stop_pickup_loop_05";
+		pickup_statIncreases = {
+			num = 1;
+			item[0] = {
+				stat = "STAT_HEALTH_PICKUP";
+				increase = 1;
+			}
+		}
+		spawnPosition = {
+			x = 0;
+			y = 0;
+			z = -999;
+		}
+		targets = {
+			num = 1;
+			item[0] = "deathmatch_pickup_mega_health_2_respawn_timeline";
+		}
+		isLootDrop = true;
+	}
+}
+}
+entity {
+	entityDef deathmatch_pickup_mega_health_2 {
+	inherit = "pickup/health/large";
+	class = "idProp2";
+	expandInheritance = false;
+	poolCount = 0;
+	poolGranularity = 2;
+	networkReplicated = true;
+	disableAIPooling = false;
+	edit = {
+		renderModelInfo = {
+			model = "art/pickups/health/megaHealth_head_a.lwo";
+			contributesToLightProbeGen = false;
+			noAmbient = true;
+			scale = {
+				x = 1;
+				y = 1;
+				z = 1;
+			}
+			emissiveColor = {
+				r = 0;
+				g = 0.913725019;
+			}
+			emissiveScale = 3;
+		}
+		spawn_statIncreases = {
+			num = 1;
+			item[0] = {
+				stat = "STAT_ITEMS_SPAWNED";
+				increase = 1;
+			}
+		}
+		equipOnPickup = true;
+		lootStyle = "LOOT_TOUCH";
+		triggerDef = "trigger/props/megahealth";
+		isStatic = true;
+		canBePossessed = true;
+		fxDecl = "pickups/megahealth_head";
+		useableComponentDecl = "mega_health";
+		sound_spawn = "play_pickup_loop_05";
+		sound_stop = "stop_pickup_loop_05";
+		pickup_statIncreases = {
+			num = 1;
+			item[0] = {
+				stat = "STAT_HEALTH_PICKUP";
+				increase = 1;
+			}
+		}
+		spawnPosition = {
+			x = 0.71;
+			y = -153.71;
+			z = 16.39;
+		}
+		spawnOrientation = {
+			mat = {
+				mat[0] = {
+					x = 0.99;
+					y = 0.01;
+					z = 0;
+				}
+				mat[1] = {
+					x = 0.01;
+					y = 0.99;
+					z = 0;
+				}
+			}
+		}
+		targets = {
+			num = 1;
+			item[0] = "deathmatch_pickup_mega_health_2_respawn_timeline";
+		}
+		isLootDrop = true;
+	}
+}
+}
+entity {
+	entityDef deathmatch_pickup_mega_health_3_respawn_timeline {
+	inherit = "target/timeline";
+	class = "idTarget_Timeline";
+	expandInheritance = false;
+	poolCount = 0;
+	poolGranularity = 2;
+	networkReplicated = true;
+	disableAIPooling = false;
+	edit = {
+		flags = {
+			noFlood = true;
+		}
+		networkSerializeTransforms = false;
+		count = 1;
+		spawnPosition = {
+			x = 1;
+			y = 1;
+			z = 1;
+		}
+		componentTimeLine = {
+			entityEvents = {
+				num = 1;
+				item[0] = {
+					entity = "deathmatch_pickup_mega_health_3_respawn_relay";
+					events = {
+						num = 1;
+						item[0] = {
+							eventTime = 15000;
+							eventCall = {
+								eventDef = "activate";
+								args = {
+									num = 1;
+									item[0] = {
+										entity = "";
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		repeat = true;
+		allowClientsToStart = true;
+		renderModelInfo = {
+			scale = {
+				x = 1;
+				y = 1;
+				z = 1;
+			}
+		}
+	}
+}
+}
+entity {
+	entityDef deathmatch_pickup_mega_health_3_respawn_relay {
+	inherit = "target/relay";
+	class = "idTarget_Count";
+	expandInheritance = false;
+	poolCount = 0;
+	poolGranularity = 2;
+	networkReplicated = false;
+	disableAIPooling = false;
+	edit = {
+		flags = {
+			noFlood = true;
+		}
+		networkSerializeTransforms = false;
+		count = 1;
+		spawnPosition = {
+			x = 1;
+			y = 1;
+			z = 1;
+		}
+		targets = {
+			num = 1;
+			item[0] = "deathmatch_pickup_mega_health_3_respawn_timeline_2";
+		}
+		repeat = true;
+	}
+}
+}
+entity {
+	entityDef deathmatch_pickup_mega_health_3_respawn_timeline_2 {
+	inherit = "target/timeline";
+	class = "idTarget_Timeline";
+	expandInheritance = false;
+	poolCount = 0;
+	poolGranularity = 2;
+	networkReplicated = true;
+	disableAIPooling = false;
+	edit = {
+		flags = {
+			noFlood = true;
+		}
+		networkSerializeTransforms = false;
+		count = 1;
+		spawnPosition = {
+			x = 1;
+			y = 1;
+			z = 1;
+		}
+		componentTimeLine = {
+			entityEvents = {
+				num = 1;
+				item[0] = {
+					entity = "deathmatch_pickup_mega_health_3_respawn";
+					events = {
+						num = 1;
+						item[0] = {
+							eventTime = 100;
+							eventCall = {
+								eventDef = "activate";
+								args = {
+									num = 1;
+									item[0] = {
+										entity = "";
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		repeat = true;
+		allowClientsToStart = true;
+		renderModelInfo = {
+			scale = {
+				x = 1;
+				y = 1;
+				z = 1;
+			}
+		}
+	}
+}
+}
+entity {
+	entityDef deathmatch_pickup_mega_health_3_respawn {
+	inherit = "target/spawn";
+	class = "idTarget_Spawn";
+	expandInheritance = false;
+	poolCount = 0;
+	poolGranularity = 2;
+	networkReplicated = false;
+	disableAIPooling = false;
+	edit = {
+		flags = {
+			noFlood = true;
+		}
+		spawnConditions = {
+			maxCount = 0;
+			reuseDelaySec = 0;
+			doBoundsTest = false;
+			boundsTestType = "BOUNDSTEST_NONE";
+			fovCheck = 0;
+			minDistance = 0;
+			maxDistance = 0;
+			neighborSpawnerDistance = -1;
+			LOS_Test = "LOS_NONE";
+			playerToTest = "PLAYER_SP";
+			conditionProxy = "";
+		}
+		spawnEditableShared = {
+			groupName = "";
+			deathTrigger = "";
+			coverRadius = 0;
+			maxEnemyCoverDistance = 0;
+		}
+		entityDefs = {
+		num = 1;
+		item[0] = {
+			name = "deathmatch_pickup_mega_health_3_x";
+		}
+}
+		conductorEntityAIType = "SPAWN_AI_TYPE_ANY";
+		initialEntityDefs = {
+			num = 0;
+		}
+		spawnEditable = {
+			spawnAt = "";
+			copyTargets = false;
+			additionalTargets = {
+				num = 0;
+			}
+			overwriteTraversalFlags = true;
+			traversalClassFlags = "CLASS_A";
+			combatHintClass = "CLASS_ALL";
+			spawnAnim = "";
+			aiStateOverride = "AIOVERRIDE_TELEPORT";
+			initialTargetOverride = "";
+		}
+		portal = "";
+		targetSpawnParent = "";
+		disablePooling = false;
+		spawnPosition = {
+			x = -25.62;
+			y = -141.97;
+			z = 19.61;
+		}
+		spawnOrientation = {
+			mat = {
+				mat[0] = {
+					x = 0;
+					y = 1;
+					z = 0;
+				}
+				mat[1] = {
+					x = -1;
+					y = 0;
+					z = 0;
+				}
+			}
+		}
+		targets = {
+			num = 1;
+			item[0] = "deathmatch_pickup_mega_health_3_x";
+		}
+	}
+}
+}
+entity {
+	entityDef deathmatch_pickup_mega_health_3_x {
+	inherit = "pickup/health/large";
+	class = "idProp2";
+	expandInheritance = false;
+	poolCount = 0;
+	poolGranularity = 2;
+	networkReplicated = true;
+	disableAIPooling = false;
+	edit = {
+		renderModelInfo = {
+			model = "art/pickups/health/megaHealth_head_a.lwo";
+			contributesToLightProbeGen = false;
+			noAmbient = true;
+			scale = {
+				x = 1;
+				y = 1;
+				z = 1;
+			}
+			emissiveColor = {
+				r = 0;
+				g = 0.913725019;
+			}
+			emissiveScale = 3;
+		}
+		spawn_statIncreases = {
+			num = 1;
+			item[0] = {
+				stat = "STAT_ITEMS_SPAWNED";
+				increase = 1;
+			}
+		}
+		equipOnPickup = true;
+		lootStyle = "LOOT_TOUCH";
+		triggerDef = "trigger/props/megahealth";
+		isStatic = true;
+		canBePossessed = true;
+		fxDecl = "pickups/megahealth_head";
+		useableComponentDecl = "mega_health";
+		sound_spawn = "play_pickup_loop_05";
+		sound_stop = "stop_pickup_loop_05";
+		pickup_statIncreases = {
+			num = 1;
+			item[0] = {
+				stat = "STAT_HEALTH_PICKUP";
+				increase = 1;
+			}
+		}
+		spawnPosition = {
+			x = 0;
+			y = 0;
+			z = -999;
+		}
+		targets = {
+			num = 1;
+			item[0] = "deathmatch_pickup_mega_health_3_respawn_timeline";
+		}
+		isLootDrop = true;
+	}
+}
+}
+entity {
+	entityDef deathmatch_pickup_mega_health_3 {
+	inherit = "pickup/health/large";
+	class = "idProp2";
+	expandInheritance = false;
+	poolCount = 0;
+	poolGranularity = 2;
+	networkReplicated = true;
+	disableAIPooling = false;
+	edit = {
+		renderModelInfo = {
+			model = "art/pickups/health/megaHealth_head_a.lwo";
+			contributesToLightProbeGen = false;
+			noAmbient = true;
+			scale = {
+				x = 1;
+				y = 1;
+				z = 1;
+			}
+			emissiveColor = {
+				r = 0;
+				g = 0.913725019;
+			}
+			emissiveScale = 3;
+		}
+		spawn_statIncreases = {
+			num = 1;
+			item[0] = {
+				stat = "STAT_ITEMS_SPAWNED";
+				increase = 1;
+			}
+		}
+		equipOnPickup = true;
+		lootStyle = "LOOT_TOUCH";
+		triggerDef = "trigger/props/megahealth";
+		isStatic = true;
+		canBePossessed = true;
+		fxDecl = "pickups/megahealth_head";
+		useableComponentDecl = "mega_health";
+		sound_spawn = "play_pickup_loop_05";
+		sound_stop = "stop_pickup_loop_05";
+		pickup_statIncreases = {
+			num = 1;
+			item[0] = {
+				stat = "STAT_HEALTH_PICKUP";
+				increase = 1;
+			}
+		}
+		spawnPosition = {
+			x = -25.62;
+			y = -141.97;
+			z = 19.61;
+		}
+		spawnOrientation = {
+			mat = {
+				mat[0] = {
+					x = 0;
+					y = 1;
+					z = 0;
+				}
+				mat[1] = {
+					x = -1;
+					y = 0;
+					z = 0;
+				}
+			}
+		}
+		targets = {
+			num = 1;
+			item[0] = "deathmatch_pickup_mega_health_3_respawn_timeline";
+		}
+		isLootDrop = true;
+	}
+}
+}
+entity {
+	entityDef deathmatch_pickup_mega_health_4_respawn_timeline {
+	inherit = "target/timeline";
+	class = "idTarget_Timeline";
+	expandInheritance = false;
+	poolCount = 0;
+	poolGranularity = 2;
+	networkReplicated = true;
+	disableAIPooling = false;
+	edit = {
+		flags = {
+			noFlood = true;
+		}
+		networkSerializeTransforms = false;
+		count = 1;
+		spawnPosition = {
+			x = 1;
+			y = 1;
+			z = 1;
+		}
+		componentTimeLine = {
+			entityEvents = {
+				num = 1;
+				item[0] = {
+					entity = "deathmatch_pickup_mega_health_4_respawn_relay";
+					events = {
+						num = 1;
+						item[0] = {
+							eventTime = 15000;
+							eventCall = {
+								eventDef = "activate";
+								args = {
+									num = 1;
+									item[0] = {
+										entity = "";
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		repeat = true;
+		allowClientsToStart = true;
+		renderModelInfo = {
+			scale = {
+				x = 1;
+				y = 1;
+				z = 1;
+			}
+		}
+	}
+}
+}
+entity {
+	entityDef deathmatch_pickup_mega_health_4_respawn_relay {
+	inherit = "target/relay";
+	class = "idTarget_Count";
+	expandInheritance = false;
+	poolCount = 0;
+	poolGranularity = 2;
+	networkReplicated = false;
+	disableAIPooling = false;
+	edit = {
+		flags = {
+			noFlood = true;
+		}
+		networkSerializeTransforms = false;
+		count = 1;
+		spawnPosition = {
+			x = 1;
+			y = 1;
+			z = 1;
+		}
+		targets = {
+			num = 1;
+			item[0] = "deathmatch_pickup_mega_health_4_respawn_timeline_2";
+		}
+		repeat = true;
+	}
+}
+}
+entity {
+	entityDef deathmatch_pickup_mega_health_4_respawn_timeline_2 {
+	inherit = "target/timeline";
+	class = "idTarget_Timeline";
+	expandInheritance = false;
+	poolCount = 0;
+	poolGranularity = 2;
+	networkReplicated = true;
+	disableAIPooling = false;
+	edit = {
+		flags = {
+			noFlood = true;
+		}
+		networkSerializeTransforms = false;
+		count = 1;
+		spawnPosition = {
+			x = 1;
+			y = 1;
+			z = 1;
+		}
+		componentTimeLine = {
+			entityEvents = {
+				num = 1;
+				item[0] = {
+					entity = "deathmatch_pickup_mega_health_4_respawn";
+					events = {
+						num = 1;
+						item[0] = {
+							eventTime = 100;
+							eventCall = {
+								eventDef = "activate";
+								args = {
+									num = 1;
+									item[0] = {
+										entity = "";
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		repeat = true;
+		allowClientsToStart = true;
+		renderModelInfo = {
+			scale = {
+				x = 1;
+				y = 1;
+				z = 1;
+			}
+		}
+	}
+}
+}
+entity {
+	entityDef deathmatch_pickup_mega_health_4_respawn {
+	inherit = "target/spawn";
+	class = "idTarget_Spawn";
+	expandInheritance = false;
+	poolCount = 0;
+	poolGranularity = 2;
+	networkReplicated = false;
+	disableAIPooling = false;
+	edit = {
+		flags = {
+			noFlood = true;
+		}
+		spawnConditions = {
+			maxCount = 0;
+			reuseDelaySec = 0;
+			doBoundsTest = false;
+			boundsTestType = "BOUNDSTEST_NONE";
+			fovCheck = 0;
+			minDistance = 0;
+			maxDistance = 0;
+			neighborSpawnerDistance = -1;
+			LOS_Test = "LOS_NONE";
+			playerToTest = "PLAYER_SP";
+			conditionProxy = "";
+		}
+		spawnEditableShared = {
+			groupName = "";
+			deathTrigger = "";
+			coverRadius = 0;
+			maxEnemyCoverDistance = 0;
+		}
+		entityDefs = {
+		num = 1;
+		item[0] = {
+			name = "deathmatch_pickup_mega_health_4_x";
+		}
+}
+		conductorEntityAIType = "SPAWN_AI_TYPE_ANY";
+		initialEntityDefs = {
+			num = 0;
+		}
+		spawnEditable = {
+			spawnAt = "";
+			copyTargets = false;
+			additionalTargets = {
+				num = 0;
+			}
+			overwriteTraversalFlags = true;
+			traversalClassFlags = "CLASS_A";
+			combatHintClass = "CLASS_ALL";
+			spawnAnim = "";
+			aiStateOverride = "AIOVERRIDE_TELEPORT";
+			initialTargetOverride = "";
+		}
+		portal = "";
+		targetSpawnParent = "";
+		disablePooling = false;
+		spawnPosition = {
+			x = -33.88;
+			y = -160.11;
+			z = 19.36;
+		}
+		spawnOrientation = {
+			mat = {
+				mat[0] = {
+					x = 0.99;
+					y = 0.01;
+					z = 0;
+				}
+				mat[1] = {
+					x = 0.01;
+					y = 0.99;
+					z = 0;
+				}
+			}
+		}
+		targets = {
+			num = 1;
+			item[0] = "deathmatch_pickup_mega_health_4_x";
+		}
+	}
+}
+}
+entity {
+	entityDef deathmatch_pickup_mega_health_4_x {
+	inherit = "pickup/health/large";
+	class = "idProp2";
+	expandInheritance = false;
+	poolCount = 0;
+	poolGranularity = 2;
+	networkReplicated = true;
+	disableAIPooling = false;
+	edit = {
+		renderModelInfo = {
+			model = "art/pickups/health/megaHealth_head_a.lwo";
+			contributesToLightProbeGen = false;
+			noAmbient = true;
+			scale = {
+				x = 1;
+				y = 1;
+				z = 1;
+			}
+			emissiveColor = {
+				r = 0;
+				g = 0.913725019;
+			}
+			emissiveScale = 3;
+		}
+		spawn_statIncreases = {
+			num = 1;
+			item[0] = {
+				stat = "STAT_ITEMS_SPAWNED";
+				increase = 1;
+			}
+		}
+		equipOnPickup = true;
+		lootStyle = "LOOT_TOUCH";
+		triggerDef = "trigger/props/megahealth";
+		isStatic = true;
+		canBePossessed = true;
+		fxDecl = "pickups/megahealth_head";
+		useableComponentDecl = "mega_health";
+		sound_spawn = "play_pickup_loop_05";
+		sound_stop = "stop_pickup_loop_05";
+		pickup_statIncreases = {
+			num = 1;
+			item[0] = {
+				stat = "STAT_HEALTH_PICKUP";
+				increase = 1;
+			}
+		}
+		spawnPosition = {
+			x = 0;
+			y = 0;
+			z = -999;
+		}
+		targets = {
+			num = 1;
+			item[0] = "deathmatch_pickup_mega_health_4_respawn_timeline";
+		}
+		isLootDrop = true;
+	}
+}
+}
+entity {
+	entityDef deathmatch_pickup_mega_health_4 {
+	inherit = "pickup/health/large";
+	class = "idProp2";
+	expandInheritance = false;
+	poolCount = 0;
+	poolGranularity = 2;
+	networkReplicated = true;
+	disableAIPooling = false;
+	edit = {
+		renderModelInfo = {
+			model = "art/pickups/health/megaHealth_head_a.lwo";
+			contributesToLightProbeGen = false;
+			noAmbient = true;
+			scale = {
+				x = 1;
+				y = 1;
+				z = 1;
+			}
+			emissiveColor = {
+				r = 0;
+				g = 0.913725019;
+			}
+			emissiveScale = 3;
+		}
+		spawn_statIncreases = {
+			num = 1;
+			item[0] = {
+				stat = "STAT_ITEMS_SPAWNED";
+				increase = 1;
+			}
+		}
+		equipOnPickup = true;
+		lootStyle = "LOOT_TOUCH";
+		triggerDef = "trigger/props/megahealth";
+		isStatic = true;
+		canBePossessed = true;
+		fxDecl = "pickups/megahealth_head";
+		useableComponentDecl = "mega_health";
+		sound_spawn = "play_pickup_loop_05";
+		sound_stop = "stop_pickup_loop_05";
+		pickup_statIncreases = {
+			num = 1;
+			item[0] = {
+				stat = "STAT_HEALTH_PICKUP";
+				increase = 1;
+			}
+		}
+		spawnPosition = {
+			x = -33.88;
+			y = -160.11;
+			z = 19.36;
+		}
+		spawnOrientation = {
+			mat = {
+				mat[0] = {
+					x = 0.99;
+					y = 0.01;
+					z = 0;
+				}
+				mat[1] = {
+					x = 0.01;
+					y = 0.99;
+					z = 0;
+				}
+			}
+		}
+		targets = {
+			num = 1;
+			item[0] = "deathmatch_pickup_mega_health_4_respawn_timeline";
+		}
+		isLootDrop = true;
+	}
+}
+}
+entity {
+	entityDef deathmatch_pickup_mega_health_5_respawn_timeline {
+	inherit = "target/timeline";
+	class = "idTarget_Timeline";
+	expandInheritance = false;
+	poolCount = 0;
+	poolGranularity = 2;
+	networkReplicated = true;
+	disableAIPooling = false;
+	edit = {
+		flags = {
+			noFlood = true;
+		}
+		networkSerializeTransforms = false;
+		count = 1;
+		spawnPosition = {
+			x = 1;
+			y = 1;
+			z = 1;
+		}
+		componentTimeLine = {
+			entityEvents = {
+				num = 1;
+				item[0] = {
+					entity = "deathmatch_pickup_mega_health_5_respawn_relay";
+					events = {
+						num = 1;
+						item[0] = {
+							eventTime = 15000;
+							eventCall = {
+								eventDef = "activate";
+								args = {
+									num = 1;
+									item[0] = {
+										entity = "";
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		repeat = true;
+		allowClientsToStart = true;
+		renderModelInfo = {
+			scale = {
+				x = 1;
+				y = 1;
+				z = 1;
+			}
+		}
+	}
+}
+}
+entity {
+	entityDef deathmatch_pickup_mega_health_5_respawn_relay {
+	inherit = "target/relay";
+	class = "idTarget_Count";
+	expandInheritance = false;
+	poolCount = 0;
+	poolGranularity = 2;
+	networkReplicated = false;
+	disableAIPooling = false;
+	edit = {
+		flags = {
+			noFlood = true;
+		}
+		networkSerializeTransforms = false;
+		count = 1;
+		spawnPosition = {
+			x = 1;
+			y = 1;
+			z = 1;
+		}
+		targets = {
+			num = 1;
+			item[0] = "deathmatch_pickup_mega_health_5_respawn_timeline_2";
+		}
+		repeat = true;
+	}
+}
+}
+entity {
+	entityDef deathmatch_pickup_mega_health_5_respawn_timeline_2 {
+	inherit = "target/timeline";
+	class = "idTarget_Timeline";
+	expandInheritance = false;
+	poolCount = 0;
+	poolGranularity = 2;
+	networkReplicated = true;
+	disableAIPooling = false;
+	edit = {
+		flags = {
+			noFlood = true;
+		}
+		networkSerializeTransforms = false;
+		count = 1;
+		spawnPosition = {
+			x = 1;
+			y = 1;
+			z = 1;
+		}
+		componentTimeLine = {
+			entityEvents = {
+				num = 1;
+				item[0] = {
+					entity = "deathmatch_pickup_mega_health_5_respawn";
+					events = {
+						num = 1;
+						item[0] = {
+							eventTime = 100;
+							eventCall = {
+								eventDef = "activate";
+								args = {
+									num = 1;
+									item[0] = {
+										entity = "";
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		repeat = true;
+		allowClientsToStart = true;
+		renderModelInfo = {
+			scale = {
+				x = 1;
+				y = 1;
+				z = 1;
+			}
+		}
+	}
+}
+}
+entity {
+	entityDef deathmatch_pickup_mega_health_5_respawn {
+	inherit = "target/spawn";
+	class = "idTarget_Spawn";
+	expandInheritance = false;
+	poolCount = 0;
+	poolGranularity = 2;
+	networkReplicated = false;
+	disableAIPooling = false;
+	edit = {
+		flags = {
+			noFlood = true;
+		}
+		spawnConditions = {
+			maxCount = 0;
+			reuseDelaySec = 0;
+			doBoundsTest = false;
+			boundsTestType = "BOUNDSTEST_NONE";
+			fovCheck = 0;
+			minDistance = 0;
+			maxDistance = 0;
+			neighborSpawnerDistance = -1;
+			LOS_Test = "LOS_NONE";
+			playerToTest = "PLAYER_SP";
+			conditionProxy = "";
+		}
+		spawnEditableShared = {
+			groupName = "";
+			deathTrigger = "";
+			coverRadius = 0;
+			maxEnemyCoverDistance = 0;
+		}
+		entityDefs = {
+		num = 1;
+		item[0] = {
+			name = "deathmatch_pickup_mega_health_5_x";
+		}
+}
+		conductorEntityAIType = "SPAWN_AI_TYPE_ANY";
+		initialEntityDefs = {
+			num = 0;
+		}
+		spawnEditable = {
+			spawnAt = "";
+			copyTargets = false;
+			additionalTargets = {
+				num = 0;
+			}
+			overwriteTraversalFlags = true;
+			traversalClassFlags = "CLASS_A";
+			combatHintClass = "CLASS_ALL";
+			spawnAnim = "";
+			aiStateOverride = "AIOVERRIDE_TELEPORT";
+			initialTargetOverride = "";
+		}
+		portal = "";
+		targetSpawnParent = "";
+		disablePooling = false;
+		spawnPosition = {
+			x = -17.21;
+			y = -188.48;
+			z = 18.51;
+		}
+		spawnOrientation = {
+			mat = {
+				mat[0] = {
+					x = 0.7;
+					y = -0.7;
+					z = 0;
+				}
+				mat[1] = {
+					x = 0.7;
+					y = 0.7;
+					z = 0;
+				}
+			}
+		}
+		targets = {
+			num = 1;
+			item[0] = "deathmatch_pickup_mega_health_5_x";
+		}
+	}
+}
+}
+entity {
+	entityDef deathmatch_pickup_mega_health_5_x {
+	inherit = "pickup/health/large";
+	class = "idProp2";
+	expandInheritance = false;
+	poolCount = 0;
+	poolGranularity = 2;
+	networkReplicated = true;
+	disableAIPooling = false;
+	edit = {
+		renderModelInfo = {
+			model = "art/pickups/health/megaHealth_head_a.lwo";
+			contributesToLightProbeGen = false;
+			noAmbient = true;
+			scale = {
+				x = 1;
+				y = 1;
+				z = 1;
+			}
+			emissiveColor = {
+				r = 0;
+				g = 0.913725019;
+			}
+			emissiveScale = 3;
+		}
+		spawn_statIncreases = {
+			num = 1;
+			item[0] = {
+				stat = "STAT_ITEMS_SPAWNED";
+				increase = 1;
+			}
+		}
+		equipOnPickup = true;
+		lootStyle = "LOOT_TOUCH";
+		triggerDef = "trigger/props/megahealth";
+		isStatic = true;
+		canBePossessed = true;
+		fxDecl = "pickups/megahealth_head";
+		useableComponentDecl = "mega_health";
+		sound_spawn = "play_pickup_loop_05";
+		sound_stop = "stop_pickup_loop_05";
+		pickup_statIncreases = {
+			num = 1;
+			item[0] = {
+				stat = "STAT_HEALTH_PICKUP";
+				increase = 1;
+			}
+		}
+		spawnPosition = {
+			x = 0;
+			y = 0;
+			z = -999;
+		}
+		targets = {
+			num = 1;
+			item[0] = "deathmatch_pickup_mega_health_5_respawn_timeline";
+		}
+		isLootDrop = true;
+	}
+}
+}
+entity {
+	entityDef deathmatch_pickup_mega_health_5 {
+	inherit = "pickup/health/large";
+	class = "idProp2";
+	expandInheritance = false;
+	poolCount = 0;
+	poolGranularity = 2;
+	networkReplicated = true;
+	disableAIPooling = false;
+	edit = {
+		renderModelInfo = {
+			model = "art/pickups/health/megaHealth_head_a.lwo";
+			contributesToLightProbeGen = false;
+			noAmbient = true;
+			scale = {
+				x = 1;
+				y = 1;
+				z = 1;
+			}
+			emissiveColor = {
+				r = 0;
+				g = 0.913725019;
+			}
+			emissiveScale = 3;
+		}
+		spawn_statIncreases = {
+			num = 1;
+			item[0] = {
+				stat = "STAT_ITEMS_SPAWNED";
+				increase = 1;
+			}
+		}
+		equipOnPickup = true;
+		lootStyle = "LOOT_TOUCH";
+		triggerDef = "trigger/props/megahealth";
+		isStatic = true;
+		canBePossessed = true;
+		fxDecl = "pickups/megahealth_head";
+		useableComponentDecl = "mega_health";
+		sound_spawn = "play_pickup_loop_05";
+		sound_stop = "stop_pickup_loop_05";
+		pickup_statIncreases = {
+			num = 1;
+			item[0] = {
+				stat = "STAT_HEALTH_PICKUP";
+				increase = 1;
+			}
+		}
+		spawnPosition = {
+			x = -17.21;
+			y = -188.48;
+			z = 18.51;
+		}
+		spawnOrientation = {
+			mat = {
+				mat[0] = {
+					x = 0.7;
+					y = -0.7;
+					z = 0;
+				}
+				mat[1] = {
+					x = 0.7;
+					y = 0.7;
+					z = 0;
+				}
+			}
+		}
+		targets = {
+			num = 1;
+			item[0] = "deathmatch_pickup_mega_health_5_respawn_timeline";
+		}
+		isLootDrop = true;
+	}
+}
+}
+entity {
+	entityDef deathmatch_pickup_mega_health_6_respawn_timeline {
+	inherit = "target/timeline";
+	class = "idTarget_Timeline";
+	expandInheritance = false;
+	poolCount = 0;
+	poolGranularity = 2;
+	networkReplicated = true;
+	disableAIPooling = false;
+	edit = {
+		flags = {
+			noFlood = true;
+		}
+		networkSerializeTransforms = false;
+		count = 1;
+		spawnPosition = {
+			x = 1;
+			y = 1;
+			z = 1;
+		}
+		componentTimeLine = {
+			entityEvents = {
+				num = 1;
+				item[0] = {
+					entity = "deathmatch_pickup_mega_health_6_respawn_relay";
+					events = {
+						num = 1;
+						item[0] = {
+							eventTime = 15000;
+							eventCall = {
+								eventDef = "activate";
+								args = {
+									num = 1;
+									item[0] = {
+										entity = "";
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		repeat = true;
+		allowClientsToStart = true;
+		renderModelInfo = {
+			scale = {
+				x = 1;
+				y = 1;
+				z = 1;
+			}
+		}
+	}
+}
+}
+entity {
+	entityDef deathmatch_pickup_mega_health_6_respawn_relay {
+	inherit = "target/relay";
+	class = "idTarget_Count";
+	expandInheritance = false;
+	poolCount = 0;
+	poolGranularity = 2;
+	networkReplicated = false;
+	disableAIPooling = false;
+	edit = {
+		flags = {
+			noFlood = true;
+		}
+		networkSerializeTransforms = false;
+		count = 1;
+		spawnPosition = {
+			x = 1;
+			y = 1;
+			z = 1;
+		}
+		targets = {
+			num = 1;
+			item[0] = "deathmatch_pickup_mega_health_6_respawn_timeline_2";
+		}
+		repeat = true;
+	}
+}
+}
+entity {
+	entityDef deathmatch_pickup_mega_health_6_respawn_timeline_2 {
+	inherit = "target/timeline";
+	class = "idTarget_Timeline";
+	expandInheritance = false;
+	poolCount = 0;
+	poolGranularity = 2;
+	networkReplicated = true;
+	disableAIPooling = false;
+	edit = {
+		flags = {
+			noFlood = true;
+		}
+		networkSerializeTransforms = false;
+		count = 1;
+		spawnPosition = {
+			x = 1;
+			y = 1;
+			z = 1;
+		}
+		componentTimeLine = {
+			entityEvents = {
+				num = 1;
+				item[0] = {
+					entity = "deathmatch_pickup_mega_health_6_respawn";
+					events = {
+						num = 1;
+						item[0] = {
+							eventTime = 100;
+							eventCall = {
+								eventDef = "activate";
+								args = {
+									num = 1;
+									item[0] = {
+										entity = "";
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		repeat = true;
+		allowClientsToStart = true;
+		renderModelInfo = {
+			scale = {
+				x = 1;
+				y = 1;
+				z = 1;
+			}
+		}
+	}
+}
+}
+entity {
+	entityDef deathmatch_pickup_mega_health_6_respawn {
+	inherit = "target/spawn";
+	class = "idTarget_Spawn";
+	expandInheritance = false;
+	poolCount = 0;
+	poolGranularity = 2;
+	networkReplicated = false;
+	disableAIPooling = false;
+	edit = {
+		flags = {
+			noFlood = true;
+		}
+		spawnConditions = {
+			maxCount = 0;
+			reuseDelaySec = 0;
+			doBoundsTest = false;
+			boundsTestType = "BOUNDSTEST_NONE";
+			fovCheck = 0;
+			minDistance = 0;
+			maxDistance = 0;
+			neighborSpawnerDistance = -1;
+			LOS_Test = "LOS_NONE";
+			playerToTest = "PLAYER_SP";
+			conditionProxy = "";
+		}
+		spawnEditableShared = {
+			groupName = "";
+			deathTrigger = "";
+			coverRadius = 0;
+			maxEnemyCoverDistance = 0;
+		}
+		entityDefs = {
+		num = 1;
+		item[0] = {
+			name = "deathmatch_pickup_mega_health_6_x";
+		}
+}
+		conductorEntityAIType = "SPAWN_AI_TYPE_ANY";
+		initialEntityDefs = {
+			num = 0;
+		}
+		spawnEditable = {
+			spawnAt = "";
+			copyTargets = false;
+			additionalTargets = {
+				num = 0;
+			}
+			overwriteTraversalFlags = true;
+			traversalClassFlags = "CLASS_A";
+			combatHintClass = "CLASS_ALL";
+			spawnAnim = "";
+			aiStateOverride = "AIOVERRIDE_TELEPORT";
+			initialTargetOverride = "";
+		}
+		portal = "";
+		targetSpawnParent = "";
+		disablePooling = false;
+		spawnPosition = {
+			x = 16.7;
+			y = -192.7;
+			z = 14.26;
+		}
+		spawnOrientation = {
+			mat = {
+				mat[0] = {
+					x = -0.71;
+					y = -0.69;
+					z = 0;
+				}
+				mat[1] = {
+					x = 0.69;
+					y = -0.71;
+					z = 0;
+				}
+			}
+		}
+		targets = {
+			num = 1;
+			item[0] = "deathmatch_pickup_mega_health_6_x";
+		}
+	}
+}
+}
+entity {
+	entityDef deathmatch_pickup_mega_health_6_x {
+	inherit = "pickup/health/large";
+	class = "idProp2";
+	expandInheritance = false;
+	poolCount = 0;
+	poolGranularity = 2;
+	networkReplicated = true;
+	disableAIPooling = false;
+	edit = {
+		renderModelInfo = {
+			model = "art/pickups/health/megaHealth_head_a.lwo";
+			contributesToLightProbeGen = false;
+			noAmbient = true;
+			scale = {
+				x = 1;
+				y = 1;
+				z = 1;
+			}
+			emissiveColor = {
+				r = 0;
+				g = 0.913725019;
+			}
+			emissiveScale = 3;
+		}
+		spawn_statIncreases = {
+			num = 1;
+			item[0] = {
+				stat = "STAT_ITEMS_SPAWNED";
+				increase = 1;
+			}
+		}
+		equipOnPickup = true;
+		lootStyle = "LOOT_TOUCH";
+		triggerDef = "trigger/props/megahealth";
+		isStatic = true;
+		canBePossessed = true;
+		fxDecl = "pickups/megahealth_head";
+		useableComponentDecl = "mega_health";
+		sound_spawn = "play_pickup_loop_05";
+		sound_stop = "stop_pickup_loop_05";
+		pickup_statIncreases = {
+			num = 1;
+			item[0] = {
+				stat = "STAT_HEALTH_PICKUP";
+				increase = 1;
+			}
+		}
+		spawnPosition = {
+			x = 0;
+			y = 0;
+			z = -999;
+		}
+		targets = {
+			num = 1;
+			item[0] = "deathmatch_pickup_mega_health_6_respawn_timeline";
+		}
+		isLootDrop = true;
+	}
+}
+}
+entity {
+	entityDef deathmatch_pickup_mega_health_6 {
+	inherit = "pickup/health/large";
+	class = "idProp2";
+	expandInheritance = false;
+	poolCount = 0;
+	poolGranularity = 2;
+	networkReplicated = true;
+	disableAIPooling = false;
+	edit = {
+		renderModelInfo = {
+			model = "art/pickups/health/megaHealth_head_a.lwo";
+			contributesToLightProbeGen = false;
+			noAmbient = true;
+			scale = {
+				x = 1;
+				y = 1;
+				z = 1;
+			}
+			emissiveColor = {
+				r = 0;
+				g = 0.913725019;
+			}
+			emissiveScale = 3;
+		}
+		spawn_statIncreases = {
+			num = 1;
+			item[0] = {
+				stat = "STAT_ITEMS_SPAWNED";
+				increase = 1;
+			}
+		}
+		equipOnPickup = true;
+		lootStyle = "LOOT_TOUCH";
+		triggerDef = "trigger/props/megahealth";
+		isStatic = true;
+		canBePossessed = true;
+		fxDecl = "pickups/megahealth_head";
+		useableComponentDecl = "mega_health";
+		sound_spawn = "play_pickup_loop_05";
+		sound_stop = "stop_pickup_loop_05";
+		pickup_statIncreases = {
+			num = 1;
+			item[0] = {
+				stat = "STAT_HEALTH_PICKUP";
+				increase = 1;
+			}
+		}
+		spawnPosition = {
+			x = 16.7;
+			y = -192.7;
+			z = 14.26;
+		}
+		spawnOrientation = {
+			mat = {
+				mat[0] = {
+					x = -0.71;
+					y = -0.69;
+					z = 0;
+				}
+				mat[1] = {
+					x = 0.69;
+					y = -0.71;
+					z = 0;
+				}
+			}
+		}
+		targets = {
+			num = 1;
+			item[0] = "deathmatch_pickup_mega_health_6_respawn_timeline";
+		}
+		isLootDrop = true;
+	}
+}
+}
+entity {
+	entityDef deathmatch_pickup_mega_health_7_respawn_timeline {
+	inherit = "target/timeline";
+	class = "idTarget_Timeline";
+	expandInheritance = false;
+	poolCount = 0;
+	poolGranularity = 2;
+	networkReplicated = true;
+	disableAIPooling = false;
+	edit = {
+		flags = {
+			noFlood = true;
+		}
+		networkSerializeTransforms = false;
+		count = 1;
+		spawnPosition = {
+			x = 1;
+			y = 1;
+			z = 1;
+		}
+		componentTimeLine = {
+			entityEvents = {
+				num = 1;
+				item[0] = {
+					entity = "deathmatch_pickup_mega_health_7_respawn_relay";
+					events = {
+						num = 1;
+						item[0] = {
+							eventTime = 15000;
+							eventCall = {
+								eventDef = "activate";
+								args = {
+									num = 1;
+									item[0] = {
+										entity = "";
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		repeat = true;
+		allowClientsToStart = true;
+		renderModelInfo = {
+			scale = {
+				x = 1;
+				y = 1;
+				z = 1;
+			}
+		}
+	}
+}
+}
+entity {
+	entityDef deathmatch_pickup_mega_health_7_respawn_relay {
+	inherit = "target/relay";
+	class = "idTarget_Count";
+	expandInheritance = false;
+	poolCount = 0;
+	poolGranularity = 2;
+	networkReplicated = false;
+	disableAIPooling = false;
+	edit = {
+		flags = {
+			noFlood = true;
+		}
+		networkSerializeTransforms = false;
+		count = 1;
+		spawnPosition = {
+			x = 1;
+			y = 1;
+			z = 1;
+		}
+		targets = {
+			num = 1;
+			item[0] = "deathmatch_pickup_mega_health_7_respawn_timeline_2";
+		}
+		repeat = true;
+	}
+}
+}
+entity {
+	entityDef deathmatch_pickup_mega_health_7_respawn_timeline_2 {
+	inherit = "target/timeline";
+	class = "idTarget_Timeline";
+	expandInheritance = false;
+	poolCount = 0;
+	poolGranularity = 2;
+	networkReplicated = true;
+	disableAIPooling = false;
+	edit = {
+		flags = {
+			noFlood = true;
+		}
+		networkSerializeTransforms = false;
+		count = 1;
+		spawnPosition = {
+			x = 1;
+			y = 1;
+			z = 1;
+		}
+		componentTimeLine = {
+			entityEvents = {
+				num = 1;
+				item[0] = {
+					entity = "deathmatch_pickup_mega_health_7_respawn";
+					events = {
+						num = 1;
+						item[0] = {
+							eventTime = 100;
+							eventCall = {
+								eventDef = "activate";
+								args = {
+									num = 1;
+									item[0] = {
+										entity = "";
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		repeat = true;
+		allowClientsToStart = true;
+		renderModelInfo = {
+			scale = {
+				x = 1;
+				y = 1;
+				z = 1;
+			}
+		}
+	}
+}
+}
+entity {
+	entityDef deathmatch_pickup_mega_health_7_respawn {
+	inherit = "target/spawn";
+	class = "idTarget_Spawn";
+	expandInheritance = false;
+	poolCount = 0;
+	poolGranularity = 2;
+	networkReplicated = false;
+	disableAIPooling = false;
+	edit = {
+		flags = {
+			noFlood = true;
+		}
+		spawnConditions = {
+			maxCount = 0;
+			reuseDelaySec = 0;
+			doBoundsTest = false;
+			boundsTestType = "BOUNDSTEST_NONE";
+			fovCheck = 0;
+			minDistance = 0;
+			maxDistance = 0;
+			neighborSpawnerDistance = -1;
+			LOS_Test = "LOS_NONE";
+			playerToTest = "PLAYER_SP";
+			conditionProxy = "";
+		}
+		spawnEditableShared = {
+			groupName = "";
+			deathTrigger = "";
+			coverRadius = 0;
+			maxEnemyCoverDistance = 0;
+		}
+		entityDefs = {
+		num = 1;
+		item[0] = {
+			name = "deathmatch_pickup_mega_health_7_x";
+		}
+}
+		conductorEntityAIType = "SPAWN_AI_TYPE_ANY";
+		initialEntityDefs = {
+			num = 0;
+		}
+		spawnEditable = {
+			spawnAt = "";
+			copyTargets = false;
+			additionalTargets = {
+				num = 0;
+			}
+			overwriteTraversalFlags = true;
+			traversalClassFlags = "CLASS_A";
+			combatHintClass = "CLASS_ALL";
+			spawnAnim = "";
+			aiStateOverride = "AIOVERRIDE_TELEPORT";
+			initialTargetOverride = "";
+		}
+		portal = "";
+		targetSpawnParent = "";
+		disablePooling = false;
+		spawnPosition = {
+			x = -9.76;
+			y = -155.44;
+			z = 8.76;
+		}
+		spawnOrientation = {
+			mat = {
+				mat[0] = {
+					x = 0.7;
+					y = 0.7;
+					z = 0;
+				}
+				mat[1] = {
+					x = -0.7;
+					y = 0.7;
+					z = 0;
+				}
+			}
+		}
+		targets = {
+			num = 1;
+			item[0] = "deathmatch_pickup_mega_health_7_x";
+		}
+	}
+}
+}
+entity {
+	entityDef deathmatch_pickup_mega_health_7_x {
+	inherit = "pickup/health/large";
+	class = "idProp2";
+	expandInheritance = false;
+	poolCount = 0;
+	poolGranularity = 2;
+	networkReplicated = true;
+	disableAIPooling = false;
+	edit = {
+		renderModelInfo = {
+			model = "art/pickups/health/megaHealth_head_a.lwo";
+			contributesToLightProbeGen = false;
+			noAmbient = true;
+			scale = {
+				x = 1;
+				y = 1;
+				z = 1;
+			}
+			emissiveColor = {
+				r = 0;
+				g = 0.913725019;
+			}
+			emissiveScale = 3;
+		}
+		spawn_statIncreases = {
+			num = 1;
+			item[0] = {
+				stat = "STAT_ITEMS_SPAWNED";
+				increase = 1;
+			}
+		}
+		equipOnPickup = true;
+		lootStyle = "LOOT_TOUCH";
+		triggerDef = "trigger/props/megahealth";
+		isStatic = true;
+		canBePossessed = true;
+		fxDecl = "pickups/megahealth_head";
+		useableComponentDecl = "mega_health";
+		sound_spawn = "play_pickup_loop_05";
+		sound_stop = "stop_pickup_loop_05";
+		pickup_statIncreases = {
+			num = 1;
+			item[0] = {
+				stat = "STAT_HEALTH_PICKUP";
+				increase = 1;
+			}
+		}
+		spawnPosition = {
+			x = 0;
+			y = 0;
+			z = -999;
+		}
+		targets = {
+			num = 1;
+			item[0] = "deathmatch_pickup_mega_health_7_respawn_timeline";
+		}
+		isLootDrop = true;
+	}
+}
+}
+entity {
+	entityDef deathmatch_pickup_mega_health_7 {
+	inherit = "pickup/health/large";
+	class = "idProp2";
+	expandInheritance = false;
+	poolCount = 0;
+	poolGranularity = 2;
+	networkReplicated = true;
+	disableAIPooling = false;
+	edit = {
+		renderModelInfo = {
+			model = "art/pickups/health/megaHealth_head_a.lwo";
+			contributesToLightProbeGen = false;
+			noAmbient = true;
+			scale = {
+				x = 1;
+				y = 1;
+				z = 1;
+			}
+			emissiveColor = {
+				r = 0;
+				g = 0.913725019;
+			}
+			emissiveScale = 3;
+		}
+		spawn_statIncreases = {
+			num = 1;
+			item[0] = {
+				stat = "STAT_ITEMS_SPAWNED";
+				increase = 1;
+			}
+		}
+		equipOnPickup = true;
+		lootStyle = "LOOT_TOUCH";
+		triggerDef = "trigger/props/megahealth";
+		isStatic = true;
+		canBePossessed = true;
+		fxDecl = "pickups/megahealth_head";
+		useableComponentDecl = "mega_health";
+		sound_spawn = "play_pickup_loop_05";
+		sound_stop = "stop_pickup_loop_05";
+		pickup_statIncreases = {
+			num = 1;
+			item[0] = {
+				stat = "STAT_HEALTH_PICKUP";
+				increase = 1;
+			}
+		}
+		spawnPosition = {
+			x = -9.76;
+			y = -155.44;
+			z = 8.76;
+		}
+		spawnOrientation = {
+			mat = {
+				mat[0] = {
+					x = 0.7;
+					y = 0.7;
+					z = 0;
+				}
+				mat[1] = {
+					x = -0.7;
+					y = 0.7;
+					z = 0;
+				}
+			}
+		}
+		targets = {
+			num = 1;
+			item[0] = "deathmatch_pickup_mega_health_7_respawn_timeline";
+		}
+		isLootDrop = true;
+	}
+}
+}
+entity {
+	entityDef deathmatch_pickup_mega_health_8_respawn_timeline {
+	inherit = "target/timeline";
+	class = "idTarget_Timeline";
+	expandInheritance = false;
+	poolCount = 0;
+	poolGranularity = 2;
+	networkReplicated = true;
+	disableAIPooling = false;
+	edit = {
+		flags = {
+			noFlood = true;
+		}
+		networkSerializeTransforms = false;
+		count = 1;
+		spawnPosition = {
+			x = 1;
+			y = 1;
+			z = 1;
+		}
+		componentTimeLine = {
+			entityEvents = {
+				num = 1;
+				item[0] = {
+					entity = "deathmatch_pickup_mega_health_8_respawn_relay";
+					events = {
+						num = 1;
+						item[0] = {
+							eventTime = 15000;
+							eventCall = {
+								eventDef = "activate";
+								args = {
+									num = 1;
+									item[0] = {
+										entity = "";
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		repeat = true;
+		allowClientsToStart = true;
+		renderModelInfo = {
+			scale = {
+				x = 1;
+				y = 1;
+				z = 1;
+			}
+		}
+	}
+}
+}
+entity {
+	entityDef deathmatch_pickup_mega_health_8_respawn_relay {
+	inherit = "target/relay";
+	class = "idTarget_Count";
+	expandInheritance = false;
+	poolCount = 0;
+	poolGranularity = 2;
+	networkReplicated = false;
+	disableAIPooling = false;
+	edit = {
+		flags = {
+			noFlood = true;
+		}
+		networkSerializeTransforms = false;
+		count = 1;
+		spawnPosition = {
+			x = 1;
+			y = 1;
+			z = 1;
+		}
+		targets = {
+			num = 1;
+			item[0] = "deathmatch_pickup_mega_health_8_respawn_timeline_2";
+		}
+		repeat = true;
+	}
+}
+}
+entity {
+	entityDef deathmatch_pickup_mega_health_8_respawn_timeline_2 {
+	inherit = "target/timeline";
+	class = "idTarget_Timeline";
+	expandInheritance = false;
+	poolCount = 0;
+	poolGranularity = 2;
+	networkReplicated = true;
+	disableAIPooling = false;
+	edit = {
+		flags = {
+			noFlood = true;
+		}
+		networkSerializeTransforms = false;
+		count = 1;
+		spawnPosition = {
+			x = 1;
+			y = 1;
+			z = 1;
+		}
+		componentTimeLine = {
+			entityEvents = {
+				num = 1;
+				item[0] = {
+					entity = "deathmatch_pickup_mega_health_8_respawn";
+					events = {
+						num = 1;
+						item[0] = {
+							eventTime = 100;
+							eventCall = {
+								eventDef = "activate";
+								args = {
+									num = 1;
+									item[0] = {
+										entity = "";
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		repeat = true;
+		allowClientsToStart = true;
+		renderModelInfo = {
+			scale = {
+				x = 1;
+				y = 1;
+				z = 1;
+			}
+		}
+	}
+}
+}
+entity {
+	entityDef deathmatch_pickup_mega_health_8_respawn {
+	inherit = "target/spawn";
+	class = "idTarget_Spawn";
+	expandInheritance = false;
+	poolCount = 0;
+	poolGranularity = 2;
+	networkReplicated = false;
+	disableAIPooling = false;
+	edit = {
+		flags = {
+			noFlood = true;
+		}
+		spawnConditions = {
+			maxCount = 0;
+			reuseDelaySec = 0;
+			doBoundsTest = false;
+			boundsTestType = "BOUNDSTEST_NONE";
+			fovCheck = 0;
+			minDistance = 0;
+			maxDistance = 0;
+			neighborSpawnerDistance = -1;
+			LOS_Test = "LOS_NONE";
+			playerToTest = "PLAYER_SP";
+			conditionProxy = "";
+		}
+		spawnEditableShared = {
+			groupName = "";
+			deathTrigger = "";
+			coverRadius = 0;
+			maxEnemyCoverDistance = 0;
+		}
+		entityDefs = {
+		num = 1;
+		item[0] = {
+			name = "deathmatch_pickup_mega_health_8_x";
+		}
+}
+		conductorEntityAIType = "SPAWN_AI_TYPE_ANY";
+		initialEntityDefs = {
+			num = 0;
+		}
+		spawnEditable = {
+			spawnAt = "";
+			copyTargets = false;
+			additionalTargets = {
+				num = 0;
+			}
+			overwriteTraversalFlags = true;
+			traversalClassFlags = "CLASS_A";
+			combatHintClass = "CLASS_ALL";
+			spawnAnim = "";
+			aiStateOverride = "AIOVERRIDE_TELEPORT";
+			initialTargetOverride = "";
+		}
+		portal = "";
+		targetSpawnParent = "";
+		disablePooling = false;
+		spawnPosition = {
+			x = -11.45;
+			y = -176.56;
+			z = 12.86;
+		}
+		spawnOrientation = {
+			mat = {
+				mat[0] = {
+					x = 0.99;
+					y = 0.01;
+					z = 0;
+				}
+				mat[1] = {
+					x = 0.01;
+					y = 0.99;
+					z = 0;
+				}
+			}
+		}
+		targets = {
+			num = 1;
+			item[0] = "deathmatch_pickup_mega_health_8_x";
+		}
+	}
+}
+}
+entity {
+	entityDef deathmatch_pickup_mega_health_8_x {
+	inherit = "pickup/health/large";
+	class = "idProp2";
+	expandInheritance = false;
+	poolCount = 0;
+	poolGranularity = 2;
+	networkReplicated = true;
+	disableAIPooling = false;
+	edit = {
+		renderModelInfo = {
+			model = "art/pickups/health/megaHealth_head_a.lwo";
+			contributesToLightProbeGen = false;
+			noAmbient = true;
+			scale = {
+				x = 1;
+				y = 1;
+				z = 1;
+			}
+			emissiveColor = {
+				r = 0;
+				g = 0.913725019;
+			}
+			emissiveScale = 3;
+		}
+		spawn_statIncreases = {
+			num = 1;
+			item[0] = {
+				stat = "STAT_ITEMS_SPAWNED";
+				increase = 1;
+			}
+		}
+		equipOnPickup = true;
+		lootStyle = "LOOT_TOUCH";
+		triggerDef = "trigger/props/megahealth";
+		isStatic = true;
+		canBePossessed = true;
+		fxDecl = "pickups/megahealth_head";
+		useableComponentDecl = "mega_health";
+		sound_spawn = "play_pickup_loop_05";
+		sound_stop = "stop_pickup_loop_05";
+		pickup_statIncreases = {
+			num = 1;
+			item[0] = {
+				stat = "STAT_HEALTH_PICKUP";
+				increase = 1;
+			}
+		}
+		spawnPosition = {
+			x = 0;
+			y = 0;
+			z = -999;
+		}
+		targets = {
+			num = 1;
+			item[0] = "deathmatch_pickup_mega_health_8_respawn_timeline";
+		}
+		isLootDrop = true;
+	}
+}
+}
+entity {
+	entityDef deathmatch_pickup_mega_health_8 {
+	inherit = "pickup/health/large";
+	class = "idProp2";
+	expandInheritance = false;
+	poolCount = 0;
+	poolGranularity = 2;
+	networkReplicated = true;
+	disableAIPooling = false;
+	edit = {
+		renderModelInfo = {
+			model = "art/pickups/health/megaHealth_head_a.lwo";
+			contributesToLightProbeGen = false;
+			noAmbient = true;
+			scale = {
+				x = 1;
+				y = 1;
+				z = 1;
+			}
+			emissiveColor = {
+				r = 0;
+				g = 0.913725019;
+			}
+			emissiveScale = 3;
+		}
+		spawn_statIncreases = {
+			num = 1;
+			item[0] = {
+				stat = "STAT_ITEMS_SPAWNED";
+				increase = 1;
+			}
+		}
+		equipOnPickup = true;
+		lootStyle = "LOOT_TOUCH";
+		triggerDef = "trigger/props/megahealth";
+		isStatic = true;
+		canBePossessed = true;
+		fxDecl = "pickups/megahealth_head";
+		useableComponentDecl = "mega_health";
+		sound_spawn = "play_pickup_loop_05";
+		sound_stop = "stop_pickup_loop_05";
+		pickup_statIncreases = {
+			num = 1;
+			item[0] = {
+				stat = "STAT_HEALTH_PICKUP";
+				increase = 1;
+			}
+		}
+		spawnPosition = {
+			x = -11.45;
+			y = -176.56;
+			z = 12.86;
+		}
+		spawnOrientation = {
+			mat = {
+				mat[0] = {
+					x = 0.99;
+					y = 0.01;
+					z = 0;
+				}
+				mat[1] = {
+					x = 0.01;
+					y = 0.99;
+					z = 0;
+				}
+			}
+		}
+		targets = {
+			num = 1;
+			item[0] = "deathmatch_pickup_mega_health_8_respawn_timeline";
+		}
+		isLootDrop = true;
+	}
+}
+}
+entity {
+	entityDef deathmatch_pickup_mega_health_9_respawn_timeline {
+	inherit = "target/timeline";
+	class = "idTarget_Timeline";
+	expandInheritance = false;
+	poolCount = 0;
+	poolGranularity = 2;
+	networkReplicated = true;
+	disableAIPooling = false;
+	edit = {
+		flags = {
+			noFlood = true;
+		}
+		networkSerializeTransforms = false;
+		count = 1;
+		spawnPosition = {
+			x = 1;
+			y = 1;
+			z = 1;
+		}
+		componentTimeLine = {
+			entityEvents = {
+				num = 1;
+				item[0] = {
+					entity = "deathmatch_pickup_mega_health_9_respawn_relay";
+					events = {
+						num = 1;
+						item[0] = {
+							eventTime = 15000;
+							eventCall = {
+								eventDef = "activate";
+								args = {
+									num = 1;
+									item[0] = {
+										entity = "";
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		repeat = true;
+		allowClientsToStart = true;
+		renderModelInfo = {
+			scale = {
+				x = 1;
+				y = 1;
+				z = 1;
+			}
+		}
+	}
+}
+}
+entity {
+	entityDef deathmatch_pickup_mega_health_9_respawn_relay {
+	inherit = "target/relay";
+	class = "idTarget_Count";
+	expandInheritance = false;
+	poolCount = 0;
+	poolGranularity = 2;
+	networkReplicated = false;
+	disableAIPooling = false;
+	edit = {
+		flags = {
+			noFlood = true;
+		}
+		networkSerializeTransforms = false;
+		count = 1;
+		spawnPosition = {
+			x = 1;
+			y = 1;
+			z = 1;
+		}
+		targets = {
+			num = 1;
+			item[0] = "deathmatch_pickup_mega_health_9_respawn_timeline_2";
+		}
+		repeat = true;
+	}
+}
+}
+entity {
+	entityDef deathmatch_pickup_mega_health_9_respawn_timeline_2 {
+	inherit = "target/timeline";
+	class = "idTarget_Timeline";
+	expandInheritance = false;
+	poolCount = 0;
+	poolGranularity = 2;
+	networkReplicated = true;
+	disableAIPooling = false;
+	edit = {
+		flags = {
+			noFlood = true;
+		}
+		networkSerializeTransforms = false;
+		count = 1;
+		spawnPosition = {
+			x = 1;
+			y = 1;
+			z = 1;
+		}
+		componentTimeLine = {
+			entityEvents = {
+				num = 1;
+				item[0] = {
+					entity = "deathmatch_pickup_mega_health_9_respawn";
+					events = {
+						num = 1;
+						item[0] = {
+							eventTime = 100;
+							eventCall = {
+								eventDef = "activate";
+								args = {
+									num = 1;
+									item[0] = {
+										entity = "";
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		repeat = true;
+		allowClientsToStart = true;
+		renderModelInfo = {
+			scale = {
+				x = 1;
+				y = 1;
+				z = 1;
+			}
+		}
+	}
+}
+}
+entity {
+	entityDef deathmatch_pickup_mega_health_9_respawn {
+	inherit = "target/spawn";
+	class = "idTarget_Spawn";
+	expandInheritance = false;
+	poolCount = 0;
+	poolGranularity = 2;
+	networkReplicated = false;
+	disableAIPooling = false;
+	edit = {
+		flags = {
+			noFlood = true;
+		}
+		spawnConditions = {
+			maxCount = 0;
+			reuseDelaySec = 0;
+			doBoundsTest = false;
+			boundsTestType = "BOUNDSTEST_NONE";
+			fovCheck = 0;
+			minDistance = 0;
+			maxDistance = 0;
+			neighborSpawnerDistance = -1;
+			LOS_Test = "LOS_NONE";
+			playerToTest = "PLAYER_SP";
+			conditionProxy = "";
+		}
+		spawnEditableShared = {
+			groupName = "";
+			deathTrigger = "";
+			coverRadius = 0;
+			maxEnemyCoverDistance = 0;
+		}
+		entityDefs = {
+		num = 1;
+		item[0] = {
+			name = "deathmatch_pickup_mega_health_9_x";
+		}
+}
+		conductorEntityAIType = "SPAWN_AI_TYPE_ANY";
+		initialEntityDefs = {
+			num = 0;
+		}
+		spawnEditable = {
+			spawnAt = "";
+			copyTargets = false;
+			additionalTargets = {
+				num = 0;
+			}
+			overwriteTraversalFlags = true;
+			traversalClassFlags = "CLASS_A";
+			combatHintClass = "CLASS_ALL";
+			spawnAnim = "";
+			aiStateOverride = "AIOVERRIDE_TELEPORT";
+			initialTargetOverride = "";
+		}
+		portal = "";
+		targetSpawnParent = "";
+		disablePooling = false;
+		spawnPosition = {
+			x = 15.71;
+			y = -181.49;
+			z = 8.76;
+		}
+		spawnOrientation = {
+			mat = {
+				mat[0] = {
+					x = 0.45;
+					y = -0.9;
+					z = 0;
+				}
+				mat[1] = {
+					x = 0.9;
+					y = 0.45;
+					z = 0;
+				}
+			}
+		}
+		targets = {
+			num = 1;
+			item[0] = "deathmatch_pickup_mega_health_9_x";
+		}
+	}
+}
+}
+entity {
+	entityDef deathmatch_pickup_mega_health_9_x {
+	inherit = "pickup/health/large";
+	class = "idProp2";
+	expandInheritance = false;
+	poolCount = 0;
+	poolGranularity = 2;
+	networkReplicated = true;
+	disableAIPooling = false;
+	edit = {
+		renderModelInfo = {
+			model = "art/pickups/health/megaHealth_head_a.lwo";
+			contributesToLightProbeGen = false;
+			noAmbient = true;
+			scale = {
+				x = 1;
+				y = 1;
+				z = 1;
+			}
+			emissiveColor = {
+				r = 0;
+				g = 0.913725019;
+			}
+			emissiveScale = 3;
+		}
+		spawn_statIncreases = {
+			num = 1;
+			item[0] = {
+				stat = "STAT_ITEMS_SPAWNED";
+				increase = 1;
+			}
+		}
+		equipOnPickup = true;
+		lootStyle = "LOOT_TOUCH";
+		triggerDef = "trigger/props/megahealth";
+		isStatic = true;
+		canBePossessed = true;
+		fxDecl = "pickups/megahealth_head";
+		useableComponentDecl = "mega_health";
+		sound_spawn = "play_pickup_loop_05";
+		sound_stop = "stop_pickup_loop_05";
+		pickup_statIncreases = {
+			num = 1;
+			item[0] = {
+				stat = "STAT_HEALTH_PICKUP";
+				increase = 1;
+			}
+		}
+		spawnPosition = {
+			x = 0;
+			y = 0;
+			z = -999;
+		}
+		targets = {
+			num = 1;
+			item[0] = "deathmatch_pickup_mega_health_9_respawn_timeline";
+		}
+		isLootDrop = true;
+	}
+}
+}
+entity {
+	entityDef deathmatch_pickup_mega_health_9 {
+	inherit = "pickup/health/large";
+	class = "idProp2";
+	expandInheritance = false;
+	poolCount = 0;
+	poolGranularity = 2;
+	networkReplicated = true;
+	disableAIPooling = false;
+	edit = {
+		renderModelInfo = {
+			model = "art/pickups/health/megaHealth_head_a.lwo";
+			contributesToLightProbeGen = false;
+			noAmbient = true;
+			scale = {
+				x = 1;
+				y = 1;
+				z = 1;
+			}
+			emissiveColor = {
+				r = 0;
+				g = 0.913725019;
+			}
+			emissiveScale = 3;
+		}
+		spawn_statIncreases = {
+			num = 1;
+			item[0] = {
+				stat = "STAT_ITEMS_SPAWNED";
+				increase = 1;
+			}
+		}
+		equipOnPickup = true;
+		lootStyle = "LOOT_TOUCH";
+		triggerDef = "trigger/props/megahealth";
+		isStatic = true;
+		canBePossessed = true;
+		fxDecl = "pickups/megahealth_head";
+		useableComponentDecl = "mega_health";
+		sound_spawn = "play_pickup_loop_05";
+		sound_stop = "stop_pickup_loop_05";
+		pickup_statIncreases = {
+			num = 1;
+			item[0] = {
+				stat = "STAT_HEALTH_PICKUP";
+				increase = 1;
+			}
+		}
+		spawnPosition = {
+			x = 15.71;
+			y = -181.49;
+			z = 8.76;
+		}
+		spawnOrientation = {
+			mat = {
+				mat[0] = {
+					x = 0.45;
+					y = -0.9;
+					z = 0;
+				}
+				mat[1] = {
+					x = 0.9;
+					y = 0.45;
+					z = 0;
+				}
+			}
+		}
+		targets = {
+			num = 1;
+			item[0] = "deathmatch_pickup_mega_health_9_respawn_timeline";
+		}
+		isLootDrop = true;
+	}
+}
+}
+entity {
+	entityDef deathmatch_pickup_mega_armor_1_respawn_timeline {
+	inherit = "target/timeline";
+	class = "idTarget_Timeline";
+	expandInheritance = false;
+	poolCount = 0;
+	poolGranularity = 2;
+	networkReplicated = true;
+	disableAIPooling = false;
+	edit = {
+		flags = {
+			noFlood = true;
+		}
+		networkSerializeTransforms = false;
+		count = 1;
+		spawnPosition = {
+			x = 1;
+			y = 1;
+			z = 1;
+		}
+		componentTimeLine = {
+			entityEvents = {
+				num = 1;
+				item[0] = {
+					entity = "deathmatch_pickup_mega_armor_1_respawn_relay";
+					events = {
+						num = 1;
+						item[0] = {
+							eventTime = 15000;
+							eventCall = {
+								eventDef = "activate";
+								args = {
+									num = 1;
+									item[0] = {
+										entity = "";
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		repeat = true;
+		allowClientsToStart = true;
+		renderModelInfo = {
+			scale = {
+				x = 1;
+				y = 1;
+				z = 1;
+			}
+		}
+	}
+}
+}
+entity {
+	entityDef deathmatch_pickup_mega_armor_1_respawn_relay {
+	inherit = "target/relay";
+	class = "idTarget_Count";
+	expandInheritance = false;
+	poolCount = 0;
+	poolGranularity = 2;
+	networkReplicated = false;
+	disableAIPooling = false;
+	edit = {
+		flags = {
+			noFlood = true;
+		}
+		networkSerializeTransforms = false;
+		count = 1;
+		spawnPosition = {
+			x = 1;
+			y = 1;
+			z = 1;
+		}
+		targets = {
+			num = 1;
+			item[0] = "deathmatch_pickup_mega_armor_1_respawn_timeline_2";
+		}
+		repeat = true;
+	}
+}
+}
+entity {
+	entityDef deathmatch_pickup_mega_armor_1_respawn_timeline_2 {
+	inherit = "target/timeline";
+	class = "idTarget_Timeline";
+	expandInheritance = false;
+	poolCount = 0;
+	poolGranularity = 2;
+	networkReplicated = true;
+	disableAIPooling = false;
+	edit = {
+		flags = {
+			noFlood = true;
+		}
+		networkSerializeTransforms = false;
+		count = 1;
+		spawnPosition = {
+			x = 1;
+			y = 1;
+			z = 1;
+		}
+		componentTimeLine = {
+			entityEvents = {
+				num = 1;
+				item[0] = {
+					entity = "deathmatch_pickup_mega_armor_1_respawn";
+					events = {
+						num = 1;
+						item[0] = {
+							eventTime = 100;
+							eventCall = {
+								eventDef = "activate";
+								args = {
+									num = 1;
+									item[0] = {
+										entity = "";
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		repeat = true;
+		allowClientsToStart = true;
+		renderModelInfo = {
+			scale = {
+				x = 1;
+				y = 1;
+				z = 1;
+			}
+		}
+	}
+}
+}
+entity {
+	entityDef deathmatch_pickup_mega_armor_1_respawn {
+	inherit = "target/spawn";
+	class = "idTarget_Spawn";
+	expandInheritance = false;
+	poolCount = 0;
+	poolGranularity = 2;
+	networkReplicated = false;
+	disableAIPooling = false;
+	edit = {
+		flags = {
+			noFlood = true;
+		}
+		spawnConditions = {
+			maxCount = 0;
+			reuseDelaySec = 0;
+			doBoundsTest = false;
+			boundsTestType = "BOUNDSTEST_NONE";
+			fovCheck = 0;
+			minDistance = 0;
+			maxDistance = 0;
+			neighborSpawnerDistance = -1;
+			LOS_Test = "LOS_NONE";
+			playerToTest = "PLAYER_SP";
+			conditionProxy = "";
+		}
+		spawnEditableShared = {
+			groupName = "";
+			deathTrigger = "";
+			coverRadius = 0;
+			maxEnemyCoverDistance = 0;
+		}
+		entityDefs = {
+		num = 1;
+		item[0] = {
+			name = "deathmatch_pickup_mega_armor_1_x";
+		}
+}
+		conductorEntityAIType = "SPAWN_AI_TYPE_ANY";
+		initialEntityDefs = {
+			num = 0;
+		}
+		spawnEditable = {
+			spawnAt = "";
+			copyTargets = false;
+			additionalTargets = {
+				num = 0;
+			}
+			overwriteTraversalFlags = true;
+			traversalClassFlags = "CLASS_A";
+			combatHintClass = "CLASS_ALL";
+			spawnAnim = "";
+			aiStateOverride = "AIOVERRIDE_TELEPORT";
+			initialTargetOverride = "";
+		}
+		portal = "";
+		targetSpawnParent = "";
+		disablePooling = false;
+		spawnPosition = {
+			x = 0;
+			y = -187.23;
+			z = 13.16;
+		}
+		spawnOrientation = {
+			mat = {
+				mat[0] = {
+					x = 0.99;
+					y = 0.01;
+					z = 0;
+				}
+				mat[1] = {
+					x = 0.01;
+					y = 0.99;
+					z = 0;
+				}
+			}
+		}
+		targets = {
+			num = 1;
+			item[0] = "deathmatch_pickup_mega_armor_1_x";
+		}
+	}
+}
+}
+entity {
+	entityDef deathmatch_pickup_mega_armor_1_x {
+	inherit = "pickup/armor/large";
+	class = "idProp2";
+	expandInheritance = false;
+	poolCount = 0;
+	poolGranularity = 2;
+	networkReplicated = true;
+	disableAIPooling = false;
+	edit = {
+		renderModelInfo = {
+			model = "art/pickups/armor/pickup_armor_mega.lwo";
+			contributesToLightProbeGen = false;
+			noAmbient = true;
+			scale = {
+				x = 2;
+				y = 2;
+				z = 2;
+			}
+		}
+		spawn_statIncreases = {
+			num = 1;
+			item[0] = {
+				stat = "STAT_ITEMS_SPAWNED";
+				increase = 1;
+			}
+		}
+		equipOnPickup = true;
+		lootStyle = "LOOT_TOUCH";
+		triggerDef = "trigger/props/mega_armor";
+		isStatic = true;
+		canBePossessed = true;
+		fxDecl = "gameplay/mega_armor_activate";
+		useableComponentDecl = "mega_armor";
+		pickup_statIncreases = {
+			num = 1;
+			item[0] = {
+				stat = "STAT_ARMOR_PICKUP";
+				increase = 1;
+			}
+		}
+		spawnPosition = {
+			x = 0;
+			y = 0;
+			z = -999;
+		}
+		targets = {
+			num = 1;
+			item[0] = "deathmatch_pickup_mega_armor_1_respawn_timeline";
+		}
+		isLootDrop = true;
+	}
+}
+}
+entity {
+	entityDef deathmatch_pickup_mega_armor_1 {
+	inherit = "pickup/armor/large";
+	class = "idProp2";
+	expandInheritance = false;
+	poolCount = 0;
+	poolGranularity = 2;
+	networkReplicated = true;
+	disableAIPooling = false;
+	edit = {
+		renderModelInfo = {
+			model = "art/pickups/armor/pickup_armor_mega.lwo";
+			contributesToLightProbeGen = false;
+			noAmbient = true;
+			scale = {
+				x = 2;
+				y = 2;
+				z = 2;
+			}
+		}
+		spawn_statIncreases = {
+			num = 1;
+			item[0] = {
+				stat = "STAT_ITEMS_SPAWNED";
+				increase = 1;
+			}
+		}
+		equipOnPickup = true;
+		lootStyle = "LOOT_TOUCH";
+		triggerDef = "trigger/props/mega_armor";
+		isStatic = true;
+		canBePossessed = true;
+		fxDecl = "gameplay/mega_armor_activate";
+		useableComponentDecl = "mega_armor";
+		pickup_statIncreases = {
+			num = 1;
+			item[0] = {
+				stat = "STAT_ARMOR_PICKUP";
+				increase = 1;
+			}
+		}
+		spawnPosition = {
+			x = 0;
+			y = -187.23;
+			z = 13.16;
+		}
+		spawnOrientation = {
+			mat = {
+				mat[0] = {
+					x = 0.99;
+					y = 0.01;
+					z = 0;
+				}
+				mat[1] = {
+					x = 0.01;
+					y = 0.99;
+					z = 0;
+				}
+			}
+		}
+		targets = {
+			num = 1;
+			item[0] = "deathmatch_pickup_mega_armor_1_respawn_timeline";
+		}
+		isLootDrop = true;
+	}
+}
+}
+entity {
+	entityDef deathmatch_pickup_mega_armor_2_respawn_timeline {
+	inherit = "target/timeline";
+	class = "idTarget_Timeline";
+	expandInheritance = false;
+	poolCount = 0;
+	poolGranularity = 2;
+	networkReplicated = true;
+	disableAIPooling = false;
+	edit = {
+		flags = {
+			noFlood = true;
+		}
+		networkSerializeTransforms = false;
+		count = 1;
+		spawnPosition = {
+			x = 1;
+			y = 1;
+			z = 1;
+		}
+		componentTimeLine = {
+			entityEvents = {
+				num = 1;
+				item[0] = {
+					entity = "deathmatch_pickup_mega_armor_2_respawn_relay";
+					events = {
+						num = 1;
+						item[0] = {
+							eventTime = 15000;
+							eventCall = {
+								eventDef = "activate";
+								args = {
+									num = 1;
+									item[0] = {
+										entity = "";
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		repeat = true;
+		allowClientsToStart = true;
+		renderModelInfo = {
+			scale = {
+				x = 1;
+				y = 1;
+				z = 1;
+			}
+		}
+	}
+}
+}
+entity {
+	entityDef deathmatch_pickup_mega_armor_2_respawn_relay {
+	inherit = "target/relay";
+	class = "idTarget_Count";
+	expandInheritance = false;
+	poolCount = 0;
+	poolGranularity = 2;
+	networkReplicated = false;
+	disableAIPooling = false;
+	edit = {
+		flags = {
+			noFlood = true;
+		}
+		networkSerializeTransforms = false;
+		count = 1;
+		spawnPosition = {
+			x = 1;
+			y = 1;
+			z = 1;
+		}
+		targets = {
+			num = 1;
+			item[0] = "deathmatch_pickup_mega_armor_2_respawn_timeline_2";
+		}
+		repeat = true;
+	}
+}
+}
+entity {
+	entityDef deathmatch_pickup_mega_armor_2_respawn_timeline_2 {
+	inherit = "target/timeline";
+	class = "idTarget_Timeline";
+	expandInheritance = false;
+	poolCount = 0;
+	poolGranularity = 2;
+	networkReplicated = true;
+	disableAIPooling = false;
+	edit = {
+		flags = {
+			noFlood = true;
+		}
+		networkSerializeTransforms = false;
+		count = 1;
+		spawnPosition = {
+			x = 1;
+			y = 1;
+			z = 1;
+		}
+		componentTimeLine = {
+			entityEvents = {
+				num = 1;
+				item[0] = {
+					entity = "deathmatch_pickup_mega_armor_2_respawn";
+					events = {
+						num = 1;
+						item[0] = {
+							eventTime = 100;
+							eventCall = {
+								eventDef = "activate";
+								args = {
+									num = 1;
+									item[0] = {
+										entity = "";
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		repeat = true;
+		allowClientsToStart = true;
+		renderModelInfo = {
+			scale = {
+				x = 1;
+				y = 1;
+				z = 1;
+			}
+		}
+	}
+}
+}
+entity {
+	entityDef deathmatch_pickup_mega_armor_2_respawn {
+	inherit = "target/spawn";
+	class = "idTarget_Spawn";
+	expandInheritance = false;
+	poolCount = 0;
+	poolGranularity = 2;
+	networkReplicated = false;
+	disableAIPooling = false;
+	edit = {
+		flags = {
+			noFlood = true;
+		}
+		spawnConditions = {
+			maxCount = 0;
+			reuseDelaySec = 0;
+			doBoundsTest = false;
+			boundsTestType = "BOUNDSTEST_NONE";
+			fovCheck = 0;
+			minDistance = 0;
+			maxDistance = 0;
+			neighborSpawnerDistance = -1;
+			LOS_Test = "LOS_NONE";
+			playerToTest = "PLAYER_SP";
+			conditionProxy = "";
+		}
+		spawnEditableShared = {
+			groupName = "";
+			deathTrigger = "";
+			coverRadius = 0;
+			maxEnemyCoverDistance = 0;
+		}
+		entityDefs = {
+		num = 1;
+		item[0] = {
+			name = "deathmatch_pickup_mega_armor_2_x";
+		}
+}
+		conductorEntityAIType = "SPAWN_AI_TYPE_ANY";
+		initialEntityDefs = {
+			num = 0;
+		}
+		spawnEditable = {
+			spawnAt = "";
+			copyTargets = false;
+			additionalTargets = {
+				num = 0;
+			}
+			overwriteTraversalFlags = true;
+			traversalClassFlags = "CLASS_A";
+			combatHintClass = "CLASS_ALL";
+			spawnAnim = "";
+			aiStateOverride = "AIOVERRIDE_TELEPORT";
+			initialTargetOverride = "";
+		}
+		portal = "";
+		targetSpawnParent = "";
+		disablePooling = false;
+		spawnPosition = {
+			x = 0;
+			y = -148.28;
+			z = 7.66;
+		}
+		spawnOrientation = {
+			mat = {
+				mat[0] = {
+					x = -1;
+					y = 0;
+					z = 0;
+				}
+				mat[1] = {
+					x = 0;
+					y = -1;
+					z = 0;
+				}
+			}
+		}
+		targets = {
+			num = 1;
+			item[0] = "deathmatch_pickup_mega_armor_2_x";
+		}
+	}
+}
+}
+entity {
+	entityDef deathmatch_pickup_mega_armor_2_x {
+	inherit = "pickup/armor/large";
+	class = "idProp2";
+	expandInheritance = false;
+	poolCount = 0;
+	poolGranularity = 2;
+	networkReplicated = true;
+	disableAIPooling = false;
+	edit = {
+		renderModelInfo = {
+			model = "art/pickups/armor/pickup_armor_mega.lwo";
+			contributesToLightProbeGen = false;
+			noAmbient = true;
+			scale = {
+				x = 2;
+				y = 2;
+				z = 2;
+			}
+		}
+		spawn_statIncreases = {
+			num = 1;
+			item[0] = {
+				stat = "STAT_ITEMS_SPAWNED";
+				increase = 1;
+			}
+		}
+		equipOnPickup = true;
+		lootStyle = "LOOT_TOUCH";
+		triggerDef = "trigger/props/mega_armor";
+		isStatic = true;
+		canBePossessed = true;
+		fxDecl = "gameplay/mega_armor_activate";
+		useableComponentDecl = "mega_armor";
+		pickup_statIncreases = {
+			num = 1;
+			item[0] = {
+				stat = "STAT_ARMOR_PICKUP";
+				increase = 1;
+			}
+		}
+		spawnPosition = {
+			x = 0;
+			y = 0;
+			z = -999;
+		}
+		targets = {
+			num = 1;
+			item[0] = "deathmatch_pickup_mega_armor_2_respawn_timeline";
+		}
+		isLootDrop = true;
+	}
+}
+}
+entity {
+	entityDef deathmatch_pickup_mega_armor_2 {
+	inherit = "pickup/armor/large";
+	class = "idProp2";
+	expandInheritance = false;
+	poolCount = 0;
+	poolGranularity = 2;
+	networkReplicated = true;
+	disableAIPooling = false;
+	edit = {
+		renderModelInfo = {
+			model = "art/pickups/armor/pickup_armor_mega.lwo";
+			contributesToLightProbeGen = false;
+			noAmbient = true;
+			scale = {
+				x = 2;
+				y = 2;
+				z = 2;
+			}
+		}
+		spawn_statIncreases = {
+			num = 1;
+			item[0] = {
+				stat = "STAT_ITEMS_SPAWNED";
+				increase = 1;
+			}
+		}
+		equipOnPickup = true;
+		lootStyle = "LOOT_TOUCH";
+		triggerDef = "trigger/props/mega_armor";
+		isStatic = true;
+		canBePossessed = true;
+		fxDecl = "gameplay/mega_armor_activate";
+		useableComponentDecl = "mega_armor";
+		pickup_statIncreases = {
+			num = 1;
+			item[0] = {
+				stat = "STAT_ARMOR_PICKUP";
+				increase = 1;
+			}
+		}
+		spawnPosition = {
+			x = 0;
+			y = -148.28;
+			z = 7.66;
+		}
+		spawnOrientation = {
+			mat = {
+				mat[0] = {
+					x = -1;
+					y = 0;
+					z = 0;
+				}
+				mat[1] = {
+					x = 0;
+					y = -1;
+					z = 0;
+				}
+			}
+		}
+		targets = {
+			num = 1;
+			item[0] = "deathmatch_pickup_mega_armor_2_respawn_timeline";
+		}
+		isLootDrop = true;
+	}
+}
+}
+entity {
+	entityDef deathmatch_pickup_mega_armor_3_respawn_timeline {
+	inherit = "target/timeline";
+	class = "idTarget_Timeline";
+	expandInheritance = false;
+	poolCount = 0;
+	poolGranularity = 2;
+	networkReplicated = true;
+	disableAIPooling = false;
+	edit = {
+		flags = {
+			noFlood = true;
+		}
+		networkSerializeTransforms = false;
+		count = 1;
+		spawnPosition = {
+			x = 1;
+			y = 1;
+			z = 1;
+		}
+		componentTimeLine = {
+			entityEvents = {
+				num = 1;
+				item[0] = {
+					entity = "deathmatch_pickup_mega_armor_3_respawn_relay";
+					events = {
+						num = 1;
+						item[0] = {
+							eventTime = 15000;
+							eventCall = {
+								eventDef = "activate";
+								args = {
+									num = 1;
+									item[0] = {
+										entity = "";
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		repeat = true;
+		allowClientsToStart = true;
+		renderModelInfo = {
+			scale = {
+				x = 1;
+				y = 1;
+				z = 1;
+			}
+		}
+	}
+}
+}
+entity {
+	entityDef deathmatch_pickup_mega_armor_3_respawn_relay {
+	inherit = "target/relay";
+	class = "idTarget_Count";
+	expandInheritance = false;
+	poolCount = 0;
+	poolGranularity = 2;
+	networkReplicated = false;
+	disableAIPooling = false;
+	edit = {
+		flags = {
+			noFlood = true;
+		}
+		networkSerializeTransforms = false;
+		count = 1;
+		spawnPosition = {
+			x = 1;
+			y = 1;
+			z = 1;
+		}
+		targets = {
+			num = 1;
+			item[0] = "deathmatch_pickup_mega_armor_3_respawn_timeline_2";
+		}
+		repeat = true;
+	}
+}
+}
+entity {
+	entityDef deathmatch_pickup_mega_armor_3_respawn_timeline_2 {
+	inherit = "target/timeline";
+	class = "idTarget_Timeline";
+	expandInheritance = false;
+	poolCount = 0;
+	poolGranularity = 2;
+	networkReplicated = true;
+	disableAIPooling = false;
+	edit = {
+		flags = {
+			noFlood = true;
+		}
+		networkSerializeTransforms = false;
+		count = 1;
+		spawnPosition = {
+			x = 1;
+			y = 1;
+			z = 1;
+		}
+		componentTimeLine = {
+			entityEvents = {
+				num = 1;
+				item[0] = {
+					entity = "deathmatch_pickup_mega_armor_3_respawn";
+					events = {
+						num = 1;
+						item[0] = {
+							eventTime = 100;
+							eventCall = {
+								eventDef = "activate";
+								args = {
+									num = 1;
+									item[0] = {
+										entity = "";
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		repeat = true;
+		allowClientsToStart = true;
+		renderModelInfo = {
+			scale = {
+				x = 1;
+				y = 1;
+				z = 1;
+			}
+		}
+	}
+}
+}
+entity {
+	entityDef deathmatch_pickup_mega_armor_3_respawn {
+	inherit = "target/spawn";
+	class = "idTarget_Spawn";
+	expandInheritance = false;
+	poolCount = 0;
+	poolGranularity = 2;
+	networkReplicated = false;
+	disableAIPooling = false;
+	edit = {
+		flags = {
+			noFlood = true;
+		}
+		spawnConditions = {
+			maxCount = 0;
+			reuseDelaySec = 0;
+			doBoundsTest = false;
+			boundsTestType = "BOUNDSTEST_NONE";
+			fovCheck = 0;
+			minDistance = 0;
+			maxDistance = 0;
+			neighborSpawnerDistance = -1;
+			LOS_Test = "LOS_NONE";
+			playerToTest = "PLAYER_SP";
+			conditionProxy = "";
+		}
+		spawnEditableShared = {
+			groupName = "";
+			deathTrigger = "";
+			coverRadius = 0;
+			maxEnemyCoverDistance = 0;
+		}
+		entityDefs = {
+		num = 1;
+		item[0] = {
+			name = "deathmatch_pickup_mega_armor_3_x";
+		}
+}
+		conductorEntityAIType = "SPAWN_AI_TYPE_ANY";
+		initialEntityDefs = {
+			num = 0;
+		}
+		spawnEditable = {
+			spawnAt = "";
+			copyTargets = false;
+			additionalTargets = {
+				num = 0;
+			}
+			overwriteTraversalFlags = true;
+			traversalClassFlags = "CLASS_A";
+			combatHintClass = "CLASS_ALL";
+			spawnAnim = "";
+			aiStateOverride = "AIOVERRIDE_TELEPORT";
+			initialTargetOverride = "";
+		}
+		portal = "";
+		targetSpawnParent = "";
+		disablePooling = false;
+		spawnPosition = {
+			x = -13.83;
+			y = -167.98;
+			z = 20.61;
+		}
+		spawnOrientation = {
+			mat = {
+				mat[0] = {
+					x = 0;
+					y = 1;
+					z = 0;
+				}
+				mat[1] = {
+					x = -1;
+					y = 0;
+					z = 0;
+				}
+			}
+		}
+		targets = {
+			num = 1;
+			item[0] = "deathmatch_pickup_mega_armor_3_x";
+		}
+	}
+}
+}
+entity {
+	entityDef deathmatch_pickup_mega_armor_3_x {
+	inherit = "pickup/armor/large";
+	class = "idProp2";
+	expandInheritance = false;
+	poolCount = 0;
+	poolGranularity = 2;
+	networkReplicated = true;
+	disableAIPooling = false;
+	edit = {
+		renderModelInfo = {
+			model = "art/pickups/armor/pickup_armor_mega.lwo";
+			contributesToLightProbeGen = false;
+			noAmbient = true;
+			scale = {
+				x = 2;
+				y = 2;
+				z = 2;
+			}
+		}
+		spawn_statIncreases = {
+			num = 1;
+			item[0] = {
+				stat = "STAT_ITEMS_SPAWNED";
+				increase = 1;
+			}
+		}
+		equipOnPickup = true;
+		lootStyle = "LOOT_TOUCH";
+		triggerDef = "trigger/props/mega_armor";
+		isStatic = true;
+		canBePossessed = true;
+		fxDecl = "gameplay/mega_armor_activate";
+		useableComponentDecl = "mega_armor";
+		pickup_statIncreases = {
+			num = 1;
+			item[0] = {
+				stat = "STAT_ARMOR_PICKUP";
+				increase = 1;
+			}
+		}
+		spawnPosition = {
+			x = 0;
+			y = 0;
+			z = -999;
+		}
+		targets = {
+			num = 1;
+			item[0] = "deathmatch_pickup_mega_armor_3_respawn_timeline";
+		}
+		isLootDrop = true;
+	}
+}
+}
+entity {
+	entityDef deathmatch_pickup_mega_armor_3 {
+	inherit = "pickup/armor/large";
+	class = "idProp2";
+	expandInheritance = false;
+	poolCount = 0;
+	poolGranularity = 2;
+	networkReplicated = true;
+	disableAIPooling = false;
+	edit = {
+		renderModelInfo = {
+			model = "art/pickups/armor/pickup_armor_mega.lwo";
+			contributesToLightProbeGen = false;
+			noAmbient = true;
+			scale = {
+				x = 2;
+				y = 2;
+				z = 2;
+			}
+		}
+		spawn_statIncreases = {
+			num = 1;
+			item[0] = {
+				stat = "STAT_ITEMS_SPAWNED";
+				increase = 1;
+			}
+		}
+		equipOnPickup = true;
+		lootStyle = "LOOT_TOUCH";
+		triggerDef = "trigger/props/mega_armor";
+		isStatic = true;
+		canBePossessed = true;
+		fxDecl = "gameplay/mega_armor_activate";
+		useableComponentDecl = "mega_armor";
+		pickup_statIncreases = {
+			num = 1;
+			item[0] = {
+				stat = "STAT_ARMOR_PICKUP";
+				increase = 1;
+			}
+		}
+		spawnPosition = {
+			x = -13.83;
+			y = -167.98;
+			z = 20.61;
+		}
+		spawnOrientation = {
+			mat = {
+				mat[0] = {
+					x = 0;
+					y = 1;
+					z = 0;
+				}
+				mat[1] = {
+					x = -1;
+					y = 0;
+					z = 0;
+				}
+			}
+		}
+		targets = {
+			num = 1;
+			item[0] = "deathmatch_pickup_mega_armor_3_respawn_timeline";
+		}
+		isLootDrop = true;
+	}
+}
+}
+entity {
+	entityDef deathmatch_pickup_weapon_double_barrel_1_respawn_timeline {
+	inherit = "target/timeline";
+	class = "idTarget_Timeline";
+	expandInheritance = false;
+	poolCount = 0;
+	poolGranularity = 2;
+	networkReplicated = true;
+	disableAIPooling = false;
+	edit = {
+		flags = {
+			noFlood = true;
+		}
+		networkSerializeTransforms = false;
+		count = 1;
+		spawnPosition = {
+			x = 1;
+			y = 1;
+			z = 1;
+		}
+		componentTimeLine = {
+			entityEvents = {
+				num = 1;
+				item[0] = {
+					entity = "deathmatch_pickup_weapon_double_barrel_1_respawn_relay";
+					events = {
+						num = 1;
+						item[0] = {
+							eventTime = 15000;
+							eventCall = {
+								eventDef = "activate";
+								args = {
+									num = 1;
+									item[0] = {
+										entity = "";
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		repeat = true;
+		allowClientsToStart = true;
+		renderModelInfo = {
+			scale = {
+				x = 1;
+				y = 1;
+				z = 1;
+			}
+		}
+	}
+}
+}
+entity {
+	entityDef deathmatch_pickup_weapon_double_barrel_1_respawn_relay {
+	inherit = "target/relay";
+	class = "idTarget_Count";
+	expandInheritance = false;
+	poolCount = 0;
+	poolGranularity = 2;
+	networkReplicated = false;
+	disableAIPooling = false;
+	edit = {
+		flags = {
+			noFlood = true;
+		}
+		networkSerializeTransforms = false;
+		count = 1;
+		spawnPosition = {
+			x = 1;
+			y = 1;
+			z = 1;
+		}
+		targets = {
+			num = 1;
+			item[0] = "deathmatch_pickup_weapon_double_barrel_1_respawn_timeline_2";
+		}
+		repeat = true;
+	}
+}
+}
+entity {
+	entityDef deathmatch_pickup_weapon_double_barrel_1_respawn_timeline_2 {
+	inherit = "target/timeline";
+	class = "idTarget_Timeline";
+	expandInheritance = false;
+	poolCount = 0;
+	poolGranularity = 2;
+	networkReplicated = true;
+	disableAIPooling = false;
+	edit = {
+		flags = {
+			noFlood = true;
+		}
+		networkSerializeTransforms = false;
+		count = 1;
+		spawnPosition = {
+			x = 1;
+			y = 1;
+			z = 1;
+		}
+		componentTimeLine = {
+			entityEvents = {
+				num = 1;
+				item[0] = {
+					entity = "deathmatch_pickup_weapon_double_barrel_1_respawn";
+					events = {
+						num = 1;
+						item[0] = {
+							eventTime = 100;
+							eventCall = {
+								eventDef = "activate";
+								args = {
+									num = 1;
+									item[0] = {
+										entity = "";
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		repeat = true;
+		allowClientsToStart = true;
+		renderModelInfo = {
+			scale = {
+				x = 1;
+				y = 1;
+				z = 1;
+			}
+		}
+	}
+}
+}
+entity {
+	entityDef deathmatch_pickup_weapon_double_barrel_1_respawn {
+	inherit = "target/spawn";
+	class = "idTarget_Spawn";
+	expandInheritance = false;
+	poolCount = 0;
+	poolGranularity = 2;
+	networkReplicated = false;
+	disableAIPooling = false;
+	edit = {
+		flags = {
+			noFlood = true;
+		}
+		spawnConditions = {
+			maxCount = 0;
+			reuseDelaySec = 0;
+			doBoundsTest = false;
+			boundsTestType = "BOUNDSTEST_NONE";
+			fovCheck = 0;
+			minDistance = 0;
+			maxDistance = 0;
+			neighborSpawnerDistance = -1;
+			LOS_Test = "LOS_NONE";
+			playerToTest = "PLAYER_SP";
+			conditionProxy = "";
+		}
+		spawnEditableShared = {
+			groupName = "";
+			deathTrigger = "";
+			coverRadius = 0;
+			maxEnemyCoverDistance = 0;
+		}
+		entityDefs = {
+		num = 1;
+		item[0] = {
+			name = "deathmatch_pickup_weapon_double_barrel_1_x";
+		}
+}
+		conductorEntityAIType = "SPAWN_AI_TYPE_ANY";
+		initialEntityDefs = {
+			num = 0;
+		}
+		spawnEditable = {
+			spawnAt = "";
+			copyTargets = false;
+			additionalTargets = {
+				num = 0;
+			}
+			overwriteTraversalFlags = true;
+			traversalClassFlags = "CLASS_A";
+			combatHintClass = "CLASS_ALL";
+			spawnAnim = "";
+			aiStateOverride = "AIOVERRIDE_TELEPORT";
+			initialTargetOverride = "";
+		}
+		portal = "";
+		targetSpawnParent = "";
+		disablePooling = false;
+		spawnPosition = {
+			x = 0;
+			y = -186.74;
+			z = 20.21;
+		}
+		spawnOrientation = {
+			mat = {
+				mat[0] = {
+					x = -0.7;
+					y = 0.7;
+					z = 0;
+				}
+				mat[1] = {
+					x = -0.7;
+					y = -0.7;
+					z = 0;
+				}
+			}
+		}
+		targets = {
+			num = 1;
+			item[0] = "deathmatch_pickup_weapon_double_barrel_1_x";
+		}
+	}
+}
+}
+entity {
+	entityDef deathmatch_pickup_weapon_double_barrel_1_x {
+	inherit = "pickup/weapon/double_barrel";
+	class = "idProp2";
+	expandInheritance = false;
+	poolCount = 0;
+	poolGranularity = 2;
+	networkReplicated = true;
+	disableAIPooling = false;
+	edit = {
+		renderModelInfo = {
+			model = "art/weapons/supershotgun/supershotgun_pickup.lwo";
+			contributesToLightProbeGen = false;
+			scale = {
+				x = 3;
+				y = 3;
+				z = 3;
+			}
+		}
+		spawn_statIncreases = {
+			num = 1;
+			item[0] = {
+				stat = "STAT_ITEMS_SPAWNED";
+				increase = 1;
+			}
+		}
+		equipOnPickup = true;
+		lootStyle = "LOOT_TOUCH";
+		triggerDef = "trigger/props/weapons/default";
+		isStatic = true;
+		canBePossessed = true;
+		whenToSave = "SGT_NORMAL";
+		removeFlag = "RMV_IMMEDIATE_ALLOW_MS";
+		flags = {
+			canBecomeDormant = true;
+		}
+		pickup_statIncreases = {
+			num = 1;
+			item[0] = {
+				stat = "STAT_PLACED_AMMO_PICKUP";
+				increase = 1;
+			}
+		}
+		clipModelInfo = {
+			type = "CLIPMODEL_BOX";
+			size = {
+				x = 0.456999987;
+				y = 0.151999995;
+				z = 0.456999987;
+			}
+			offset = {
+				z = -0.151999995;
+			}
+		}
+		forceEquip = true;
+		useableComponentDecl = "propitem/weapon/double_barrel_shotgun/base";
+		thinkComponentDecl = NULL;
+		spawnPosition = {
+			x = 0;
+			y = 0;
+			z = -999;
+		}
+		spawnOrientation = {
+			mat = {
+				mat[0] = {
+					x = -1;
+					y = 2.68220901e-07;
+				}
+				mat[1] = {
+					x = -2.68220901e-07;
+					y = -1;
+				}
+			}
+		}
+		dormancy = {
+			allowDistanceDormancy = false;
+			allowPvsDormancy = false;
+		}
+		targets = {
+			num = 1;
+			item[0] = "deathmatch_pickup_weapon_double_barrel_1_respawn_timeline";
+		}
+		isLootDrop = true;
+	}
+}
+}
+entity {
+	entityDef deathmatch_pickup_weapon_double_barrel_1 {
+	inherit = "pickup/weapon/double_barrel";
+	class = "idProp2";
+	expandInheritance = false;
+	poolCount = 0;
+	poolGranularity = 2;
+	networkReplicated = true;
+	disableAIPooling = false;
+	edit = {
+		renderModelInfo = {
+			model = "art/weapons/supershotgun/supershotgun_pickup.lwo";
+			contributesToLightProbeGen = false;
+			scale = {
+				x = 3;
+				y = 3;
+				z = 3;
+			}
+		}
+		spawn_statIncreases = {
+			num = 1;
+			item[0] = {
+				stat = "STAT_ITEMS_SPAWNED";
+				increase = 1;
+			}
+		}
+		equipOnPickup = true;
+		lootStyle = "LOOT_TOUCH";
+		triggerDef = "trigger/props/weapons/default";
+		isStatic = true;
+		canBePossessed = true;
+		whenToSave = "SGT_NORMAL";
+		removeFlag = "RMV_IMMEDIATE_ALLOW_MS";
+		flags = {
+			canBecomeDormant = true;
+		}
+		pickup_statIncreases = {
+			num = 1;
+			item[0] = {
+				stat = "STAT_PLACED_AMMO_PICKUP";
+				increase = 1;
+			}
+		}
+		clipModelInfo = {
+			type = "CLIPMODEL_BOX";
+			size = {
+				x = 0.456999987;
+				y = 0.151999995;
+				z = 0.456999987;
+			}
+			offset = {
+				z = -0.151999995;
+			}
+		}
+		forceEquip = true;
+		useableComponentDecl = "propitem/weapon/double_barrel_shotgun/base";
+		thinkComponentDecl = NULL;
+		spawnPosition = {
+			x = 0;
+			y = -186.74;
+			z = 20.21;
+		}
+		spawnOrientation = {
+			mat = {
+				mat[0] = {
+					x = -0.7;
+					y = 0.7;
+					z = 0;
+				}
+				mat[1] = {
+					x = -0.7;
+					y = -0.7;
+					z = 0;
+				}
+			}
+		}
+		dormancy = {
+			allowDistanceDormancy = false;
+			allowPvsDormancy = false;
+		}
+		targets = {
+			num = 1;
+			item[0] = "deathmatch_pickup_weapon_double_barrel_1_respawn_timeline";
+		}
+		isLootDrop = true;
+	}
+}
+}
+entity {
+	entityDef deathmatch_pickup_weapon_double_barrel_2_respawn_timeline {
+	inherit = "target/timeline";
+	class = "idTarget_Timeline";
+	expandInheritance = false;
+	poolCount = 0;
+	poolGranularity = 2;
+	networkReplicated = true;
+	disableAIPooling = false;
+	edit = {
+		flags = {
+			noFlood = true;
+		}
+		networkSerializeTransforms = false;
+		count = 1;
+		spawnPosition = {
+			x = 1;
+			y = 1;
+			z = 1;
+		}
+		componentTimeLine = {
+			entityEvents = {
+				num = 1;
+				item[0] = {
+					entity = "deathmatch_pickup_weapon_double_barrel_2_respawn_relay";
+					events = {
+						num = 1;
+						item[0] = {
+							eventTime = 15000;
+							eventCall = {
+								eventDef = "activate";
+								args = {
+									num = 1;
+									item[0] = {
+										entity = "";
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		repeat = true;
+		allowClientsToStart = true;
+		renderModelInfo = {
+			scale = {
+				x = 1;
+				y = 1;
+				z = 1;
+			}
+		}
+	}
+}
+}
+entity {
+	entityDef deathmatch_pickup_weapon_double_barrel_2_respawn_relay {
+	inherit = "target/relay";
+	class = "idTarget_Count";
+	expandInheritance = false;
+	poolCount = 0;
+	poolGranularity = 2;
+	networkReplicated = false;
+	disableAIPooling = false;
+	edit = {
+		flags = {
+			noFlood = true;
+		}
+		networkSerializeTransforms = false;
+		count = 1;
+		spawnPosition = {
+			x = 1;
+			y = 1;
+			z = 1;
+		}
+		targets = {
+			num = 1;
+			item[0] = "deathmatch_pickup_weapon_double_barrel_2_respawn_timeline_2";
+		}
+		repeat = true;
+	}
+}
+}
+entity {
+	entityDef deathmatch_pickup_weapon_double_barrel_2_respawn_timeline_2 {
+	inherit = "target/timeline";
+	class = "idTarget_Timeline";
+	expandInheritance = false;
+	poolCount = 0;
+	poolGranularity = 2;
+	networkReplicated = true;
+	disableAIPooling = false;
+	edit = {
+		flags = {
+			noFlood = true;
+		}
+		networkSerializeTransforms = false;
+		count = 1;
+		spawnPosition = {
+			x = 1;
+			y = 1;
+			z = 1;
+		}
+		componentTimeLine = {
+			entityEvents = {
+				num = 1;
+				item[0] = {
+					entity = "deathmatch_pickup_weapon_double_barrel_2_respawn";
+					events = {
+						num = 1;
+						item[0] = {
+							eventTime = 100;
+							eventCall = {
+								eventDef = "activate";
+								args = {
+									num = 1;
+									item[0] = {
+										entity = "";
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		repeat = true;
+		allowClientsToStart = true;
+		renderModelInfo = {
+			scale = {
+				x = 1;
+				y = 1;
+				z = 1;
+			}
+		}
+	}
+}
+}
+entity {
+	entityDef deathmatch_pickup_weapon_double_barrel_2_respawn {
+	inherit = "target/spawn";
+	class = "idTarget_Spawn";
+	expandInheritance = false;
+	poolCount = 0;
+	poolGranularity = 2;
+	networkReplicated = false;
+	disableAIPooling = false;
+	edit = {
+		flags = {
+			noFlood = true;
+		}
+		spawnConditions = {
+			maxCount = 0;
+			reuseDelaySec = 0;
+			doBoundsTest = false;
+			boundsTestType = "BOUNDSTEST_NONE";
+			fovCheck = 0;
+			minDistance = 0;
+			maxDistance = 0;
+			neighborSpawnerDistance = -1;
+			LOS_Test = "LOS_NONE";
+			playerToTest = "PLAYER_SP";
+			conditionProxy = "";
+		}
+		spawnEditableShared = {
+			groupName = "";
+			deathTrigger = "";
+			coverRadius = 0;
+			maxEnemyCoverDistance = 0;
+		}
+		entityDefs = {
+		num = 1;
+		item[0] = {
+			name = "deathmatch_pickup_weapon_double_barrel_2_x";
+		}
+}
+		conductorEntityAIType = "SPAWN_AI_TYPE_ANY";
+		initialEntityDefs = {
+			num = 0;
+		}
+		spawnEditable = {
+			spawnAt = "";
+			copyTargets = false;
+			additionalTargets = {
+				num = 0;
+			}
+			overwriteTraversalFlags = true;
+			traversalClassFlags = "CLASS_A";
+			combatHintClass = "CLASS_ALL";
+			spawnAnim = "";
+			aiStateOverride = "AIOVERRIDE_TELEPORT";
+			initialTargetOverride = "";
+		}
+		portal = "";
+		targetSpawnParent = "";
+		disablePooling = false;
+		spawnPosition = {
+			x = 0;
+			y = -158.56;
+			z = 13.85;
+		}
+		spawnOrientation = {
+			mat = {
+				mat[0] = {
+					x = 0;
+					y = 1;
+					z = 0;
+				}
+				mat[1] = {
+					x = -1;
+					y = 0;
+					z = 0;
+				}
+			}
+		}
+		targets = {
+			num = 1;
+			item[0] = "deathmatch_pickup_weapon_double_barrel_2_x";
+		}
+	}
+}
+}
+entity {
+	entityDef deathmatch_pickup_weapon_double_barrel_2_x {
+	inherit = "pickup/weapon/double_barrel";
+	class = "idProp2";
+	expandInheritance = false;
+	poolCount = 0;
+	poolGranularity = 2;
+	networkReplicated = true;
+	disableAIPooling = false;
+	edit = {
+		renderModelInfo = {
+			model = "art/weapons/supershotgun/supershotgun_pickup.lwo";
+			contributesToLightProbeGen = false;
+			scale = {
+				x = 3;
+				y = 3;
+				z = 3;
+			}
+		}
+		spawn_statIncreases = {
+			num = 1;
+			item[0] = {
+				stat = "STAT_ITEMS_SPAWNED";
+				increase = 1;
+			}
+		}
+		equipOnPickup = true;
+		lootStyle = "LOOT_TOUCH";
+		triggerDef = "trigger/props/weapons/default";
+		isStatic = true;
+		canBePossessed = true;
+		whenToSave = "SGT_NORMAL";
+		removeFlag = "RMV_IMMEDIATE_ALLOW_MS";
+		flags = {
+			canBecomeDormant = true;
+		}
+		pickup_statIncreases = {
+			num = 1;
+			item[0] = {
+				stat = "STAT_PLACED_AMMO_PICKUP";
+				increase = 1;
+			}
+		}
+		clipModelInfo = {
+			type = "CLIPMODEL_BOX";
+			size = {
+				x = 0.456999987;
+				y = 0.151999995;
+				z = 0.456999987;
+			}
+			offset = {
+				z = -0.151999995;
+			}
+		}
+		forceEquip = true;
+		useableComponentDecl = "propitem/weapon/double_barrel_shotgun/base";
+		thinkComponentDecl = NULL;
+		spawnPosition = {
+			x = 0;
+			y = 0;
+			z = -999;
+		}
+		spawnOrientation = {
+			mat = {
+				mat[0] = {
+					x = -1;
+					y = 2.68220901e-07;
+				}
+				mat[1] = {
+					x = -2.68220901e-07;
+					y = -1;
+				}
+			}
+		}
+		dormancy = {
+			allowDistanceDormancy = false;
+			allowPvsDormancy = false;
+		}
+		targets = {
+			num = 1;
+			item[0] = "deathmatch_pickup_weapon_double_barrel_2_respawn_timeline";
+		}
+		isLootDrop = true;
+	}
+}
+}
+entity {
+	entityDef deathmatch_pickup_weapon_double_barrel_2 {
+	inherit = "pickup/weapon/double_barrel";
+	class = "idProp2";
+	expandInheritance = false;
+	poolCount = 0;
+	poolGranularity = 2;
+	networkReplicated = true;
+	disableAIPooling = false;
+	edit = {
+		renderModelInfo = {
+			model = "art/weapons/supershotgun/supershotgun_pickup.lwo";
+			contributesToLightProbeGen = false;
+			scale = {
+				x = 3;
+				y = 3;
+				z = 3;
+			}
+		}
+		spawn_statIncreases = {
+			num = 1;
+			item[0] = {
+				stat = "STAT_ITEMS_SPAWNED";
+				increase = 1;
+			}
+		}
+		equipOnPickup = true;
+		lootStyle = "LOOT_TOUCH";
+		triggerDef = "trigger/props/weapons/default";
+		isStatic = true;
+		canBePossessed = true;
+		whenToSave = "SGT_NORMAL";
+		removeFlag = "RMV_IMMEDIATE_ALLOW_MS";
+		flags = {
+			canBecomeDormant = true;
+		}
+		pickup_statIncreases = {
+			num = 1;
+			item[0] = {
+				stat = "STAT_PLACED_AMMO_PICKUP";
+				increase = 1;
+			}
+		}
+		clipModelInfo = {
+			type = "CLIPMODEL_BOX";
+			size = {
+				x = 0.456999987;
+				y = 0.151999995;
+				z = 0.456999987;
+			}
+			offset = {
+				z = -0.151999995;
+			}
+		}
+		forceEquip = true;
+		useableComponentDecl = "propitem/weapon/double_barrel_shotgun/base";
+		thinkComponentDecl = NULL;
+		spawnPosition = {
+			x = 0;
+			y = -158.56;
+			z = 13.85;
+		}
+		spawnOrientation = {
+			mat = {
+				mat[0] = {
+					x = 0;
+					y = 1;
+					z = 0;
+				}
+				mat[1] = {
+					x = -1;
+					y = 0;
+					z = 0;
+				}
+			}
+		}
+		dormancy = {
+			allowDistanceDormancy = false;
+			allowPvsDormancy = false;
+		}
+		targets = {
+			num = 1;
+			item[0] = "deathmatch_pickup_weapon_double_barrel_2_respawn_timeline";
+		}
+		isLootDrop = true;
+	}
+}
+}
+entity {
+	entityDef deathmatch_pickup_weapon_heavy_cannon_1_respawn_timeline {
+	inherit = "target/timeline";
+	class = "idTarget_Timeline";
+	expandInheritance = false;
+	poolCount = 0;
+	poolGranularity = 2;
+	networkReplicated = true;
+	disableAIPooling = false;
+	edit = {
+		flags = {
+			noFlood = true;
+		}
+		networkSerializeTransforms = false;
+		count = 1;
+		spawnPosition = {
+			x = 1;
+			y = 1;
+			z = 1;
+		}
+		componentTimeLine = {
+			entityEvents = {
+				num = 1;
+				item[0] = {
+					entity = "deathmatch_pickup_weapon_heavy_cannon_1_respawn_relay";
+					events = {
+						num = 1;
+						item[0] = {
+							eventTime = 15000;
+							eventCall = {
+								eventDef = "activate";
+								args = {
+									num = 1;
+									item[0] = {
+										entity = "";
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		repeat = true;
+		allowClientsToStart = true;
+		renderModelInfo = {
+			scale = {
+				x = 1;
+				y = 1;
+				z = 1;
+			}
+		}
+	}
+}
+}
+entity {
+	entityDef deathmatch_pickup_weapon_heavy_cannon_1_respawn_relay {
+	inherit = "target/relay";
+	class = "idTarget_Count";
+	expandInheritance = false;
+	poolCount = 0;
+	poolGranularity = 2;
+	networkReplicated = false;
+	disableAIPooling = false;
+	edit = {
+		flags = {
+			noFlood = true;
+		}
+		networkSerializeTransforms = false;
+		count = 1;
+		spawnPosition = {
+			x = 1;
+			y = 1;
+			z = 1;
+		}
+		targets = {
+			num = 1;
+			item[0] = "deathmatch_pickup_weapon_heavy_cannon_1_respawn_timeline_2";
+		}
+		repeat = true;
+	}
+}
+}
+entity {
+	entityDef deathmatch_pickup_weapon_heavy_cannon_1_respawn_timeline_2 {
+	inherit = "target/timeline";
+	class = "idTarget_Timeline";
+	expandInheritance = false;
+	poolCount = 0;
+	poolGranularity = 2;
+	networkReplicated = true;
+	disableAIPooling = false;
+	edit = {
+		flags = {
+			noFlood = true;
+		}
+		networkSerializeTransforms = false;
+		count = 1;
+		spawnPosition = {
+			x = 1;
+			y = 1;
+			z = 1;
+		}
+		componentTimeLine = {
+			entityEvents = {
+				num = 1;
+				item[0] = {
+					entity = "deathmatch_pickup_weapon_heavy_cannon_1_respawn";
+					events = {
+						num = 1;
+						item[0] = {
+							eventTime = 100;
+							eventCall = {
+								eventDef = "activate";
+								args = {
+									num = 1;
+									item[0] = {
+										entity = "";
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		repeat = true;
+		allowClientsToStart = true;
+		renderModelInfo = {
+			scale = {
+				x = 1;
+				y = 1;
+				z = 1;
+			}
+		}
+	}
+}
+}
+entity {
+	entityDef deathmatch_pickup_weapon_heavy_cannon_1_respawn {
+	inherit = "target/spawn";
+	class = "idTarget_Spawn";
+	expandInheritance = false;
+	poolCount = 0;
+	poolGranularity = 2;
+	networkReplicated = false;
+	disableAIPooling = false;
+	edit = {
+		flags = {
+			noFlood = true;
+		}
+		spawnConditions = {
+			maxCount = 0;
+			reuseDelaySec = 0;
+			doBoundsTest = false;
+			boundsTestType = "BOUNDSTEST_NONE";
+			fovCheck = 0;
+			minDistance = 0;
+			maxDistance = 0;
+			neighborSpawnerDistance = -1;
+			LOS_Test = "LOS_NONE";
+			playerToTest = "PLAYER_SP";
+			conditionProxy = "";
+		}
+		spawnEditableShared = {
+			groupName = "";
+			deathTrigger = "";
+			coverRadius = 0;
+			maxEnemyCoverDistance = 0;
+		}
+		entityDefs = {
+		num = 1;
+		item[0] = {
+			name = "deathmatch_pickup_weapon_heavy_cannon_1_x";
+		}
+}
+		conductorEntityAIType = "SPAWN_AI_TYPE_ANY";
+		initialEntityDefs = {
+			num = 0;
+		}
+		spawnEditable = {
+			spawnAt = "";
+			copyTargets = false;
+			additionalTargets = {
+				num = 0;
+			}
+			overwriteTraversalFlags = true;
+			traversalClassFlags = "CLASS_A";
+			combatHintClass = "CLASS_ALL";
+			spawnAnim = "";
+			aiStateOverride = "AIOVERRIDE_TELEPORT";
+			initialTargetOverride = "";
+		}
+		portal = "";
+		targetSpawnParent = "";
+		disablePooling = false;
+		spawnPosition = {
+			x = 8.66;
+			y = -137.72;
+			z = 10.71;
+		}
+		spawnOrientation = {
+			mat = {
+				mat[0] = {
+					x = 0.7;
+					y = 0.7;
+					z = 0;
+				}
+				mat[1] = {
+					x = -0.7;
+					y = 0.7;
+					z = 0;
+				}
+			}
+		}
+		targets = {
+			num = 1;
+			item[0] = "deathmatch_pickup_weapon_heavy_cannon_1_x";
+		}
+	}
+}
+}
+entity {
+	entityDef deathmatch_pickup_weapon_heavy_cannon_1_x {
+	inherit = "pickup/weapon/heavy_cannon";
+	class = "idProp2";
+	expandInheritance = false;
+	poolCount = 0;
+	poolGranularity = 2;
+	networkReplicated = true;
+	disableAIPooling = false;
+	edit = {
+		renderModelInfo = {
+			model = "art/weapons/heavycannon/heavycannon_pickup.lwo";
+			contributesToLightProbeGen = false;
+			scale = {
+				x = 2;
+				y = 2;
+				z = 2;
+			}
+		}
+		spawn_statIncreases = {
+			num = 1;
+			item[0] = {
+				stat = "STAT_ITEMS_SPAWNED";
+				increase = 1;
+			}
+		}
+		equipOnPickup = true;
+		lootStyle = "LOOT_TOUCH";
+		triggerDef = "trigger/props/weapons/default";
+		isStatic = true;
+		canBePossessed = true;
+		whenToSave = "SGT_NORMAL";
+		removeFlag = "RMV_IMMEDIATE_ALLOW_MS";
+		flags = {
+			canBecomeDormant = true;
+		}
+		pickup_statIncreases = {
+			num = 2;
+			item[0] = {
+				stat = "STAT_ITEMS_COLLECTED";
+				increase = 1;
+			}
+			item[1] = {
+				stat = "STAT_PLACED_AMMO_PICKUP";
+				increase = 1;
+			}
+		}
+		clipModelInfo = {
+			type = "CLIPMODEL_BOX";
+			size = {
+				x = 0.762000024;
+				y = 0.191;
+				z = 0.762000024;
+			}
+			offset = {
+				z = -0.191;
+			}
+		}
+		forceEquip = true;
+		useableComponentDecl = "propitem/weapon/heavy_cannon/heavy_cannon";
+		thinkComponentDecl = NULL;
+		spawnPosition = {
+			x = 0;
+			y = 0;
+			z = -999;
+		}
+		spawnOrientation = {
+			mat = {
+				mat[0] = {
+					x = -1;
+					y = 2.68220901e-07;
+				}
+				mat[1] = {
+					x = -2.68220901e-07;
+					y = -1;
+				}
+			}
+		}
+		dormancy = {
+			allowDistanceDormancy = false;
+			allowPvsDormancy = false;
+		}
+		targets = {
+			num = 1;
+			item[0] = "deathmatch_pickup_weapon_heavy_cannon_1_respawn_timeline";
+		}
+		isLootDrop = true;
+	}
+}
+}
+entity {
+	entityDef deathmatch_pickup_weapon_heavy_cannon_1 {
+	inherit = "pickup/weapon/heavy_cannon";
+	class = "idProp2";
+	expandInheritance = false;
+	poolCount = 0;
+	poolGranularity = 2;
+	networkReplicated = true;
+	disableAIPooling = false;
+	edit = {
+		renderModelInfo = {
+			model = "art/weapons/heavycannon/heavycannon_pickup.lwo";
+			contributesToLightProbeGen = false;
+			scale = {
+				x = 2;
+				y = 2;
+				z = 2;
+			}
+		}
+		spawn_statIncreases = {
+			num = 1;
+			item[0] = {
+				stat = "STAT_ITEMS_SPAWNED";
+				increase = 1;
+			}
+		}
+		equipOnPickup = true;
+		lootStyle = "LOOT_TOUCH";
+		triggerDef = "trigger/props/weapons/default";
+		isStatic = true;
+		canBePossessed = true;
+		whenToSave = "SGT_NORMAL";
+		removeFlag = "RMV_IMMEDIATE_ALLOW_MS";
+		flags = {
+			canBecomeDormant = true;
+		}
+		pickup_statIncreases = {
+			num = 2;
+			item[0] = {
+				stat = "STAT_ITEMS_COLLECTED";
+				increase = 1;
+			}
+			item[1] = {
+				stat = "STAT_PLACED_AMMO_PICKUP";
+				increase = 1;
+			}
+		}
+		clipModelInfo = {
+			type = "CLIPMODEL_BOX";
+			size = {
+				x = 0.762000024;
+				y = 0.191;
+				z = 0.762000024;
+			}
+			offset = {
+				z = -0.191;
+			}
+		}
+		forceEquip = true;
+		useableComponentDecl = "propitem/weapon/heavy_cannon/heavy_cannon";
+		thinkComponentDecl = NULL;
+		spawnPosition = {
+			x = 8.66;
+			y = -137.72;
+			z = 10.71;
+		}
+		spawnOrientation = {
+			mat = {
+				mat[0] = {
+					x = 0.7;
+					y = 0.7;
+					z = 0;
+				}
+				mat[1] = {
+					x = -0.7;
+					y = 0.7;
+					z = 0;
+				}
+			}
+		}
+		dormancy = {
+			allowDistanceDormancy = false;
+			allowPvsDormancy = false;
+		}
+		targets = {
+			num = 1;
+			item[0] = "deathmatch_pickup_weapon_heavy_cannon_1_respawn_timeline";
+		}
+		isLootDrop = true;
+	}
+}
+}
+entity {
+	entityDef deathmatch_pickup_weapon_heavy_cannon_2_respawn_timeline {
+	inherit = "target/timeline";
+	class = "idTarget_Timeline";
+	expandInheritance = false;
+	poolCount = 0;
+	poolGranularity = 2;
+	networkReplicated = true;
+	disableAIPooling = false;
+	edit = {
+		flags = {
+			noFlood = true;
+		}
+		networkSerializeTransforms = false;
+		count = 1;
+		spawnPosition = {
+			x = 1;
+			y = 1;
+			z = 1;
+		}
+		componentTimeLine = {
+			entityEvents = {
+				num = 1;
+				item[0] = {
+					entity = "deathmatch_pickup_weapon_heavy_cannon_2_respawn_relay";
+					events = {
+						num = 1;
+						item[0] = {
+							eventTime = 15000;
+							eventCall = {
+								eventDef = "activate";
+								args = {
+									num = 1;
+									item[0] = {
+										entity = "";
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		repeat = true;
+		allowClientsToStart = true;
+		renderModelInfo = {
+			scale = {
+				x = 1;
+				y = 1;
+				z = 1;
+			}
+		}
+	}
+}
+}
+entity {
+	entityDef deathmatch_pickup_weapon_heavy_cannon_2_respawn_relay {
+	inherit = "target/relay";
+	class = "idTarget_Count";
+	expandInheritance = false;
+	poolCount = 0;
+	poolGranularity = 2;
+	networkReplicated = false;
+	disableAIPooling = false;
+	edit = {
+		flags = {
+			noFlood = true;
+		}
+		networkSerializeTransforms = false;
+		count = 1;
+		spawnPosition = {
+			x = 1;
+			y = 1;
+			z = 1;
+		}
+		targets = {
+			num = 1;
+			item[0] = "deathmatch_pickup_weapon_heavy_cannon_2_respawn_timeline_2";
+		}
+		repeat = true;
+	}
+}
+}
+entity {
+	entityDef deathmatch_pickup_weapon_heavy_cannon_2_respawn_timeline_2 {
+	inherit = "target/timeline";
+	class = "idTarget_Timeline";
+	expandInheritance = false;
+	poolCount = 0;
+	poolGranularity = 2;
+	networkReplicated = true;
+	disableAIPooling = false;
+	edit = {
+		flags = {
+			noFlood = true;
+		}
+		networkSerializeTransforms = false;
+		count = 1;
+		spawnPosition = {
+			x = 1;
+			y = 1;
+			z = 1;
+		}
+		componentTimeLine = {
+			entityEvents = {
+				num = 1;
+				item[0] = {
+					entity = "deathmatch_pickup_weapon_heavy_cannon_2_respawn";
+					events = {
+						num = 1;
+						item[0] = {
+							eventTime = 100;
+							eventCall = {
+								eventDef = "activate";
+								args = {
+									num = 1;
+									item[0] = {
+										entity = "";
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		repeat = true;
+		allowClientsToStart = true;
+		renderModelInfo = {
+			scale = {
+				x = 1;
+				y = 1;
+				z = 1;
+			}
+		}
+	}
+}
+}
+entity {
+	entityDef deathmatch_pickup_weapon_heavy_cannon_2_respawn {
+	inherit = "target/spawn";
+	class = "idTarget_Spawn";
+	expandInheritance = false;
+	poolCount = 0;
+	poolGranularity = 2;
+	networkReplicated = false;
+	disableAIPooling = false;
+	edit = {
+		flags = {
+			noFlood = true;
+		}
+		spawnConditions = {
+			maxCount = 0;
+			reuseDelaySec = 0;
+			doBoundsTest = false;
+			boundsTestType = "BOUNDSTEST_NONE";
+			fovCheck = 0;
+			minDistance = 0;
+			maxDistance = 0;
+			neighborSpawnerDistance = -1;
+			LOS_Test = "LOS_NONE";
+			playerToTest = "PLAYER_SP";
+			conditionProxy = "";
+		}
+		spawnEditableShared = {
+			groupName = "";
+			deathTrigger = "";
+			coverRadius = 0;
+			maxEnemyCoverDistance = 0;
+		}
+		entityDefs = {
+		num = 1;
+		item[0] = {
+			name = "deathmatch_pickup_weapon_heavy_cannon_2_x";
+		}
+}
+		conductorEntityAIType = "SPAWN_AI_TYPE_ANY";
+		initialEntityDefs = {
+			num = 0;
+		}
+		spawnEditable = {
+			spawnAt = "";
+			copyTargets = false;
+			additionalTargets = {
+				num = 0;
+			}
+			overwriteTraversalFlags = true;
+			traversalClassFlags = "CLASS_A";
+			combatHintClass = "CLASS_ALL";
+			spawnAnim = "";
+			aiStateOverride = "AIOVERRIDE_TELEPORT";
+			initialTargetOverride = "";
+		}
+		portal = "";
+		targetSpawnParent = "";
+		disablePooling = false;
+		spawnPosition = {
+			x = -28.34;
+			y = -161.2;
+			z = 16.46;
+		}
+		spawnOrientation = {
+			mat = {
+				mat[0] = {
+					x = 0;
+					y = 1;
+					z = 0;
+				}
+				mat[1] = {
+					x = -1;
+					y = 0;
+					z = 0;
+				}
+			}
+		}
+		targets = {
+			num = 1;
+			item[0] = "deathmatch_pickup_weapon_heavy_cannon_2_x";
+		}
+	}
+}
+}
+entity {
+	entityDef deathmatch_pickup_weapon_heavy_cannon_2_x {
+	inherit = "pickup/weapon/heavy_cannon";
+	class = "idProp2";
+	expandInheritance = false;
+	poolCount = 0;
+	poolGranularity = 2;
+	networkReplicated = true;
+	disableAIPooling = false;
+	edit = {
+		renderModelInfo = {
+			model = "art/weapons/heavycannon/heavycannon_pickup.lwo";
+			contributesToLightProbeGen = false;
+			scale = {
+				x = 2;
+				y = 2;
+				z = 2;
+			}
+		}
+		spawn_statIncreases = {
+			num = 1;
+			item[0] = {
+				stat = "STAT_ITEMS_SPAWNED";
+				increase = 1;
+			}
+		}
+		equipOnPickup = true;
+		lootStyle = "LOOT_TOUCH";
+		triggerDef = "trigger/props/weapons/default";
+		isStatic = true;
+		canBePossessed = true;
+		whenToSave = "SGT_NORMAL";
+		removeFlag = "RMV_IMMEDIATE_ALLOW_MS";
+		flags = {
+			canBecomeDormant = true;
+		}
+		pickup_statIncreases = {
+			num = 2;
+			item[0] = {
+				stat = "STAT_ITEMS_COLLECTED";
+				increase = 1;
+			}
+			item[1] = {
+				stat = "STAT_PLACED_AMMO_PICKUP";
+				increase = 1;
+			}
+		}
+		clipModelInfo = {
+			type = "CLIPMODEL_BOX";
+			size = {
+				x = 0.762000024;
+				y = 0.191;
+				z = 0.762000024;
+			}
+			offset = {
+				z = -0.191;
+			}
+		}
+		forceEquip = true;
+		useableComponentDecl = "propitem/weapon/heavy_cannon/heavy_cannon";
+		thinkComponentDecl = NULL;
+		spawnPosition = {
+			x = 0;
+			y = 0;
+			z = -999;
+		}
+		spawnOrientation = {
+			mat = {
+				mat[0] = {
+					x = -1;
+					y = 2.68220901e-07;
+				}
+				mat[1] = {
+					x = -2.68220901e-07;
+					y = -1;
+				}
+			}
+		}
+		dormancy = {
+			allowDistanceDormancy = false;
+			allowPvsDormancy = false;
+		}
+		targets = {
+			num = 1;
+			item[0] = "deathmatch_pickup_weapon_heavy_cannon_2_respawn_timeline";
+		}
+		isLootDrop = true;
+	}
+}
+}
+entity {
+	entityDef deathmatch_pickup_weapon_heavy_cannon_2 {
+	inherit = "pickup/weapon/heavy_cannon";
+	class = "idProp2";
+	expandInheritance = false;
+	poolCount = 0;
+	poolGranularity = 2;
+	networkReplicated = true;
+	disableAIPooling = false;
+	edit = {
+		renderModelInfo = {
+			model = "art/weapons/heavycannon/heavycannon_pickup.lwo";
+			contributesToLightProbeGen = false;
+			scale = {
+				x = 2;
+				y = 2;
+				z = 2;
+			}
+		}
+		spawn_statIncreases = {
+			num = 1;
+			item[0] = {
+				stat = "STAT_ITEMS_SPAWNED";
+				increase = 1;
+			}
+		}
+		equipOnPickup = true;
+		lootStyle = "LOOT_TOUCH";
+		triggerDef = "trigger/props/weapons/default";
+		isStatic = true;
+		canBePossessed = true;
+		whenToSave = "SGT_NORMAL";
+		removeFlag = "RMV_IMMEDIATE_ALLOW_MS";
+		flags = {
+			canBecomeDormant = true;
+		}
+		pickup_statIncreases = {
+			num = 2;
+			item[0] = {
+				stat = "STAT_ITEMS_COLLECTED";
+				increase = 1;
+			}
+			item[1] = {
+				stat = "STAT_PLACED_AMMO_PICKUP";
+				increase = 1;
+			}
+		}
+		clipModelInfo = {
+			type = "CLIPMODEL_BOX";
+			size = {
+				x = 0.762000024;
+				y = 0.191;
+				z = 0.762000024;
+			}
+			offset = {
+				z = -0.191;
+			}
+		}
+		forceEquip = true;
+		useableComponentDecl = "propitem/weapon/heavy_cannon/heavy_cannon";
+		thinkComponentDecl = NULL;
+		spawnPosition = {
+			x = -28.34;
+			y = -161.2;
+			z = 16.46;
+		}
+		spawnOrientation = {
+			mat = {
+				mat[0] = {
+					x = 0;
+					y = 1;
+					z = 0;
+				}
+				mat[1] = {
+					x = -1;
+					y = 0;
+					z = 0;
+				}
+			}
+		}
+		dormancy = {
+			allowDistanceDormancy = false;
+			allowPvsDormancy = false;
+		}
+		targets = {
+			num = 1;
+			item[0] = "deathmatch_pickup_weapon_heavy_cannon_2_respawn_timeline";
+		}
+		isLootDrop = true;
+	}
+}
+}
+entity {
+	entityDef deathmatch_pickup_weapon_plasma_rifle_1_respawn_timeline {
+	inherit = "target/timeline";
+	class = "idTarget_Timeline";
+	expandInheritance = false;
+	poolCount = 0;
+	poolGranularity = 2;
+	networkReplicated = true;
+	disableAIPooling = false;
+	edit = {
+		flags = {
+			noFlood = true;
+		}
+		networkSerializeTransforms = false;
+		count = 1;
+		spawnPosition = {
+			x = 1;
+			y = 1;
+			z = 1;
+		}
+		componentTimeLine = {
+			entityEvents = {
+				num = 1;
+				item[0] = {
+					entity = "deathmatch_pickup_weapon_plasma_rifle_1_respawn_relay";
+					events = {
+						num = 1;
+						item[0] = {
+							eventTime = 15000;
+							eventCall = {
+								eventDef = "activate";
+								args = {
+									num = 1;
+									item[0] = {
+										entity = "";
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		repeat = true;
+		allowClientsToStart = true;
+		renderModelInfo = {
+			scale = {
+				x = 1;
+				y = 1;
+				z = 1;
+			}
+		}
+	}
+}
+}
+entity {
+	entityDef deathmatch_pickup_weapon_plasma_rifle_1_respawn_relay {
+	inherit = "target/relay";
+	class = "idTarget_Count";
+	expandInheritance = false;
+	poolCount = 0;
+	poolGranularity = 2;
+	networkReplicated = false;
+	disableAIPooling = false;
+	edit = {
+		flags = {
+			noFlood = true;
+		}
+		networkSerializeTransforms = false;
+		count = 1;
+		spawnPosition = {
+			x = 1;
+			y = 1;
+			z = 1;
+		}
+		targets = {
+			num = 1;
+			item[0] = "deathmatch_pickup_weapon_plasma_rifle_1_respawn_timeline_2";
+		}
+		repeat = true;
+	}
+}
+}
+entity {
+	entityDef deathmatch_pickup_weapon_plasma_rifle_1_respawn_timeline_2 {
+	inherit = "target/timeline";
+	class = "idTarget_Timeline";
+	expandInheritance = false;
+	poolCount = 0;
+	poolGranularity = 2;
+	networkReplicated = true;
+	disableAIPooling = false;
+	edit = {
+		flags = {
+			noFlood = true;
+		}
+		networkSerializeTransforms = false;
+		count = 1;
+		spawnPosition = {
+			x = 1;
+			y = 1;
+			z = 1;
+		}
+		componentTimeLine = {
+			entityEvents = {
+				num = 1;
+				item[0] = {
+					entity = "deathmatch_pickup_weapon_plasma_rifle_1_respawn";
+					events = {
+						num = 1;
+						item[0] = {
+							eventTime = 100;
+							eventCall = {
+								eventDef = "activate";
+								args = {
+									num = 1;
+									item[0] = {
+										entity = "";
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		repeat = true;
+		allowClientsToStart = true;
+		renderModelInfo = {
+			scale = {
+				x = 1;
+				y = 1;
+				z = 1;
+			}
+		}
+	}
+}
+}
+entity {
+	entityDef deathmatch_pickup_weapon_plasma_rifle_1_respawn {
+	inherit = "target/spawn";
+	class = "idTarget_Spawn";
+	expandInheritance = false;
+	poolCount = 0;
+	poolGranularity = 2;
+	networkReplicated = false;
+	disableAIPooling = false;
+	edit = {
+		flags = {
+			noFlood = true;
+		}
+		spawnConditions = {
+			maxCount = 0;
+			reuseDelaySec = 0;
+			doBoundsTest = false;
+			boundsTestType = "BOUNDSTEST_NONE";
+			fovCheck = 0;
+			minDistance = 0;
+			maxDistance = 0;
+			neighborSpawnerDistance = -1;
+			LOS_Test = "LOS_NONE";
+			playerToTest = "PLAYER_SP";
+			conditionProxy = "";
+		}
+		spawnEditableShared = {
+			groupName = "";
+			deathTrigger = "";
+			coverRadius = 0;
+			maxEnemyCoverDistance = 0;
+		}
+		entityDefs = {
+		num = 1;
+		item[0] = {
+			name = "deathmatch_pickup_weapon_plasma_rifle_1_x";
+		}
+}
+		conductorEntityAIType = "SPAWN_AI_TYPE_ANY";
+		initialEntityDefs = {
+			num = 0;
+		}
+		spawnEditable = {
+			spawnAt = "";
+			copyTargets = false;
+			additionalTargets = {
+				num = 0;
+			}
+			overwriteTraversalFlags = true;
+			traversalClassFlags = "CLASS_A";
+			combatHintClass = "CLASS_ALL";
+			spawnAnim = "";
+			aiStateOverride = "AIOVERRIDE_TELEPORT";
+			initialTargetOverride = "";
+		}
+		portal = "";
+		targetSpawnParent = "";
+		disablePooling = false;
+		spawnPosition = {
+			x = -29.61;
+			y = -138.01;
+			z = 16.16;
+		}
+		spawnOrientation = {
+			mat = {
+				mat[0] = {
+					x = 0.7;
+					y = -0.7;
+					z = 0;
+				}
+				mat[1] = {
+					x = 0.7;
+					y = 0.7;
+					z = 0;
+				}
+			}
+		}
+		targets = {
+			num = 1;
+			item[0] = "deathmatch_pickup_weapon_plasma_rifle_1_x";
+		}
+	}
+}
+}
+entity {
+	entityDef deathmatch_pickup_weapon_plasma_rifle_1_x {
+	inherit = "pickup/weapon/plasma_rifle";
+	class = "idProp2";
+	expandInheritance = false;
+	poolCount = 0;
+	poolGranularity = 2;
+	networkReplicated = true;
+	disableAIPooling = false;
+	edit = {
+		renderModelInfo = {
+			model = "art/weapons/plasma/plasma_pickup.lwo";
+			contributesToLightProbeGen = false;
+			scale = {
+				x = 2;
+				y = 2;
+				z = 2;
+			}
+		}
+		spawn_statIncreases = {
+			num = 1;
+			item[0] = {
+				stat = "STAT_ITEMS_SPAWNED";
+				increase = 1;
+			}
+		}
+		equipOnPickup = true;
+		lootStyle = "LOOT_TOUCH";
+		triggerDef = "trigger/props/weapons/default";
+		isStatic = true;
+		canBePossessed = true;
+		whenToSave = "SGT_NORMAL";
+		removeFlag = "RMV_IMMEDIATE_ALLOW_MS";
+		flags = {
+			canBecomeDormant = true;
+		}
+		pickup_statIncreases = {
+			num = 1;
+			item[0] = {
+				stat = "STAT_PLACED_AMMO_PICKUP";
+				increase = 1;
+			}
+		}
+		clipModelInfo = {
+			type = "CLIPMODEL_BOX";
+			size = {
+				x = 0.456999987;
+				y = 0.151999995;
+				z = 0.456999987;
+			}
+			offset = {
+				z = -0.151999995;
+			}
+		}
+		forceEquip = true;
+		useableComponentDecl = "propitem/weapon/plasma_rifle/base";
+		thinkComponentDecl = NULL;
+		use_statIncreases = {
+			num = 1;
+			item[0] = {
+				stat = "STAT_ITEMS_COLLECTED";
+				increase = 1;
+			}
+		}
+		spawnPosition = {
+			x = 0;
+			y = 0;
+			z = -999;
+		}
+		spawnOrientation = {
+			mat = {
+				mat[0] = {
+					x = -1;
+					y = 2.68220901e-07;
+				}
+				mat[1] = {
+					x = -2.68220901e-07;
+					y = -1;
+				}
+			}
+		}
+		dormancy = {
+			allowDistanceDormancy = false;
+			allowPvsDormancy = false;
+		}
+		targets = {
+			num = 1;
+			item[0] = "deathmatch_pickup_weapon_plasma_rifle_1_respawn_timeline";
+		}
+		isLootDrop = true;
+	}
+}
+}
+entity {
+	entityDef deathmatch_pickup_weapon_plasma_rifle_1 {
+	inherit = "pickup/weapon/plasma_rifle";
+	class = "idProp2";
+	expandInheritance = false;
+	poolCount = 0;
+	poolGranularity = 2;
+	networkReplicated = true;
+	disableAIPooling = false;
+	edit = {
+		renderModelInfo = {
+			model = "art/weapons/plasma/plasma_pickup.lwo";
+			contributesToLightProbeGen = false;
+			scale = {
+				x = 2;
+				y = 2;
+				z = 2;
+			}
+		}
+		spawn_statIncreases = {
+			num = 1;
+			item[0] = {
+				stat = "STAT_ITEMS_SPAWNED";
+				increase = 1;
+			}
+		}
+		equipOnPickup = true;
+		lootStyle = "LOOT_TOUCH";
+		triggerDef = "trigger/props/weapons/default";
+		isStatic = true;
+		canBePossessed = true;
+		whenToSave = "SGT_NORMAL";
+		removeFlag = "RMV_IMMEDIATE_ALLOW_MS";
+		flags = {
+			canBecomeDormant = true;
+		}
+		pickup_statIncreases = {
+			num = 1;
+			item[0] = {
+				stat = "STAT_PLACED_AMMO_PICKUP";
+				increase = 1;
+			}
+		}
+		clipModelInfo = {
+			type = "CLIPMODEL_BOX";
+			size = {
+				x = 0.456999987;
+				y = 0.151999995;
+				z = 0.456999987;
+			}
+			offset = {
+				z = -0.151999995;
+			}
+		}
+		forceEquip = true;
+		useableComponentDecl = "propitem/weapon/plasma_rifle/base";
+		thinkComponentDecl = NULL;
+		use_statIncreases = {
+			num = 1;
+			item[0] = {
+				stat = "STAT_ITEMS_COLLECTED";
+				increase = 1;
+			}
+		}
+		spawnPosition = {
+			x = -29.61;
+			y = -138.01;
+			z = 16.16;
+		}
+		spawnOrientation = {
+			mat = {
+				mat[0] = {
+					x = 0.7;
+					y = -0.7;
+					z = 0;
+				}
+				mat[1] = {
+					x = 0.7;
+					y = 0.7;
+					z = 0;
+				}
+			}
+		}
+		dormancy = {
+			allowDistanceDormancy = false;
+			allowPvsDormancy = false;
+		}
+		targets = {
+			num = 1;
+			item[0] = "deathmatch_pickup_weapon_plasma_rifle_1_respawn_timeline";
+		}
+		isLootDrop = true;
+	}
+}
+}
+entity {
+	entityDef deathmatch_pickup_weapon_plasma_rifle_2_respawn_timeline {
+	inherit = "target/timeline";
+	class = "idTarget_Timeline";
+	expandInheritance = false;
+	poolCount = 0;
+	poolGranularity = 2;
+	networkReplicated = true;
+	disableAIPooling = false;
+	edit = {
+		flags = {
+			noFlood = true;
+		}
+		networkSerializeTransforms = false;
+		count = 1;
+		spawnPosition = {
+			x = 1;
+			y = 1;
+			z = 1;
+		}
+		componentTimeLine = {
+			entityEvents = {
+				num = 1;
+				item[0] = {
+					entity = "deathmatch_pickup_weapon_plasma_rifle_2_respawn_relay";
+					events = {
+						num = 1;
+						item[0] = {
+							eventTime = 15000;
+							eventCall = {
+								eventDef = "activate";
+								args = {
+									num = 1;
+									item[0] = {
+										entity = "";
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		repeat = true;
+		allowClientsToStart = true;
+		renderModelInfo = {
+			scale = {
+				x = 1;
+				y = 1;
+				z = 1;
+			}
+		}
+	}
+}
+}
+entity {
+	entityDef deathmatch_pickup_weapon_plasma_rifle_2_respawn_relay {
+	inherit = "target/relay";
+	class = "idTarget_Count";
+	expandInheritance = false;
+	poolCount = 0;
+	poolGranularity = 2;
+	networkReplicated = false;
+	disableAIPooling = false;
+	edit = {
+		flags = {
+			noFlood = true;
+		}
+		networkSerializeTransforms = false;
+		count = 1;
+		spawnPosition = {
+			x = 1;
+			y = 1;
+			z = 1;
+		}
+		targets = {
+			num = 1;
+			item[0] = "deathmatch_pickup_weapon_plasma_rifle_2_respawn_timeline_2";
+		}
+		repeat = true;
+	}
+}
+}
+entity {
+	entityDef deathmatch_pickup_weapon_plasma_rifle_2_respawn_timeline_2 {
+	inherit = "target/timeline";
+	class = "idTarget_Timeline";
+	expandInheritance = false;
+	poolCount = 0;
+	poolGranularity = 2;
+	networkReplicated = true;
+	disableAIPooling = false;
+	edit = {
+		flags = {
+			noFlood = true;
+		}
+		networkSerializeTransforms = false;
+		count = 1;
+		spawnPosition = {
+			x = 1;
+			y = 1;
+			z = 1;
+		}
+		componentTimeLine = {
+			entityEvents = {
+				num = 1;
+				item[0] = {
+					entity = "deathmatch_pickup_weapon_plasma_rifle_2_respawn";
+					events = {
+						num = 1;
+						item[0] = {
+							eventTime = 100;
+							eventCall = {
+								eventDef = "activate";
+								args = {
+									num = 1;
+									item[0] = {
+										entity = "";
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		repeat = true;
+		allowClientsToStart = true;
+		renderModelInfo = {
+			scale = {
+				x = 1;
+				y = 1;
+				z = 1;
+			}
+		}
+	}
+}
+}
+entity {
+	entityDef deathmatch_pickup_weapon_plasma_rifle_2_respawn {
+	inherit = "target/spawn";
+	class = "idTarget_Spawn";
+	expandInheritance = false;
+	poolCount = 0;
+	poolGranularity = 2;
+	networkReplicated = false;
+	disableAIPooling = false;
+	edit = {
+		flags = {
+			noFlood = true;
+		}
+		spawnConditions = {
+			maxCount = 0;
+			reuseDelaySec = 0;
+			doBoundsTest = false;
+			boundsTestType = "BOUNDSTEST_NONE";
+			fovCheck = 0;
+			minDistance = 0;
+			maxDistance = 0;
+			neighborSpawnerDistance = -1;
+			LOS_Test = "LOS_NONE";
+			playerToTest = "PLAYER_SP";
+			conditionProxy = "";
+		}
+		spawnEditableShared = {
+			groupName = "";
+			deathTrigger = "";
+			coverRadius = 0;
+			maxEnemyCoverDistance = 0;
+		}
+		entityDefs = {
+		num = 1;
+		item[0] = {
+			name = "deathmatch_pickup_weapon_plasma_rifle_2_x";
+		}
+}
+		conductorEntityAIType = "SPAWN_AI_TYPE_ANY";
+		initialEntityDefs = {
+			num = 0;
+		}
+		spawnEditable = {
+			spawnAt = "";
+			copyTargets = false;
+			additionalTargets = {
+				num = 0;
+			}
+			overwriteTraversalFlags = true;
+			traversalClassFlags = "CLASS_A";
+			combatHintClass = "CLASS_ALL";
+			spawnAnim = "";
+			aiStateOverride = "AIOVERRIDE_TELEPORT";
+			initialTargetOverride = "";
+		}
+		portal = "";
+		targetSpawnParent = "";
+		disablePooling = false;
+		spawnPosition = {
+			x = 0;
+			y = -167.32;
+			z = 5.36;
+		}
+		spawnOrientation = {
+			mat = {
+				mat[0] = {
+					x = 0.7;
+					y = -0.7;
+					z = 0;
+				}
+				mat[1] = {
+					x = 0.7;
+					y = 0.7;
+					z = 0;
+				}
+			}
+		}
+		targets = {
+			num = 1;
+			item[0] = "deathmatch_pickup_weapon_plasma_rifle_2_x";
+		}
+	}
+}
+}
+entity {
+	entityDef deathmatch_pickup_weapon_plasma_rifle_2_x {
+	inherit = "pickup/weapon/plasma_rifle";
+	class = "idProp2";
+	expandInheritance = false;
+	poolCount = 0;
+	poolGranularity = 2;
+	networkReplicated = true;
+	disableAIPooling = false;
+	edit = {
+		renderModelInfo = {
+			model = "art/weapons/plasma/plasma_pickup.lwo";
+			contributesToLightProbeGen = false;
+			scale = {
+				x = 2;
+				y = 2;
+				z = 2;
+			}
+		}
+		spawn_statIncreases = {
+			num = 1;
+			item[0] = {
+				stat = "STAT_ITEMS_SPAWNED";
+				increase = 1;
+			}
+		}
+		equipOnPickup = true;
+		lootStyle = "LOOT_TOUCH";
+		triggerDef = "trigger/props/weapons/default";
+		isStatic = true;
+		canBePossessed = true;
+		whenToSave = "SGT_NORMAL";
+		removeFlag = "RMV_IMMEDIATE_ALLOW_MS";
+		flags = {
+			canBecomeDormant = true;
+		}
+		pickup_statIncreases = {
+			num = 1;
+			item[0] = {
+				stat = "STAT_PLACED_AMMO_PICKUP";
+				increase = 1;
+			}
+		}
+		clipModelInfo = {
+			type = "CLIPMODEL_BOX";
+			size = {
+				x = 0.456999987;
+				y = 0.151999995;
+				z = 0.456999987;
+			}
+			offset = {
+				z = -0.151999995;
+			}
+		}
+		forceEquip = true;
+		useableComponentDecl = "propitem/weapon/plasma_rifle/base";
+		thinkComponentDecl = NULL;
+		use_statIncreases = {
+			num = 1;
+			item[0] = {
+				stat = "STAT_ITEMS_COLLECTED";
+				increase = 1;
+			}
+		}
+		spawnPosition = {
+			x = 0;
+			y = 0;
+			z = -999;
+		}
+		spawnOrientation = {
+			mat = {
+				mat[0] = {
+					x = -1;
+					y = 2.68220901e-07;
+				}
+				mat[1] = {
+					x = -2.68220901e-07;
+					y = -1;
+				}
+			}
+		}
+		dormancy = {
+			allowDistanceDormancy = false;
+			allowPvsDormancy = false;
+		}
+		targets = {
+			num = 1;
+			item[0] = "deathmatch_pickup_weapon_plasma_rifle_2_respawn_timeline";
+		}
+		isLootDrop = true;
+	}
+}
+}
+entity {
+	entityDef deathmatch_pickup_weapon_plasma_rifle_2 {
+	inherit = "pickup/weapon/plasma_rifle";
+	class = "idProp2";
+	expandInheritance = false;
+	poolCount = 0;
+	poolGranularity = 2;
+	networkReplicated = true;
+	disableAIPooling = false;
+	edit = {
+		renderModelInfo = {
+			model = "art/weapons/plasma/plasma_pickup.lwo";
+			contributesToLightProbeGen = false;
+			scale = {
+				x = 2;
+				y = 2;
+				z = 2;
+			}
+		}
+		spawn_statIncreases = {
+			num = 1;
+			item[0] = {
+				stat = "STAT_ITEMS_SPAWNED";
+				increase = 1;
+			}
+		}
+		equipOnPickup = true;
+		lootStyle = "LOOT_TOUCH";
+		triggerDef = "trigger/props/weapons/default";
+		isStatic = true;
+		canBePossessed = true;
+		whenToSave = "SGT_NORMAL";
+		removeFlag = "RMV_IMMEDIATE_ALLOW_MS";
+		flags = {
+			canBecomeDormant = true;
+		}
+		pickup_statIncreases = {
+			num = 1;
+			item[0] = {
+				stat = "STAT_PLACED_AMMO_PICKUP";
+				increase = 1;
+			}
+		}
+		clipModelInfo = {
+			type = "CLIPMODEL_BOX";
+			size = {
+				x = 0.456999987;
+				y = 0.151999995;
+				z = 0.456999987;
+			}
+			offset = {
+				z = -0.151999995;
+			}
+		}
+		forceEquip = true;
+		useableComponentDecl = "propitem/weapon/plasma_rifle/base";
+		thinkComponentDecl = NULL;
+		use_statIncreases = {
+			num = 1;
+			item[0] = {
+				stat = "STAT_ITEMS_COLLECTED";
+				increase = 1;
+			}
+		}
+		spawnPosition = {
+			x = 0;
+			y = -167.32;
+			z = 5.36;
+		}
+		spawnOrientation = {
+			mat = {
+				mat[0] = {
+					x = 0.7;
+					y = -0.7;
+					z = 0;
+				}
+				mat[1] = {
+					x = 0.7;
+					y = 0.7;
+					z = 0;
+				}
+			}
+		}
+		dormancy = {
+			allowDistanceDormancy = false;
+			allowPvsDormancy = false;
+		}
+		targets = {
+			num = 1;
+			item[0] = "deathmatch_pickup_weapon_plasma_rifle_2_respawn_timeline";
+		}
+		isLootDrop = true;
+	}
+}
+}
+entity {
+	entityDef deathmatch_pickup_weapon_rocket_launcher_1_respawn_timeline {
+	inherit = "target/timeline";
+	class = "idTarget_Timeline";
+	expandInheritance = false;
+	poolCount = 0;
+	poolGranularity = 2;
+	networkReplicated = true;
+	disableAIPooling = false;
+	edit = {
+		flags = {
+			noFlood = true;
+		}
+		networkSerializeTransforms = false;
+		count = 1;
+		spawnPosition = {
+			x = 1;
+			y = 1;
+			z = 1;
+		}
+		componentTimeLine = {
+			entityEvents = {
+				num = 1;
+				item[0] = {
+					entity = "deathmatch_pickup_weapon_rocket_launcher_1_respawn_relay";
+					events = {
+						num = 1;
+						item[0] = {
+							eventTime = 15000;
+							eventCall = {
+								eventDef = "activate";
+								args = {
+									num = 1;
+									item[0] = {
+										entity = "";
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		repeat = true;
+		allowClientsToStart = true;
+		renderModelInfo = {
+			scale = {
+				x = 1;
+				y = 1;
+				z = 1;
+			}
+		}
+	}
+}
+}
+entity {
+	entityDef deathmatch_pickup_weapon_rocket_launcher_1_respawn_relay {
+	inherit = "target/relay";
+	class = "idTarget_Count";
+	expandInheritance = false;
+	poolCount = 0;
+	poolGranularity = 2;
+	networkReplicated = false;
+	disableAIPooling = false;
+	edit = {
+		flags = {
+			noFlood = true;
+		}
+		networkSerializeTransforms = false;
+		count = 1;
+		spawnPosition = {
+			x = 1;
+			y = 1;
+			z = 1;
+		}
+		targets = {
+			num = 1;
+			item[0] = "deathmatch_pickup_weapon_rocket_launcher_1_respawn_timeline_2";
+		}
+		repeat = true;
+	}
+}
+}
+entity {
+	entityDef deathmatch_pickup_weapon_rocket_launcher_1_respawn_timeline_2 {
+	inherit = "target/timeline";
+	class = "idTarget_Timeline";
+	expandInheritance = false;
+	poolCount = 0;
+	poolGranularity = 2;
+	networkReplicated = true;
+	disableAIPooling = false;
+	edit = {
+		flags = {
+			noFlood = true;
+		}
+		networkSerializeTransforms = false;
+		count = 1;
+		spawnPosition = {
+			x = 1;
+			y = 1;
+			z = 1;
+		}
+		componentTimeLine = {
+			entityEvents = {
+				num = 1;
+				item[0] = {
+					entity = "deathmatch_pickup_weapon_rocket_launcher_1_respawn";
+					events = {
+						num = 1;
+						item[0] = {
+							eventTime = 100;
+							eventCall = {
+								eventDef = "activate";
+								args = {
+									num = 1;
+									item[0] = {
+										entity = "";
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		repeat = true;
+		allowClientsToStart = true;
+		renderModelInfo = {
+			scale = {
+				x = 1;
+				y = 1;
+				z = 1;
+			}
+		}
+	}
+}
+}
+entity {
+	entityDef deathmatch_pickup_weapon_rocket_launcher_1_respawn {
+	inherit = "target/spawn";
+	class = "idTarget_Spawn";
+	expandInheritance = false;
+	poolCount = 0;
+	poolGranularity = 2;
+	networkReplicated = false;
+	disableAIPooling = false;
+	edit = {
+		flags = {
+			noFlood = true;
+		}
+		spawnConditions = {
+			maxCount = 0;
+			reuseDelaySec = 0;
+			doBoundsTest = false;
+			boundsTestType = "BOUNDSTEST_NONE";
+			fovCheck = 0;
+			minDistance = 0;
+			maxDistance = 0;
+			neighborSpawnerDistance = -1;
+			LOS_Test = "LOS_NONE";
+			playerToTest = "PLAYER_SP";
+			conditionProxy = "";
+		}
+		spawnEditableShared = {
+			groupName = "";
+			deathTrigger = "";
+			coverRadius = 0;
+			maxEnemyCoverDistance = 0;
+		}
+		entityDefs = {
+		num = 1;
+		item[0] = {
+			name = "deathmatch_pickup_weapon_rocket_launcher_1_x";
+		}
+}
+		conductorEntityAIType = "SPAWN_AI_TYPE_ANY";
+		initialEntityDefs = {
+			num = 0;
+		}
+		spawnEditable = {
+			spawnAt = "";
+			copyTargets = false;
+			additionalTargets = {
+				num = 0;
+			}
+			overwriteTraversalFlags = true;
+			traversalClassFlags = "CLASS_A";
+			combatHintClass = "CLASS_ALL";
+			spawnAnim = "";
+			aiStateOverride = "AIOVERRIDE_TELEPORT";
+			initialTargetOverride = "";
+		}
+		portal = "";
+		targetSpawnParent = "";
+		disablePooling = false;
+		spawnPosition = {
+			x = -11.27;
+			y = -165.25;
+			z = 18.76;
+		}
+		spawnOrientation = {
+			mat = {
+				mat[0] = {
+					x = -1;
+					y = 0;
+					z = 0;
+				}
+				mat[1] = {
+					x = 0;
+					y = -1;
+					z = 0;
+				}
+			}
+		}
+		targets = {
+			num = 1;
+			item[0] = "deathmatch_pickup_weapon_rocket_launcher_1_x";
+		}
+	}
+}
+}
+entity {
+	entityDef deathmatch_pickup_weapon_rocket_launcher_1_x {
+	inherit = "pickup/weapon/rocket_launcher";
+	class = "idProp2";
+	expandInheritance = false;
+	poolCount = 0;
+	poolGranularity = 2;
+	networkReplicated = true;
+	disableAIPooling = false;
+	edit = {
+		renderModelInfo = {
+			model = "art/weapons/rocket/rocket_pickup.lwo";
+			contributesToLightProbeGen = false;
+			scale = {
+				x = 2;
+				y = 2;
+				z = 2;
+			}
+		}
+		spawn_statIncreases = {
+			num = 1;
+			item[0] = {
+				stat = "STAT_ITEMS_SPAWNED";
+				increase = 1;
+			}
+		}
+		equipOnPickup = true;
+		lootStyle = "LOOT_TOUCH";
+		triggerDef = "trigger/props/weapons/default";
+		isStatic = true;
+		canBePossessed = true;
+		whenToSave = "SGT_NORMAL";
+		removeFlag = "RMV_IMMEDIATE_ALLOW_MS";
+		flags = {
+			canBecomeDormant = true;
+		}
+		pickup_statIncreases = {
+			num = 1;
+			item[0] = {
+				stat = "STAT_PLACED_AMMO_PICKUP";
+				increase = 1;
+			}
+		}
+		clipModelInfo = {
+			type = "CLIPMODEL_BOX";
+			size = {
+				x = 0.762000024;
+				y = 0.191;
+				z = 0.762000024;
+			}
+			offset = {
+				z = -0.191;
+			}
+		}
+		forceEquip = true;
+		useableComponentDecl = "propitem/weapon/rocket_launcher/base";
+		thinkComponentDecl = NULL;
+		use_statIncreases = {
+			num = 1;
+			item[0] = {
+				stat = "STAT_ITEMS_COLLECTED";
+				increase = 1;
+			}
+		}
+		spawnPosition = {
+			x = 0;
+			y = 0;
+			z = -999;
+		}
+		spawnOrientation = {
+			mat = {
+				mat[0] = {
+					x = -1;
+					y = 2.68220901e-07;
+				}
+				mat[1] = {
+					x = -2.68220901e-07;
+					y = -1;
+				}
+			}
+		}
+		dormancy = {
+			allowDistanceDormancy = false;
+			allowPvsDormancy = false;
+		}
+		targets = {
+			num = 1;
+			item[0] = "deathmatch_pickup_weapon_rocket_launcher_1_respawn_timeline";
+		}
+		isLootDrop = true;
+	}
+}
+}
+entity {
+	entityDef deathmatch_pickup_weapon_rocket_launcher_1 {
+	inherit = "pickup/weapon/rocket_launcher";
+	class = "idProp2";
+	expandInheritance = false;
+	poolCount = 0;
+	poolGranularity = 2;
+	networkReplicated = true;
+	disableAIPooling = false;
+	edit = {
+		renderModelInfo = {
+			model = "art/weapons/rocket/rocket_pickup.lwo";
+			contributesToLightProbeGen = false;
+			scale = {
+				x = 2;
+				y = 2;
+				z = 2;
+			}
+		}
+		spawn_statIncreases = {
+			num = 1;
+			item[0] = {
+				stat = "STAT_ITEMS_SPAWNED";
+				increase = 1;
+			}
+		}
+		equipOnPickup = true;
+		lootStyle = "LOOT_TOUCH";
+		triggerDef = "trigger/props/weapons/default";
+		isStatic = true;
+		canBePossessed = true;
+		whenToSave = "SGT_NORMAL";
+		removeFlag = "RMV_IMMEDIATE_ALLOW_MS";
+		flags = {
+			canBecomeDormant = true;
+		}
+		pickup_statIncreases = {
+			num = 1;
+			item[0] = {
+				stat = "STAT_PLACED_AMMO_PICKUP";
+				increase = 1;
+			}
+		}
+		clipModelInfo = {
+			type = "CLIPMODEL_BOX";
+			size = {
+				x = 0.762000024;
+				y = 0.191;
+				z = 0.762000024;
+			}
+			offset = {
+				z = -0.191;
+			}
+		}
+		forceEquip = true;
+		useableComponentDecl = "propitem/weapon/rocket_launcher/base";
+		thinkComponentDecl = NULL;
+		use_statIncreases = {
+			num = 1;
+			item[0] = {
+				stat = "STAT_ITEMS_COLLECTED";
+				increase = 1;
+			}
+		}
+		spawnPosition = {
+			x = -11.27;
+			y = -165.25;
+			z = 18.76;
+		}
+		spawnOrientation = {
+			mat = {
+				mat[0] = {
+					x = -1;
+					y = 0;
+					z = 0;
+				}
+				mat[1] = {
+					x = 0;
+					y = -1;
+					z = 0;
+				}
+			}
+		}
+		dormancy = {
+			allowDistanceDormancy = false;
+			allowPvsDormancy = false;
+		}
+		targets = {
+			num = 1;
+			item[0] = "deathmatch_pickup_weapon_rocket_launcher_1_respawn_timeline";
+		}
+		isLootDrop = true;
+	}
+}
+}
+entity {
+	entityDef deathmatch_pickup_weapon_rocket_launcher_2_respawn_timeline {
+	inherit = "target/timeline";
+	class = "idTarget_Timeline";
+	expandInheritance = false;
+	poolCount = 0;
+	poolGranularity = 2;
+	networkReplicated = true;
+	disableAIPooling = false;
+	edit = {
+		flags = {
+			noFlood = true;
+		}
+		networkSerializeTransforms = false;
+		count = 1;
+		spawnPosition = {
+			x = 1;
+			y = 1;
+			z = 1;
+		}
+		componentTimeLine = {
+			entityEvents = {
+				num = 1;
+				item[0] = {
+					entity = "deathmatch_pickup_weapon_rocket_launcher_2_respawn_relay";
+					events = {
+						num = 1;
+						item[0] = {
+							eventTime = 15000;
+							eventCall = {
+								eventDef = "activate";
+								args = {
+									num = 1;
+									item[0] = {
+										entity = "";
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		repeat = true;
+		allowClientsToStart = true;
+		renderModelInfo = {
+			scale = {
+				x = 1;
+				y = 1;
+				z = 1;
+			}
+		}
+	}
+}
+}
+entity {
+	entityDef deathmatch_pickup_weapon_rocket_launcher_2_respawn_relay {
+	inherit = "target/relay";
+	class = "idTarget_Count";
+	expandInheritance = false;
+	poolCount = 0;
+	poolGranularity = 2;
+	networkReplicated = false;
+	disableAIPooling = false;
+	edit = {
+		flags = {
+			noFlood = true;
+		}
+		networkSerializeTransforms = false;
+		count = 1;
+		spawnPosition = {
+			x = 1;
+			y = 1;
+			z = 1;
+		}
+		targets = {
+			num = 1;
+			item[0] = "deathmatch_pickup_weapon_rocket_launcher_2_respawn_timeline_2";
+		}
+		repeat = true;
+	}
+}
+}
+entity {
+	entityDef deathmatch_pickup_weapon_rocket_launcher_2_respawn_timeline_2 {
+	inherit = "target/timeline";
+	class = "idTarget_Timeline";
+	expandInheritance = false;
+	poolCount = 0;
+	poolGranularity = 2;
+	networkReplicated = true;
+	disableAIPooling = false;
+	edit = {
+		flags = {
+			noFlood = true;
+		}
+		networkSerializeTransforms = false;
+		count = 1;
+		spawnPosition = {
+			x = 1;
+			y = 1;
+			z = 1;
+		}
+		componentTimeLine = {
+			entityEvents = {
+				num = 1;
+				item[0] = {
+					entity = "deathmatch_pickup_weapon_rocket_launcher_2_respawn";
+					events = {
+						num = 1;
+						item[0] = {
+							eventTime = 100;
+							eventCall = {
+								eventDef = "activate";
+								args = {
+									num = 1;
+									item[0] = {
+										entity = "";
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		repeat = true;
+		allowClientsToStart = true;
+		renderModelInfo = {
+			scale = {
+				x = 1;
+				y = 1;
+				z = 1;
+			}
+		}
+	}
+}
+}
+entity {
+	entityDef deathmatch_pickup_weapon_rocket_launcher_2_respawn {
+	inherit = "target/spawn";
+	class = "idTarget_Spawn";
+	expandInheritance = false;
+	poolCount = 0;
+	poolGranularity = 2;
+	networkReplicated = false;
+	disableAIPooling = false;
+	edit = {
+		flags = {
+			noFlood = true;
+		}
+		spawnConditions = {
+			maxCount = 0;
+			reuseDelaySec = 0;
+			doBoundsTest = false;
+			boundsTestType = "BOUNDSTEST_NONE";
+			fovCheck = 0;
+			minDistance = 0;
+			maxDistance = 0;
+			neighborSpawnerDistance = -1;
+			LOS_Test = "LOS_NONE";
+			playerToTest = "PLAYER_SP";
+			conditionProxy = "";
+		}
+		spawnEditableShared = {
+			groupName = "";
+			deathTrigger = "";
+			coverRadius = 0;
+			maxEnemyCoverDistance = 0;
+		}
+		entityDefs = {
+		num = 1;
+		item[0] = {
+			name = "deathmatch_pickup_weapon_rocket_launcher_2_x";
+		}
+}
+		conductorEntityAIType = "SPAWN_AI_TYPE_ANY";
+		initialEntityDefs = {
+			num = 0;
+		}
+		spawnEditable = {
+			spawnAt = "";
+			copyTargets = false;
+			additionalTargets = {
+				num = 0;
+			}
+			overwriteTraversalFlags = true;
+			traversalClassFlags = "CLASS_A";
+			combatHintClass = "CLASS_ALL";
+			spawnAnim = "";
+			aiStateOverride = "AIOVERRIDE_TELEPORT";
+			initialTargetOverride = "";
+		}
+		portal = "";
+		targetSpawnParent = "";
+		disablePooling = false;
+		spawnPosition = {
+			x = 15.81;
+			y = -171.96;
+			z = 17.36;
+		}
+		spawnOrientation = {
+			mat = {
+				mat[0] = {
+					x = 0.7;
+					y = -0.7;
+					z = 0;
+				}
+				mat[1] = {
+					x = 0.7;
+					y = 0.7;
+					z = 0;
+				}
+			}
+		}
+		targets = {
+			num = 1;
+			item[0] = "deathmatch_pickup_weapon_rocket_launcher_2_x";
+		}
+	}
+}
+}
+entity {
+	entityDef deathmatch_pickup_weapon_rocket_launcher_2_x {
+	inherit = "pickup/weapon/rocket_launcher";
+	class = "idProp2";
+	expandInheritance = false;
+	poolCount = 0;
+	poolGranularity = 2;
+	networkReplicated = true;
+	disableAIPooling = false;
+	edit = {
+		renderModelInfo = {
+			model = "art/weapons/rocket/rocket_pickup.lwo";
+			contributesToLightProbeGen = false;
+			scale = {
+				x = 2;
+				y = 2;
+				z = 2;
+			}
+		}
+		spawn_statIncreases = {
+			num = 1;
+			item[0] = {
+				stat = "STAT_ITEMS_SPAWNED";
+				increase = 1;
+			}
+		}
+		equipOnPickup = true;
+		lootStyle = "LOOT_TOUCH";
+		triggerDef = "trigger/props/weapons/default";
+		isStatic = true;
+		canBePossessed = true;
+		whenToSave = "SGT_NORMAL";
+		removeFlag = "RMV_IMMEDIATE_ALLOW_MS";
+		flags = {
+			canBecomeDormant = true;
+		}
+		pickup_statIncreases = {
+			num = 1;
+			item[0] = {
+				stat = "STAT_PLACED_AMMO_PICKUP";
+				increase = 1;
+			}
+		}
+		clipModelInfo = {
+			type = "CLIPMODEL_BOX";
+			size = {
+				x = 0.762000024;
+				y = 0.191;
+				z = 0.762000024;
+			}
+			offset = {
+				z = -0.191;
+			}
+		}
+		forceEquip = true;
+		useableComponentDecl = "propitem/weapon/rocket_launcher/base";
+		thinkComponentDecl = NULL;
+		use_statIncreases = {
+			num = 1;
+			item[0] = {
+				stat = "STAT_ITEMS_COLLECTED";
+				increase = 1;
+			}
+		}
+		spawnPosition = {
+			x = 0;
+			y = 0;
+			z = -999;
+		}
+		spawnOrientation = {
+			mat = {
+				mat[0] = {
+					x = -1;
+					y = 2.68220901e-07;
+				}
+				mat[1] = {
+					x = -2.68220901e-07;
+					y = -1;
+				}
+			}
+		}
+		dormancy = {
+			allowDistanceDormancy = false;
+			allowPvsDormancy = false;
+		}
+		targets = {
+			num = 1;
+			item[0] = "deathmatch_pickup_weapon_rocket_launcher_2_respawn_timeline";
+		}
+		isLootDrop = true;
+	}
+}
+}
+entity {
+	entityDef deathmatch_pickup_weapon_rocket_launcher_2 {
+	inherit = "pickup/weapon/rocket_launcher";
+	class = "idProp2";
+	expandInheritance = false;
+	poolCount = 0;
+	poolGranularity = 2;
+	networkReplicated = true;
+	disableAIPooling = false;
+	edit = {
+		renderModelInfo = {
+			model = "art/weapons/rocket/rocket_pickup.lwo";
+			contributesToLightProbeGen = false;
+			scale = {
+				x = 2;
+				y = 2;
+				z = 2;
+			}
+		}
+		spawn_statIncreases = {
+			num = 1;
+			item[0] = {
+				stat = "STAT_ITEMS_SPAWNED";
+				increase = 1;
+			}
+		}
+		equipOnPickup = true;
+		lootStyle = "LOOT_TOUCH";
+		triggerDef = "trigger/props/weapons/default";
+		isStatic = true;
+		canBePossessed = true;
+		whenToSave = "SGT_NORMAL";
+		removeFlag = "RMV_IMMEDIATE_ALLOW_MS";
+		flags = {
+			canBecomeDormant = true;
+		}
+		pickup_statIncreases = {
+			num = 1;
+			item[0] = {
+				stat = "STAT_PLACED_AMMO_PICKUP";
+				increase = 1;
+			}
+		}
+		clipModelInfo = {
+			type = "CLIPMODEL_BOX";
+			size = {
+				x = 0.762000024;
+				y = 0.191;
+				z = 0.762000024;
+			}
+			offset = {
+				z = -0.191;
+			}
+		}
+		forceEquip = true;
+		useableComponentDecl = "propitem/weapon/rocket_launcher/base";
+		thinkComponentDecl = NULL;
+		use_statIncreases = {
+			num = 1;
+			item[0] = {
+				stat = "STAT_ITEMS_COLLECTED";
+				increase = 1;
+			}
+		}
+		spawnPosition = {
+			x = 15.81;
+			y = -171.96;
+			z = 17.36;
+		}
+		spawnOrientation = {
+			mat = {
+				mat[0] = {
+					x = 0.7;
+					y = -0.7;
+					z = 0;
+				}
+				mat[1] = {
+					x = 0.7;
+					y = 0.7;
+					z = 0;
+				}
+			}
+		}
+		dormancy = {
+			allowDistanceDormancy = false;
+			allowPvsDormancy = false;
+		}
+		targets = {
+			num = 1;
+			item[0] = "deathmatch_pickup_weapon_rocket_launcher_2_respawn_timeline";
+		}
+		isLootDrop = true;
+	}
+}
+}
+entity {
+	entityDef deathmatch_pickup_weapon_bfg_1_respawn_timeline_initial {
+	inherit = "target/timeline";
+	class = "idTarget_Timeline";
+	expandInheritance = false;
+	poolCount = 0;
+	poolGranularity = 2;
+	networkReplicated = true;
+	disableAIPooling = false;
+	edit = {
+		flags = {
+			noFlood = true;
+		}
+		networkSerializeTransforms = false;
+		count = 1;
+		spawnPosition = {
+			x = 1;
+			y = 1;
+			z = 1;
+		}
+		componentTimeLine = {
+			entityEvents = {
+				num = 1;
+				item[0] = {
+					entity = "deathmatch_pickup_weapon_bfg_1_respawn_relay";
+					events = {
+						num = 1;
+						item[0] = {
+							eventTime = 60000;
+							eventCall = {
+								eventDef = "activate";
+								args = {
+									num = 1;
+									item[0] = {
+										entity = "";
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		repeat = false;
+		allowClientsToStart = true;
+		renderModelInfo = {
+			scale = {
+				x = 1;
+				y = 1;
+				z = 1;
+			}
+		}
+	}
+}
+}
+entity {
+	entityDef deathmatch_pickup_weapon_bfg_1_respawn_timeline {
+	inherit = "target/timeline";
+	class = "idTarget_Timeline";
+	expandInheritance = false;
+	poolCount = 0;
+	poolGranularity = 2;
+	networkReplicated = true;
+	disableAIPooling = false;
+	edit = {
+		flags = {
+			noFlood = true;
+		}
+		networkSerializeTransforms = false;
+		count = 1;
+		spawnPosition = {
+			x = 1;
+			y = 1;
+			z = 1;
+		}
+		componentTimeLine = {
+			entityEvents = {
+				num = 1;
+				item[0] = {
+					entity = "deathmatch_pickup_weapon_bfg_1_respawn_relay";
+					events = {
+						num = 1;
+						item[0] = {
+							eventTime = 60000;
+							eventCall = {
+								eventDef = "activate";
+								args = {
+									num = 1;
+									item[0] = {
+										entity = "";
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		repeat = true;
+		allowClientsToStart = true;
+		renderModelInfo = {
+			scale = {
+				x = 1;
+				y = 1;
+				z = 1;
+			}
+		}
+	}
+}
+}
+entity {
+	entityDef deathmatch_pickup_weapon_bfg_1_respawn_relay {
+	inherit = "target/relay";
+	class = "idTarget_Count";
+	expandInheritance = false;
+	poolCount = 0;
+	poolGranularity = 2;
+	networkReplicated = false;
+	disableAIPooling = false;
+	edit = {
+		flags = {
+			noFlood = true;
+		}
+		networkSerializeTransforms = false;
+		count = 1;
+		spawnPosition = {
+			x = 1;
+			y = 1;
+			z = 1;
+		}
+		targets = {
+			num = 2;
+			item[0] = "deathmatch_pickup_weapon_bfg_1_respawn_timeline_2";
+			item[1] = "deathmatch_power_weapon_sfx";
+		}
+		repeat = true;
+	}
+}
+}
+entity {
+	entityDef deathmatch_pickup_weapon_bfg_1_respawn_timeline_2 {
+	inherit = "target/timeline";
+	class = "idTarget_Timeline";
+	expandInheritance = false;
+	poolCount = 0;
+	poolGranularity = 2;
+	networkReplicated = true;
+	disableAIPooling = false;
+	edit = {
+		flags = {
+			noFlood = true;
+		}
+		networkSerializeTransforms = false;
+		count = 1;
+		spawnPosition = {
+			x = 1;
+			y = 1;
+			z = 1;
+		}
+		componentTimeLine = {
+			entityEvents = {
+				num = 1;
+				item[0] = {
+					entity = "deathmatch_pickup_weapon_bfg_1_respawn";
+					events = {
+						num = 1;
+						item[0] = {
+							eventTime = 100;
+							eventCall = {
+								eventDef = "activate";
+								args = {
+									num = 1;
+									item[0] = {
+										entity = "";
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		repeat = true;
+		allowClientsToStart = true;
+		renderModelInfo = {
+			scale = {
+				x = 1;
+				y = 1;
+				z = 1;
+			}
+		}
+	}
+}
+}
+entity {
+	entityDef deathmatch_pickup_weapon_bfg_1_respawn {
+	inherit = "target/spawn";
+	class = "idTarget_Spawn";
+	expandInheritance = false;
+	poolCount = 0;
+	poolGranularity = 2;
+	networkReplicated = false;
+	disableAIPooling = false;
+	edit = {
+		flags = {
+			noFlood = true;
+		}
+		spawnConditions = {
+			maxCount = 0;
+			reuseDelaySec = 0;
+			doBoundsTest = false;
+			boundsTestType = "BOUNDSTEST_NONE";
+			fovCheck = 0;
+			minDistance = 0;
+			maxDistance = 0;
+			neighborSpawnerDistance = -1;
+			LOS_Test = "LOS_NONE";
+			playerToTest = "PLAYER_SP";
+			conditionProxy = "";
+		}
+		spawnEditableShared = {
+			groupName = "";
+			deathTrigger = "";
+			coverRadius = 0;
+			maxEnemyCoverDistance = 0;
+		}
+		entityDefs = {
+		num = 1;
+		item[0] = {
+			name = "deathmatch_pickup_weapon_bfg_1_x";
+		}
+}
+		conductorEntityAIType = "SPAWN_AI_TYPE_ANY";
+		initialEntityDefs = {
+			num = 0;
+		}
+		spawnEditable = {
+			spawnAt = "";
+			copyTargets = false;
+			additionalTargets = {
+				num = 0;
+			}
+			overwriteTraversalFlags = true;
+			traversalClassFlags = "CLASS_A";
+			combatHintClass = "CLASS_ALL";
+			spawnAnim = "";
+			aiStateOverride = "AIOVERRIDE_TELEPORT";
+			initialTargetOverride = "";
+		}
+		portal = "";
+		targetSpawnParent = "";
+		disablePooling = false;
+		spawnPosition = {
+			x = 11.98;
+			y = -176.89;
+			z = 26.95;
+		}
+		spawnOrientation = {
+			mat = {
+				mat[0] = {
+					x = -0.7;
+					y = -0.7;
+					z = 0;
+				}
+				mat[1] = {
+					x = 0.7;
+					y = -0.7;
+					z = 0;
+				}
+			}
+		}
+		targets = {
+			num = 1;
+			item[0] = "deathmatch_pickup_weapon_bfg_1_x";
+		}
+	}
+}
+}
+entity {
+	entityDef deathmatch_pickup_weapon_bfg_1_x {
+	inherit = "pickup/weapon/bfg";
+	class = "idProp2";
+	expandInheritance = false;
+	poolCount = 0;
+	poolGranularity = 2;
+	networkReplicated = true;
+	disableAIPooling = false;
+	edit = {
+		renderModelInfo = {
+			model = "art/weapons/bfg/bfg_pickup.lwo";
+			contributesToLightProbeGen = false;
+			scale = {
+				x = 2;
+				y = 2;
+				z = 2;
+			}
+		}
+		spawn_statIncreases = {
+			num = 1;
+			item[0] = {
+				stat = "STAT_ITEMS_SPAWNED";
+				increase = 1;
+			}
+		}
+		equipOnPickup = true;
+		lootStyle = "LOOT_TOUCH";
+		triggerDef = "trigger/props/weapons/default";
+		isStatic = true;
+		canBePossessed = true;
+		whenToSave = "SGT_NORMAL";
+		removeFlag = "RMV_IMMEDIATE_ALLOW_MS";
+		flags = {
+			canBecomeDormant = true;
+		}
+		pickup_statIncreases = {
+			num = 1;
+			item[0] = {
+				stat = "STAT_PLACED_AMMO_PICKUP";
+				increase = 1;
+			}
+		}
+		clipModelInfo = {
+			type = "CLIPMODEL_BOX";
+			size = {
+				x = 0.456999987;
+				y = 0.151999995;
+				z = 0.456999987;
+			}
+			offset = {
+				z = -0.151999995;
+			}
+		}
+		forceEquip = true;
+		useableComponentDecl = "propitem/weapon/bfg/base";
+		thinkComponentDecl = NULL;
+		use_statIncreases = {
+			num = 1;
+			item[0] = {
+				stat = "STAT_ITEMS_COLLECTED";
+				increase = 1;
+			}
+		}
+		spawnPosition = {
+			x = 0;
+			y = 0;
+			z = -999;
+		}
+		spawnOrientation = {
+			mat = {
+				mat[0] = {
+					x = -1;
+					y = 2.68220901e-07;
+				}
+				mat[1] = {
+					x = -2.68220901e-07;
+					y = -1;
+				}
+			}
+		}
+		dormancy = {
+			allowDistanceDormancy = false;
+			allowPvsDormancy = false;
+		}
+		targets = {
+			num = 1;
+			item[0] = "deathmatch_pickup_weapon_bfg_1_respawn_timeline";
+		}
+		resetOnEndRound = true;
+		isLootDrop = true;
+	}
+}
+}
+entity {
 	entityDef slayer_side_teleporter_trigger {
 	inherit = "trigger/teleporter";
 	class = "idTrigger_Teleporter";
@@ -44973,7 +52837,7 @@ entity {
 				item[0] = {
 					entity = "battlemode_encounter_manager";
 					events = {
-						num = 11;
+						num = 6;
 						item[0] = {
 							eventCall = {
 								eventDef = "activateTarget";
@@ -45004,152 +52868,19 @@ entity {
 						}
 						item[2] = {
 							eventCall = {
-								eventDef = "makeAIAwareOfPlayer";
+								eventDef = "activateTarget";
 								args = {
-									num = 4;
+									num = 2;
 									item[0] = {
-										bool = true;
+										entity = "deathmatch_pickup_weapon_bfg_1_respawn_timeline_initial";
 									}
 									item[1] = {
-										bool = true;
-									}
-									item[2] = {
 										string = "";
-									}
-									item[3] = {
-										bool = false;
 									}
 								}
 							}
 						}
 						item[3] = {
-							eventCall = {
-								eventDef = "staggeredAISpawn";
-								args = {
-									num = 6;
-									item[0] = {
-										eEncounterSpawnType_t = "ENCOUNTER_SPAWN_ZOMBIE_TIER_1";
-									}
-									item[1] = {
-										int = 5;
-									}
-									item[2] = {
-										entity = "round_start_spawn_group";
-									}
-									item[3] = {
-										string = "";
-									}
-									item[4] = {
-										float = 0;
-									}
-									item[5] = {
-										float = 2;
-									}
-								}
-							}
-						}
-						item[4] = {
-							eventCall = {
-								eventDef = "staggeredAISpawn";
-								args = {
-									num = 6;
-									item[0] = {
-										eEncounterSpawnType_t = "ENCOUNTER_SPAWN_IMP";
-									}
-									item[1] = {
-										int = 4;
-									}
-									item[2] = {
-										entity = "round_start_spawn_group";
-									}
-									item[3] = {
-										string = "";
-									}
-									item[4] = {
-										float = 0;
-									}
-									item[5] = {
-										float = 2;
-									}
-								}
-							}
-						}
-						item[5] = {
-							eventCall = {
-								eventDef = "wait";
-								args = {
-									num = 1;
-									item[0] = {
-										float = 2;
-									}
-								}
-							}
-						}
-						item[6] = {
-							eventCall = {
-								eventDef = "maintainAICount";
-								args = {
-									num = 8;
-									item[0] = {
-										eEncounterSpawnType_t = "ENCOUNTER_SPAWN_ZOMBIE_TIER_1";
-									}
-									item[1] = {
-										int = 5;
-									}
-									item[2] = {
-										int = -1;
-									}
-									item[3] = {
-										float = 2;
-									}
-									item[4] = {
-										int = 4;
-									}
-									item[5] = {
-										entity = "";
-									}
-									item[6] = {
-										string = "";
-									}
-									item[7] = {
-										float = 4;
-									}
-								}
-							}
-						}
-						item[7] = {
-							eventCall = {
-								eventDef = "maintainAICount";
-								args = {
-									num = 8;
-									item[0] = {
-										eEncounterSpawnType_t = "ENCOUNTER_SPAWN_IMP";
-									}
-									item[1] = {
-										int = 4;
-									}
-									item[2] = {
-										int = -1;
-									}
-									item[3] = {
-										float = 2;
-									}
-									item[4] = {
-										int = 3;
-									}
-									item[5] = {
-										entity = "";
-									}
-									item[6] = {
-										string = "";
-									}
-									item[7] = {
-										float = 4;
-									}
-								}
-							}
-						}
-						item[8] = {
 							eventCall = {
 								eventDef = "wait";
 								args = {
@@ -45160,7 +52891,7 @@ entity {
 								}
 							}
 						}
-						item[9] = {
+						item[4] = {
 							eventCall = {
 								eventDef = "setNextScriptIndex";
 								args = {
@@ -45171,7 +52902,7 @@ entity {
 								}
 							}
 						}
-						item[10] = {
+						item[5] = {
 							eventCall = {
 								eventDef = "proceedToNextScript";
 								args = {
@@ -47914,9 +55645,8 @@ entity {
 			z = 1;
 		}
 		targets = {
-			num = 2;
+			num = 1;
 			item[0] = "deathmatch_increase_havok_limit";
-			item[1] = "deathmatch_endless_devinvloadout_swap";
 		}
 		repeat = false;
 	}
@@ -47939,6 +55669,34 @@ entity {
 			x = 1;
 			y = 1;
 			z = 1;
+		}
+	}
+}
+}
+entity {
+	entityDef deathmatch_power_weapon_sfx {
+	inherit = "sound/soundentity";
+	class = "idSoundEntity";
+	expandInheritance = false;
+	poolCount = 0;
+	poolGranularity = 2;
+	networkReplicated = false;
+	disableAIPooling = false;
+	edit = {
+		temporarySoundEvent = true;
+		spawnPosition = {
+			x = 1;
+			y = 1;
+			z = 1;
+		}
+		soundOcclusionBypass = true;
+		startEvents = {
+			num = 1;
+			item[0] = "play_streak_levelupsound";
+		}
+		stopEvents = {
+			num = 1;
+			item[0] = "play_streak_levelupsound";
 		}
 	}
 }
