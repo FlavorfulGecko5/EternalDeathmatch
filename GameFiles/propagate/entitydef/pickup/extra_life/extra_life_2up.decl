@@ -1,0 +1,53 @@
+{
+	class = "idProp2";
+	networkReplicated = true;
+	disableAIPooling = false;
+	editorVars {
+		rotatable = false;
+		showOrientation = false;
+		showFixedBox = false;
+		skipRenderModelInEditor = false;
+		showInRenderMode = false;
+		placeable = true;
+		color = ( 1, 1, 1, 1 );
+		size = ( 0, 0, 0 );
+		originOffset = ( 0, 0, 0 );
+		material = "";
+		translucent = false;
+		editorName = "";
+		description = "";
+	}
+	edit = {
+		whenToSave = "SGT_NORMAL";
+		saveType = "SGS_GAME_DATA";
+		removeFlag = "RMV_IMMEDIATE_ALLOW_MS";
+		automapPropertiesDecl = "extra_life_2up";
+		renderModelInfo = {
+			model = "art/pickups/extraLife_2.lwo";
+			contributesToLightProbeGen = false;
+			ignoreDesaturate = true;
+			scale = {
+				x = 1.75;
+				y = 1.75;
+				z = 1.75;
+			}
+			emissiveColor = {
+				r = 0;
+				b = 0.68235302;
+			}
+			emissiveScale = 1;
+		}
+		clipModelInfo = {
+			type = "CLIPMODEL_BOX";
+		}
+		fxDecl = "pickups/ammo_extralife";
+		physicsAttributes = "lootdrop/health";
+		useableComponentDecl = "sp_extra_life_2";
+		thinkComponentDecl = "bobthink";
+		triggerDef = "trigger/props/pickup_large";
+		updateFX = true;
+		canBePossessed = true;
+		sendNotableItemTelemetryEvent = true;
+		isLootDrop = true;
+	}
+}

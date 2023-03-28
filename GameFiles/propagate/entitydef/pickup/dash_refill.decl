@@ -1,0 +1,45 @@
+{
+	class = "idProp2";
+	networkReplicated = true;
+	editorVars {
+		rotatable = false;
+		showOrientation = false;
+		showFixedBox = false;
+		skipRenderModelInEditor = false;
+		showInRenderMode = false;
+		placeable = true;
+		color = ( 1, 1, 1, 1 );
+		size = ( 0, 0, 0 );
+		originOffset = ( 0, 0, 0 );
+		material = "";
+		translucent = false;
+		editorName = "";
+		description = "";
+	}
+	edit = {
+		soundOffset = {
+			z = 1;
+		}
+		renderModelInfo = {
+			model = "art/pickups/dash_recharge_a.lwo";
+			noAmbient = true;
+			contributesToLightProbeGen = false;
+			scale = {
+				x = 0.25;
+				y = 0.25;
+				z = 0.25;
+			}
+			emissiveScale = 1;
+		}
+		fxDecl = "gameplay/dash_activate";
+		useableComponentDecl = "propitem/player/fill_dash_meter";
+		thinkComponentDecl = "bob_seek";
+		hideOnUse = true;
+		timeUntilRespawnMS = 5000;
+		triggerDef = "trigger/props/megahealth";
+		sound_spawn = "play_pickup_loop_03";
+		sound_stop = "stop_pickup_loop_03";
+		updateFX = true;
+		isLootDrop = true;
+	}
+}

@@ -1,0 +1,41 @@
+{
+	class = "idProp2";
+	networkReplicated = true;
+	editorVars {
+		rotatable = false;
+		showOrientation = false;
+		showFixedBox = false;
+		skipRenderModelInEditor = false;
+		showInRenderMode = false;
+		placeable = true;
+		color = ( 1, 1, 1, 1 );
+		size = ( 0, 0, 0 );
+		originOffset = ( 0, 0, 0 );
+		material = "";
+		translucent = false;
+		editorName = "";
+		description = "";
+	}
+	edit = {
+		renderModelInfo = {
+			model = "art/pickups/radSuit/rad_refill_a.lwo";
+			noAmbient = true;
+			scale = {
+				x = 1.25;
+				y = 1.25;
+				z = 1.25;
+			}
+		}
+		fxDecl = "gameplay/rad_suit_refill";
+		isStatic = false;
+		equipOnPickup = true;
+		useableComponentDecl = "propitem/player/rad_suit_refill_shield";
+		thinkComponentDecl = "bob_rotate";
+		timeUntilRespawnMS = 5000;
+		triggerDef = "trigger/props/rad_suit_refill";
+		sound_spawn = "play_rad_suit_time_extender_amb_hum";
+		sound_stop = "stop_rad_suit_time_extender_amb_hum";
+		updateFX = true;
+		isLootDrop = true;
+	}
+}

@@ -159,6 +159,16 @@
             "weapon/weapon/player/shotgun_secondary_full_auto.decl",
             "weapon/weapon/player/unmaykr.decl"
         ],
+        
+        "e5m1_spear/generated/decls/":
+        [
+            "entitydef/pickup/extra_life/extra_life_1.decl",
+            "entitydef/pickup/extra_life/extra_life_2up.decl",
+            "entitydef/pickup/blood_punch_refill.decl",
+            "entitydef/pickup/dash_refill.decl",
+            "entitydef/pickup/rad_suit.decl",
+            "entitydef/pickup/rad_suit_refill.decl"
+        ],
 
         "e1m3_cult_patch3/": ["EternalMod/assetsinfo/e1m3_cult.json"],
         "e1m4_boss_patch2/": ["EternalMod/assetsinfo/e1m4_boss.json"],
