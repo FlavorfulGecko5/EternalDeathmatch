@@ -16,7 +16,17 @@
         "e2m2_base_patch3/": ["EternalMod/assetsinfo/e2m2_base.json"],
         "e2m4_boss_patch2/": ["EternalMod/assetsinfo/e2m4_boss.json"],
         "e4m3_mcity_patch2/": ["EternalMod/assetsinfo/e4m3_mcity.json"],
-        "e5m1_spear_patch1/": ["EternalMod/assetsinfo/e5m1_spear.json"]
+        "e5m1_spear_patch1/": ["EternalMod/assetsinfo/e5m1_spear.json"],
+
+        "pvp_bronco/generated/decls": ["logicentity/maps/prefabs/pvp/podiums/level_stage_podiums/podiums_info_logic_stage_sequences.decl", "pvpprogressionscoring/battle_arena.decl"],
+        "pvp_darkmetal/generated/decls": ["logicentity/maps/prefabs/pvp/podiums/level_stage_podiums/podiums_info_logic_stage_sequences.decl", "pvpprogressionscoring/battle_arena.decl"],
+        "pvp_deathvalley/generated/decls": ["logicentity/maps/prefabs/pvp/podiums/level_stage_podiums/podiums_info_logic_stage_sequences.decl", "pvpprogressionscoring/battle_arena.decl"],
+        "pvp_inferno/generated/decls": ["logicentity/maps/prefabs/pvp/podiums/level_stage_podiums/podiums_info_logic_stage_sequences.decl", "pvpprogressionscoring/battle_arena.decl"],
+        "pvp_laser/generated/decls": ["logicentity/maps/prefabs/pvp/podiums/level_stage_podiums/podiums_info_logic_stage_sequences.decl", "pvpprogressionscoring/battle_arena.decl"],
+        "pvp_shrapnel/generated/decls": ["logicentity/maps/prefabs/pvp/podiums/level_stage_podiums/podiums_info_logic_stage_sequences.decl", "pvpprogressionscoring/battle_arena.decl"],
+        "pvp_sideswipe/generated/decls": ["logicentity/maps/prefabs/pvp/podiums/level_stage_podiums/podiums_info_logic_stage_sequences.decl", "pvpprogressionscoring/battle_arena.decl"],
+        "pvp_thunder/generated/decls": ["logicentity/maps/prefabs/pvp/podiums/level_stage_podiums/podiums_info_logic_stage_sequences.decl", "pvpprogressionscoring/battle_arena.decl"],
+        "pvp_zap/generated/decls": ["logicentity/maps/prefabs/pvp/podiums/level_stage_podiums/podiums_info_logic_stage_sequences.decl", "pvpprogressionscoring/battle_arena.decl"]
     },
 
     "StringExpressions": false

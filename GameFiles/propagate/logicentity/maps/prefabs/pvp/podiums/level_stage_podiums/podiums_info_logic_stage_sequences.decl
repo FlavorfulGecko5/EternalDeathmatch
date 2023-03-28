@@ -1,0 +1,602 @@
+{
+	edit = {
+		versionNumber = 21;
+		mainGraph = {
+			className = "idLogicGraphAssetEntityMain";
+			object = {
+				id = 1355552833;
+				pos = {
+					x = 271.428589;
+					y = 273.80954;
+				}
+				zoom = 42;
+				nodes = {
+					num = 15;
+					item[0] = {
+						id = 31279574;
+						model = {
+							className = "idLogicNodeModelEventReceive";
+							object = {
+								event = {
+									decl = "game/pvp/battle_arena_podiums_libs";
+									id = 690723858;
+								}
+							}
+						}
+						pos = {
+							x = -200;
+						}
+						size = {
+							x = 140;
+							y = 100;
+						}
+						pinVariables = {
+							num = 1;
+							item[0] = {
+								id = 0;
+								model = {
+									className = "idLogicVariableModelBool";
+									object = {
+										value = true;
+									}
+								}
+							}
+						}
+					}
+					item[1] = {
+						id = 1575896547;
+						model = {
+							className = "idLogicNodeModelSceneDirectorControl_v3";
+							object = {
+								scene = NULL;
+							}
+						}
+						pos = {
+							x = 400;
+						}
+						size = {
+							x = 280;
+							y = 260;
+						}
+						pinVariables = {
+							num = 1;
+							item[0] = {
+								id = 1;
+								model = {
+									className = "idLogicVariableModelBool";
+								}
+							}
+						}
+					}
+					item[2] = {
+						id = 2719044003;
+						model = {
+							className = "idLogicNodeModelSceneDirectorControl_v3";
+							object = {
+								scene = "maps/pvp/podium_stage_slayer_victory";
+							}
+						}
+						pos = {
+							x = 400;
+							y = 400;
+						}
+						size = {
+							x = 280;
+							y = 260;
+						}
+						pinVariables = {
+							num = 1;
+							item[0] = {
+								id = 1;
+								model = {
+									className = "idLogicVariableModelBool";
+								}
+							}
+						}
+					}
+					item[3] = {
+						id = 1197847929;
+						model = {
+							className = "idLogicNodeModelEventReceive";
+							object = {
+								event = {
+									decl = "game/pvp/battle_arena_podiums_libs";
+									id = 1337999419;
+								}
+							}
+						}
+						pos = {
+							x = -200;
+							y = 400;
+						}
+						size = {
+							x = 200;
+							y = 100;
+						}
+						pinVariables = {
+							num = 1;
+							item[0] = {
+								id = 0;
+								model = {
+									className = "idLogicVariableModelBool";
+									object = {
+										value = true;
+									}
+								}
+							}
+						}
+					}
+					item[4] = {
+						id = 1043956775;
+						model = {
+							className = "idLogicNodeModelSceneDirectorControl_v3";
+							object = {
+								scene = "maps/pvp/podium_stage_demon_victory";
+							}
+						}
+						pos = {
+							x = 400;
+							y = 800;
+						}
+						size = {
+							x = 280;
+							y = 260;
+						}
+						pinVariables = {
+							num = 1;
+							item[0] = {
+								id = 1;
+								model = {
+									className = "idLogicVariableModelBool";
+								}
+							}
+						}
+					}
+					item[5] = {
+						id = 1358295278;
+						model = {
+							className = "idLogicNodeModelEventReceive";
+							object = {
+								event = {
+									decl = "game/pvp/battle_arena_podiums_libs";
+									id = 666821569;
+								}
+							}
+						}
+						pos = {
+							x = -200;
+							y = 800;
+						}
+						size = {
+							x = 200;
+							y = 100;
+						}
+						pinVariables = {
+							num = 1;
+							item[0] = {
+								id = 0;
+								model = {
+									className = "idLogicVariableModelBool";
+									object = {
+										value = true;
+									}
+								}
+							}
+						}
+					}
+					item[6] = {
+						id = 2607968232;
+						model = {
+							className = "idLogicNodeModelLightControllerCommand_V2";
+							object = {
+								lightCommands = {
+									num = 1;
+									item[0] = "LC_ACTIVATE_LIGHT";
+								}
+							}
+						}
+						pos = {
+							x = 100;
+							y = 800;
+						}
+						size = {
+							x = 200;
+							y = 80;
+						}
+						pinVariables = {
+							num = 1;
+							item[0] = {
+								id = 2;
+								model = {
+									className = "idLogicVariableModelEntityList";
+									object = {
+										value = {
+											num = 3;
+											item[0] = "light_spot_winner_demon_left";
+											item[1] = "light_spot_winner_demon_right";
+											item[2] = "lightscatter_over_loser_slayer";
+										}
+									}
+								}
+							}
+						}
+					}
+					item[7] = {
+						id = 2871229493;
+						model = {
+							className = "idLogicNodeModelLightControllerCommand_V2";
+							object = {
+								lightCommands = {
+									num = 1;
+									item[0] = "LC_ACTIVATE_LIGHT";
+								}
+							}
+						}
+						pos = {
+							x = 100;
+							y = 400;
+						}
+						size = {
+							x = 200;
+							y = 80;
+						}
+						pinVariables = {
+							num = 1;
+							item[0] = {
+								id = 2;
+								model = {
+									className = "idLogicVariableModelEntityList";
+									object = {
+										value = {
+											num = 2;
+											item[0] = "light_spot_winner_slayer";
+											item[1] = "lightscatter_over_loser_demons";
+										}
+									}
+								}
+							}
+						}
+					}
+					item[8] = {
+						id = 3494364496;
+						model = {
+							className = "idLogicNodeModelEventReceive";
+							object = {
+								event = {
+									decl = "game/pvp/battle_arena_podiums_libs";
+									id = 553627071;
+								}
+							}
+						}
+						pos = {
+							x = -200;
+							y = 180;
+						}
+						size = {
+							x = 200;
+							y = 100;
+						}
+						pinVariables = {
+							num = 1;
+							item[0] = {
+								id = 0;
+								model = {
+									className = "idLogicVariableModelBool";
+									object = {
+										value = true;
+									}
+								}
+							}
+						}
+					}
+					item[9] = {
+						id = 2350484022;
+						model = {
+							className = "idLogicNodeModelLightControllerCommand_V2";
+							object = {
+								lightCommands = {
+									num = 1;
+									item[0] = "LC_ACTIVATE_LIGHT";
+								}
+							}
+						}
+						pos = {
+							x = 100;
+						}
+						size = {
+							x = 200;
+							y = 80;
+						}
+						pinVariables = {
+							num = 1;
+							item[0] = {
+								id = 2;
+								model = {
+									className = "idLogicVariableModelEntityList";
+									object = {
+										value = {
+											num = 3;
+											item[0] = "light_spot_intro_slayer";
+											item[1] = "light_spot_intro_demon1";
+											item[2] = "light_spot_intro_demon2";
+										}
+									}
+								}
+							}
+						}
+					}
+					item[10] = {
+						id = 618494529;
+						model = {
+							className = "idLogicNodeModelLightControllerCommand_V2";
+							object = {
+								lightCommands = {
+									num = 1;
+									item[0] = "LC_DEACTIVATE_LIGHT";
+								}
+							}
+						}
+						pos = {
+							x = 800;
+						}
+						size = {
+							x = 200;
+							y = 80;
+						}
+						pinVariables = {
+							num = 1;
+							item[0] = {
+								id = 2;
+								model = {
+									className = "idLogicVariableModelEntityList";
+									object = {
+										value = {
+											num = 3;
+											item[0] = "light_spot_intro_slayer";
+											item[1] = "light_spot_intro_demon1";
+											item[2] = "light_spot_intro_demon2";
+										}
+									}
+								}
+							}
+						}
+					}
+					item[11] = {
+						id = 4140548515;
+						model = {
+							className = "idLogicNodeModelLightControllerCommand_V2";
+							object = {
+								lightCommands = {
+									num = 1;
+									item[0] = "LC_DEACTIVATE_LIGHT";
+								}
+							}
+						}
+						pos = {
+							x = 800;
+							y = 400;
+						}
+						size = {
+							x = 200;
+							y = 80;
+						}
+						pinVariables = {
+							num = 1;
+							item[0] = {
+								id = 2;
+								model = {
+									className = "idLogicVariableModelEntityList";
+									object = {
+										value = {
+											num = 2;
+											item[0] = "light_spot_winner_slayer";
+											item[1] = "lightscatter_over_loser_demons";
+										}
+									}
+								}
+							}
+						}
+					}
+					item[12] = {
+						id = 3962761342;
+						model = {
+							className = "idLogicNodeModelLightControllerCommand_V2";
+							object = {
+								lightCommands = {
+									num = 1;
+									item[0] = "LC_DEACTIVATE_LIGHT";
+								}
+							}
+						}
+						pos = {
+							x = 1000;
+							y = 960;
+						}
+						size = {
+							x = 200;
+							y = 80;
+						}
+						pinVariables = {
+							num = 1;
+							item[0] = {
+								id = 2;
+								model = {
+									className = "idLogicVariableModelEntityList";
+									object = {
+										value = {
+											num = 3;
+											item[0] = "light_spot_winner_demon_left";
+											item[1] = "light_spot_winner_demon_right";
+											item[2] = "lightscatter_over_loser_slayer";
+										}
+									}
+								}
+							}
+						}
+					}
+					item[13] = {
+						id = 334721265;
+						model = {
+							className = "idLogicNodeModelLog";
+							object = {
+								elements = {
+									num = 1;
+									item[0] = {
+										name = "Message";
+										type = "STRING";
+									}
+								}
+							}
+						}
+						pos = {
+							x = 1260;
+							y = 960;
+						}
+						size = {
+							x = 200;
+							y = 80;
+						}
+						pinVariables = {
+							num = 1;
+							item[0] = {
+								id = 2;
+								model = {
+									className = "idLogicVariableModelString";
+									object = {
+										value = "Deactivating Demon Victory Lights";
+									}
+								}
+							}
+						}
+					}
+					item[14] = {
+						id = 1105579008;
+						model = {
+							className = "idLogicNodeModelSwitchString_v2";
+							object = {
+								cases = {
+									num = 1;
+									item[0] = {
+										id = 2832238224;
+										value = "cin_complete";
+									}
+								}
+							}
+						}
+						pos = {
+							x = 780;
+							y = 960;
+						}
+						size = {
+							x = 140;
+							y = 80;
+						}
+						pinVariables = {
+							num = 1;
+							item[0] = {
+								id = 1;
+								model = {
+									className = "idLogicVariableModelString";
+								}
+							}
+						}
+					}
+				}
+				links = {
+					num = 13;
+					item[0] = {
+						id = 1376499272;
+						fromNodeId = 3494364496;
+						fromPinId = 3;
+						toNodeId = 1575896547;
+						toPinId = 4;
+					}
+					item[1] = {
+						id = 934739353;
+						fromNodeId = 2607968232;
+						fromPinId = 1;
+						toNodeId = 1043956775;
+						toPinId = 0;
+					}
+					item[2] = {
+						id = 2799796185;
+						fromNodeId = 1358295278;
+						fromPinId = 3;
+						toNodeId = 2607968232;
+						toPinId = 0;
+					}
+					item[3] = {
+						id = 3298741653;
+						fromNodeId = 1197847929;
+						fromPinId = 3;
+						toNodeId = 2871229493;
+						toPinId = 0;
+					}
+					item[4] = {
+						id = 3458646159;
+						fromNodeId = 2871229493;
+						fromPinId = 1;
+						toNodeId = 2719044003;
+						toPinId = 0;
+					}
+					item[5] = {
+						id = 4075848168;
+						fromNodeId = 31279574;
+						fromPinId = 3;
+						toNodeId = 2350484022;
+						toPinId = 0;
+					}
+					item[6] = {
+						id = 2931094685;
+						fromNodeId = 2350484022;
+						fromPinId = 1;
+						toNodeId = 1575896547;
+						toPinId = 0;
+					}
+					item[7] = {
+						id = 1168433295;
+						fromNodeId = 1575896547;
+						fromPinId = 19;
+						toNodeId = 618494529;
+						toPinId = 0;
+					}
+					item[8] = {
+						id = 2051499505;
+						fromNodeId = 2719044003;
+						fromPinId = 19;
+						toNodeId = 4140548515;
+						toPinId = 0;
+					}
+					item[9] = {
+						id = 384542500;
+						fromNodeId = 1043956775;
+						fromPinId = 7;
+						toNodeId = 1105579008;
+						toPinId = 1;
+					}
+					item[10] = {
+						id = 1174724405;
+						fromNodeId = 3962761342;
+						fromPinId = 1;
+						toNodeId = 334721265;
+						toPinId = 0;
+					}
+					item[11] = {
+						id = 377906937;
+						fromNodeId = 1043956775;
+						fromPinId = 6;
+						toNodeId = 1105579008;
+						toPinId = 0;
+					}
+					item[12] = {
+						id = 3424431936;
+						fromNodeId = 1105579008;
+						fromPinId = 2832238224;
+						toNodeId = 3962761342;
+						toPinId = 0;
+					}
+				}
+			}
+		}
+	}
+}

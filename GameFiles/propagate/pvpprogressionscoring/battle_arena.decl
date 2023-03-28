@@ -1,0 +1,104 @@
+{
+	edit = {
+		matchWinPts = 1000;
+		matchLossPts = 750;
+		firstBloodPts = 50;
+		roundWinPts = 100;
+		roundLossPts = 75;
+		sequentialWinPts = {
+			num = 2;
+			item[0] = 100;
+			item[1] = 250;
+		}
+		slayerScoringActions = {
+			num = 10;
+			item[0] = {
+				slayerScoringAction = "SSA_DAMAGE_INFLICTED";
+				damageInficted = 1000;
+				awardPoints = 10;
+				damageHitMax = 10000;
+			}
+			item[1] = {
+				slayerScoringAction = "SSA_AI_KILL";
+				awardPoints = 10;
+			}
+			item[2] = {
+				slayerScoringAction = "SSA_AI_GK";
+				awardPoints = 20;
+			}
+			item[3] = {
+				slayerScoringAction = "SSA_SPEC_WEAPON_KILL";
+			}
+			item[4] = {
+				slayerScoringAction = "SSA_DEMON_PLAYER_KILL";
+				awardPoints = 100;
+			}
+			item[5] = {
+				slayerScoringAction = "SSA_DIRECT_HIT_SPEC_WEAPON";
+			}
+			item[6] = {
+				slayerScoringAction = "SSA_KILL_BEFORE_ARMOR_DEPLETION";
+				awardPoints = 100;
+			}
+			item[7] = {
+				slayerScoringAction = "SSA_HEALTH_RECOVERY";
+				awardPoints = 25;
+			}
+			item[8] = {
+				slayerScoringAction = "SSA_AMMO_RECOVERY";
+				awardPoints = 10;
+			}
+			item[9] = {
+				slayerScoringAction = "SSA_NO_HEALTH_LOSS_WIN";
+				awardPoints = 1000;
+			}
+		}
+		demonScoringActions = {
+			num = 10;
+			item[0] = {
+				slayerScoringAction = "SSA_DAMAGE_INFLICTED";
+				damageInficted = 1000;
+				awardPoints = 10;
+				damageHitMax = 10000;
+			}
+			item[1] = {
+				slayerScoringAction = "SSA_AI_KILL";
+				awardPoints = 10;
+			}
+			item[2] = {
+				slayerScoringAction = "SSA_AI_GK";
+				awardPoints = 20;
+			}
+			item[3] = {
+				slayerScoringAction = "SSA_SPEC_WEAPON_KILL";
+			}
+			item[4] = {
+				slayerScoringAction = "SSA_DEMON_PLAYER_KILL";
+				awardPoints = 100;
+			}
+			item[5] = {
+				slayerScoringAction = "SSA_DIRECT_HIT_SPEC_WEAPON";
+			}
+			item[6] = {
+				slayerScoringAction = "SSA_KILL_BEFORE_ARMOR_DEPLETION";
+				awardPoints = 100;
+			}
+			item[7] = {
+				slayerScoringAction = "SSA_HEALTH_RECOVERY";
+				awardPoints = 25;
+			}
+			item[8] = {
+				slayerScoringAction = "SSA_AMMO_RECOVERY";
+				awardPoints = 10;
+			}
+			item[9] = {
+				slayerScoringAction = "SSA_NO_HEALTH_LOSS_WIN";
+				awardPoints = 1000;
+			}
+		}
+		currencyExchange = {
+			pointsToScore = 1;
+			currencyToAward = 1;
+		}
+	}
+}
