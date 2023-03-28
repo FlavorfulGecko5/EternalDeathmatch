@@ -1,0 +1,14 @@
+{
+	"resources":
+	[
+		{
+			"name":"e5m1_spear.resources"
+		},
+		{
+			"name":"e5m1_spear_patch1.resources"
+		},
+		{
+			"name":"e5m1_spear_patch2.resources"
+		}
+	]
+}
