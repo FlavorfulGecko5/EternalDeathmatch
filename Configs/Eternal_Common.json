@@ -22,6 +22,12 @@
 
         "gameresources_patch1/generated/decls": ["pvpupgrade/slayer/power_upgrades.decl"],
 
+        "e5m1_spear/generated/decls/":
+        [
+            "devinvloadout/devinvloadout/dlc/e4m2_swamp.decl",
+            "devinvloadout/devinvloadout/dlc/e4m3_mcity.decl"
+        ],
+
         "pvp_laser/generated/decls/": ["devinvloadoutoverride/pvp_bfg_extra_ammo.decl"]
     }
 }

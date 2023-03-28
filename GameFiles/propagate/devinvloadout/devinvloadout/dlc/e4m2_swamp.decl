@@ -1,0 +1,328 @@
+{
+	edit = {
+		startingInventory = {
+			num = $emb_var# 85 + int(AirControl)$;
+			item[0] = {
+				item = "abilities/grapplegloves";
+			}
+			item[1] = {
+				item = "abilities/environmentsuit";
+			}
+			item[2] = {
+				item = "jumpboots/base";
+				equip = true;
+			}
+			item[3] = {
+				item = "ability_dash_pvp";
+				equip = true;
+			}
+			item[4] = {
+				perk = "perk/player/suit/fundamentals/increase_pickup_radius";
+				equip = true;
+			}
+			item[5] = {
+				perk = "perk/pvp/slayer/speed_boost_on_sync_kill";
+				equip = true;
+			}
+			item[6] = {
+				perk = "perk/player/suit/fundamentals/ledge_grab_speed";
+				equip = true;
+			}
+			item[7] = {
+				perk = "perk/player/suit/fundamentals/weapon_change_speed";
+				equip = true;
+			}
+			item[8] = {
+				perk = "perk/player/suit/fundamentals/weapon_mod_speed";
+				equip = true;
+			}
+			item[9] = {
+				perk = "perk/player/equipment/flame_extend_duration";
+				equip = true;
+			}
+			item[10] = {
+				perk = "perk/pvp/slayer/eor_upgrade_frag_reduce_cooldown_level_1";
+				equip = true;
+			}
+			item[11] = {
+				perk = "perk/player/equipment/frag_concussive_blast";
+				equip = true;
+			}
+			item[12] = {
+				perk = "perk/player/blood_punch/ai_charge_rate";
+				equip = true;
+			}
+			item[13] = {
+				perk = "perk/player/argent/health_capacity_pvp";
+				equip = true;
+			}
+			item[14] = {
+				perk = "perk/player/argent/armor_capacity_pvp";
+				equip = true;
+			}
+			item[15] = {
+				item = "equipmentlauncher/equipmentlauncherleft";
+				equip = true;
+			}
+			item[16] = {
+				item = "equipmentlauncher/equipmentlauncherright_restricted";
+			}
+			item[17] = {
+				item = "throwable/player/frag_grenade";
+				equip = true;
+			}
+			item[18] = {
+				item = "weapon/player/equipment_flame_belch";
+				equip = true;
+			}
+			item[19] = {
+				item = "weapon/player/fists";
+			}
+			item[20] = {
+				item = "abilities/blood_punch";
+				equip = true;
+			}
+			item[21] = {
+				item = "weapon/player/shotgun";
+				equip = true;
+			}
+			item[22] = {
+				perk = "perk/player/weapons/shotgun/secondary_full_auto";
+			}
+			item[23] = {
+				perk = "perk/player/weapons/shotgun/secondary_full_auto_faster_recovery";
+			}
+			item[24] = {
+				perk = "perk/player/weapons/shotgun/secondary_full_auto_faster_charge";
+			}
+			item[25] = {
+				perk = "perk/player/weapons/shotgun/secondary_full_auto_increased_movement_speed";
+			}
+			item[26] = {
+				perk = "perk/player/weapons/shotgun/secondary_full_auto_ammo_giveback";
+			}
+			item[27] = {
+				perk = "perk/player/weapons/shotgun/pop_rocket";
+				equip = true;
+			}
+			item[28] = {
+				perk = "perk/player/weapons/shotgun/pop_rocket_faster_recharge";
+				equip = true;
+			}
+			item[29] = {
+				perk = "perk/player/weapons/shotgun/pop_rocket_larger_explosion";
+				equip = true;
+			}
+			item[30] = {
+				perk = "perk/player/weapons/shotgun/pop_rocket_more_bombs";
+				equip = true;
+			}
+			item[31] = {
+				item = "weapon/player/double_barrel";
+			}
+			item[32] = {
+				perk = "perk/player/weapons/double_barrel/default_faster_reload";
+				equip = true;
+			}
+			item[33] = {
+				perk = "perk/player/weapons/double_barrel/meat_hook_faster_reload";
+				equip = true;
+			}
+			item[34] = {
+				perk = "perk/player/weapons/double_barrel/meat_hook_mastery";
+				equip = true;
+			}
+			item[35] = {
+				item = "weapon/player/plasma_rifle";
+			}
+			item[36] = {
+				perk = "perk/player/weapons/plasma_rifle/secondary_aoe";
+				equip = true;
+			}
+			item[37] = {
+				perk = "perk/player/weapons/plasma_rifle/secondary_aoe_no_primary_delay";
+				equip = true;
+			}
+			item[38] = {
+				perk = "perk/player/weapons/plasma_rifle/secondary_aoe_faster_charge";
+				equip = true;
+			}
+			item[39] = {
+				perk = "perk/player/weapons/plasma_rifle/secondary_aoe_mastery";
+				equip = true;
+			}
+			item[40] = {
+				perk = "perk/player/weapons/plasma_rifle/secondary_microwave";
+			}
+			item[41] = {
+				perk = "perk/player/weapons/plasma_rifle/secondary_microwave_faster_charge";
+			}
+			item[42] = {
+				perk = "perk/player/weapons/plasma_rifle/secondary_microwave_max_range";
+			}
+			item[43] = {
+				perk = "perk/player/weapons/plasma_rifle/secondary_microwave_mastery";
+			}
+			item[44] = {
+				item = "weapon/player/gauss_rifle";
+			}
+			item[45] = {
+				perk = "perk/player/weapons/gauss_cannon/ballista";
+				equip = true;
+			}
+			item[46] = {
+				perk = "perk/player/weapons/gauss_cannon/ballista_movement";
+				equip = true;
+			}
+			item[47] = {
+				perk = "perk/player/weapons/gauss_cannon/ballista_larger_explosion";
+				equip = true;
+			}
+			item[48] = {
+				perk = "perk/player/weapons/gauss_cannon/destroyer";
+			}
+			item[49] = {
+				perk = "perk/player/weapons/gauss_cannon/destroyer_charge_levels_aoe";
+			}
+			item[50] = {
+				perk = "perk/player/weapons/gauss_cannon/destroyer_faster_charge_and_recovery";
+			}
+			item[51] = {
+				perk = "perk/player/weapons/chaingun/energy_shell_dash_smash";
+			}
+			item[52] = {
+				item = "weapon/player/heavy_cannon";
+			}
+			item[53] = {
+				perk = "perk/player/weapons/heavy_cannon/bolt_action";
+				equip = true;
+			}
+			item[54] = {
+				perk = "perk/player/weapons/heavy_cannon/bolt_action_faster_movement";
+				equip = true;
+			}
+			item[55] = {
+				perk = "perk/player/weapons/heavy_cannon/bolt_action_mastery_upgrades";
+				equip = true;
+			}
+			item[56] = {
+				perk = "perk/player/weapons/heavy_cannon/burst_detonate";
+			}
+			item[57] = {
+				perk = "perk/player/weapons/heavy_cannon/burst_detonate_faster_recharge";
+			}
+			item[58] = {
+				perk = "perk/player/weapons/heavy_cannon/burst_detonate_faster_charge";
+			}
+			item[59] = {
+				perk = "perk/player/weapons/heavy_cannon/burst_detonate_primary_charge";
+			}
+			item[60] = {
+				item = "weapon/player/chaingun";
+			}
+			item[61] = {
+				perk = "perk/player/weapons/chaingun/turret";
+				equip = true;
+			}
+			item[62] = {
+				perk = "perk/player/weapons/chaingun/turret_faster_equip";
+				equip = true;
+			}
+			item[63] = {
+				perk = "perk/player/weapons/chaingun/turret_faster_movement";
+				equip = true;
+			}
+			item[64] = {
+				item = "weapon/player/rocket_launcher";
+			}
+			item[65] = {
+				perk = "perk/player/weapons/rocket_launcher/detonate";
+			}
+			item[66] = {
+				perk = "perk/player/weapons/rocket_launcher/detonate_proximity_flare";
+			}
+			item[67] = {
+				perk = "perk/player/weapons/rocket_launcher/detonate_concussive";
+			}
+			item[68] = {
+				perk = "perk/player/weapons/rocket_launcher/detonate_explosive_array_horizontal";
+			}
+			item[69] = {
+				perk = "perk/player/weapons/rocket_launcher/detonate_mastery";
+			}
+			item[70] = {
+				perk = "perk/player/weapons/rocket_launcher/lock_on";
+				equip = true;
+			}
+			item[71] = {
+				perk = "perk/player/weapons/rocket_launcher/lockon_faster_recovery";
+				equip = true;
+			}
+			item[72] = {
+				item = "weapon/player/chainsaw";
+			}
+			item[73] = {
+				item = "ammo/sharedammopool/shells";
+				count = 999;
+				applyAfterLoadout = true;
+			}
+			item[74] = {
+				item = "ammo/sharedammopool/cells";
+				count = 999;
+				applyAfterLoadout = true;
+			}
+			item[75] = {
+				item = "ammo/sharedammopool/bullets";
+				count = 999;
+				applyAfterLoadout = true;
+			}
+			item[76] = {
+				item = "ammo/sharedammopool/rockets";
+				count = 999;
+				applyAfterLoadout = true;
+			}
+			item[77] = {
+				item = "ammo/sharedammopool/fuel";
+			}
+			item[78] = {
+				overrides = {
+					num = 1;
+					item[0] = "pvp_bfg_extra_ammo";
+				}
+				item = "ammo/sharedammopool/bfg";
+				count = 60;
+				applyAfterLoadout = true;
+			}
+			item[79] = {
+				perk = "perk/pvp/slayer/chainsaw_ammo_regen_default";
+				equip = true;
+			}
+			item[80] = {
+				perk = "perk/pvp/slayer/eor_upgrade_cut_up";
+				equip = true;
+			}
+			item[81] = {
+				perk = "perk/player/suit/dash/dash_regen_delay";
+				equip = true;
+			}
+			item[82] = {
+				perk = "perk/player/suit/dash/dash_gk_restore_dash";
+				equip = true;
+			}
+			item[83] = {
+				perk = "perk/player/argent/health_capacity_3";
+				equip = true;
+			}
+			item[84] = {
+				perk = "perk/player/argent/armor_capacity_3";
+				equip = true;
+			}
+            $emb_toggle# AirControl $
+			item[85] = {
+				perk = "perk/player/runes/double_jump_air_control";
+				isRune = true;
+			}
+            $emb_toggle_end$
+		}
+	}
+}
