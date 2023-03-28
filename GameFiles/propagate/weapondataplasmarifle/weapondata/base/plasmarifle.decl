@@ -1,0 +1,94 @@
+{
+	edit = {
+		secondaryFire = {
+			maxStuckProjectiles = 1;
+			projectileExplosionMultiplier = 1;
+			projectileRangeToApplyMultiplier = 0;
+			resetDetonationOnAlt = false;
+		}
+		secondaryFire_Charged = {
+			timeReductionPrimaryHitSec = 0;
+			maxReductionTimeSec = 0;
+		}
+		secondaryFire_ForceBeam = {
+			declWeapon = "weapon/player/plasma_rifle_secondary_microwave";
+			declGibAiWhenTimeExpires = "damage/firearm/plasma_rifle_secondary_microwave_gib_ai";
+			maxScaleSize = 0;
+			speed = 100;
+			movementSpeedScaleWithTarget = 1;
+			movementSpeedScaleNoTarget = 1;
+			declRibbon2 = "plasma_rifle/plasma_rifle_microwave";
+			declRibbon2_2 = "plasma_rifle/plasma_rifle_microwave_glow";
+			declRibbon2_3 = "plasma_rifle/plasma_rifle_microwave_outer";
+			declRibbon2_rangeUpgrade = "plasma_rifle/plasma_rifle_microwave";
+			declRibbon2_2_rangeUpgrade = "plasma_rifle/plasma_rifle_microwave_glow";
+			declRibbon2_3_rangeUpgrade = "plasma_rifle/plasma_rifle_microwave_outer";
+			splineOfsTable = "weapon/plasma_rifle/microwave_splineofs";
+			splineOfsMoveTable = "weapon/plasma_rifle/microwave_splineofsmove";
+			startHasTargetSoundDecl = "play_microwave_lockon_alert_01";
+			startNoTargetSoundDecl = "play_microwave_no_target_alert_01";
+			startIdleSoundDecl = "play_plasma_microwave_idle";
+			releaseTargetingDelayMS = 750;
+			tierList = {
+				num = 1;
+				item[0] = {
+					lifeTimeMS = -1;
+					projectileDecl = "projectile/player/plasma_rifle_secondary_microwave";
+				}
+			}
+			defaultCookedExplosionDecl = "projectile_ent/player/plasma_rifle_secondary_microwave_medium";
+			aiKillList = {
+				num = 7;
+				item[0] = {
+					monsterType = "AI_MONSTER_MARAUDER_WOLF AI_MONSTER_NPC AI_MONSTER_CUEBALL AI_MONSTER_TENTACLE AI_MONSTER_DEMONIC_TROOPER";
+					killTimeMS = 0;
+					cookedAiExplosionDecl = "projectile_ent/player/plasma_rifle_secondary_microwave_small";
+					upgradedConcussionDelayMS = 85;
+					upgradedConcussionDecl = "projectile_ent/player/plasma_rifle_secondary_microwave_small_concussive";
+				}
+				item[1] = {
+					monsterType = "AI_MONSTER_ZOMBIE_TIER_1 AI_MONSTER_ZOMBIE_TIER_3 AI_MONSTER_ZOMBIE_MAYKR AI_MONSTER_IMP AI_MONSTER_STONE_IMP AI_MONSTER_GARGOYLE AI_MONSTER_HELL_SOLDIER AI_MONSTER_SHOTGUN_SOLDIER AI_MONSTER_CHAINGUN_SOLDIER AI_MONSTER_LOSTSOUL";
+					killTimeMS = 0;
+					cookedAiExplosionDecl = "projectile_ent/player/plasma_rifle_secondary_microwave_small";
+					upgradedConcussionDelayMS = 85;
+					upgradedConcussionDecl = "projectile_ent/player/plasma_rifle_secondary_microwave_small_concussive";
+				}
+				item[2] = {
+					monsterType = "AI_MONSTER_PROWLER AI_MONSTER_CURSED_PROWLER AI_MONSTER_CARCASS AI_MONSTER_HELLKNIGHT AI_MONSTER_DREADKNIGHT AI_MONSTER_PINKY AI_MONSTER_SPECTRE AI_MONSTER_REVENANT AI_MONSTER_WHIPLASH AI_MONSTER_BLOOD_ANGEL AI_MONSTER_SPIRIT AI_MONSTER_PLAYER_REVENANT";
+					killTimeMS = 0;
+					cookedAiExplosionDecl = "projectile_ent/player/plasma_rifle_secondary_microwave_medium";
+					upgradedConcussionDelayMS = 85;
+					upgradedConcussionDecl = "projectile_ent/player/plasma_rifle_secondary_microwave_medium_concussive";
+				}
+				item[3] = {
+					monsterType = "AI_MONSTER_CACODEMON AI_MONSTER_PAIN_ELEMENTAL AI_MONSTER_MANCUBUS AI_MONSTER_CYBER_MANCUBUS AI_MONSTER_ARACHNOTRON AI_MONSTER_SUPER_TENTACLE AI_MONSTER_PLAYER_MANCUBUS AI_MONSTER_PLAYER_PAIN_ELEMENTAL AI_MONSTER_PLAYER_MARAUDER AI_MONSTER_PLAYER_ARCHVILE";
+					killTimeMS = 0;
+					cookedAiExplosionDecl = "projectile_ent/player/plasma_rifle_secondary_microwave_large";
+					upgradedConcussionDelayMS = 85;
+					upgradedConcussionDecl = "projectile_ent/player/plasma_rifle_secondary_microwave_large_concussive";
+				}
+				item[4] = {
+					monsterType = "AI_MONSTER_DOOM_HUNTER AI_MONSTER_MARAUDER AI_MONSTER_BARON AI_MONSTER_ARMORED_BARON AI_MONSTER_TYRANT AI_MONSTER_ARCHVILE";
+					killTimeMS = 0;
+					cookedAiExplosionDecl = "projectile_ent/player/plasma_rifle_secondary_microwave_super";
+					upgradedConcussionDelayMS = 85;
+					upgradedConcussionDecl = "projectile_ent/player/plasma_rifle_secondary_microwave_super_concussive";
+				}
+				item[5] = {
+					monsterType = "AI_MONSTER_GLADIATOR AI_MONSTER_ICON_OF_SIN AI_MONSTER_MAYKR_ANGEL";
+					killTimeMS = -1;
+				}
+				item[6] = {
+					monsterType = "AI_MONSTER_ZOMBIE_T1_SCREECHER";
+					killTimeMS = 0;
+				}
+			}
+			aiKillFx = {
+				num = 1;
+				item[0] = {
+					monsterType = "AI_MONSTER_ZOMBIE_TIER_1 AI_MONSTER_ZOMBIE_TIER_3 AI_MONSTER_ZOMBIE_MAYKR AI_MONSTER_IMP AI_MONSTER_STONE_IMP AI_MONSTER_GARGOYLE AI_MONSTER_PROWLER AI_MONSTER_CURSED_PROWLER AI_MONSTER_HELL_SOLDIER AI_MONSTER_SHOTGUN_SOLDIER AI_MONSTER_CHAINGUN_SOLDIER AI_MONSTER_CARCASS AI_MONSTER_LOSTSOUL AI_MONSTER_HELLKNIGHT AI_MONSTER_DREADKNIGHT AI_MONSTER_PINKY AI_MONSTER_SPECTRE AI_MONSTER_CACODEMON AI_MONSTER_PAIN_ELEMENTAL AI_MONSTER_MANCUBUS AI_MONSTER_CYBER_MANCUBUS AI_MONSTER_ARACHNOTRON AI_MONSTER_REVENANT AI_MONSTER_WHIPLASH AI_MONSTER_BLOOD_ANGEL AI_MONSTER_DOOM_HUNTER AI_MONSTER_MARAUDER AI_MONSTER_MARAUDER_WOLF AI_MONSTER_BARON AI_MONSTER_ARMORED_BARON AI_MONSTER_TYRANT AI_MONSTER_ARCHVILE AI_MONSTER_CUEBALL AI_MONSTER_SUPER_TENTACLE AI_MONSTER_TENTACLE AI_MONSTER_SPIRIT";
+				}
+			}
+		}
+	}
+}

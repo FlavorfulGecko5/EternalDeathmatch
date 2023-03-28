@@ -1,0 +1,83 @@
+{
+	edit = {
+		upgradeIcon = "art/ui/icons/pvp_mid_round_upgrades/ico_pvp_upg_main_0";
+		upgrades = {
+			num = 1;
+			item[0] = {
+				num = 6;
+				item[0] = {
+					upgradeTitle = "#str_decl_pvp_upgrade_GHOST45268";
+					upgradeDescription = "#str_decl_pvp_upgrade_GHOST45269";
+					icon = "art/ui/icons/pvp_mid_round_upgrades/new/icon_eom_resourcedrain";
+					telemetryIdentifier = "upg_std_resourcedrain";
+					perks = {
+						num = 0;
+					}
+					descData = {
+						num = 0;
+					}
+				}
+				item[1] = {
+					upgradeTitle = "#str_decl_pvp_upgrade_GHOST45268";
+					upgradeDescription = "#str_decl_pvp_upgrade_GHOST45269";
+					icon = "art/ui/icons/pvp_mid_round_upgrades/new/icon_eom_resourcedrain";
+					telemetryIdentifier = "upg_std_burninghate";
+					perks = {
+						num = 0;
+					}
+					descData = {
+						num = 0;
+					}
+				}
+				item[2] = {
+					upgradeTitle = "#str_decl_pvp_upgrade_GHOST45268";
+					upgradeDescription = "#str_decl_pvp_upgrade_GHOST45269";
+					icon = "art/ui/icons/pvp_mid_round_upgrades/new/icon_eom_resourcedrain";
+					telemetryIdentifier = "upg_std_mastercarve";
+					perks = {
+						num = 0;
+					}
+					descData = {
+						num = 0;
+					}
+				}
+				item[3] = {
+					upgradeTitle = "#str_decl_pvp_upgrade_GHOST45268";
+					upgradeDescription = "#str_decl_pvp_upgrade_GHOST45269";
+					icon = "art/ui/icons/pvp_mid_round_upgrades/new/icon_eom_resourcedrain";
+					telemetryIdentifier = "upg_std_doubledown";
+					perks = {
+						num = 0;
+					}
+					descData = {
+						num = 0;
+					}
+				}
+				item[4] = {
+					upgradeTitle = "#str_decl_pvp_upgrade_GHOST45268";
+					upgradeDescription = "#str_decl_pvp_upgrade_GHOST45269";
+					icon = "art/ui/icons/pvp_mid_round_upgrades/new/icon_eom_resourcedrain";
+					telemetryIdentifier = "upg_std_dashing";
+					perks = {
+						num = 0;
+					}
+					descData = {
+						num = 0;
+					}
+				}
+				item[5] = {
+					upgradeTitle = "#str_decl_pvp_upgrade_GHOST45268";
+					upgradeDescription = "#str_decl_pvp_upgrade_GHOST45269";
+					icon = "art/ui/icons/pvp_mid_round_upgrades/new/icon_eom_resourcedrain";
+					telemetryIdentifier = "upg_std_speeddemon";
+					perks = {
+						num = 0;
+					}
+					descData = {
+						num = 0;
+					}
+				}
+			}
+		}
+	}
+}

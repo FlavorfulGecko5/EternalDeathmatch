@@ -1,0 +1,12 @@
+{
+	inherit = "projectile/player/shotgun_triple_burst_supercharge";
+	edit = {
+		impactEffectTableLimitedBySurfType = "impacteffect/projectiles/weapons/shotgun_per_surface_stone_imp";
+		damageDecl = "damage/firearm/12_gauge_full_auto_ammo_giveback";
+		maxRange = 100;
+		tracerInfo = {
+			tracers = 2;
+			tracerLength = 0.699999988;
+		}
+	}
+}

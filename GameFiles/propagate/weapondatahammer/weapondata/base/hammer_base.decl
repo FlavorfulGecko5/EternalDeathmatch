@@ -1,0 +1,26 @@
+{
+	edit = {
+		movementTable_Slam = "weapon/hammer/slam_dash";
+		slamActivationSound = "play_sfx_hammer_slam_start";
+		superSlamActivationSound = "play_sfx_hammer_slam_start";
+		minActivationHeight = 0.75;
+		dashCanCancel = false;
+		slamCooldown = {
+			value = 18;
+		}
+		slamCancellationTime = {
+			value = 0;
+		}
+		enableRadialDashBlur = false;
+		launchParms = {
+			slamJumpImpulse = 20;
+			slamJumpImpulseFromGround = 24.2999992;
+			slamJumpGroundCushion = 0.5;
+		}
+		superSlamLandingParms = {
+			damage_Slam = "damage/melee/hammer_slam_aoe_super";
+			landingSound = "play_sfx_hammer_slam_impact";
+			slamFX = "FX_PLAYER_GROUND_SLAM_SUPER";
+		}
+	}
+}

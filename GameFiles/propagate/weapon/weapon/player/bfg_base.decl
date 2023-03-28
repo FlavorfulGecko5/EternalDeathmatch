@@ -1,0 +1,204 @@
+{
+	inherit = "weapon/base/default";
+	edit = {
+		inventoryClass = "idBFG";
+		handsModelMD6 = "md6def/objects/weapons/energy/bfg.md6";
+		handsFovScale = 0.649999976;
+		displayName = "#str_decl_weapon_bfg";
+		icon = "textures/guis/icons/weapons/simple/bfg";
+		iconDetails = "textures/guis/icons/weapons/simple/bfg";
+		notificationOverrideIcon = "art/ui/weapon/bfg";
+		iconColor = "SWF_NAMED_COLOR_WEAPON_BFG";
+		quickSlotGroup = "QUICKSLOTGROUP_WEAPON";
+		ownerForgetAfterDrop = true;
+		maxCount = 1;
+		numHands = 2;
+		itemUse = "INVENTORY_USE_WEAPON";
+		weaponFX = "weapon/bfg/bfg_1st";
+		weaponHaptics = {
+			settings = {
+				settings[0] = {
+					mode = "HMT_OFF";
+					endPercent = "HTP_MAX";
+					strength = "HFS_OFF";
+				}
+				settings[1] = {
+					endPercent = "HTP_THIRTY_PERCENT";
+					strength = "HFS_VERY_LOW";
+				}
+			}
+		}
+		emptyIcon = "textures/guis/icons/weapons/simple/bfg_empty";
+		selectedIcon = "textures/guis/icons/weapons/simple/bfg_selected";
+		iconColorFull = "SWF_NAMED_COLOR_WEAPON_BFG_FULL";
+		initialAmmoDecl = "ammo/player/bfg";
+		validAmmoClips = {
+			num = 4;
+			item[0] = {
+				validAmmoDecl = "ammo/player/bfg";
+				clipType = "AMMOCLIP_ROCKET";
+				clipSize = 90;
+				ammoPerShot = 30;
+				ammoPerReload = 30;
+			}
+			item[1] = {
+				validAmmoDecl = "ammo/player/bfg_charge_sphere";
+				clipType = "AMMOCLIP_ROCKET";
+				clipSize = 90;
+				ammoPerShot = 30;
+				ammoPerReload = 30;
+			}
+			item[2] = {
+				validAmmoDecl = "ammo/player/bfg_charge_sphere_arc";
+				clipType = "AMMOCLIP_ROCKET";
+				clipSize = 90;
+				ammoPerShot = 30;
+				ammoPerReload = 30;
+			}
+			item[3] = {
+				validAmmoDecl = "ammo/player/bfg_rapid_fire_beam_arc";
+				clipType = "AMMOCLIP_ROCKET";
+				clipSize = 90;
+				ammoPerReload = 1;
+			}
+		}
+		weaponEntityDef = "weapon_ent/bfg";
+		noAmmoCache = true;
+		killStat = "STAT_WEAPON_BFG_KILLS";
+		weaponSelectionGroup = "WEAPONSELECTIONGROUP_8";
+		recoilAngles = {
+			pitch = -0.800000012;
+		}
+		firingInterval = 600;
+		burstInfo = {
+			burstInfo[1] = {
+				canQueueBurst = false;
+			}
+		}
+		noPerkSwitcher = true;
+		hasIntroBringup = true;
+		singleTapFire = true;
+		fireBreaksReload = true;
+		interruptibleAtFireFinished = false;
+		hasReloadOut = true;
+		handLag = {
+			clamp = 4;
+			scale = 0.000199999995;
+			retain = 0.949999988;
+			recenter = 0;
+		}
+		handRotation = {
+			clamp = 30;
+			scale = 0.200000003;
+			retain = -0.00499999989;
+		}
+		aiInfo = {
+			reloadEventDecl = "base/misc/reload";
+			gunfireEventDecl = "base/gunfire/gunfire";
+			minRange = 7.35300016;
+			minOptimalRange = 9.75400066;
+			maxOptimalRange = 22.8600006;
+			weaponAccuracyList = {
+				accuracyVersusPlayer = "weapon/accuracy/shotgun_high_acc_long_dist";
+				accuracyVersusDestiny = "weapon/accuracy/shotgun_low_acc_short_dist";
+				accuracyVersusDemonCommon = "weapon/accuracy/shotgun_low_acc_short_dist";
+				accuracyVersusSurvivorCommon = "weapon/accuracy/shotgun_med_acc_long_dist";
+			}
+			reloadAnimName = "reload_shells";
+		}
+		weaponAnimSet = "WEAPONANIM_SHOTGUN";
+		meleeProjectile = "projectile/player/directional_melee";
+		meleeOneHitKillProjectile = "projectile/player/directional_melee_one_hit_kill";
+		meleeTraceBoundsType = "BOUNDS_48x48";
+		meleeTraceDamageType = "MELEE_FIRST_PLUS_ACTOR";
+		meleeTraceDamageCap = 1;
+		targetLockZoomed = {
+			canLock = true;
+		}
+		handsHitReactionSubweb = "bfg";
+		subweb_normal = "bfg";
+		showHideMeshHands = {
+			bodyKit = "HideAll";
+		}
+		ironSightZoom = {
+			zoomedFOV = 55;
+			sensitivity_scale_controller = 0.300000012;
+			sensitivity_scale_mouse = 0.300000012;
+			zoomDelay = 50;
+			zoomTime = 297;
+			hasBlendedZoom = true;
+			zoomBlendTime = 297;
+		}
+		postSprintFirePenaltyMS = 100;
+		zoomInSound = "play_bfg_zoom_in_01";
+		zoomOutSound = "play_bfg_zoom_out_02";
+		bfgRemotePreChargeSound = "play_bfg_charge";
+		spreadParams = {
+			spreadIncreasedByMovement = 0;
+			spreadIncreasedByMovementZoom = 0;
+			spreadIncreasedByAiming = 0;
+			spreadAdditionMax = 0;
+			spreadAdditionPerShotZoom = 0;
+			spreadAdditionPerShotMoving = 0;
+			spreadAdditionPerShotZoomMoving = 0;
+			spreadAdditionMaxZoom = 0;
+			spreadReturnDelay = 400;
+			spreadReturnTime = 500;
+		}
+		weaponFeedBack = {
+			pitchKickAmount = 4;
+			pitchKickAmountDelta = 2;
+			pitchKickTopBound = 6;
+			pitchKickSpeedInto = 25;
+			pitchKickSpeedIntoMin = 25;
+			pitchKickSpeedIntoPerShot = 25;
+			pitchKickSpeedFrom = 10;
+			yawKickSpeedInto = 25;
+			yawKickSpeedFrom = 25;
+			controllerShakeHighTime = 100;
+			controllerShakeLowMag = 0.5;
+			controllerShakeLowTime = 150;
+			controllerRTriggerShakeMag = 0.5;
+			controllerRTriggerShakeTime = 100;
+		}
+		shellEmitter = {
+			baseSpeed = 2.85800004;
+			deltaSpeed = 0.381000012;
+			deltaAngle = 15;
+		}
+		thirdPersonWeaponFX = "weapon/bfg/bfg_3rd";
+		zoomBlur = {
+			scaleBiasPower = {
+				x = 7.46950027e-05;
+				z = 8.14048035e-05;
+			}
+		}
+		declAimAssist = "aimassist/bfg";
+		reticle = "weaponreticle/bfg";
+		guiDisplay = {
+			scale = 0.0280000009;
+			offset = {
+				x = 0.0299999993;
+				y = -0.00400000019;
+				z = 0.00340000005;
+			}
+			profileFrame = 9;
+		}
+		weaponLag = {
+			enable = true;
+			pendulumLength = 0.125;
+			friction = 15;
+			maxAngleDegrees = 8;
+			maxAcceleration = 0.5;
+			gravity = 3.79999995;
+		}
+		weaponBob = {
+			rotationalAmplitudes = {
+				roll = 1.64999998;
+			}
+		}
+		weaponCategory = "WEAPON_CATEGORY_LAUNCHER";
+		calloutIcon = "art/ui/icons/callouts/icon_callout_bfg";
+		calloutColor = "DEMON_HUD_COLOR_GREEN";
+	}
+}

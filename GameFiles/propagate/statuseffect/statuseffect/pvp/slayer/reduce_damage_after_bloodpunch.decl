@@ -1,0 +1,25 @@
+{
+	inherit = "statuseffect/pvp/toughened_default";
+	edit = {
+		effectClass = "idStatusEffect_ReduceDamageAfterBloodPunch";
+		lifeTimeMS = {
+			defaultValue = 3000;
+		}
+		runningOutSound = NULL;
+		berserkData = {
+			damageMitigationMult = {
+				defaultValue = 0.1;
+				branchPairs = {
+					num = 1;
+					item[0] = {
+						branchKey = "CONTROLLERPAD_DECL";
+						branchResult = 0.1;
+					}
+				}
+			}
+		}
+		damageAdjustmentData = {
+			adjustmentTimeMS = 3000;
+		}
+	}
+}

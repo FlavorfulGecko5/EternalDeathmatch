@@ -1,0 +1,23 @@
+{
+	inherit = "projectile/base/bullet";
+	edit = {
+		worldPenetration = true;
+		fireSoundStart = "play_shotgun_burst_fire";
+		fireSoundStop = "play_wpn_sp_shotgun_fire_end";
+		fireSoundLastShot = "play_wpn_sp_shotgun_fire_end";
+		fireViewShakeDecl = "advancedscreenviewshake/shotgun_triple_burst";
+		impactEffectTable = "impacteffect/projectiles/weapons/shotgun";
+		impactEffectTableLimitedBySurfType = "impacteffect/projectiles/weapons/shotgun_per_surface_stone_imp";
+		maxImpactEffectsPerSurface = 1;
+		damageDecl = "damage/firearm/12_gauge_full_auto";
+		maxRange = 100;
+		spawnNumCircles = 2;
+		spawnCount = 10;
+		fixedSpreadRandomDecals = true;
+		fixedSpreadRandomDecalsWiggle = 0.0500000007;
+		tracerInfo = {
+			tracerMtrQuad = "models/weapons/tracer/tracer1_quad";
+			tracerLength = 0.699999988;
+		}
+	}
+}

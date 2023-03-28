@@ -87,7 +87,16 @@
             "mapinfo/game/sp/e1m4_boss/e1m4_boss.decl",
             "mapinfo/game/sp/e2m4_boss/e2m4_boss.decl",
             "menu/main_menu.decl",
-            "pvpupgrade/slayer/normal_upgrades.decl"
+            "projectile/projectile/player/shotgun_full_auto.decl",
+            "projectile/projectile/player/shotgun_full_auto_ammo_giveback.decl",
+            "pvpupgrade/demon/painelemental_upgrades.decl",
+            "pvpupgrade/slayer/normal_upgrades.decl",
+            "statuseffect/statuseffect/pvp/slayer/reduce_damage_after_bloodpunch.decl",
+            "upgrade/upgrade/weapons/melee/hammer/supermeter.decl",
+            "weapon/weapon/player/bfg_base.decl",
+            "weapon/weapon/player/double_barrel.decl",
+            "weapondatahammer/weapondata/base/hammer_base.decl",
+            "weapondataplasmarifle/weapondata/base/plasmarifle.decl"
         ],
 
         "gameresources_patch2/generated/decls":
