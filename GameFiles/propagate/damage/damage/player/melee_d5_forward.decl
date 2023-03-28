@@ -1,0 +1,55 @@
+{
+	inherit = "damage/player/directional_melee";
+	edit = {
+		damageParms = {
+			weaponDamageType = "PLAYER_WEAPON_MELEE";
+			doom5MeleeTest = {
+				impulseVelocity = {
+					x = 18;
+					z = 1.5;
+				}
+				monsterImpulseScales = {
+					num = 1;
+					item[0] = {
+						monsterType = "AI_MONSTER_HELLKNIGHT AI_MONSTER_DREADKNIGHT AI_MONSTER_PINKY AI_MONSTER_SPECTRE AI_MONSTER_CACODEMON AI_MONSTER_PAIN_ELEMENTAL AI_MONSTER_MANCUBUS AI_MONSTER_CYBER_MANCUBUS AI_MONSTER_ARACHNOTRON AI_MONSTER_REVENANT AI_MONSTER_WHIPLASH";
+						value = 0.800000012;
+					}
+				}
+				monsterImpulsePainTypes = {
+					num = 7;
+					item[0] = "PAIN_FALTER_LIGHT";
+					item[1] = "PAIN_FALTER";
+					item[2] = "PAIN_PUSHBACK";
+					item[3] = "PAIN_STAGGER";
+					item[4] = "PAIN_STAGGER_VULNERABLE";
+					item[5] = "PAIN_KNOCKDOWN";
+					item[6] = "PAIN_LIVING_RAGDOLL";
+				}
+				attackerKnockback = 43.2054024;
+				attackerKnockbackMS = 200;
+				attackerVelocityScale = 0.850000024;
+				monsterMaxImpulseVelocity = {
+					num = 2;
+					item[0] = {
+						monsterType = "AI_MONSTER_ZOMBIE_TIER_1 AI_MONSTER_ZOMBIE_TIER_3 AI_MONSTER_IMP AI_MONSTER_STONE_IMP AI_MONSTER_GARGOYLE AI_MONSTER_PROWLER AI_MONSTER_CURSED_PROWLER AI_MONSTER_SHOTGUN_SOLDIER AI_MONSTER_CARCASS AI_MONSTER_LOSTSOUL AI_MONSTER_CUEBALL";
+						value = 20;
+					}
+					item[1] = {
+						monsterType = "AI_MONSTER_HELLKNIGHT AI_MONSTER_DREADKNIGHT AI_MONSTER_PINKY AI_MONSTER_SPECTRE AI_MONSTER_CACODEMON AI_MONSTER_PAIN_ELEMENTAL AI_MONSTER_MANCUBUS AI_MONSTER_CYBER_MANCUBUS AI_MONSTER_ARACHNOTRON AI_MONSTER_REVENANT AI_MONSTER_WHIPLASH AI_MONSTER_DOOM_HUNTER AI_MONSTER_MARAUDER AI_MONSTER_BARON AI_MONSTER_TYRANT AI_MONSTER_ARCHVILE AI_MONSTER_GLADIATOR AI_MONSTER_ICON_OF_SIN AI_MONSTER_MAYKR_ANGEL";
+						value = 18.5;
+					}
+				}
+				isDoom5Melee = true;
+				freezePlayer = true;
+			}
+			damageDirAttackerToTarget = true;
+		}
+		maxDamage = {
+			defaultValue = 25;
+		}
+		minDamage = {
+			defaultValue = 25;
+		}
+		pvpPlayerDamageScale = 10;
+	}
+}

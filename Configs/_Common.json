@@ -72,7 +72,8 @@
             "damage/damage/pvp/bronco_purifying_beam_hazard.decl",
             "damage/damage/pvp/thunder_lava.decl",
             "damage/damage/pvp/thunder_pressure_plate.decl",
-            "demoncarddeck/demoncarddeck/pvp/painelemental/deck_2.decl"
+            "demoncarddeck/demoncarddeck/pvp/painelemental/deck_2.decl",
+            "pvpupgrade/slayer/normal_upgrades.decl"
         ],
 
         "gameresources_patch2/generated/decls":

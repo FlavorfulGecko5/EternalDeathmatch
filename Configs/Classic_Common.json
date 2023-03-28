@@ -27,6 +27,11 @@
             "ammo/ammo/player/unmaykr.decl"
         ],
 
+        "gameresources_patch1/generated/decls":
+        [
+            "damage/damage/player/melee_d5_forward.decl"
+        ],
+
 
         "e1m3_cult_patch3/generated/decls/": ["prophealth/mega_armor.decl"],
         "e1m4_boss_patch2/generated/decls/": ["prophealth/mega_armor.decl"],

@@ -1,0 +1,197 @@
+$emb_toggle# ClassicMode $
+{
+	edit = {
+		upgradeIcon = "art/ui/icons/pvp_mid_round_upgrades/ico_pvp_upg_main_0";
+		upgrades = {
+			num = 1;
+			item[0] = {
+				num = 6;
+				item[0] = {
+					upgradeTitle = "#str_decl_pvp_upgrade_GHOST45268";
+					upgradeDescription = "#str_decl_pvp_upgrade_GHOST45269";
+					icon = "art/ui/icons/pvp_mid_round_upgrades/new/icon_eom_resourcedrain";
+					telemetryIdentifier = "upg_std_resourcedrain";
+					perks = {
+						num = 0;
+					}
+					descData = {
+						num = 0;
+					}
+				}
+				item[1] = {
+					upgradeTitle = "#str_decl_pvp_upgrade_GHOST45268";
+					upgradeDescription = "#str_decl_pvp_upgrade_GHOST45269";
+					icon = "art/ui/icons/pvp_mid_round_upgrades/new/icon_eom_resourcedrain";
+					telemetryIdentifier = "upg_std_burninghate";
+					perks = {
+						num = 0;
+					}
+					descData = {
+						num = 0;
+					}
+				}
+				item[2] = {
+					upgradeTitle = "#str_decl_pvp_upgrade_GHOST45268";
+					upgradeDescription = "#str_decl_pvp_upgrade_GHOST45269";
+					icon = "art/ui/icons/pvp_mid_round_upgrades/new/icon_eom_resourcedrain";
+					telemetryIdentifier = "upg_std_mastercarve";
+					perks = {
+						num = 0;
+					}
+					descData = {
+						num = 0;
+					}
+				}
+				item[3] = {
+					upgradeTitle = "#str_decl_pvp_upgrade_GHOST45268";
+					upgradeDescription = "#str_decl_pvp_upgrade_GHOST45269";
+					icon = "art/ui/icons/pvp_mid_round_upgrades/new/icon_eom_resourcedrain";
+					telemetryIdentifier = "upg_std_doubledown";
+					perks = {
+						num = 0;
+					}
+					descData = {
+						num = 0;
+					}
+				}
+				item[4] = {
+					upgradeTitle = "#str_decl_pvp_upgrade_GHOST45268";
+					upgradeDescription = "#str_decl_pvp_upgrade_GHOST45269";
+					icon = "art/ui/icons/pvp_mid_round_upgrades/new/icon_eom_resourcedrain";
+					telemetryIdentifier = "upg_std_dashing";
+					perks = {
+						num = 0;
+					}
+					descData = {
+						num = 0;
+					}
+				}
+				item[5] = {
+					upgradeTitle = "#str_decl_pvp_upgrade_GHOST45268";
+					upgradeDescription = "#str_decl_pvp_upgrade_GHOST45269";
+					icon = "art/ui/icons/pvp_mid_round_upgrades/new/icon_eom_resourcedrain";
+					telemetryIdentifier = "upg_std_speeddemon";
+					perks = {
+						num = 0;
+					}
+					descData = {
+						num = 0;
+					}
+				}
+			}
+		}
+	}
+}
+$emb_toggle_end$
+
+
+
+
+$emb_toggle# ~ClassicMode $
+{
+	edit = {
+		upgradeIcon = "art/ui/icons/pvp_mid_round_upgrades/ico_pvp_upg_main_0";
+		upgrades = {
+			num = 1;
+			item[0] = {
+				num = 5;
+				item[0] = {
+					upgradeTitle = "#str_decl_pvp_upgrade_GHOST45278";
+					upgradeDescription = "#str_decl_pvp_upgrade_GHOST45279";
+					icon = "art/ui/icons/pvp_mid_round_upgrades/new/icon_eom_uac_firepower";
+					telemetryIdentifier = "upg_std_speeddemon";
+					perks = {
+						num = 1;
+						item[0] = "perk/pvp/slayer/eor_plasma_rifle_damage";
+					}
+					descData = {
+						num = 1;
+						item[0] = {
+							description = "#str_decl_pvp_upgrade_desc_speed_demon_1_GHOST60369";
+							icon = "art/ui/icons/pvp_mid_round_upgrades/ico_pvp_upg_main_3";
+						}
+					}
+				}
+				item[1] = {
+					upgradeTitle = "#str_decl_pvp_upgrade_GHOST45270";
+					upgradeDescription = "#str_decl_pvp_upgrade_GHOST45271";
+					icon = "art/ui/icons/pvp_mid_round_upgrades/new/icon_eom_burninghate";
+					telemetryIdentifier = "upg_std_burninghate";
+					perks = {
+						num = 2;
+						item[0] = "perk/player/equipment/flame_more_loot";
+						item[1] = "perk/pvp/slayer/eor_upgrade_flame_reduce_cooldown";
+					}
+					descData = {
+						num = 1;
+						item[0] = {
+							description = "#str_decl_pvp_upgrade_desc_burning_hate_1_GHOST60361";
+							icon = "art/ui/icons/pvp_mid_round_upgrades/ico_pvp_upg_main_1";
+						}
+					}
+				}
+				item[2] = {
+					upgradeTitle = "#str_decl_cosmetic_customization_revenant_skin_racecar";
+					upgradeDescription = "#str_decl_pvp_upgrade_GHOST45273";
+					icon = "art/ui/icons/pvp_mid_round_upgrades/new/icon_eom_mastercarve";
+					telemetryIdentifier = "upg_std_mastercarve";
+					perks = {
+						num = 1;
+						item[0] = "perk/pvp/slayer/eor_upgrade_chainsaw_kill_speed";
+					}
+					descData = {
+						num = 2;
+						item[0] = {
+							description = "#str_decl_pvp_upgrade_desc_master_carve_1_GHOST60362";
+							icon = "art/ui/icons/ammo/fuel";
+						},
+						item[1] = {
+							description = "#str_decl_pvp_upgrade_desc_speed_demon_2_GHOST60370";
+							icon = "art/ui/icons/challenges/glorykills";
+						}
+					}
+				}
+				item[3] = {
+					upgradeTitle = "#str_decl_pvp_upgrade_GHOST45274";
+					upgradeDescription = "#str_decl_pvp_upgrade_GHOST45275";
+					icon = "art/ui/icons/pvp_mid_round_upgrades/new/icon_eom_doubledown";
+					telemetryIdentifier = "upg_std_doubledown";
+					perks = {
+						num = 2;
+						item[0] = "perk/player/equipment/frag_max_capacity";
+						item[1] = "perk/pvp/slayer/eor_upgrade_increase_frag_radius";
+					}
+					descData = {
+						num = 2;
+						item[0] = {
+							description = "#str_decl_pvp_upgrade_desc_double_down_1_GHOST60364";
+							icon = "art/ui/dossier/icons/preator_suit/equipment/double_charge";
+						}
+						item[1] = {
+							description = "#str_decl_pvp_upgrade_desc_double_down_2_GHOST60365";
+							icon = "art/ui/dossier/icons/preator_suit/equipment/area_increased";
+						}
+					}
+				}
+				item[4] = {
+					upgradeTitle = "#str_decl_codex_slayer_arsenal_hammer";
+					upgradeDescription = "#str_decl_deathmatch_upgrade_hammer_desc";
+					icon = "art/ui/icons/ammo/hammer";
+					telemetryIdentifier = "upg_std_dashing";
+					perks = {
+						num = 1;
+						item[0] = "perk/pvp/slayer/eor_upgrade_bfg_ammo_from_gk";
+					}
+					descData = {
+						num = 1;
+						item[0] = {
+							description = "#str_decl_deathmatch_upgrade_hammer_desc_data";
+							icon = "art/ui/icons/codex/sentinel";
+						}
+					}
+				}
+			}
+		}
+	}
+}
+$emb_toggle_end$
