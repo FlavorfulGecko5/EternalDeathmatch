@@ -38,6 +38,13 @@
         "e2m2_base_patch3/generated/decls/": ["prophealth/mega_armor.decl"],
         "e2m4_boss_patch2/generated/decls/": ["prophealth/mega_armor.decl"],
         "e4m3_mcity_patch2/generated/decls/": ["prophealth/mega_armor.decl"],
-        "e5m1_spear_patch2/generated/decls/": ["prophealth/mega_armor.decl"]
+        "e5m1_spear_patch2/generated/decls/": 
+        [
+            "prophealth/mega_armor.decl",
+
+            "entitydef/trigger/props/weapons/default.decl",
+            "material2/art/weapons/",
+            "propitem/propitem/weapon/"
+        ]
     }
 }

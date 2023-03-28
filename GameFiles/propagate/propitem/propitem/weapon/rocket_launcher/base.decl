@@ -1,0 +1,9 @@
+{
+	edit = {
+		sound_use = "play_ammo_rockets_small";
+		sound_pickup = "play_ammo_rockets_small";
+		componentTypeInfo = "idUseableAmmoComponent";
+		inventoryDecl = "ammo/sharedammopool/rockets";
+		inventoryCount = 12;
+	}
+}

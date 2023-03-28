@@ -1,0 +1,41 @@
+{
+	class = "idTrigger";
+	networkReplicated = false;
+	disableAIPooling = false;
+	editorVars {
+		rotatable = false;
+		showOrientation = false;
+		showFixedBox = false;
+		skipRenderModelInEditor = false;
+		showInRenderMode = false;
+		placeable = false;
+		color = ( 1, 1, 1, 1 );
+		size = ( 0, 0, 0 );
+		originOffset = ( 0, 0, 0 );
+		material = "";
+		translucent = false;
+		editorName = "";
+		description = "";
+	}
+	edit = {
+		flags = {
+			noknockback = false;
+		}
+		clipModelInfo = {
+			type = "CLIPMODEL_CYLINDER";
+			contentsFilter = {
+				monsterClip = false;
+			}
+			size = {
+				x = 1.929;
+				y = 1.929;
+				z = 1.31899998;
+			}
+			numSides = 8;
+		}
+		triggerOnce = false;
+		botCanActivate = true;
+		onlyLocalPlayerCanActivate = true;
+		demonPlayerCanActivate = true;
+	}
+}

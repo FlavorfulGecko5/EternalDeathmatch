@@ -1,0 +1,9 @@
+{
+	edit = {
+		sound_use = "play_ammo_energy";
+		sound_pickup = "play_ammo_energy";
+		componentTypeInfo = "idUseableAmmoComponent";
+		inventoryDecl = "ammo/sharedammopool/cells";
+		inventoryCount = 250;
+	}
+}

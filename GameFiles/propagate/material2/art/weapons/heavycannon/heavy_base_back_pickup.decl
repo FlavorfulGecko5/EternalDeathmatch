@@ -1,0 +1,82 @@
+{
+	inherit = "template/pbr_pickup";
+	edit = {
+		Passes = {
+			MATERIALPASS_PARTICLE_SURFACE_SPAWN = {
+				prog = "gpuparticlesurfacespawnrender";
+				common = {
+					toolsVisibility = "";
+					passSortBias = 0;
+					localSortBias = 0;
+					depthSortBias = 0;
+				}
+			}
+		}
+		RenderLayers = {
+			item[0] = {
+				parms = {
+					heightmap = {
+						filePath = "textures/system/constant_color/grey_md.tga";
+						options = {
+							type = "TT_2D";
+							filter = "TF_DEFAULT";
+							repeat = "TR_REPEAT";
+							format = "FMT_BC1";
+							atlasPadding = 0;
+							fullScaleBias = false;
+							noMips = false;
+							fftBloom = false;
+						}
+					}
+					bloommaskmap = {
+						filePath = "art/weapons/heavycannon/heavy_base_back_pickup_e.tga";
+						options = {
+							format = "FMT_BC5";
+						}
+					}
+					sssmask = {
+						filePath = "_default";
+					}
+					cover = {
+						filePath = "_default";
+					}
+					smoothness = {
+						filePath = "textures/system/specular/flatspec_125.tga";
+					}
+					normal = {
+						filePath = "art/weapons/heavycannon/heavy_base_back_n.tga";
+					}
+					specular = {
+						filePath = "textures/system/specular/flatspec_100.tga";
+					}
+					albedo = {
+						filePath = "art/weapons/heavycannon/heavy_base_back.tga";
+					}
+				}
+			}
+		}
+		Parms = {
+			surfaceemissivescale = 6;
+			surfaceemissivecolor = {
+				x = 0.5;
+				y = 1;
+				z = 0;
+			}
+			surfacesheencolor = {
+				x = 0.5;
+				y = 1;
+				z = 0;
+			}
+			surfaceemissivetiledmask = {
+				filePath = "textures/system/constant_color/black.tga";
+			}
+			deathfaderamp = {
+				x = 0.100000001;
+				y = 5;
+				z = 3;
+				w = 0;
+			}
+		}
+		SurfaceType = "SURFTYPE_METAL";
+	}
+}

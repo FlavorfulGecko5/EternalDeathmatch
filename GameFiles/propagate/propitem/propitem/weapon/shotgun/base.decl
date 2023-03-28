@@ -1,0 +1,9 @@
+{
+	edit = {
+		sound_use = "play_ammo_shells";
+		sound_pickup = "play_ammo_shells";
+		componentTypeInfo = "idUseableAmmoComponent";
+		inventoryDecl = "ammo/sharedammopool/shells";
+		inventoryCount = 20;
+	}
+}
