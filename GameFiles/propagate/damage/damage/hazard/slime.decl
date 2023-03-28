@@ -1,0 +1,36 @@
+{
+	edit = {
+		damageParms = {
+			damageName = "#str_damage_hazard_slime";
+			damageSource = "DAMAGESRC_RADIATION";
+			damageReportDecayMS = 1000;
+			damageSoundWhenLocalPlayerIsHit = "play_hazard_damage_player";
+			damageSoundWhenLocalPlayerIsHit_Armor = "play_hazard_damage_armor";
+			damageSoundWhenLocalDemonPlayerIsHit = "play_hazard_damage_player";
+			damageSoundLoopingStart = "play_slime_damage_loop_player";
+			damageSoundLoopingStop = "stop_slime_damage_loop_player";
+		}
+		maxDamage = {
+			defaultValue = 10;
+		}
+		minDamage = {
+			defaultValue = 10;
+		}
+		demonPlayerDamageMitigation = {
+			num = 1;
+			item[0] = {
+				monsterType = "AI_MONSTER_PLAYER_PAIN_ELEMENTAL";
+				damageScalar = {
+					defaultValue = 0;
+					branchPairs = {
+						num = 1;
+						item[0] = {
+							branchKey = "CONTROLLERPAD_DECL";
+							branchResult = 0;
+						}
+					}
+				}
+			}
+		}
+	}
+}

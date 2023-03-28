@@ -1,0 +1,22 @@
+{
+	inherit = "ammo/sharedammopool/base";
+	edit = {
+		displayName = "#str_decl_ammo_bullets";
+		icon = "art/ui/icons/ammo/bullets";
+		iconColor = "SWF_NAMED_COLOR_WEAPON_ASSUALT_RIFLE";
+		maxCount = 60;
+		maxCountPVP = {
+			defaultValue = 120;
+			branchPairs = {
+				num = 1;
+				item[0] = {
+					branchKey = "CONTROLLERPAD_DECL";
+					branchResult = 120;
+				}
+			}
+		}
+		gameDifficultyDecl_Dropped = "campaign/per_item/ammodropped_heavy_rifle";
+		gameDifficultyDecl_Pickup = "campaign/per_item/ammopickup_heavy_rifle";
+		ammoType = "AMMO_BULLET";
+	}
+}

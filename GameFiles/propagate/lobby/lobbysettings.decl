@@ -1,0 +1,27 @@
+{
+	edit = {
+		waitingForPlayersMinimumShowtimeMS = 8000;
+		privateMatchCountdownTimeMS = 3000;
+		mapList = "casualbattlearenamaplist";
+		rootCameraPrefix = "pvp_root_camera";
+		lobbyRootCameraPrefix = "pvp_root_camera";
+		slayerPodiumSettings = {
+			podiumPrefix = "pvp_match_slayer_podium";
+			cameraPrefix = "pvp_match_slayer_camera";
+			cameraTransitionLerpTimeMS = 500;
+		}
+		demonPodiumSettings = {
+			podiumPrefix = "pvp_match_demon_podium_slot_";
+			cameraPrefix = "pvp_match_demon_camera_slot_";
+			cameraTransitionLerpTimeMS = 500;
+		}
+		soundSwitch = "music_ghost_switch";
+		soundSwitchState = "slayer_city_music";
+		soundState = "music_ghost_states/main_light";
+		playersNeededToPlay = 2;
+		defaultPodium = "podiums/lobby/podium_slot_empty";
+		publicShellSkybox = "multiplayer_skybox";
+		privateShellSkybox = "multiplayer_skybox";
+		maxTimeIdleInPublicLobbyMS = 30000;
+	}
+}

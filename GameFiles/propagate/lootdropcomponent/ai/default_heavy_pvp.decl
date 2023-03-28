@@ -1,0 +1,105 @@
+{
+	inherit = "ai/default_pvp";
+	edit = {
+		droppableItems = {
+			num = 28;
+			item[0] = "lootdrop/pvp/health/base/heavy_low_hp_weapon_kill";
+			item[1] = "lootdrop/pvp/health/base/heavy_low_hp_glory_kill";
+			item[2] = "lootdrop/pvp/health/base/heavy_med_hp_weapon_kill";
+			item[3] = "lootdrop/pvp/health/base/heavy_med_hp_glory_kill";
+			item[4] = "lootdrop/pvp/health/base/heavy_high_hp_weapon_kill";
+			item[5] = "lootdrop/pvp/health/base/heavy_high_hp_glory_kill";
+			item[6] = "lootdrop/pvp/health/base/heavy_low_hp_chainsaw_kill";
+			item[7] = "lootdrop/pvp/health/base/heavy_med_hp_chainsaw_kill";
+			item[8] = "lootdrop/pvp/health/base/heavy_high_hp_chainsaw_kill";
+			item[9] = "lootdrop/pvp/health/base/heavy_any_hp_desummon";
+			item[10] = "lootdrop/pvp/health/upgrade/heavy_low_hp_weapon_kill";
+			item[11] = "lootdrop/pvp/health/upgrade/heavy_low_hp_glory_kill";
+			item[12] = "lootdrop/pvp/health/upgrade/heavy_med_hp_weapon_kill";
+			item[13] = "lootdrop/pvp/health/upgrade/heavy_med_hp_glory_kill";
+			item[14] = "lootdrop/pvp/health/upgrade/heavy_high_hp_weapon_kill";
+			item[15] = "lootdrop/pvp/health/upgrade/heavy_high_hp_glory_kill";
+			item[16] = "lootdrop/pvp/health/upgrade/heavy_low_hp_chainsaw_kill";
+			item[17] = "lootdrop/pvp/health/upgrade/heavy_med_hp_chainsaw_kill";
+			item[18] = "lootdrop/pvp/health/upgrade/heavy_high_hp_chainsaw_kill";
+			item[19] = "lootdrop/pvp/health/upgrade/heavy_any_hp_desummon";
+			item[20] = "lootdrop/pvp/armor/heavy_any_hp_desummon";
+			item[21] = "lootdrop/pvp/ammo/bullets/heavy_any_ammo_desummon";
+			item[22] = "lootdrop/pvp/ammo/cells/heavy_any_ammo_desummon";
+			item[23] = "lootdrop/pvp/ammo/rockets/heavy_any_ammo_desummon";
+			item[24] = "lootdrop/pvp/ammo/shells/heavy_any_ammo_desummon";
+			item[25] = "lootdrop/ammo/shotgun/shells_full_auto_giveback_heavy";
+			item[26] = "lootdrop/pvp/ammo/bfg/heavy_any_ammo_glory_kill";
+			item[27] = "lootdrop/pvp/ammo/bfg/heavy_any_ammo_chainsaw_kill";
+		}
+		damageOverTime = {
+			item[0] = {
+				dropData = {
+					itemEntity = "prop/lootdrops/pvp/armor/armor_15";
+					upgradedItemEntity = "prop/lootdrops/pvp/armor/armor_15";
+					dropTimeAndCount = {
+						onDeathMinDrops = 1;
+						weaponHitDrops = {
+							item[0] = {
+								numExtraToDrop = 0;
+							}
+							item[1] = {
+								numExtraToDrop = 0;
+							}
+							item[6] = {
+								numExtraToDrop = 0;
+							}
+							item[7] = {
+								numExtraToDrop = 0;
+							}
+							item[12] = {
+								numExtraToDrop = 0;
+							}
+							item[13] = {
+								numExtraToDrop = 0;
+							}
+						}
+					}
+					maxLifetimeDrops = 1;
+					upgradedTimingAndCount = {
+						onDeathMinDrops = 1;
+						weaponHitDrops = {
+							item[0] = {
+								numExtraToDrop = 0;
+							}
+							item[1] = {
+								numExtraToDrop = 0;
+							}
+							item[6] = {
+								numExtraToDrop = 0;
+							}
+							item[7] = {
+								numExtraToDrop = 0;
+							}
+							item[12] = {
+								numExtraToDrop = 0;
+							}
+							item[13] = {
+								numExtraToDrop = 0;
+							}
+						}
+					}
+				}
+			}
+			item[1] = {
+				dropData = {
+					itemEntity = "prop/lootdrops/pvp/armor/armor_10";
+					dropTimeAndCount = {
+						onDeathMinDrops = 3;
+						weaponHitDrops = {
+							item[0] = {
+								numExtraToDrop = 0;
+							}
+						}
+					}
+					maxLifetimeDrops = 0;
+				}
+			}
+		}
+	}
+}

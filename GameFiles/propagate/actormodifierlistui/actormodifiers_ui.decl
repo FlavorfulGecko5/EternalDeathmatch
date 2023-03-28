@@ -1,0 +1,52 @@
+{
+	edit = {
+		actorModifiers = {
+			num = 7;
+			item[0] = {
+				actorModifier = "actormodifier/pvp/slayer/default";
+				uiSlot = "SLOT_SLAYER";
+				displayName = "#str_decl_actormodifier_become_slayer_name_GHOST53519";
+			}
+			item[1] = {
+				actorModifier = "actormodifier/pvp/demon/archvile";
+				uiSlot = "SLOT_DEMON";
+				displayName = "#str_decl_actormodifier_become_slayer_name_GHOST53519";
+			}
+			item[2] = {
+				actorModifier = "actormodifier/pvp/demon/dreadknight";
+				bindingAppend = "_dreadKnight";
+				uiSlot = "SLOT_DEMON";
+				displayName = "#str_decl_actormodifier_become_dreadknight_name";
+				demonInputBindSet = "BINDSET_MULTIPLAYER_DEMON_05";
+			}
+			item[3] = {
+				actorModifier = "actormodifier/pvp/demon/mancubus";
+				bindingAppend = "_mancubus";
+				uiSlot = "SLOT_DEMON";
+				displayName = "#str_decl_actormodifier_become_mancubus_name_GHOST53511";
+				demonInputBindSet = "BINDSET_MULTIPLAYER_DEMON_01";
+			}
+			item[4] = {
+				actorModifier = "actormodifier/pvp/demon/marauder";
+				bindingAppend = "_marauder";
+				uiSlot = "SLOT_DEMON";
+				displayName = "#str_decl_actormodifier_become_marauder_name_GHOST53513";
+				demonInputBindSet = "BINDSET_MULTIPLAYER_DEMON_04";
+			}
+			item[5] = {
+				actorModifier = "actormodifier/pvp/demon/painelemental";
+				bindingAppend = "_painelemental";
+				uiSlot = "SLOT_DEMON";
+				displayName = "#str_decl_actormodifier_become_painelemental_name_GHOST53515";
+				demonInputBindSet = "BINDSET_MULTIPLAYER_DEMON_02";
+			}
+			item[6] = {
+				actorModifier = "actormodifier/pvp/demon/revenant";
+				bindingAppend = "_revenant";
+				uiSlot = "SLOT_DEMON";
+				displayName = "#str_decl_actormodifier_become_revenant_name_GHOST53517";
+				demonInputBindSet = "BINDSET_MULTIPLAYER_DEMON_00";
+			}
+		}
+	}
+}

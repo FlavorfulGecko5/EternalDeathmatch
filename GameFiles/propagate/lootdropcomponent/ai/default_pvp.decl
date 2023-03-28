@@ -1,0 +1,451 @@
+{
+	edit = {
+		angelWingsData = {
+			limitAngles = {
+				pitch = 40;
+				yaw = 40;
+				roll = 20;
+			}
+			minSpeed = 2;
+			maxSpeed = 3;
+			initialVelocity = {
+				x = 3;
+				y = 1;
+				z = 1;
+			}
+		}
+		coneData = {
+			limitAngles = {
+				pitch = 40;
+				yaw = 180;
+				roll = 60;
+			}
+			directionOffset = {
+				z = 3;
+			}
+			initialVelocity = {
+				z = 3;
+			}
+		}
+		onlyDropOnce = true;
+		damageOverTime = {
+			num = 2;
+			item[0] = {
+				declDamage = "damage/firearm/equipment_flame_belch_dot";
+				dropData = {
+					dropOnFirstWeaponHit = false;
+					itemEntity = "prop/lootdrops/armor/pvp_armor_drop_small_flame_belch";
+					itemType = "LOOT_ARMOR";
+					dropItemSound = "play_flame_item_pop";
+					dropTimeAndCount = {
+						initialDropTimeMS = 500;
+						minDropTimeMS = 900;
+						maxDropTimeMS = 900;
+						minDropDelayMS = 83;
+						maxDropDelayMS = 166;
+						onDeathMinDrops = 3;
+						weaponHitDrops = {
+							num = 14;
+							item[0] = {
+								weaponType = "PLAYER_WEAPON_MELEE_";
+								dropsCappedByMaxCount = false;
+								dropPhysics = {
+									velocity = 9;
+									horizAngle = 180;
+									vertMinAngle = 60;
+									vertMaxAngle = 75;
+								}
+							}
+							item[1] = {
+								weaponType = "PLAYER_WEAPON_SHOTGUN_STICKY_BOMB_ PLAYER_WEAPON_SHOTGUN_STICKY_BOMB_SPLASH_ PLAYER_WEAPON_PLASMA_STUNSHOT_ PLAYER_WEAPON_PLASMA_HEATWAVE_ PLAYER_WEAPON_HAR_SCOPE_ PLAYER_WEAPON_ROCKETLAUNCHER_DETONATE_ PLAYER_WEAPON_BALLISTA_ARBALEST_ PLAYER_WEAPON_BALLISTA_DESTROYER_ PLAYER_WEAPON_MEAT_HOOK_NAPALM_ PLAYER_WEAPON_FRAG_GRENADE_ PLAYER_WEAPON_FRAG_GRENADE_CLUSTER_";
+								dropsCappedByMaxCount = false;
+								dropPhysics = {
+									velocity = 9;
+									horizAngle = 180;
+									vertMinAngle = 60;
+									vertMaxAngle = 75;
+								}
+							}
+							item[2] = {
+								weaponType = "PLAYER_WEAPON_ROCKETLAUNCHER_ PLAYER_WEAPON_BALLISTA_ PLAYER_WEAPON_FRAG_";
+								numExtraToDrop = 0;
+								dropsCappedByMaxCount = false;
+								dropPhysics = {
+									velocity = 9;
+									horizAngle = 180;
+									vertMinAngle = 60;
+									vertMaxAngle = 75;
+								}
+							}
+							item[3] = {
+								weaponType = "PLAYER_WEAPON_ROCKETLAUNCHER_SPLASH_ PLAYER_WEAPON_ROCKETLAUNCHER_DETONATE_ PLAYER_WEAPON_ROCKETLAUNCHER_DETONATE_PROXIMITY_FLARE_SPLASH_ PLAYER_WEAPON_ROCKETLAUNCHER_LOCKON_ PLAYER_WEAPON_BALLISTA_ARBALEST_ PLAYER_WEAPON_BALLISTA_DESTROYER_";
+								numExtraToDrop = 0;
+								dropsCappedByMaxCount = false;
+								dropPhysics = {
+									velocity = 9;
+									horizAngle = 180;
+									vertMinAngle = 60;
+									vertMaxAngle = 75;
+								}
+							}
+							item[4] = {
+								weaponType = "PLAYER_WEAPON_HAR_";
+								hitIncreaseRate = 0.150000006;
+								numExtraToDrop = 0;
+								dropsCappedByMaxCount = false;
+								dropPhysics = {
+									velocity = 9;
+									horizAngle = 180;
+									vertMinAngle = 60;
+									vertMaxAngle = 75;
+								}
+								forceDropDamageIntervalMS = 165;
+							}
+							item[5] = {
+								weaponType = "PLAYER_WEAPON_HAR_MICROMISSLE_ PLAYER_WEAPON_HAR_MICROMISSLE_SPLASH_";
+								hitIncreaseRate = 0.150000006;
+								numExtraToDrop = 0;
+								dropsCappedByMaxCount = false;
+								dropPhysics = {
+									velocity = 9;
+									horizAngle = 180;
+									vertMinAngle = 60;
+									vertMaxAngle = 75;
+								}
+								forceDropDamageIntervalMS = 165;
+							}
+							item[6] = {
+								weaponType = "PLAYER_WEAPON_SHOTGUN_";
+								dropsCappedByMaxCount = false;
+								fixedDropPerWeaponShot = true;
+								dropPhysics = {
+									velocity = 9;
+									horizAngle = 180;
+									vertMinAngle = 60;
+									vertMaxAngle = 75;
+								}
+							}
+							item[7] = {
+								weaponType = "PLAYER_WEAPON_DOUBLE_BARRELED_SHOTGUN_";
+								numExtraToDrop = 2;
+								dropsCappedByMaxCount = false;
+								fixedDropPerWeaponShot = true;
+								dropPhysics = {
+									velocity = 9;
+									horizAngle = 180;
+									vertMinAngle = 60;
+									vertMaxAngle = 75;
+								}
+							}
+							item[8] = {
+								weaponType = "PLAYER_WEAPON_SHOTGUN_FULL_AUTO_ PLAYER_WEAPON_SHOTGUN_FULL_AUTO_MASTERY_";
+								hitIncreaseRate = 0.0299999993;
+								numExtraToDrop = 0;
+								dropsCappedByMaxCount = false;
+								fixedDropPerWeaponShot = true;
+								dropPhysics = {
+									velocity = 9;
+									horizAngle = 180;
+									vertMinAngle = 60;
+									vertMaxAngle = 75;
+								}
+								forceDropDamageIntervalMS = 165;
+							}
+							item[9] = {
+								weaponType = "PLAYER_WEAPON_PLASMA_";
+								hitIncreaseRate = 0.0900000036;
+								numExtraToDrop = 0;
+								dropsCappedByMaxCount = false;
+								dropPhysics = {
+									velocity = 9;
+									horizAngle = 180;
+									vertMinAngle = 60;
+									vertMaxAngle = 75;
+								}
+								forceDropDamageIntervalMS = 165;
+							}
+							item[10] = {
+								weaponType = "PLAYER_WEAPON_CHAINGUN_";
+								hitIncreaseRate = 0.0299999993;
+								numExtraToDrop = 0;
+								dropsCappedByMaxCount = false;
+								dropPhysics = {
+									velocity = 9;
+									horizAngle = 180;
+									vertMinAngle = 60;
+									vertMaxAngle = 75;
+								}
+								forceDropDamageIntervalMS = 165;
+							}
+							item[11] = {
+								weaponType = "PLAYER_WEAPON_PLASMA_MICROWAVE_UPGRADE_ PLAYER_WEAPON_CHAINGUN_TURRET_ PLAYER_WEAPON_CHAINGUN_GATLING_ PLAYER_WEAPON_MICROWAVE_MOD_";
+								hitIncreaseRate = 0.0299999993;
+								numExtraToDrop = 0;
+								dropsCappedByMaxCount = false;
+								dropPhysics = {
+									velocity = 9;
+									horizAngle = 180;
+									vertMinAngle = 60;
+									vertMaxAngle = 75;
+								}
+								forceDropDamageIntervalMS = 165;
+							}
+							item[12] = {
+								weaponType = "PLAYER_WEAPON_BFG_ PLAYER_WEAPON_UNMAYKR_";
+								numExtraToDrop = 9;
+								dropsCappedByMaxCount = false;
+								dropPhysics = {
+									velocity = 9;
+									horizAngle = 180;
+									vertMinAngle = 60;
+									vertMaxAngle = 75;
+								}
+							}
+							item[13] = {
+								weaponType = "PLAYER_WEAPON_CRUCIBLE_ PLAYER_WEAPON_GLORYKILL_ PLAYER_WEAPON_CHAINSAW_";
+								numExtraToDrop = 9;
+								dropsCappedByMaxCount = false;
+								dropPhysics = {
+									velocity = 9;
+									horizAngle = 180;
+									vertMinAngle = 60;
+									vertMaxAngle = 75;
+								}
+							}
+						}
+						dropAllRemainingOnDeath = true;
+					}
+					dropPhysics = {
+						velocity = 6;
+						horizAngle = 40;
+						vertMinAngle = 20;
+						vertMaxAngle = 40;
+					}
+					lifetimeMS = 3500;
+					maxLifetimeDrops = 10;
+					upgradedPerkRequired = "perk/player/equipment/flame_more_loot";
+					upgradedTimingAndCount = {
+						initialDropTimeMS = 250;
+						minDropTimeMS = 455;
+						maxDropTimeMS = 455;
+						minDropDelayMS = 83;
+						maxDropDelayMS = 166;
+						onDeathMinDrops = 5;
+						weaponHitDrops = {
+							num = 14;
+							item[0] = {
+								weaponType = "PLAYER_WEAPON_MELEE_";
+								dropsCappedByMaxCount = false;
+								dropPhysics = {
+									velocity = 9;
+									horizAngle = 180;
+									vertMinAngle = 60;
+									vertMaxAngle = 75;
+								}
+							}
+							item[1] = {
+								weaponType = "PLAYER_WEAPON_SHOTGUN_STICKY_BOMB_ PLAYER_WEAPON_SHOTGUN_STICKY_BOMB_SPLASH_ PLAYER_WEAPON_PLASMA_STUNSHOT_ PLAYER_WEAPON_PLASMA_HEATWAVE_ PLAYER_WEAPON_HAR_SCOPE_ PLAYER_WEAPON_ROCKETLAUNCHER_DETONATE_ PLAYER_WEAPON_BALLISTA_ARBALEST_ PLAYER_WEAPON_BALLISTA_DESTROYER_ PLAYER_WEAPON_MEAT_HOOK_NAPALM_ PLAYER_WEAPON_FRAG_GRENADE_ PLAYER_WEAPON_FRAG_GRENADE_CLUSTER_";
+								dropsCappedByMaxCount = false;
+								dropPhysics = {
+									velocity = 9;
+									horizAngle = 180;
+									vertMinAngle = 60;
+									vertMaxAngle = 75;
+								}
+							}
+							item[2] = {
+								weaponType = "PLAYER_WEAPON_ROCKETLAUNCHER_ PLAYER_WEAPON_BALLISTA_ PLAYER_WEAPON_FRAG_";
+								numExtraToDrop = 0;
+								dropsCappedByMaxCount = false;
+								dropPhysics = {
+									velocity = 9;
+									horizAngle = 180;
+									vertMinAngle = 60;
+									vertMaxAngle = 75;
+								}
+							}
+							item[3] = {
+								weaponType = "PLAYER_WEAPON_ROCKETLAUNCHER_SPLASH_ PLAYER_WEAPON_ROCKETLAUNCHER_DETONATE_ PLAYER_WEAPON_ROCKETLAUNCHER_DETONATE_PROXIMITY_FLARE_SPLASH_ PLAYER_WEAPON_ROCKETLAUNCHER_LOCKON_ PLAYER_WEAPON_BALLISTA_ARBALEST_ PLAYER_WEAPON_BALLISTA_DESTROYER_";
+								numExtraToDrop = 0;
+								dropsCappedByMaxCount = false;
+								dropPhysics = {
+									velocity = 9;
+									horizAngle = 180;
+									vertMinAngle = 60;
+									vertMaxAngle = 75;
+								}
+							}
+							item[4] = {
+								weaponType = "PLAYER_WEAPON_HAR_";
+								hitIncreaseRate = 0.150000006;
+								numExtraToDrop = 0;
+								dropsCappedByMaxCount = false;
+								dropPhysics = {
+									velocity = 9;
+									horizAngle = 180;
+									vertMinAngle = 60;
+									vertMaxAngle = 75;
+								}
+								forceDropDamageIntervalMS = 165;
+							}
+							item[5] = {
+								weaponType = "PLAYER_WEAPON_HAR_MICROMISSLE_ PLAYER_WEAPON_HAR_MICROMISSLE_SPLASH_";
+								hitIncreaseRate = 0.150000006;
+								numExtraToDrop = 0;
+								dropsCappedByMaxCount = false;
+								dropPhysics = {
+									velocity = 9;
+									horizAngle = 180;
+									vertMinAngle = 60;
+									vertMaxAngle = 75;
+								}
+								forceDropDamageIntervalMS = 165;
+							}
+							item[6] = {
+								weaponType = "PLAYER_WEAPON_SHOTGUN_";
+								dropsCappedByMaxCount = false;
+								fixedDropPerWeaponShot = true;
+								dropPhysics = {
+									velocity = 9;
+									horizAngle = 180;
+									vertMinAngle = 60;
+									vertMaxAngle = 75;
+								}
+							}
+							item[7] = {
+								weaponType = "PLAYER_WEAPON_DOUBLE_BARRELED_SHOTGUN_";
+								numExtraToDrop = 2;
+								dropsCappedByMaxCount = false;
+								fixedDropPerWeaponShot = true;
+								dropPhysics = {
+									velocity = 9;
+									horizAngle = 180;
+									vertMinAngle = 60;
+									vertMaxAngle = 75;
+								}
+							}
+							item[8] = {
+								weaponType = "PLAYER_WEAPON_SHOTGUN_FULL_AUTO_ PLAYER_WEAPON_SHOTGUN_FULL_AUTO_MASTERY_";
+								hitIncreaseRate = 0.0299999993;
+								numExtraToDrop = 0;
+								dropsCappedByMaxCount = false;
+								fixedDropPerWeaponShot = true;
+								dropPhysics = {
+									velocity = 9;
+									horizAngle = 180;
+									vertMinAngle = 60;
+									vertMaxAngle = 75;
+								}
+								forceDropDamageIntervalMS = 165;
+							}
+							item[9] = {
+								weaponType = "PLAYER_WEAPON_PLASMA_";
+								hitIncreaseRate = 0.0900000036;
+								numExtraToDrop = 0;
+								dropsCappedByMaxCount = false;
+								dropPhysics = {
+									velocity = 9;
+									horizAngle = 180;
+									vertMinAngle = 60;
+									vertMaxAngle = 75;
+								}
+								forceDropDamageIntervalMS = 165;
+							}
+							item[10] = {
+								weaponType = "PLAYER_WEAPON_CHAINGUN_";
+								hitIncreaseRate = 0.0299999993;
+								numExtraToDrop = 0;
+								dropsCappedByMaxCount = false;
+								dropPhysics = {
+									velocity = 9;
+									horizAngle = 180;
+									vertMinAngle = 60;
+									vertMaxAngle = 75;
+								}
+								forceDropDamageIntervalMS = 165;
+							}
+							item[11] = {
+								weaponType = "PLAYER_WEAPON_PLASMA_MICROWAVE_UPGRADE_ PLAYER_WEAPON_CHAINGUN_TURRET_ PLAYER_WEAPON_CHAINGUN_GATLING_ PLAYER_WEAPON_MICROWAVE_MOD_";
+								hitIncreaseRate = 0.0299999993;
+								numExtraToDrop = 0;
+								dropsCappedByMaxCount = false;
+								dropPhysics = {
+									velocity = 9;
+									horizAngle = 180;
+									vertMinAngle = 60;
+									vertMaxAngle = 75;
+								}
+								forceDropDamageIntervalMS = 165;
+							}
+							item[12] = {
+								weaponType = "PLAYER_WEAPON_BFG_ PLAYER_WEAPON_UNMAYKR_";
+								numExtraToDrop = 9;
+								dropsCappedByMaxCount = false;
+								dropPhysics = {
+									velocity = 9;
+									horizAngle = 180;
+									vertMinAngle = 60;
+									vertMaxAngle = 75;
+								}
+							}
+							item[13] = {
+								weaponType = "PLAYER_WEAPON_CRUCIBLE_ PLAYER_WEAPON_GLORYKILL_ PLAYER_WEAPON_CHAINSAW_";
+								numExtraToDrop = 9;
+								dropsCappedByMaxCount = false;
+								dropPhysics = {
+									velocity = 9;
+									horizAngle = 180;
+									vertMinAngle = 60;
+									vertMaxAngle = 75;
+								}
+							}
+						}
+						dropAllRemainingOnDeath = true;
+					}
+				}
+			}
+			item[1] = {
+				declDamage = "damage/firearm/double_barrel_meat_hook_flame";
+				dropData = {
+					dropOnFirstWeaponHit = false;
+					itemEntity = "prop/lootdrops/pvp/armor/armor_10";
+					itemType = "LOOT_ARMOR";
+					dropItemSound = "play_flame_item_pop";
+					dropTimeAndCount = {
+						initialDropTimeMS = 0;
+						minDropTimeMS = 0;
+						maxDropTimeMS = 0;
+						minNumToDrop = 0;
+						maxNumToDrop = 0;
+						minDropDelayMS = 0;
+						maxDropDelayMS = 0;
+						weaponHitDrops = {
+							num = 1;
+							item[0] = {
+								weaponType = "PLAYER_WEAPON_DOUBLE_BARRELED_SHOTGUN_";
+								dropsCappedByMaxCount = false;
+								fixedDropPerWeaponShot = true;
+								dropPhysics = {
+									velocity = 8;
+									horizAngle = 180;
+									vertMinAngle = 60;
+									vertMaxAngle = 75;
+								}
+							}
+						}
+						dropAllRemainingOnDeath = true;
+					}
+					dropPhysics = {
+						velocity = 6;
+						horizAngle = 40;
+						vertMinAngle = 20;
+						vertMaxAngle = 40;
+					}
+					lifetimeMS = 3500;
+					maxLifetimeDrops = 2;
+					resetNumDropsOnFlameBelchDamage = true;
+				}
+			}
+		}
+	}
+}

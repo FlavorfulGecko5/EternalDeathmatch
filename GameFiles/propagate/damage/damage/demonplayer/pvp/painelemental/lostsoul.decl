@@ -1,0 +1,46 @@
+{
+	edit = {
+		damageParms = {
+			damageName = "#str_decl_damage_painelemental_soul_spit_name_GHOST53566";
+			damageTypes = "DAMAGETYPE_BLINDING";
+			damageSource = "DAMAGESRC_ACID DAMAGESRC_PLASMA";
+			playerBodyReactionDescriptor = {
+				useAlive = true;
+				useDead = true;
+				throwsPlayer = true;
+				onGroundOnly = true;
+				dontUseInWater = true;
+			}
+			hitClientAuthoritative = true;
+			showThreatIndicatorForSelfDamage = false;
+			selfDamageScale = 0;
+			killStat = "STAT_MP_DEMON_CACODEMON_BILE_KILLS";
+			kickTime = 0;
+			kickAmplitude = 0;
+			kickDir = {
+				y = 0;
+			}
+			ragdollImpulseMag = 21.6027012;
+			hitFXStartCondition = "FX_PLAYER_VIEW_HIT";
+			intensity = "DAMAGEINTENSITY_MEDIUM";
+			damageSoundWhenLocalPlayerIsHit = "play_fire_damage_player";
+			damageSoundWhenLocalPlayerIsHit_Armor = "play_fire_damage_armor";
+			friendlyFire = false;
+			selfDamage = false;
+			knocksOffArmor = false;
+			damageIcon = "textures/guis/hud/damage_icons/demon/ability/pain_elemental_soulspit";
+			declGoreBehavior = "gorebehavior/default";
+			damageBasedCritInfo = {
+				critAgainstDemonWeakPoints = true;
+				damageThreshold = 50;
+			}
+			dodgingValue = 0.200000003;
+		}
+		maxDamage = {
+			defaultValue = 0;
+		}
+		minDamage = {
+			defaultValue = 0;
+		}
+	}
+}

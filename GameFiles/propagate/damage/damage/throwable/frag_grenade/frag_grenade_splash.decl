@@ -1,0 +1,70 @@
+{
+	edit = {
+		damageParms = {
+			weaponDamageType = "PLAYER_WEAPON_FRAG_GRENADE";
+			damageName = "#str_weapon_grenade";
+			damageTooltip = "grenade";
+			damageTypes = "DAMAGETYPE_HEALTH DAMAGETYPE_EXPLOSION DAMAGETYPE_SPLASH DAMAGETYPE_EQUIPMENT";
+			damageSource = "DAMAGESRC_EXPLOSIVE DAMAGESRC_GRENADE";
+			handsHitReactionType = "HANDSHITREACTION_EXPLOSIVE";
+			playerBodyReactionDescriptor = {
+				type = "PLAYER_BODY_REACTION_GIB";
+			}
+			bloodSplatterCount = 5;
+			selfDamageScale = 0;
+			damageStat = "STAT_EQUIPMENT_FRAG_GRENADE_DAMAGE";
+			killStat = "STAT_GRENADE_KILLS";
+			ragdollOnDeath = true;
+			affectsDamageDir = false;
+			alternateHitIndicator = true;
+			aiDamageMitigation = {
+				num = 1;
+				item[0] = {
+					monsterType = "AI_MONSTER_MARAUDER AI_MONSTER_GLADIATOR";
+					maxDamage = -1;
+					damageScalar = 0.5;
+				}
+			}
+			knockBack = 1.72821605;
+			knockUp = 0.431827009;
+			freezeTagKnockBack = 3.4564321;
+			freezeTagKnockUp = 0.215913996;
+			knockBackInAirScale = 0.5;
+			kickTime = 140;
+			kickAmplitude = 0.100000001;
+			radius = 7;
+			radiusInner = 4;
+			ragdollImpulseMag = 8.6410799;
+			damageSoundWhenLocalPlayerIsHit = "play_sfx_splash_damage_ducktest";
+			knocksOffArmor = false;
+			damageIcon = "textures/guis/hud/damage_icons/weapon_grenade";
+			declGoreBehavior = "gorebehavior/throwable/grenade";
+		}
+		maxDamage = {
+			defaultValue = 630;
+		}
+		minDamage = {
+			defaultValue = 630;
+		}
+		demonPlayerDamageScale = {
+			defaultValue = 0.792999983;
+		}
+		pvpPlayerDamageScale = 0.792999983;
+		demonPlayerDamageMitigation = {
+			num = 1;
+			item[0] = {
+				monsterType = "AI_MONSTER_PLAYER_PAIN_ELEMENTAL";
+				damageScalar = {
+					defaultValue = 0;
+					branchPairs = {
+						num = 1;
+						item[0] = {
+							branchKey = "CONTROLLERPAD_DECL";
+							branchResult = 0;
+						}
+					}
+				}
+			}
+		}
+	}
+}

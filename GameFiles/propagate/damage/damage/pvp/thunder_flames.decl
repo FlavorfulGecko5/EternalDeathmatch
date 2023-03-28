@@ -1,0 +1,35 @@
+{
+	inherit = "damage/hazard/fire";
+	edit = {
+		damageParms = {
+			handsHitReactionType = "HANDSHITREACTION_NONE";
+			playerDamageScale = 1;
+			damageIcon = "textures/guis/hud/damage_icons/environment/hazard_fire";
+		}
+		maxDamage = {
+			defaultValue = 5;
+		}
+		minDamage = {
+			defaultValue = 5;
+		}
+		demonPlayerDamageScale = {
+			defaultValue = 5;
+		}
+		demonPlayerDamageMitigation = {
+			num = 1;
+			item[0] = {
+				monsterType = "AI_MONSTER_PLAYER_PAIN_ELEMENTAL";
+				damageScalar = {
+					defaultValue = 0;
+					branchPairs = {
+						num = 1;
+						item[0] = {
+							branchKey = "CONTROLLERPAD_DECL";
+							branchResult = 0;
+						}
+					}
+				}
+			}
+		}
+	}
+}

@@ -53,6 +53,31 @@
             "EternalMod/strings/"
         ],
 
+        "gameresources_patch2/generated/decls":
+        [
+            "actormodifierlistui/actormodifiers_ui.decl",
+            "ammo/ammo/sharedammopool/bullets.decl",
+            "damage/damage/demonplayer/pvp/painelemental/lostsoul.decl",
+            "damage/damage/demonplayer/pvp/painelemental/lostsoul_splash.decl",
+            "damage/damage/hazard/slime.decl",
+            "damage/damage/pvp/thunder_flames.decl",
+            "damage/damage/pvp/zap_electrical.decl",
+            "damage/damage/throwable/frag_grenade/frag_grenade_splash.decl",
+            "demoncarddeck/demoncarddeck/pvp/painelemental/deck_1.decl",
+            "lobby/lobbysettings.decl",
+            "lootdrop/lootdrop/pvp/health/base/fodder_high_hp_chainsaw_kill.decl",
+            "lootdrop/lootdrop/pvp/health/base/fodder_high_hp_weapon_kill.decl",
+            "lootdrop/lootdrop/pvp/health/base/fodder_low_hp_chainsaw_kill.decl",
+            "lootdrop/lootdrop/pvp/health/base/fodder_low_hp_weapon_kill.decl",
+            "lootdrop/lootdrop/pvp/health/base/fodder_med_hp_chainsaw_kill.decl",
+            "lootdrop/lootdrop/pvp/health/base/fodder_med_hp_weapon_kill.decl",
+            "lootdropcomponent/ai/default_fodder_pvp.decl",
+            "lootdropcomponent/ai/default_heavy_pvp.decl",
+            "lootdropcomponent/ai/default_medium_pvp.decl",
+            "lootdropcomponent/ai/default_pvp.decl",
+            "lootdropcomponent/ai/default_superheavy_pvp.decl"
+        ],
+
         "e1m3_cult_patch3/": ["EternalMod/assetsinfo/e1m3_cult.json"],
         "e1m4_boss_patch2/": ["EternalMod/assetsinfo/e1m4_boss.json"],
         "e2m2_base_patch3/": ["EternalMod/assetsinfo/e2m2_base.json"],

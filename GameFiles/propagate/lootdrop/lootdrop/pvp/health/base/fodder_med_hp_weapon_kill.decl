@@ -1,0 +1,15 @@
+{
+	inherit = "lootdrop/pvp/default";
+	edit = {
+		dropRestriction = "LOOT_DROP_RESTRICTION_NORMAL_KILL_OR_GLORY_KILL";
+		value_MinConditional = 26;
+		value_MaxConditional = 40;
+		itemType = "LOOT_HEALTH";
+		entityDef = "prop/lootdrops/pvp/health/health_10";
+		item_maxDrop = {
+			defaultValue = 3;
+		}
+		decl = "health/pvp/health_10";
+		mustNotHavePerk = "perk/pvp/slayer/eor_upgrade_resource_drain";
+	}
+}

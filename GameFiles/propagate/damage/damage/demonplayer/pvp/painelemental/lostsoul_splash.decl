@@ -1,0 +1,39 @@
+{
+	edit = {
+		damageParms = {
+			damageName = "#str_decl_damage_painelemental_soul_spit_splash_name_GHOST53567";
+			damageTypes = "DAMAGETYPE_SPLASH";
+			damageSource = "DAMAGESRC_ACID DAMAGESRC_PLASMA";
+			hitClientAuthoritative = true;
+			showThreatIndicatorForSelfDamage = false;
+			noFeedbackSound = true;
+			killStat = "STAT_MP_DEMON_CACODEMON_BILE_KILLS";
+			kickTime = 0;
+			kickAmplitude = 0;
+			kickDir = {
+				y = 0;
+			}
+			radius = 3.5;
+			radiusInner = 1;
+			radiusOuterDamageStrength = 0.25;
+			expansionSpeed = 57.1500015;
+			hitFXStartCondition = "FX_PLAYER_VIEW_HIT";
+			intensity = "DAMAGEINTENSITY_LIGHT";
+			damageSoundWhenLocalPlayerIsHit = "play_fire_damage_player";
+			damageSoundWhenLocalPlayerIsHit_Armor = "play_fire_damage_armor";
+			selfDamage = true;
+			knocksOffArmor = false;
+			damageIcon = "textures/guis/hud/damage_icons/demon/ability/pain_elemental_soulspit";
+			declGoreBehavior = "gorebehavior/default";
+			hitFlashDurationMS = 200;
+			selfDamageScale = 5;
+		}
+		maxDamage = {
+			defaultValue = 1;
+		}
+		minDamage = {
+			defaultValue = 1;
+		}
+		pvpPlayerDamageScale = 0;
+	}
+}
