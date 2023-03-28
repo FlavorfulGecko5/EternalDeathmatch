@@ -1,0 +1,11 @@
+{
+	"resources":
+	[
+		{
+			"name":"pvp_shrapnel.resources"
+		},	
+		{
+			"name":"pvp_shrapnel_patch1.resources"
+		}
+	]
+}

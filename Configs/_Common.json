@@ -11,10 +11,12 @@
             "EternalMod/strings/"
         ],
 
-        "e1m3_cult_patch3/": 
-        [
-            "EternalMod/assetsinfo/e1m3_cult.json"
-        ]
+        "e1m3_cult_patch3/": ["EternalMod/assetsinfo/e1m3_cult.json"],
+        "e1m4_boss_patch2/": ["EternalMod/assetsinfo/e1m4_boss.json"],
+        "e2m2_base_patch3/": ["EternalMod/assetsinfo/e2m2_base.json"],
+        "e2m4_boss_patch2/": ["EternalMod/assetsinfo/e2m4_boss.json"],
+        "e4m3_mcity_patch2/": ["EternalMod/assetsinfo/e4m3_mcity.json"],
+        "e5m1_spear_patch1/": ["EternalMod/assetsinfo/e5m1_spear.json"]
     },
 
     "StringExpressions": false
