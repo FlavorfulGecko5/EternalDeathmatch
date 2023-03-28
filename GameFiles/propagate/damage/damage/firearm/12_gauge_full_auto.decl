@@ -1,0 +1,85 @@
+{
+	inherit = "damage/firearm/12_gauge";
+	edit = {
+		damageParms = {
+			weaponDamageType = "PLAYER_WEAPON_SHOTGUN_FULL_AUTO";
+			aiDamageMitigation = {
+				num = 7;
+				item[5] = {
+					monsterType = "AI_MONSTER_MAYKR_ANGEL";
+					maxDamage = -1;
+					damageScalar = 0.899999976;
+				}
+				item[6] = {
+					monsterType = "AI_MONSTER_SAMUEL_BOSS";
+					maxDamage = -1;
+					damageScalar = 0.5;
+				}
+			}
+			declGoreBehavior = "gorebehavior/firearm/12_gauge_full_auto";
+			noDeath = false;
+		}
+		demonPlayerDamageMitigation = {
+			item[0] = {
+				damageScalar = {
+					defaultValue = 1;
+					branchPairs = {
+						item[0] = {
+							branchResult = 1;
+						}
+					}
+				}
+			}
+			item[1] = {
+				damageScalar = {
+					defaultValue = 1;
+					branchPairs = {
+						item[0] = {
+							branchResult = 1;
+						}
+					}
+				}
+			}
+			item[2] = {
+				damageScalar = {
+					defaultValue = 1;
+					branchPairs = {
+						item[0] = {
+							branchResult = 1;
+						}
+					}
+				}
+			}
+			item[3] = {
+				damageScalar = {
+					defaultValue = 1;
+					branchPairs = {
+						item[0] = {
+							branchResult = 1;
+						}
+					}
+				}
+			}
+			item[4] = {
+				damageScalar = {
+					defaultValue = 1;
+					branchPairs = {
+						item[0] = {
+							branchResult = 1;
+						}
+					}
+				}
+			}
+			item[5] = {
+				damageScalar = {
+					defaultValue = 1;
+					branchPairs = {
+						item[0] = {
+							branchResult = 1;
+						}
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,179 @@
+{
+	inherit = "damage/firearm/base/bullet_standard";
+	edit = {
+		damageParms = {
+			weaponDamageType = "PLAYER_WEAPON_SHOTGUN";
+			damageName = "#str_damage_combat_shotgun_shell";
+			pointBlankDamage = 28;
+			startPBFalloffDistance = 4.75;
+			endPBFalloffDistance = 4.75;
+			startFalloffDistance = 10;
+			endFalloffDistance = 10;
+			aiDamageMitigation = {
+				num = 6;
+				item[0] = {
+					monsterType = "AI_MONSTER_IMP AI_MONSTER_STONE_IMP AI_MONSTER_GARGOYLE";
+				}
+				item[1] = {
+					monsterType = "AI_MONSTER_ZOMBIE_TIER_1";
+					damagePerFrame = false;
+				}
+				item[2] = {
+					monsterType = "AI_MONSTER_HELL_SOLDIER";
+				}
+				item[3] = {
+					monsterType = "AI_MONSTER_ZOMBIE_MAYKR";
+					maxDamage = 320;
+					damageScalar = 1.20000005;
+				}
+				item[4] = {
+					monsterType = "AI_MONSTER_DOOM_HUNTER";
+					maxDamage = 320;
+					damageScalar = 1.20000005;
+				}
+				item[5] = {
+					monsterType = "AI_MONSTER_ZOMBIE_T1_SCREECHER";
+					damageScalar = 2;
+				}
+			}
+			ragdollImpulseMag = 4.32053995;
+			damageIcon = "textures/guis/hud/damage_icons/slayer/weapon/weapon_shotgun";
+			declGoreBehavior = "gorebehavior/firearm/12_gauge";
+			hitFlashDurationMS = 200;
+			noDeath = $emb_var# ~ClassicMode $;
+		}
+		maxDamage = {
+			defaultValue = 28;
+		}
+		minDamage = {
+			defaultValue = 22;
+		}
+		pvpPlayerDamageScale = 1.25;
+		demonPlayerDamageMitigation = {
+			num = 6;
+			item[0] = {
+				monsterType = "AI_MONSTER_PLAYER_ARCHVILE";
+				damageScalar = {
+					defaultValue = 1.25;
+					branchPairs = {
+						num = 1;
+						item[0] = {
+							branchKey = "CONTROLLERPAD_DECL";
+							branchResult = 1.25;
+						}
+					}
+				}
+				fallOffScale = {
+					branchPairs = {
+						num = 1;
+						item[0] = {
+							branchKey = "CONTROLLERPAD_DECL";
+							branchResult = 1;
+						}
+					}
+				}
+			}
+			item[1] = {
+				monsterType = "AI_MONSTER_PLAYER_MANCUBUS";
+				damageScalar = {
+					defaultValue = 1.25;
+					branchPairs = {
+						num = 1;
+						item[0] = {
+							branchKey = "CONTROLLERPAD_DECL";
+							branchResult = 1.25;
+						}
+					}
+				}
+				fallOffScale = {
+					branchPairs = {
+						num = 1;
+						item[0] = {
+							branchKey = "CONTROLLERPAD_DECL";
+							branchResult = 1;
+						}
+					}
+				}
+			}
+			item[2] = {
+				monsterType = "AI_MONSTER_PLAYER_MARAUDER";
+				damageScalar = {
+					defaultValue = 1.25;
+					branchPairs = {
+						num = 1;
+						item[0] = {
+							branchKey = "CONTROLLERPAD_DECL";
+							branchResult = 1.25;
+						}
+					}
+				}
+				fallOffScale = {
+					branchPairs = {
+						num = 1;
+						item[0] = {
+							branchKey = "CONTROLLERPAD_DECL";
+							branchResult = 1;
+						}
+					}
+				}
+			}
+			item[3] = {
+				monsterType = "AI_MONSTER_PLAYER_PAIN_ELEMENTAL";
+				damageScalar = {
+					defaultValue = 1.25;
+					branchPairs = {
+						num = 1;
+						item[0] = {
+							branchKey = "CONTROLLERPAD_DECL";
+							branchResult = 1.25;
+						}
+					}
+				}
+				fallOffScale = {
+					branchPairs = {
+						num = 1;
+						item[0] = {
+							branchKey = "CONTROLLERPAD_DECL";
+							branchResult = 1;
+						}
+					}
+				}
+			}
+			item[4] = {
+				monsterType = "AI_MONSTER_PLAYER_REVENANT";
+				damageScalar = {
+					defaultValue = 1.25;
+					branchPairs = {
+						num = 1;
+						item[0] = {
+							branchKey = "CONTROLLERPAD_DECL";
+							branchResult = 1.25;
+						}
+					}
+				}
+				fallOffScale = {
+					branchPairs = {
+						num = 1;
+						item[0] = {
+							branchKey = "CONTROLLERPAD_DECL";
+							branchResult = 1;
+						}
+					}
+				}
+			}
+			item[5] = {
+				monsterType = "AI_MONSTER_PLAYER_DREADKNIGHT";
+				damageScalar = {
+					defaultValue = 1.25;
+					branchPairs = {
+						num = 1;
+						item[0] = {
+							branchKey = "CONTROLLERPAD_DECL";
+							branchResult = 1.25;
+						}
+					}
+				}
+			}
+		}
+	}
+}

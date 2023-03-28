@@ -1,0 +1,84 @@
+{
+	inherit = "damage/firearm/heavy_cannon_burst_detonate";
+	edit = {
+		damageParms = {
+			weaponDamageType = "PLAYER_WEAPON_HAR_MICROMISSLE_SPLASH";
+			damageName = "#str_online_weapon_heavy_assault_rifle";
+			damageTypes = "DAMAGETYPE_HEALTH DAMAGETYPE_SPLASH";
+			damageSource = "DAMAGESRC_EXPLOSIVE";
+			handsHitReactionType = "HANDSHITREACTION_NONE";
+			playerBodyReactionDescriptor = {
+				type = "PLAYER_BODY_REACTION_GIB";
+			}
+			selfDamageScale = 0.0299999993;
+			noFeedbackSound = true;
+			affectsDamageDir = false;
+			aiDamageMitigation = {
+				num = 8;
+				item[0] = {
+					monsterType = "AI_MONSTER_SHOTGUN_SOLDIER";
+					damageScalar = 1.20000005;
+				}
+				item[1] = {
+					monsterType = "AI_MONSTER_ARACHNOTRON";
+					damageScalar = 1.5;
+				}
+				item[2] = {
+					monsterType = "AI_MONSTER_ZOMBIE_MAYKR";
+					damageScalar = 1.25;
+				}
+				item[3] = {
+					monsterType = "AI_MONSTER_HELLKNIGHT";
+					damageScalar = 1.5;
+				}
+				item[4] = {
+					monsterType = "AI_MONSTER_DOOM_HUNTER";
+					damageScalar = 1.29999995;
+				}
+				item[5] = {
+					monsterType = "AI_MONSTER_MARAUDER";
+					damageScalar = 1.04999995;
+				}
+				item[6] = {
+					monsterType = "AI_MONSTER_MAYKR_ANGEL";
+					maxDamage = -1;
+					damageScalar = 0.75;
+				}
+				item[7] = {
+					monsterType = "AI_MONSTER_SAMUEL_BOSS";
+					damageScalar = 0.330000013;
+				}
+			}
+			radius = 1.829;
+			ragdollImpulseMag = 0.864108026;
+			declGoreBehavior = "gorebehavior/firearm/heavy_cannon_missile_splash";
+			igniteVictimWithPlayerUpgrade = true;
+		}
+		maxDamage = {
+			defaultValue = 100;
+		}
+		minDamage = {
+			defaultValue = 100;
+		}
+		demonPlayerDamageScale = {
+			defaultValue = 0.699999988;
+		}
+		pvpPlayerDamageScale = 0.8;
+		demonPlayerDamageMitigation = {
+			num = 1;
+			item[0] = {
+				monsterType = "AI_MONSTER_PLAYER_PAIN_ELEMENTAL";
+				damageScalar = {
+					defaultValue = 0;
+					branchPairs = {
+						num = 1;
+						item[0] = {
+							branchKey = "CONTROLLERPAD_DECL";
+							branchResult = 0;
+						}
+					}
+				}
+			}
+		}
+	}
+}

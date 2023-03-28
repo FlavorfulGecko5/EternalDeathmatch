@@ -1,0 +1,12 @@
+{
+	inherit = "damage/firearm/pop_rocket";
+	edit = {
+		maxDamage = {
+			defaultValue = 200;
+		}
+		minDamage = {
+			defaultValue = 200;
+		}
+		pvpPlayerDamageScale = 1;
+	}
+}

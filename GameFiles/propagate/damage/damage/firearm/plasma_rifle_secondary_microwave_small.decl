@@ -1,0 +1,69 @@
+{
+	edit = {
+		damageParms = {
+			weaponDamageType = "PLAYER_WEAPON_MICROWAVE_MOD_EXPLOSION";
+			damageName = "#str_weapon_grenade";
+			damageTooltip = "grenade";
+			damageTypes = "DAMAGETYPE_HEALTH DAMAGETYPE_EXPLOSION DAMAGETYPE_SPLASH";
+			damageSource = "DAMAGESRC_EXPLOSIVE DAMAGESRC_GRENADE";
+			handsHitReactionType = "HANDSHITREACTION_EXPLOSIVE";
+			playerBodyReactionDescriptor = {
+				type = "PLAYER_BODY_REACTION_GIB";
+			}
+			bloodSplatterCount = 5;
+			playerDamageScale = 0;
+			ragdollOnDeath = true;
+			affectsDamageDir = false;
+			alternateHitIndicator = true;
+			knockBack = 1.72821605;
+			knockUp = 0.431827009;
+			freezeTagKnockBack = 3.4564321;
+			freezeTagKnockUp = 0.215913996;
+			knockBackInAirScale = 0.5;
+			kickTime = 140;
+			kickAmplitude = 0.100000001;
+			radius = 6;
+			radiusInner = 3;
+			radiusOuterDamageStrength = 0.5;
+			ragdollImpulseMag = 8.6410799;
+			damageSoundWhenLocalPlayerIsHit = "play_sfx_splash_damage_ducktest";
+			damageSoundWhenLocalDemonPlayerIsHit = "play_energy_damage_demon";
+			knocksOffArmor = false;
+			damageIcon = "textures/guis/hud/damage_icons/slayer/weapon/weapon_plasma";
+			declGoreBehavior = "gorebehavior/firearm/plasma_rifle_microwave_splash";
+			skillshotHighlightInfo = {
+				fadeTime = 300;
+				color = {
+					r = 1;
+					a = 1;
+				}
+			}
+			selfDamageScale = 0;
+		}
+		maxDamage = {
+			defaultValue = 100;
+		}
+		minDamage = {
+			defaultValue = 50;
+		}
+		pvpPlayerDamageScale = {
+			defaultValue = 5;
+		}
+		demonPlayerDamageMitigation = {
+			num = 1;
+			item[0] = {
+				monsterType = "AI_MONSTER_PLAYER_PAIN_ELEMENTAL";
+				damageScalar = {
+					defaultValue = 0;
+					branchPairs = {
+						num = 1;
+						item[0] = {
+							branchKey = "CONTROLLERPAD_DECL";
+							branchResult = 0;
+						}
+					}
+				}
+			}
+		}
+	}
+}

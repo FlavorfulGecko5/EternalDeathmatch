@@ -1,0 +1,125 @@
+{
+	edit = {
+		damageParms = {
+			weaponDamageType = "PLAYER_WEAPON_CHAINGUN_TURRET";
+			bulletPenetrationData = {
+				penetrationEnergy = 1000;
+				damageScaleAccepted = 0;
+			}
+			damageName = "chaingun";
+			damageSource = "DAMAGESRC_BULLET";
+			aiDamageMitigation = {
+				num = 2;
+				item[0] = {
+					monsterType = "AI_MONSTER_ICON_OF_SIN AI_MONSTER_MAYKR_ANGEL";
+					maxDamage = -1;
+					damageScalar = 0.400000006;
+				}
+				item[1] = {
+					monsterType = "AI_MONSTER_SAMUEL_BOSS";
+					maxDamage = -1;
+					damageScalar = 0.391000003;
+				}
+			}
+			damageSoundWhenLocalDemonPlayerIsHit = "play_bullet_damage_demon";
+			knocksOffArmor = false;
+			damageIcon = "textures/guis/hud/damage_icons/slayer/weapon/weapon_chaingun";
+			declGoreBehavior = "gorebehavior/firearm/chaingun_turret";
+			skillshotHighlightInfo = {
+				fadeTime = 300;
+				color = {
+					r = 1;
+					a = 1;
+				}
+			}
+		}
+		maxDamage = {
+			defaultValue = 24;
+		}
+		minDamage = {
+			defaultValue = 24;
+		}
+		pvpPlayerDamageScale = 1.25;
+		demonPlayerDamageMitigation = {
+			num = 6;
+			item[0] = {
+				monsterType = "AI_MONSTER_PLAYER_ARCHVILE";
+				damageScalar = {
+					defaultValue = 0.670000017;
+					branchPairs = {
+						num = 1;
+						item[0] = {
+							branchKey = "CONTROLLERPAD_DECL";
+							branchResult = 0.670000017;
+						}
+					}
+				}
+			}
+			item[1] = {
+				monsterType = "AI_MONSTER_PLAYER_MANCUBUS";
+				damageScalar = {
+					defaultValue = 0.670000017;
+					branchPairs = {
+						num = 1;
+						item[0] = {
+							branchKey = "CONTROLLERPAD_DECL";
+							branchResult = 0.670000017;
+						}
+					}
+				}
+			}
+			item[2] = {
+				monsterType = "AI_MONSTER_PLAYER_MARAUDER";
+				damageScalar = {
+					defaultValue = 0.670000017;
+					branchPairs = {
+						num = 1;
+						item[0] = {
+							branchKey = "CONTROLLERPAD_DECL";
+							branchResult = 0.670000017;
+						}
+					}
+				}
+			}
+			item[3] = {
+				monsterType = "AI_MONSTER_PLAYER_PAIN_ELEMENTAL";
+				damageScalar = {
+					defaultValue = 0.670000017;
+					branchPairs = {
+						num = 1;
+						item[0] = {
+							branchKey = "CONTROLLERPAD_DECL";
+							branchResult = 0.670000017;
+						}
+					}
+				}
+			}
+			item[4] = {
+				monsterType = "AI_MONSTER_PLAYER_REVENANT";
+				damageScalar = {
+					defaultValue = 0.670000017;
+					branchPairs = {
+						num = 1;
+						item[0] = {
+							branchKey = "CONTROLLERPAD_DECL";
+							branchResult = 0.670000017;
+						}
+					}
+				}
+			}
+			item[5] = {
+				monsterType = "AI_MONSTER_PLAYER_DREADKNIGHT";
+				damageScalar = {
+					defaultValue = 0.670000017;
+					branchPairs = {
+						num = 1;
+						item[0] = {
+							branchKey = "CONTROLLERPAD_DECL";
+							branchResult = 0.670000017;
+						}
+					}
+				}
+			}
+		}
+	}
+}

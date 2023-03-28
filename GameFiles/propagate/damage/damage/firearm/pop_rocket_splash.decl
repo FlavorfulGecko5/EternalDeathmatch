@@ -1,0 +1,103 @@
+{
+	inherit = "damage/firearm/40_x_46mm_grenade";
+	edit = {
+		damageParms = {
+			weaponDamageType = "PLAYER_WEAPON_SHOTGUN_STICKY_BOMB_SPLASH";
+			damageName = "#str_damage_combat_shotgun_pop_rocket";
+			damageTypes = "DAMAGETYPE_HEALTH DAMAGETYPE_SPLASH";
+			handsHitReactionType = "HANDSHITREACTION_NONE";
+			playerBodyReactionDescriptor = {
+				type = "PLAYER_BODY_REACTION_GIB";
+			}
+			syncExtraInfoForSplashTraces = true;
+			selfDamageScale = 0;
+			noFeedbackSound = true;
+			affectsDamageDir = false;
+			aiDamageMitigation = {
+				num = 1;
+				item[0] = {
+					monsterType = "AI_MONSTER_MARAUDER";
+					maxDamage = -1;
+					damageScalar = 0.75;
+				}
+			}
+			radius = 4.38199997;
+			radiusInner = 1.829;
+			radiusOuterDamageStrength = 0.100000001;
+			damageIcon = "textures/guis/hud/damage_icons/slayer/weapon/weapon_shotgun";
+			declGoreBehavior = "gorebehavior/firearm/pop_rocket_splash";
+			igniteVictimWithPlayerUpgrade = true;
+		}
+		maxDamage = {
+			defaultValue = 350;
+		}
+		minDamage = {
+			defaultValue = 0;
+		}
+		pvpPlayerDamageScale = 1.1429;
+		demonPlayerDamageMitigation = {
+			num = 5;
+			item[0] = {
+				monsterType = "AI_MONSTER_PLAYER_ARCHVILE";
+				damageScalar = {
+					branchPairs = {
+						num = 1;
+						item[0] = {
+							branchKey = "CONTROLLERPAD_DECL";
+							branchResult = 1;
+						}
+					}
+				}
+			}
+			item[1] = {
+				monsterType = "AI_MONSTER_PLAYER_MANCUBUS";
+				damageScalar = {
+					branchPairs = {
+						num = 1;
+						item[0] = {
+							branchKey = "CONTROLLERPAD_DECL";
+							branchResult = 1;
+						}
+					}
+				}
+			}
+			item[2] = {
+				monsterType = "AI_MONSTER_PLAYER_MARAUDER";
+				damageScalar = {
+					branchPairs = {
+						num = 1;
+						item[0] = {
+							branchKey = "CONTROLLERPAD_DECL";
+							branchResult = 1;
+						}
+					}
+				}
+			}
+			item[3] = {
+				monsterType = "AI_MONSTER_PLAYER_PAIN_ELEMENTAL";
+				damageScalar = {
+					defaultValue = 0;
+					branchPairs = {
+						num = 1;
+						item[0] = {
+							branchKey = "CONTROLLERPAD_DECL";
+							branchResult = 0;
+						}
+					}
+				}
+			}
+			item[4] = {
+				monsterType = "AI_MONSTER_PLAYER_REVENANT";
+				damageScalar = {
+					branchPairs = {
+						num = 1;
+						item[0] = {
+							branchKey = "CONTROLLERPAD_DECL";
+							branchResult = 1;
+						}
+					}
+				}
+			}
+		}
+	}
+}

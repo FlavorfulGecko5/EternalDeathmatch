@@ -1,0 +1,29 @@
+{
+	inherit = "damage/firearm/40_x_46mm_grenade";
+	edit = {
+		damageParms = {
+			weaponDamageType = "PLAYER_WEAPON_SHOTGUN_STICKY_BOMB";
+			damageName = "#str_damage_combat_shotgun_pop_rocket";
+			handsHitReactionType = "HANDSHITREACTION_NONE";
+			clientPredictiveVsAI = true;
+			noDeath = true;
+			aiDamageMitigation = {
+				num = 1;
+				item[0] = {
+					monsterType = "AI_MONSTER_MARAUDER";
+					maxDamage = -1;
+					damageScalar = 2;
+				}
+			}
+			damageIcon = "textures/guis/hud/damage_icons/slayer/weapon/weapon_shotgun";
+			declGoreBehavior = "gorebehavior/firearm/pop_rocket_direct";
+		}
+		maxDamage = {
+			defaultValue = 50;
+		}
+		minDamage = {
+			defaultValue = 50;
+		}
+		pvpPlayerDamageScale = 4;
+	}
+}

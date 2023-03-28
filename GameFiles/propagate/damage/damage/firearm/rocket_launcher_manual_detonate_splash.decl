@@ -1,0 +1,91 @@
+{
+	inherit = "damage/firearm/rocket_launcher_splash";
+	edit = {
+		damageParms = {
+			weaponDamageType = "PLAYER_WEAPON_ROCKETLAUNCHER_DETONATE";
+			damageName = "#str_damage_rocket_launcher_detonate_splash";
+			selfDamageScale = 0.07;
+			killStat = "STAT_WEAPON_ROCKET_LAUNCHER_MAN_DET_KILLS";
+			aiDamageMitigation = {
+				item[0] = {
+					damageScalar = 0.375;
+				}
+				item[1] = {
+					monsterType = "AI_MONSTER_PINKY";
+					damageScalar = 2.5;
+				}
+			}
+			radiusInner = 2;
+			radiusOuterDamageStrength = 0.25;
+			declGoreBehavior = "gorebehavior/firearm/rocket_launcher_remote_detonate_splash";
+		}
+		maxDamage = {
+			defaultValue = 400;
+		}
+		pvpPlayerDamageScale = 1.25;
+		demonPlayerDamageMitigation = {
+			item[0] = {
+				damageScalar = {
+					defaultValue = 1;
+					branchPairs = {
+						item[0] = {
+							branchResult = 1;
+						}
+					}
+				}
+			}
+			item[1] = {
+				damageScalar = {
+					defaultValue = 1;
+					branchPairs = {
+						item[0] = {
+							branchResult = 1;
+						}
+					}
+				}
+			}
+			item[2] = {
+				damageScalar = {
+					defaultValue = 1;
+					branchPairs = {
+						item[0] = {
+							branchResult = 1;
+						}
+					}
+				}
+			}
+			item[3] = {
+				damageScalar = {
+					defaultValue = 0;
+					branchPairs = {
+						item[0] = {
+							branchResult = 0;
+						}
+					}
+				}
+			}
+			item[4] = {
+				damageScalar = {
+					defaultValue = 1;
+					branchPairs = {
+						item[0] = {
+							branchResult = 1;
+						}
+					}
+				}
+			}
+			item[5] = {
+				damageScalar = {
+					defaultValue = 1;
+					branchPairs = {
+						num = 1;
+						item[0] = {
+							branchKey = "CONTROLLERPAD_DECL";
+							branchResult = 1;
+						}
+					}
+				}
+			}
+		}
+	}
+}

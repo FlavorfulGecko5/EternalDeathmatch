@@ -1,0 +1,127 @@
+{
+	inherit = "damage/firearm/base/bullet_standard";
+	edit = {
+		damageParms = {
+			weaponDamageType = "PLAYER_WEAPON_BALLISTA_ARBALEST";
+			bulletPenetrationData = {
+				usesPenetrationEnergy = false;
+				maxPenetrations = -1;
+				aiBlocksPenetration = "AI_MONSTER_STONE_IMP AI_MONSTER_CURSED_PROWLER AI_MONSTER_HELLKNIGHT AI_MONSTER_DREADKNIGHT AI_MONSTER_PINKY AI_MONSTER_SPECTRE AI_MONSTER_CACODEMON AI_MONSTER_PAIN_ELEMENTAL AI_MONSTER_MANCUBUS AI_MONSTER_CYBER_MANCUBUS AI_MONSTER_ARACHNOTRON AI_MONSTER_REVENANT AI_MONSTER_WHIPLASH AI_MONSTER_DOOM_HUNTER AI_MONSTER_MARAUDER AI_MONSTER_BARON AI_MONSTER_TYRANT AI_MONSTER_ARCHVILE AI_MONSTER_BUFF_POD AI_MONSTER_SUPER_TENTACLE AI_MONSTER_TENTACLE AI_MONSTER_GLADIATOR AI_MONSTER_ICON_OF_SIN AI_MONSTER_MAYKR_ANGEL";
+				demonPlayerBlocksPenetration = true;
+			}
+			damageName = "#str_damage_sniper_rifle_round";
+			damageSource = "DAMAGESRC_GAUSS";
+			hitClientAuthoritative = false;
+			aiDamageMitigation = {
+				num = 5;
+				item[0] = {
+					monsterType = "AI_MONSTER_LOSTSOUL AI_MONSTER_CACODEMON AI_MONSTER_PAIN_ELEMENTAL AI_MONSTER_DOOM_HUNTER";
+					damageScalar = 1.5;
+				}
+				item[1] = {
+					monsterType = "AI_MONSTER_MARAUDER";
+					maxDamage = -1;
+					damageScalar = 0.75;
+				}
+				item[2] = {
+					monsterType = "AI_MONSTER_ICON_OF_SIN AI_MONSTER_MAYKR_ANGEL";
+					maxDamage = -1;
+					damageScalar = 0.5;
+				}
+				item[3] = {
+					monsterType = "AI_MONSTER_DREADKNIGHT AI_MONSTER_MANCUBUS AI_MONSTER_CYBER_MANCUBUS";
+					damageScalar = 0.5;
+				}
+				item[4] = {
+					monsterType = "AI_MONSTER_SAMUEL_BOSS";
+					damageScalar = 0.363000005;
+				}
+			}
+			damageSoundWhenLocalDemonPlayerIsHit = "play_precision_damage_demon";
+			damageIcon = "textures/guis/hud/damage_icons/slayer/weapon/weapon_gauss";
+			declGoreBehavior = "gorebehavior/firearm/gauss_cannon_ballista";
+		}
+		maxDamage = {
+			defaultValue = 400;
+		}
+		minDamage = {
+			defaultValue = 400;
+		}
+		pvpPlayerDamageScale = 1.5;
+		demonPlayerDamageMitigation = {
+			num = 6;
+			item[0] = {
+				monsterType = "AI_MONSTER_PLAYER_ARCHVILE";
+				damageScalar = {
+					branchPairs = {
+						num = 1;
+						item[0] = {
+							branchKey = "CONTROLLERPAD_DECL";
+							branchResult = 1;
+						}
+					}
+				}
+			}
+			item[1] = {
+				monsterType = "AI_MONSTER_PLAYER_MANCUBUS";
+				damageScalar = {
+					branchPairs = {
+						num = 1;
+						item[0] = {
+							branchKey = "CONTROLLERPAD_DECL";
+							branchResult = 1;
+						}
+					}
+				}
+			}
+			item[2] = {
+				monsterType = "AI_MONSTER_PLAYER_MARAUDER";
+				damageScalar = {
+					branchPairs = {
+						num = 1;
+						item[0] = {
+							branchKey = "CONTROLLERPAD_DECL";
+							branchResult = 1;
+						}
+					}
+				}
+			}
+			item[3] = {
+				monsterType = "AI_MONSTER_PLAYER_PAIN_ELEMENTAL";
+				damageScalar = {
+					branchPairs = {
+						num = 1;
+						item[0] = {
+							branchKey = "CONTROLLERPAD_DECL";
+							branchResult = 1;
+						}
+					}
+				}
+			}
+			item[4] = {
+				monsterType = "AI_MONSTER_PLAYER_REVENANT";
+				damageScalar = {
+					branchPairs = {
+						num = 1;
+						item[0] = {
+							branchKey = "CONTROLLERPAD_DECL";
+							branchResult = 1;
+						}
+					}
+				}
+			}
+			item[5] = {
+				monsterType = "AI_MONSTER_PLAYER_DREADKNIGHT";
+				damageScalar = {
+					branchPairs = {
+						num = 1;
+						item[0] = {
+							branchKey = "CONTROLLERPAD_DECL";
+							branchResult = 1;
+						}
+					}
+				}
+			}
+		}
+	}
+}

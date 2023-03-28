@@ -1,0 +1,156 @@
+{
+	inherit = "damage/firearm/heavy_cannon_bolt_action_weakpoint_bonus_cylindrical";
+	edit = {
+		damageParms = {
+			spawnEntOnHeadshotKill = "projectile_ent/player/heavy_cannon_bolt_action_mastery_explosion_projectile";
+			spawnEntExplodeInstantly = true;
+		}
+		pvpPlayerDamageScale = 0.75;
+		demonPlayerDamageMitigation = {
+			item[0] = {
+				damageScalar = {
+					defaultValue = 0.875;
+					branchPairs = {
+						num = 1;
+						item[0] = {
+							branchKey = "CONTROLLERPAD_DECL";
+							branchResult = 1;
+						}
+					}
+				}
+				startFODist = 15;
+				endFODist = 45;
+				fallOffScale = {
+					defaultValue = 0.600000024;
+					branchPairs = {
+						num = 1;
+						item[0] = {
+							branchKey = "CONTROLLERPAD_DECL";
+							branchResult = 0.600000024;
+						}
+					}
+				}
+			}
+			item[1] = {
+				damageScalar = {
+					defaultValue = 0.875;
+					branchPairs = {
+						num = 1;
+						item[0] = {
+							branchKey = "CONTROLLERPAD_DECL";
+							branchResult = 1;
+						}
+					}
+				}
+				startFODist = 15;
+				endFODist = 45;
+				fallOffScale = {
+					defaultValue = 0.400000006;
+					branchPairs = {
+						num = 1;
+						item[0] = {
+							branchKey = "CONTROLLERPAD_DECL";
+							branchResult = 0.400000006;
+						}
+					}
+				}
+			}
+			item[2] = {
+				damageScalar = {
+					defaultValue = 0.875;
+					branchPairs = {
+						num = 1;
+						item[0] = {
+							branchKey = "CONTROLLERPAD_DECL";
+							branchResult = 1;
+						}
+					}
+				}
+				startFODist = 15;
+				endFODist = 45;
+				fallOffScale = {
+					defaultValue = 0.600000024;
+					branchPairs = {
+						num = 1;
+						item[0] = {
+							branchKey = "CONTROLLERPAD_DECL";
+							branchResult = 0.600000024;
+						}
+					}
+				}
+			}
+			item[3] = {
+				damageScalar = {
+					defaultValue = 0.875;
+					branchPairs = {
+						num = 1;
+						item[0] = {
+							branchKey = "CONTROLLERPAD_DECL";
+							branchResult = 1;
+						}
+					}
+				}
+				startFODist = 25;
+				endFODist = 75;
+				fallOffScale = {
+					defaultValue = 0.600000024;
+					branchPairs = {
+						num = 1;
+						item[0] = {
+							branchKey = "CONTROLLERPAD_DECL";
+							branchResult = 0.600000024;
+						}
+					}
+				}
+			}
+			item[4] = {
+				damageScalar = {
+					defaultValue = 0.875;
+					branchPairs = {
+						num = 1;
+						item[0] = {
+							branchKey = "CONTROLLERPAD_DECL";
+							branchResult = 1;
+						}
+					}
+				}
+				startFODist = 15;
+				endFODist = 45;
+				fallOffScale = {
+					defaultValue = 0.600000024;
+					branchPairs = {
+						num = 1;
+						item[0] = {
+							branchKey = "CONTROLLERPAD_DECL";
+							branchResult = 0.600000024;
+						}
+					}
+				}
+			}
+			item[5] = {
+				damageScalar = {
+					defaultValue = 0.875;
+					branchPairs = {
+						num = 1;
+						item[0] = {
+							branchKey = "CONTROLLERPAD_DECL";
+							branchResult = 1;
+						}
+					}
+				}
+				startFODist = 15;
+				endFODist = 45;
+				fallOffScale = {
+					defaultValue = 0.600000024;
+					branchPairs = {
+						num = 1;
+						item[0] = {
+							branchKey = "CONTROLLERPAD_DECL";
+							branchResult = 0.600000024;
+						}
+					}
+				}
+			}
+		}
+	}
+}

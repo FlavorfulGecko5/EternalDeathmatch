@@ -1,0 +1,34 @@
+{
+	inherit = "damage/firearm/plasma_rifle_secondary_microwave_small";
+	edit = {
+		damageParms = {
+			radius = 12;
+			radiusInner = 12;
+		}
+		maxDamage = {
+			defaultValue = 1;
+		}
+		minDamage = {
+			defaultValue = 0;
+		}
+		pvpPlayerDamageScale = {
+			defaultValue = 0;
+		}
+		demonPlayerDamageMitigation = {
+			num = 1;
+			item[0] = {
+				monsterType = "AI_MONSTER_PLAYER_PAIN_ELEMENTAL";
+				damageScalar = {
+					defaultValue = 0;
+					branchPairs = {
+						num = 1;
+						item[0] = {
+							branchKey = "CONTROLLERPAD_DECL";
+							branchResult = 0;
+						}
+					}
+				}
+			}
+		}
+	}
+}

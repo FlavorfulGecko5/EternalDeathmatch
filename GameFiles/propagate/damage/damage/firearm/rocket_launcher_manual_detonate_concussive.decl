@@ -1,0 +1,17 @@
+{
+	inherit = "damage/firearm/rocket_launcher_splash";
+	edit = {
+		damageParms = {
+			weaponDamageType = "PLAYER_WEAPON_ROCKETLAUNCHER_DETONATE";
+			damageName = "#str_damage_rocket_launcher_detonate_splash";
+			playerDamageScale = 0;
+			killStat = "STAT_WEAPON_ROCKET_LAUNCHER_MAN_DET_KILLS";
+			radius = 12;
+			declGoreBehavior = "gorebehavior/firearm/rocket_launcher_remote_detonate_splash";
+		}
+		maxDamage = {
+			defaultValue = 1;
+		}
+		pvpPlayerDamageScale = 0;
+	}
+}

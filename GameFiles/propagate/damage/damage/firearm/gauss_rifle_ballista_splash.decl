@@ -1,0 +1,150 @@
+{
+	inherit = "damage/firearm/base/bullet_standard";
+	edit = {
+		damageParms = {
+			weaponDamageType = "PLAYER_WEAPON_BALLISTA_ARBALEST";
+			bulletPenetrationData = {
+				usesPenetrationEnergy = false;
+				maxPenetrations = -1;
+				aiBlocksPenetration = "AI_MONSTER_HELLKNIGHT AI_MONSTER_PINKY AI_MONSTER_SPECTRE AI_MONSTER_CACODEMON AI_MONSTER_MANCUBUS AI_MONSTER_CYBER_MANCUBUS AI_MONSTER_REVENANT AI_MONSTER_BARON AI_MONSTER_ARCHVILE AI_MONSTER_SUPER_TENTACLE AI_MONSTER_TENTACLE";
+			}
+			damageName = "#str_damage_sniper_rifle_round";
+			damageTypes = "DAMAGETYPE_HEALTH DAMAGETYPE_SPLASH";
+			damageSource = "DAMAGESRC_GAUSS";
+			hitClientAuthoritative = false;
+			selfDamageScale = 0;
+			noFeedbackSound = true;
+			affectsDamageDir = false;
+			aiDamageMitigation = {
+				num = 8;
+				item[0] = {
+					monsterType = "AI_MONSTER_LOSTSOUL AI_MONSTER_PAIN_ELEMENTAL";
+					damageScalar = 1.58399999;
+				}
+				item[1] = {
+					monsterType = "AI_MONSTER_CACODEMON";
+					damageScalar = 1.75;
+				}
+				item[2] = {
+					monsterType = "AI_MONSTER_HELLKNIGHT AI_MONSTER_DREADKNIGHT AI_MONSTER_PINKY AI_MONSTER_SPECTRE AI_MONSTER_CYBER_MANCUBUS";
+					damageScalar = 0.699999988;
+				}
+				item[3] = {
+					monsterType = "AI_MONSTER_DOOM_HUNTER AI_MONSTER_MARAUDER AI_MONSTER_BARON AI_MONSTER_TYRANT AI_MONSTER_ARCHVILE";
+					damageScalar = 0.5;
+				}
+				item[4] = {
+					monsterType = "AI_MONSTER_GLADIATOR AI_MONSTER_ICON_OF_SIN AI_MONSTER_MAYKR_ANGEL";
+					maxDamage = -1;
+					damageScalar = 0.5;
+				}
+				item[5] = {
+					monsterType = "AI_MONSTER_MANCUBUS";
+					damageScalar = 0.600000024;
+				}
+				item[6] = {
+					monsterType = "AI_MONSTER_ARACHNOTRON";
+					damageScalar = 0.800000012;
+				}
+				item[7] = {
+					monsterType = "AI_MONSTER_SAMUEL_BOSS";
+					damageScalar = 0.379000008;
+				}
+			}
+			radius = 3.65799999;
+			radiusInner = 0.913999975;
+			radiusOuterDamageStrength = 0.200000003;
+			damageIcon = "textures/guis/hud/damage_icons/slayer/weapon/weapon_gauss";
+			declGoreBehavior = "gorebehavior/firearm/gauss_cannon_ballista_splash";
+			igniteVictimWithPlayerUpgrade = true;
+		}
+		maxDamage = {
+			defaultValue = 1200;
+		}
+		minDamage = {
+			defaultValue = 1200;
+		}
+		pvpPlayerDamageScale = 0.4167;
+		demonPlayerDamageMitigation = {
+			num = 6;
+			item[0] = {
+				monsterType = "AI_MONSTER_PLAYER_ARCHVILE";
+				damageScalar = {
+					defaultValue = 0.5;
+					branchPairs = {
+						num = 1;
+						item[0] = {
+							branchKey = "CONTROLLERPAD_DECL";
+							branchResult = 0.5;
+						}
+					}
+				}
+			}
+			item[1] = {
+				monsterType = "AI_MONSTER_PLAYER_MANCUBUS";
+				damageScalar = {
+					defaultValue = 0.416649997;
+					branchPairs = {
+						num = 1;
+						item[0] = {
+							branchKey = "CONTROLLERPAD_DECL";
+							branchResult = 0.416649997;
+						}
+					}
+				}
+			}
+			item[2] = {
+				monsterType = "AI_MONSTER_PLAYER_MARAUDER";
+				damageScalar = {
+					defaultValue = 0.5;
+					branchPairs = {
+						num = 1;
+						item[0] = {
+							branchKey = "CONTROLLERPAD_DECL";
+							branchResult = 0.5;
+						}
+					}
+				}
+			}
+			item[3] = {
+				monsterType = "AI_MONSTER_PLAYER_PAIN_ELEMENTAL";
+				damageScalar = {
+					defaultValue = 0;
+					branchPairs = {
+						num = 1;
+						item[0] = {
+							branchKey = "CONTROLLERPAD_DECL";
+							branchResult = 0;
+						}
+					}
+				}
+			}
+			item[4] = {
+				monsterType = "AI_MONSTER_PLAYER_REVENANT";
+				damageScalar = {
+					defaultValue = 0.5;
+					branchPairs = {
+						num = 1;
+						item[0] = {
+							branchKey = "CONTROLLERPAD_DECL";
+							branchResult = 0.5;
+						}
+					}
+				}
+			}
+			item[5] = {
+				monsterType = "AI_MONSTER_PLAYER_DREADKNIGHT";
+				damageScalar = {
+					defaultValue = 0.5;
+					branchPairs = {
+						num = 1;
+						item[0] = {
+							branchKey = "CONTROLLERPAD_DECL";
+							branchResult = 0.5;
+						}
+					}
+				}
+			}
+		}
+	}
+}

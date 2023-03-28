@@ -1,0 +1,216 @@
+{
+	inherit = "damage/firearm/base/bullet_standard";
+	edit = {
+		damageParms = {
+			weaponDamageType = "PLAYER_WEAPON_BALLISTA";
+			bulletPenetrationData = {
+				penetrationEnergy = 10000;
+				maxPenetrations = -1;
+				aiBlocksPenetration = "AI_MONSTER_STONE_IMP AI_MONSTER_HELLKNIGHT AI_MONSTER_DREADKNIGHT AI_MONSTER_PINKY AI_MONSTER_SPECTRE AI_MONSTER_CACODEMON AI_MONSTER_PAIN_ELEMENTAL AI_MONSTER_MANCUBUS AI_MONSTER_CYBER_MANCUBUS AI_MONSTER_ARACHNOTRON AI_MONSTER_REVENANT AI_MONSTER_WHIPLASH AI_MONSTER_MAX_HEAVY AI_MONSTER_DOOM_HUNTER AI_MONSTER_MARAUDER AI_MONSTER_BARON AI_MONSTER_TYRANT AI_MONSTER_ARCHVILE AI_MONSTER_MAX_SUPER AI_MONSTER_NPC AI_MONSTER_BUFF_POD AI_MONSTER_SUPER_TENTACLE AI_MONSTER_TENTACLE";
+			}
+			damageName = "#str_damage_sniper_rifle_round";
+			damageSource = "DAMAGESRC_GAUSS";
+			hitClientAuthoritative = true;
+			selfDamageScale = 0;
+			headshotFocusDamage = true;
+			stuns = true;
+			radialDmgUseInflictorToTargetDir = true;
+			aiDamageMitigation = {
+				num = 6;
+				item[0] = {
+					monsterType = "AI_MONSTER_CACODEMON";
+					damageScalar = 1.5625;
+				}
+				item[1] = {
+					monsterType = "AI_MONSTER_PAIN_ELEMENTAL";
+					damageScalar = 1.75;
+				}
+				item[2] = {
+					monsterType = "AI_MONSTER_MARAUDER";
+					maxDamage = 750;
+				}
+				item[3] = {
+					monsterType = "AI_MONSTER_MAYKR_ANGEL AI_MONSTER_SAMUEL_BOSS";
+					maxDamage = -1;
+					damageScalar = 0.75;
+				}
+				item[4] = {
+					monsterType = "AI_MONSTER_ICON_OF_SIN";
+					maxDamage = -1;
+					damageScalar = 0.850000024;
+				}
+				item[5] = {
+					monsterType = "AI_MONSTER_SAMUEL_BOSS";
+					maxDamage = -1;
+					damageScalar = 0.524999976;
+				}
+			}
+			radius = 0.375;
+			radiusOuterDamageStrength = 1;
+			damageSoundWhenLocalDemonPlayerIsHit = "play_precision_damage_demon";
+			damageIcon = "textures/guis/hud/damage_icons/slayer/weapon/weapon_gauss";
+			declGoreBehavior = "gorebehavior/firearm/gauss_cannon";
+			hitFlashDurationMS = 200;
+		}
+		maxDamage = {
+			defaultValue = 800;
+		}
+		minDamage = {
+			defaultValue = 800;
+		}
+		pvpPlayerDamageScale = 0.43;
+		demonPlayerDamageMitigation = {
+			num = 6;
+			item[0] = {
+				monsterType = "AI_MONSTER_PLAYER_ARCHVILE";
+				damageScalar = {
+					defaultValue = 0.625;
+					branchPairs = {
+						num = 1;
+						item[0] = {
+							branchKey = "CONTROLLERPAD_DECL";
+							branchResult = 0.625;
+						}
+					}
+				}
+				startFODist = 15;
+				endFODist = 45;
+				fallOffScale = {
+					defaultValue = 0.600000024;
+					branchPairs = {
+						num = 1;
+						item[0] = {
+							branchKey = "CONTROLLERPAD_DECL";
+							branchResult = 0.600000024;
+						}
+					}
+				}
+			}
+			item[1] = {
+				monsterType = "AI_MONSTER_PLAYER_MANCUBUS";
+				damageScalar = {
+					defaultValue = 0.625;
+					branchPairs = {
+						num = 1;
+						item[0] = {
+							branchKey = "CONTROLLERPAD_DECL";
+							branchResult = 0.625;
+						}
+					}
+				}
+				startFODist = 15;
+				endFODist = 45;
+				fallOffScale = {
+					defaultValue = 0.400000006;
+					branchPairs = {
+						num = 1;
+						item[0] = {
+							branchKey = "CONTROLLERPAD_DECL";
+							branchResult = 0.400000006;
+						}
+					}
+				}
+			}
+			item[2] = {
+				monsterType = "AI_MONSTER_PLAYER_MARAUDER";
+				damageScalar = {
+					defaultValue = 0.625;
+					branchPairs = {
+						num = 1;
+						item[0] = {
+							branchKey = "CONTROLLERPAD_DECL";
+							branchResult = 0.625;
+						}
+					}
+				}
+				startFODist = 15;
+				endFODist = 45;
+				fallOffScale = {
+					defaultValue = 0.600000024;
+					branchPairs = {
+						num = 1;
+						item[0] = {
+							branchKey = "CONTROLLERPAD_DECL";
+							branchResult = 0.600000024;
+						}
+					}
+				}
+			}
+			item[3] = {
+				monsterType = "AI_MONSTER_PLAYER_PAIN_ELEMENTAL";
+				damageScalar = {
+					defaultValue = 0.625;
+					branchPairs = {
+						num = 1;
+						item[0] = {
+							branchKey = "CONTROLLERPAD_DECL";
+							branchResult = 0.625;
+						}
+					}
+				}
+				startFODist = 25;
+				endFODist = 75;
+				fallOffScale = {
+					defaultValue = 0.600000024;
+					branchPairs = {
+						num = 1;
+						item[0] = {
+							branchKey = "CONTROLLERPAD_DECL";
+							branchResult = 0.600000024;
+						}
+					}
+				}
+			}
+			item[4] = {
+				monsterType = "AI_MONSTER_PLAYER_REVENANT";
+				damageScalar = {
+					defaultValue = 0.625;
+					branchPairs = {
+						num = 1;
+						item[0] = {
+							branchKey = "CONTROLLERPAD_DECL";
+							branchResult = 0.625;
+						}
+					}
+				}
+				startFODist = 15;
+				endFODist = 45;
+				fallOffScale = {
+					defaultValue = 0.600000024;
+					branchPairs = {
+						num = 1;
+						item[0] = {
+							branchKey = "CONTROLLERPAD_DECL";
+							branchResult = 0.600000024;
+						}
+					}
+				}
+			}
+			item[5] = {
+				monsterType = "AI_MONSTER_PLAYER_DREADKNIGHT";
+				damageScalar = {
+					defaultValue = 0.625;
+					branchPairs = {
+						num = 1;
+						item[0] = {
+							branchKey = "CONTROLLERPAD_DECL";
+							branchResult = 0.625;
+						}
+					}
+				}
+				startFODist = 15;
+				endFODist = 45;
+				fallOffScale = {
+					defaultValue = 0.600000024;
+					branchPairs = {
+						num = 1;
+						item[0] = {
+							branchKey = "CONTROLLERPAD_DECL";
+							branchResult = 0.600000024;
+						}
+					}
+				}
+			}
+		}
+	}
+}

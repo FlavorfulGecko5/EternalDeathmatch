@@ -1,0 +1,118 @@
+{
+	inherit = "damage/firearm/base/bullet_standard";
+	edit = {
+		damageParms = {
+			weaponDamageType = "PLAYER_WEAPON_BALLISTA_DESTROYER";
+			bulletPenetrationData = {
+				usesPenetrationEnergy = false;
+				maxPenetrations = -1;
+				aiBlocksPenetration = "AI_MONSTER_HELLKNIGHT AI_MONSTER_PINKY AI_MONSTER_SPECTRE AI_MONSTER_CACODEMON AI_MONSTER_MANCUBUS AI_MONSTER_CYBER_MANCUBUS AI_MONSTER_REVENANT AI_MONSTER_BARON AI_MONSTER_ARCHVILE";
+			}
+			damageName = "#str_damage_sniper_rifle_round";
+			damageSource = "DAMAGESRC_GAUSS";
+			hitClientAuthoritative = true;
+			noFeedbackSound = true;
+			aiDamageMitigation = {
+				num = 4;
+				item[0] = {
+					monsterType = "AI_MONSTER_MARAUDER";
+					maxDamage = -1;
+					damageScalar = 0.75;
+				}
+				item[1] = {
+					monsterType = "AI_MONSTER_MAYKR_ANGEL";
+					maxDamage = -1;
+					damageScalar = 0.550000012;
+				}
+				item[2] = {
+					monsterType = "AI_MONSTER_ICON_OF_SIN";
+					maxDamage = -1;
+					damageScalar = 0.670000017;
+				}
+				item[3] = {
+					monsterType = "AI_MONSTER_SAMUEL_BOSS";
+					maxDamage = -1;
+					damageScalar = 0.400000006;
+				}
+			}
+			damageSoundWhenLocalDemonPlayerIsHit = "play_precision_damage_demon";
+			damageIcon = "textures/guis/hud/damage_icons/slayer/weapon/weapon_gauss";
+			declGoreBehavior = "gorebehavior/firearm/gauss_cannon_destroyer";
+		}
+		maxDamage = {
+			defaultValue = 1;
+		}
+		minDamage = {
+			defaultValue = 1;
+		}
+		pvpPlayerDamageScale = 0.3334;
+		demonPlayerDamageMitigation = {
+			num = 5;
+			item[0] = {
+				monsterType = "AI_MONSTER_PLAYER_ARCHVILE";
+				damageScalar = {
+					defaultValue = 0.375;
+					branchPairs = {
+						num = 1;
+						item[0] = {
+							branchKey = "CONTROLLERPAD_DECL";
+							branchResult = 0.375;
+						}
+					}
+				}
+			}
+			item[1] = {
+				monsterType = "AI_MONSTER_PLAYER_MANCUBUS";
+				damageScalar = {
+					defaultValue = 0.375;
+					branchPairs = {
+						num = 1;
+						item[0] = {
+							branchKey = "CONTROLLERPAD_DECL";
+							branchResult = 0.375;
+						}
+					}
+				}
+			}
+			item[2] = {
+				monsterType = "AI_MONSTER_PLAYER_MARAUDER";
+				damageScalar = {
+					defaultValue = 0.375;
+					branchPairs = {
+						num = 1;
+						item[0] = {
+							branchKey = "CONTROLLERPAD_DECL";
+							branchResult = 0.375;
+						}
+					}
+				}
+			}
+			item[3] = {
+				monsterType = "AI_MONSTER_PLAYER_PAIN_ELEMENTAL";
+				damageScalar = {
+					defaultValue = 0;
+					branchPairs = {
+						num = 1;
+						item[0] = {
+							branchKey = "CONTROLLERPAD_DECL";
+							branchResult = 0;
+						}
+					}
+				}
+			}
+			item[4] = {
+				monsterType = "AI_MONSTER_PLAYER_REVENANT";
+				damageScalar = {
+					defaultValue = 0.375;
+					branchPairs = {
+						num = 1;
+						item[0] = {
+							branchKey = "CONTROLLERPAD_DECL";
+							branchResult = 0.375;
+						}
+					}
+				}
+			}
+		}
+	}
+}

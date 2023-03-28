@@ -1,0 +1,123 @@
+{
+	inherit = "damage/firearm/base/energy_standard";
+	edit = {
+		damageParms = {
+			weaponDamageType = "PLAYER_WEAPON_PLASMA";
+			damageName = "#str_damage_plasma_rifle_round";
+			hitClientAuthoritative = true;
+			aiDamageMitigation = {
+				num = 4;
+				item[0] = {
+					monsterType = "AI_MONSTER_ZOMBIE_TIER_1 AI_MONSTER_ZOMBIE_TIER_3 AI_MONSTER_IMP AI_MONSTER_STONE_IMP AI_MONSTER_GARGOYLE AI_MONSTER_HELL_SOLDIER AI_MONSTER_SHOTGUN_SOLDIER";
+					maxDamage = -1;
+					damageScalar = 0.777778029;
+				}
+				item[1] = {
+					monsterType = "AI_MONSTER_MAYKR_ANGEL";
+					maxDamage = -1;
+					damageScalar = 0.899999976;
+				}
+				item[2] = {
+					monsterType = "AI_MONSTER_SAMUEL_BOSS";
+					maxDamage = -1;
+					damageScalar = 0.699999988;
+				}
+				item[3] = {
+					monsterType = "AI_MONSTER_ZOMBIE_T1_SCREECHER";
+					damageScalar = 1.28999996;
+				}
+			}
+			ragdollImpulseMag = 0.864108026;
+			damageIcon = "textures/guis/hud/damage_icons/slayer/weapon/weapon_plasma";
+			declGoreBehavior = "gorebehavior/firearm/plasma_rifle";
+		}
+		maxDamage = {
+			defaultValue = 35;
+		}
+		minDamage = {
+			defaultValue = 35;
+		}
+		pvpPlayerDamageScale = 1.28999996;
+		demonPlayerDamageMitigation = {
+			num = 6;
+			item[0] = {
+				monsterType = "AI_MONSTER_PLAYER_ARCHVILE";
+				damageScalar = {
+					defaultValue = 1.28999996;
+					branchPairs = {
+						num = 1;
+						item[0] = {
+							branchKey = "CONTROLLERPAD_DECL";
+							branchResult = 1.28999996;
+						}
+					}
+				}
+			}
+			item[1] = {
+				monsterType = "AI_MONSTER_PLAYER_MANCUBUS";
+				damageScalar = {
+					defaultValue = 1.28999996;
+					branchPairs = {
+						num = 1;
+						item[0] = {
+							branchKey = "CONTROLLERPAD_DECL";
+							branchResult = 1.28999996;
+						}
+					}
+				}
+			}
+			item[2] = {
+				monsterType = "AI_MONSTER_PLAYER_MARAUDER";
+				damageScalar = {
+					defaultValue = 1.28999996;
+					branchPairs = {
+						num = 1;
+						item[0] = {
+							branchKey = "CONTROLLERPAD_DECL";
+							branchResult = 1.28999996;
+						}
+					}
+				}
+			}
+			item[3] = {
+				monsterType = "AI_MONSTER_PLAYER_PAIN_ELEMENTAL";
+				damageScalar = {
+					defaultValue = 1.28999996;
+					branchPairs = {
+						num = 1;
+						item[0] = {
+							branchKey = "CONTROLLERPAD_DECL";
+							branchResult = 1.28999996;
+						}
+					}
+				}
+			}
+			item[4] = {
+				monsterType = "AI_MONSTER_PLAYER_REVENANT";
+				damageScalar = {
+					defaultValue = 1.28999996;
+					branchPairs = {
+						num = 1;
+						item[0] = {
+							branchKey = "CONTROLLERPAD_DECL";
+							branchResult = 1.28999996;
+						}
+					}
+				}
+			}
+			item[5] = {
+				monsterType = "AI_MONSTER_PLAYER_DREADKNIGHT";
+				damageScalar = {
+					defaultValue = 1.28999996;
+					branchPairs = {
+						num = 1;
+						item[0] = {
+							branchKey = "CONTROLLERPAD_DECL";
+							branchResult = 1.28999996;
+						}
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,121 @@
+{
+	inherit = "damage/firearm/7_62mm";
+	edit = {
+		damageParms = {
+			weaponDamageType = "PLAYER_WEAPON_HAR";
+			bulletPenetrationData = {
+				penetrationEnergy = 10000;
+				maxPenetrations = -1;
+				aiBlocksPenetration = "AI_MONSTER_SHOTGUN_SOLDIER AI_MONSTER_CARCASS AI_MONSTER_HELLKNIGHT AI_MONSTER_DREADKNIGHT AI_MONSTER_PINKY AI_MONSTER_SPECTRE AI_MONSTER_CACODEMON AI_MONSTER_PAIN_ELEMENTAL AI_MONSTER_MANCUBUS AI_MONSTER_CYBER_MANCUBUS AI_MONSTER_ARACHNOTRON AI_MONSTER_REVENANT AI_MONSTER_WHIPLASH AI_MONSTER_MAX_HEAVY AI_MONSTER_DOOM_HUNTER AI_MONSTER_MARAUDER AI_MONSTER_BARON AI_MONSTER_TYRANT AI_MONSTER_ARCHVILE AI_MONSTER_MAX_SUPER AI_MONSTER_NPC AI_MONSTER_BUFF_POD AI_MONSTER_TENTACLE";
+			}
+			hitClientAuthoritative = true;
+			aiDamageMitigation = {
+				num = 3;
+				item[0] = {
+					monsterType = "AI_MONSTER_SAMUEL_BOSS";
+					damageScalar = 0.870000005;
+				}
+				item[1] = {
+					monsterType = "AI_MONSTER_ZOMBIE_T1_SCREECHER AI_MONSTER_IMP AI_MONSTER_GARGOYLE AI_MONSTER_HELL_SOLDIER AI_MONSTER_SHOTGUN_SOLDIER";
+					damageScalar = 1.42999995;
+				}
+				item[2] = {
+					monsterType = "AI_MONSTER_ZOMBIE_TIER_1 AI_MONSTER_ZOMBIE_TIER_3";
+					damageScalar = 1.22999995;
+				}
+			}
+			radius = 0.375;
+			radiusOuterDamageStrength = 1;
+			damageIcon = "textures/guis/hud/damage_icons/slayer/weapon/weapon_assault";
+			declGoreBehavior = "gorebehavior/firearm/heavy_cannon";
+		}
+		maxDamage = {
+			defaultValue = 35;
+		}
+		minDamage = {
+			defaultValue = 35;
+		}
+		pvpPlayerDamageScale = 2.57999992;
+		demonPlayerDamageMitigation = {
+			num = 6;
+			item[0] = {
+				monsterType = "AI_MONSTER_PLAYER_ARCHVILE";
+				damageScalar = {
+					defaultValue = 2.57999992;
+					branchPairs = {
+						num = 1;
+						item[0] = {
+							branchKey = "CONTROLLERPAD_DECL";
+							branchResult = 2.57999992;
+						}
+					}
+				}
+			}
+			item[1] = {
+				monsterType = "AI_MONSTER_PLAYER_MANCUBUS";
+				damageScalar = {
+					defaultValue = 2.57999992;
+					branchPairs = {
+						num = 1;
+						item[0] = {
+							branchKey = "CONTROLLERPAD_DECL";
+							branchResult = 2.57999992;
+						}
+					}
+				}
+			}
+			item[2] = {
+				monsterType = "AI_MONSTER_PLAYER_MARAUDER";
+				damageScalar = {
+					defaultValue = 2.57999992;
+					branchPairs = {
+						num = 1;
+						item[0] = {
+							branchKey = "CONTROLLERPAD_DECL";
+							branchResult = 2.57999992;
+						}
+					}
+				}
+			}
+			item[3] = {
+				monsterType = "AI_MONSTER_PLAYER_PAIN_ELEMENTAL";
+				damageScalar = {
+					defaultValue = 2.57999992;
+					branchPairs = {
+						num = 1;
+						item[0] = {
+							branchKey = "CONTROLLERPAD_DECL";
+							branchResult = 2.57999992;
+						}
+					}
+				}
+			}
+			item[4] = {
+				monsterType = "AI_MONSTER_PLAYER_REVENANT";
+				damageScalar = {
+					defaultValue = 2.57999992;
+					branchPairs = {
+						num = 1;
+						item[0] = {
+							branchKey = "CONTROLLERPAD_DECL";
+							branchResult = 2.57999992;
+						}
+					}
+				}
+			}
+			item[5] = {
+				monsterType = "AI_MONSTER_PLAYER_DREADKNIGHT";
+				damageScalar = {
+					defaultValue = 2.57999992;
+					branchPairs = {
+						num = 1;
+						item[0] = {
+							branchKey = "CONTROLLERPAD_DECL";
+							branchResult = 2.57999992;
+						}
+					}
+				}
+			}
+		}
+	}
+}
