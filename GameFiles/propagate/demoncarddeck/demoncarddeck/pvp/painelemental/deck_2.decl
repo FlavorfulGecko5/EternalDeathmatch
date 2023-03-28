@@ -1,0 +1,9 @@
+{
+	edit = {
+		deckName = "#str_decl_actormodifier_become_painelemental_name_GHOST53515";
+		cardDeck = {
+			num = 0;
+		}
+		isStarterDeck = true;
+	}
+}

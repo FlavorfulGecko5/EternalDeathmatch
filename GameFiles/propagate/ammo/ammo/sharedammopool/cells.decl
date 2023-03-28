@@ -1,0 +1,22 @@
+{
+	inherit = "ammo/sharedammopool/base";
+	edit = {
+		displayName = "#str_decl_ammo_cells";
+		icon = "art/ui/icons/ammo/cells";
+		iconColor = "SWF_NAMED_COLOR_WEAPON_PLASMA_RIFLE";
+		maxCount = 150;
+		maxCountPVP = {
+			defaultValue = 200;
+			branchPairs = {
+				num = 1;
+				item[0] = {
+					branchKey = "CONTROLLERPAD_DECL";
+					branchResult = 200;
+				}
+			}
+		}
+		gameDifficultyDecl_Dropped = "campaign/per_item/ammodropped_plasma_rifle";
+		gameDifficultyDecl_Pickup = "campaign/per_item/ammopickup_plasma_rifle";
+		ammoType = "AMMO_CELL";
+	}
+}

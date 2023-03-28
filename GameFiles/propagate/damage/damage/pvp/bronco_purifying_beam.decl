@@ -1,0 +1,36 @@
+{
+	inherit = "damage/hazard/electrical";
+	edit = {
+		damageParms = {
+			damageReportDecayMS = 500;
+			playerDamageScale = 1;
+			radius = 5;
+			damageIcon = "textures/guis/hud/damage_icons/environment/hazard_electric";
+		}
+		maxDamage = {
+			defaultValue = 3;
+		}
+		minDamage = {
+			defaultValue = 3;
+		}
+		demonPlayerDamageScale = {
+			defaultValue = 5;
+		}
+		demonPlayerDamageMitigation = {
+			num = 1;
+			item[0] = {
+				monsterType = "AI_MONSTER_PLAYER_PAIN_ELEMENTAL";
+				damageScalar = {
+					defaultValue = 0;
+					branchPairs = {
+						num = 1;
+						item[0] = {
+							branchKey = "CONTROLLERPAD_DECL";
+							branchResult = 0;
+						}
+					}
+				}
+			}
+		}
+	}
+}

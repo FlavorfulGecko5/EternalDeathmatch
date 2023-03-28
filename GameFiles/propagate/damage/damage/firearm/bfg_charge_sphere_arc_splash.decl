@@ -1,0 +1,71 @@
+{
+	edit = {
+		damageParms = {
+			weaponDamageType = "PLAYER_WEAPON_BFG";
+			damageName = "Great Big Firearm 8000 (splash)";
+			damageTypes = "DAMAGETYPE_HEALTH DAMAGETYPE_EXPLOSION DAMAGETYPE_SPLASH";
+			damageSource = "DAMAGESRC_EXPLOSIVE DAMAGESRC_BFG";
+			handsHitReactionType = "HANDSHITREACTION_EXPLOSIVE";
+			hitClientAuthoritative = true;
+			selfDamageScale = 0;
+			noFeedbackSound = true;
+			affectsDamageDir = false;
+			aiDamageMitigation = {
+				num = 5;
+				item[0] = {
+					monsterType = "AI_MONSTER_DOOM_HUNTER AI_MONSTER_MARAUDER AI_MONSTER_BARON AI_MONSTER_ARMORED_BARON AI_MONSTER_TYRANT AI_MONSTER_ARCHVILE AI_MONSTER_MAYKR_ANGEL";
+					damageScalar = 1.5;
+					damagePerFrame = false;
+				}
+				item[1] = {
+					monsterType = "AI_MONSTER_GLADIATOR";
+					damageScalar = 0.666000009;
+					damagePerFrame = false;
+				}
+				item[2] = {
+					monsterType = "AI_MONSTER_ICON_OF_SIN";
+					damageScalar = 0;
+					damagePerFrame = false;
+				}
+				item[3] = {
+					monsterType = "AI_MONSTER_SAMUEL_BOSS";
+					damageScalar = 0.166669995;
+				}
+				item[4] = {
+					monsterType = "AI_MONSTER_DARKLORD_BOSS";
+					damageScalar = 0.5;
+				}
+			}
+			knockBack = 3.02415109;
+			selfKnockbackScale = 0.5;
+			knockBackInAirScale = 0.5;
+			kickTime = 0;
+			kickAmplitude = 0;
+			kickDir = {
+				y = 0;
+			}
+			radius = 8;
+			ragdollImpulseMag = 43.2054024;
+			friendlyFire = false;
+			damageIcon = "textures/guis/hud/damage_icons/slayer/weapon/weapon_bfg";
+			declGoreBehavior = "gorebehavior/firearm/bfg_splash";
+			skillshotHighlightInfo = {
+				fadeTime = 300;
+				color = {
+					r = 1;
+					a = 1;
+				}
+			}
+		}
+		maxDamage = {
+			defaultValue = 3000;
+		}
+		minDamage = {
+			defaultValue = 3000;
+		}
+		demonPlayerDamageScale = {
+			defaultValue = 0;
+		}
+		pvpPlayerDamageScale = 0.2666;
+	}
+}

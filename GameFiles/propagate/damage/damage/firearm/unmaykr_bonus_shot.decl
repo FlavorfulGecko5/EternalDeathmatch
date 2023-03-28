@@ -1,0 +1,74 @@
+{
+	edit = {
+		damageParms = {
+			weaponDamageType = "PLAYER_WEAPON_UNMAYKR";
+			damageName = "Great Big Firearm 8000";
+			damageTypes = "DAMAGETYPE_HEALTH DAMAGETYPE_EXPLOSION";
+			damageSource = "DAMAGESRC_EXPLOSIVE DAMAGESRC_BFG";
+			handsHitReactionType = "HANDSHITREACTION_EXPLOSIVE";
+			selfDamageScale = 0.5;
+			aiDamageMitigation = {
+				num = 6;
+				item[0] = {
+					monsterType = "AI_MONSTER_MARAUDER";
+					maxDamage = -1;
+					damageScalar = 0.449999988;
+				}
+				item[1] = {
+					monsterType = "AI_MONSTER_GLADIATOR";
+					maxDamage = -1;
+					damageScalar = 0.666000009;
+				}
+				item[2] = {
+					monsterType = "AI_MONSTER_MAYKR_ANGEL";
+					maxDamage = -1;
+					damageScalar = 0.5;
+				}
+				item[3] = {
+					monsterType = "AI_MONSTER_ICON_OF_SIN";
+					maxDamage = -1;
+					damageScalar = 0.330000013;
+				}
+				item[4] = {
+					monsterType = "AI_MONSTER_SAMUEL_BOSS";
+					maxDamage = -1;
+					damageScalar = 0.150000006;
+				}
+				item[5] = {
+					monsterType = "AI_MONSTER_DARKLORD_BOSS";
+					maxDamage = -1;
+					damageScalar = 0.300000012;
+				}
+			}
+			knockBack = 1.72821605;
+			knockBackInAirScale = 0.5;
+			kickTime = 0;
+			kickAmplitude = 0;
+			kickDir = {
+				y = 0;
+			}
+			radius = 3.0480001;
+			radiusInner = 1.23800004;
+			radiusOuterDamageStrength = 0.75;
+			ragdollImpulseMag = 129.616196;
+			friendlyFire = false;
+			knocksOffArmor = false;
+			damageIcon = "textures/guis/hud/damage_icons/slayer/weapon/weapon_unmaykr";
+			declGoreBehavior = "gorebehavior/firearm/unmaykr";
+			skillshotHighlightInfo = {
+				fadeTime = 300;
+				color = {
+					r = 1;
+					a = 1;
+				}
+			}
+		}
+		maxDamage = {
+			defaultValue = 200;
+		}
+		minDamage = {
+			defaultValue = 200;
+		}
+		pvpPlayerDamageScale = 0.5;
+	}
+}

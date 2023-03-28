@@ -1,0 +1,67 @@
+{
+	inherit = "damage/firearm/7_62mm";
+	edit = {
+		damageParms = {
+			weaponDamageType = "PLAYER_WEAPON_HAR_SCOPE";
+			bulletPenetrationData = {
+				maxPenetrations = -1;
+				aiBlocksPenetration = "AI_MONSTER_SHOTGUN_SOLDIER AI_MONSTER_CARCASS AI_MONSTER_HELLKNIGHT AI_MONSTER_DREADKNIGHT AI_MONSTER_PINKY AI_MONSTER_SPECTRE AI_MONSTER_CACODEMON AI_MONSTER_PAIN_ELEMENTAL AI_MONSTER_MANCUBUS AI_MONSTER_CYBER_MANCUBUS AI_MONSTER_ARACHNOTRON AI_MONSTER_REVENANT AI_MONSTER_WHIPLASH AI_MONSTER_MAX_HEAVY AI_MONSTER_DOOM_HUNTER AI_MONSTER_MARAUDER AI_MONSTER_BARON AI_MONSTER_TYRANT AI_MONSTER_ARCHVILE AI_MONSTER_MAX_SUPER AI_MONSTER_NPC AI_MONSTER_BUFF_POD AI_MONSTER_TENTACLE";
+				demonPlayerBlocksPenetration = true;
+				delayAfterPenetrationMS = 80;
+				sound = "play_bullet_penetration";
+				viewShake = "advancedscreenviewshake/heavy_cannon_bullet_penetration";
+				impactEffectTable = "impacteffect/projectiles/weapons/har_flesh_penetration_s";
+			}
+			hitClientAuthoritative = true;
+			syncExtraInfoForSplashTraces = true;
+			headshotFocusDamage = true;
+			headshotSound = "play_bullet_impact_flesh_hitbeep_har_bullet_scoped_headshot";
+			radialDmgUseInflictorToTargetDir = true;
+			aiDamageMitigation = {
+				num = 2;
+				item[0] = {
+					monsterType = "AI_MONSTER_MAYKR_ANGEL";
+					maxDamage = -1;
+					damageScalar = 1.20000005;
+				}
+				item[1] = {
+					monsterType = "AI_MONSTER_SAMUEL_BOSS";
+					damageScalar = 0.600000024;
+				}
+			}
+			radius = 0.375;
+			radiusOuterDamageStrength = 1;
+			damageSoundWhenLocalDemonPlayerIsHit = "play_precision_damage_demon";
+			damageIcon = "textures/guis/hud/damage_icons/slayer/weapon/weapon_assault";
+			declGoreBehavior = "gorebehavior/firearm/heavy_cannon_bolt_action_weakpoint_bonus";
+		}
+		maxDamage = {
+			defaultValue = 400;
+		}
+		minDamage = {
+			defaultValue = 400;
+		}
+		pvpPlayerDamageScale = 0.75;
+		demonPlayerDamageMitigation = {
+			num = 6;
+			item[0] = {
+				monsterType = "AI_MONSTER_PLAYER_ARCHVILE";
+			}
+			item[1] = {
+				monsterType = "AI_MONSTER_PLAYER_MANCUBUS";
+			}
+			item[2] = {
+				monsterType = "AI_MONSTER_PLAYER_MARAUDER";
+			}
+			item[3] = {
+				monsterType = "AI_MONSTER_PLAYER_PAIN_ELEMENTAL";
+			}
+			item[4] = {
+				monsterType = "AI_MONSTER_PLAYER_REVENANT";
+			}
+			item[5] = {
+				monsterType = "AI_MONSTER_PLAYER_DREADKNIGHT";
+			}
+		}
+	}
+}

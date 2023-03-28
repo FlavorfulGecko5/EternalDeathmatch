@@ -1,0 +1,70 @@
+{
+	inherit = "damage/firearm/base/projectile_splash";
+	edit = {
+		damageParms = {
+			weaponDamageType = "PLAYER_WEAPON_ROCKETLAUNCHER_LOCKON";
+			damageName = "#str_decl_damage_rocket_launcher_splash_GHOST53184";
+			damageSource = "DAMAGESRC_EXPLOSIVE";
+			handsHitReactionType = "HANDSHITREACTION_NONE";
+			hitClientAuthoritative = true;
+			selfDamageScale = 0.670000017;
+			aiDamageMitigation = {
+				num = 4;
+				item[0] = {
+					monsterType = "AI_MONSTER_BARON AI_MONSTER_ARMORED_BARON AI_MONSTER_TYRANT";
+					maxDamage = -1;
+					damageScalar = 0.699999988;
+				}
+				item[1] = {
+					monsterType = "AI_MONSTER_DOOM_HUNTER AI_MONSTER_MARAUDER";
+					maxDamage = -1;
+					damageScalar = 0.75;
+				}
+				item[2] = {
+					monsterType = "AI_MONSTER_GLADIATOR";
+					maxDamage = -1;
+					damageScalar = 0.666000009;
+				}
+				item[3] = {
+					monsterType = "AI_MONSTER_ICON_OF_SIN AI_MONSTER_MAYKR_ANGEL";
+					maxDamage = -1;
+					damageScalar = 0.449999988;
+				}
+			}
+			kickTime = 0;
+			kickAmplitude = 0;
+			kickDir = {
+				y = 0;
+			}
+			radius = 2.43799996;
+			radiusOuterDamageStrength = 0.100000001;
+			ragdollImpulseMag = 216.027008;
+			damageIcon = "textures/guis/hud/damage_icons/slayer/weapon/weapon_rocket";
+			declGoreBehavior = "gorebehavior/firearm/rocket_launcher_lockon_splash";
+			igniteVictimWithPlayerUpgrade = true;
+		}
+		maxDamage = {
+			defaultValue = 25;
+		}
+		minDamage = {
+			defaultValue = 0;
+		}
+		pvpPlayerDamageScale = 0;
+		demonPlayerDamageMitigation = {
+			num = 1;
+			item[0] = {
+				monsterType = "AI_MONSTER_PLAYER_PAIN_ELEMENTAL";
+				damageScalar = {
+					defaultValue = 0;
+					branchPairs = {
+						num = 1;
+						item[0] = {
+							branchKey = "CONTROLLERPAD_DECL";
+							branchResult = 0;
+						}
+					}
+				}
+			}
+		}
+	}
+}

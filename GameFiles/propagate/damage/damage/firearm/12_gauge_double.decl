@@ -1,0 +1,161 @@
+{
+	inherit = "damage/firearm/12_gauge";
+	edit = {
+		damageParms = {
+			weaponDamageType = "PLAYER_WEAPON_DOUBLE_BARRELED_SHOTGUN";
+			bulletPenetrationData = {
+				penetrationEnergy = 1000;
+				maxPenetrations = 50;
+			}
+			damageName = "#str_damage_double_barrel_shotgun_shell";
+			pointBlankDamage = 100;
+			startPBFalloffDistance = 10;
+			endPBFalloffDistance = 12;
+			startFalloffDistance = 15;
+			endFalloffDistance = 20;
+			killStat = "STAT_WEAPON_DBL_SHOTGUN_KILLS";
+			stuns = true;
+			aiDamageMitigation = {
+				num = 7;
+				item[0] = {
+					monsterType = "AI_MONSTER_ZOMBIE_TIER_3 AI_MONSTER_PROWLER AI_MONSTER_CURSED_PROWLER AI_MONSTER_HELL_SOLDIER AI_MONSTER_SHOTGUN_SOLDIER";
+					damageScalar = 1.5;
+				}
+				item[1] = {
+					monsterType = "AI_MONSTER_ZOMBIE_TIER_1 AI_MONSTER_IMP AI_MONSTER_GARGOYLE";
+					damageScalar = 2;
+				}
+				item[2] = {
+					monsterType = "AI_MONSTER_TYRANT";
+					maxDamage = 1600;
+					damageScalar = 1.39999998;
+				}
+				item[3] = {
+					maxDamage = 1600;
+					damageScalar = 1.5;
+				}
+				item[4] = {
+					monsterType = "AI_MONSTER_MARAUDER";
+					maxDamage = 750;
+					damageScalar = 0.850000024;
+				}
+				item[5] = {
+					monsterType = "AI_MONSTER_ICON_OF_SIN";
+					damageScalar = 0.5;
+				}
+				item[6] = {
+					monsterType = "AI_MONSTER_SAMUEL_BOSS";
+					damageScalar = 0.75;
+				}
+			}
+			damageIcon = "textures/guis/hud/damage_icons/slayer/weapon/weapon_double_barrel";
+			declGoreBehavior = "gorebehavior/firearm/8_gauge";
+			noDeath = false;
+		}
+		maxDamage = {
+			defaultValue = 25;
+		}
+		minDamage = {
+			defaultValue = 20;
+		}
+		pvpPlayerDamageScale = 0.5;
+		demonPlayerDamageMitigation = {
+			item[0] = {
+				maxDamage = {
+					defaultValue = 900;
+					branchPairs = {
+						num = 1;
+						item[0] = {
+							branchKey = "CONTROLLERPAD_DECL";
+							branchResult = 900;
+						}
+					}
+				}
+				damageScalar = {
+					defaultValue = 1;
+					branchPairs = {
+						item[0] = {
+							branchResult = 1;
+						}
+					}
+				}
+			}
+			item[1] = {
+				maxDamage = {
+					defaultValue = 900;
+					branchPairs = {
+						num = 1;
+						item[0] = {
+							branchKey = "CONTROLLERPAD_DECL";
+							branchResult = 900;
+						}
+					}
+				}
+				damageScalar = {
+					defaultValue = 0.649999976;
+					branchPairs = {
+						item[0] = {
+							branchResult = 0.649999976;
+						}
+					}
+				}
+			}
+			item[2] = {
+				maxDamage = {
+					defaultValue = 900;
+					branchPairs = {
+						num = 1;
+						item[0] = {
+							branchKey = "CONTROLLERPAD_DECL";
+							branchResult = 900;
+						}
+					}
+				}
+			}
+			item[3] = {
+				maxDamage = {
+					defaultValue = 900;
+					branchPairs = {
+						num = 1;
+						item[0] = {
+							branchKey = "CONTROLLERPAD_DECL";
+							branchResult = 900;
+						}
+					}
+				}
+				damageScalar = {
+					defaultValue = 0.649999976;
+					branchPairs = {
+						item[0] = {
+							branchResult = 0.649999976;
+						}
+					}
+				}
+			}
+			item[4] = {
+				maxDamage = {
+					defaultValue = 900;
+					branchPairs = {
+						num = 1;
+						item[0] = {
+							branchKey = "CONTROLLERPAD_DECL";
+							branchResult = 900;
+						}
+					}
+				}
+			}
+			item[5] = {
+				maxDamage = {
+					defaultValue = 900;
+					branchPairs = {
+						num = 1;
+						item[0] = {
+							branchKey = "CONTROLLERPAD_DECL";
+							branchResult = 900;
+						}
+					}
+				}
+			}
+		}
+	}
+}

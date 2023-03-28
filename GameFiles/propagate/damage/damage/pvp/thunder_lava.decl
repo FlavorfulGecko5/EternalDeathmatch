@@ -1,0 +1,35 @@
+{
+	inherit = "damage/hazard/lava";
+	edit = {
+		damageParms = {
+			damageReportDecayMS = 1000;
+			handsHitReactionType = "HANDSHITREACTION_NONE";
+			damageIcon = "textures/guis/hud/damage_icons/environment/hazard_lava";
+		}
+		maxDamage = {
+			defaultValue = 2;
+		}
+		minDamage = {
+			defaultValue = 2;
+		}
+		demonPlayerDamageScale = {
+			defaultValue = 5;
+		}
+		demonPlayerDamageMitigation = {
+			num = 1;
+			item[0] = {
+				monsterType = "AI_MONSTER_PLAYER_PAIN_ELEMENTAL";
+				damageScalar = {
+					defaultValue = 0;
+					branchPairs = {
+						num = 1;
+						item[0] = {
+							branchKey = "CONTROLLERPAD_DECL";
+							branchResult = 0;
+						}
+					}
+				}
+			}
+		}
+	}
+}

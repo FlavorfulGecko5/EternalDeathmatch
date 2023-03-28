@@ -1,0 +1,86 @@
+{
+	edit = {
+		damageParms = {
+			weaponDamageType = "PLAYER_WEAPON_BFG";
+			damageName = "Great Big Firearm 8000";
+			damageTypes = "DAMAGETYPE_HEALTH DAMAGETYPE_EXPLOSION";
+			damageSource = "DAMAGESRC_EXPLOSIVE DAMAGESRC_BFG";
+			handsHitReactionType = "HANDSHITREACTION_EXPLOSIVE";
+			hitClientAuthoritative = true;
+			selfDamageScale = 0;
+			aiDamageMitigation = {
+				num = 5;
+				item[0] = {
+					monsterType = "AI_MONSTER_DOOM_HUNTER AI_MONSTER_MARAUDER AI_MONSTER_BARON AI_MONSTER_ARMORED_BARON AI_MONSTER_TYRANT AI_MONSTER_ARCHVILE AI_MONSTER_MAYKR_ANGEL";
+					damageScalar = 1.5;
+					damagePerFrame = false;
+				}
+				item[1] = {
+					monsterType = "AI_MONSTER_GLADIATOR";
+					damageScalar = 0.666000009;
+					damagePerFrame = false;
+				}
+				item[2] = {
+					monsterType = "AI_MONSTER_ICON_OF_SIN";
+					damageScalar = 10;
+					damagePerFrame = false;
+				}
+				item[3] = {
+					monsterType = "AI_MONSTER_SAMUEL_BOSS";
+					damageScalar = 0.800000012;
+				}
+				item[4] = {
+					monsterType = "AI_MONSTER_DARKLORD_BOSS";
+					damageScalar = 0.949999988;
+				}
+			}
+			knockBack = 1.72821605;
+			knockBackInAirScale = 0.5;
+			kickTime = 0;
+			kickAmplitude = 0;
+			kickDir = {
+				y = 0;
+			}
+			radius = 22.8600006;
+			radiusInner = 1.23800004;
+			radiusOuterDamageStrength = 0.75;
+			ragdollImpulseMag = 129.616196;
+			friendlyFire = false;
+			damageIcon = "textures/guis/hud/damage_icons/slayer/weapon/weapon_bfg";
+			declGoreBehavior = "gorebehavior/firearm/bfg";
+			skillshotHighlightInfo = {
+				fadeTime = 300;
+				color = {
+					r = 1;
+					a = 1;
+				}
+			}
+		}
+		maxDamage = {
+			defaultValue = 1000;
+		}
+		minDamage = {
+			defaultValue = 1000;
+		}
+		demonPlayerDamageScale = {
+			defaultValue = 0.7;
+		}
+		pvpPlayerDamageScale = 0.7;
+		demonPlayerDamageMitigation = {
+			num = 1;
+			item[0] = {
+				monsterType = "AI_MONSTER_PLAYER_PAIN_ELEMENTAL";
+				damageScalar = {
+					defaultValue = 0;
+					branchPairs = {
+						num = 1;
+						item[0] = {
+							branchKey = "CONTROLLERPAD_DECL";
+							branchResult = 0;
+						}
+					}
+				}
+			}
+		}
+	}
+}

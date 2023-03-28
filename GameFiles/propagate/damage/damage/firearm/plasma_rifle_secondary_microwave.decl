@@ -1,0 +1,186 @@
+{
+	edit = {
+		damageParms = {
+			weaponDamageType = "PLAYER_WEAPON_PLASMA";
+			doom5MeleeTest = {
+				impulseVelocity = {
+					x = 800;
+				}
+				monsterImpulseScales = {
+					num = 3;
+					item[0] = {
+						monsterType = "AI_MONSTER_ZOMBIE_TIER_3 AI_MONSTER_GARGOYLE AI_MONSTER_PROWLER AI_MONSTER_CURSED_PROWLER AI_MONSTER_SHOTGUN_SOLDIER AI_MONSTER_DREADKNIGHT AI_MONSTER_WHIPLASH AI_MONSTER_DOOM_HUNTER AI_MONSTER_MAX_SUPER AI_MONSTER_CUEBALL AI_MONSTER_BUFF_POD AI_MONSTER_TENTACLE AI_MONSTER_ICON_OF_SIN AI_MONSTER_MAYKR_ANGEL";
+						value = 3.4580073e+12;
+					}
+					item[1] = {
+						monsterType = "AI_MONSTER_HELLKNIGHT AI_MONSTER_CACODEMON AI_MONSTER_REVENANT AI_MONSTER_ARCHVILE";
+						value = 869422336;
+					}
+					item[2] = {
+						monsterType = "AI_MONSTER_PINKY AI_MONSTER_SPECTRE AI_MONSTER_MANCUBUS AI_MONSTER_CYBER_MANCUBUS AI_MONSTER_BARON";
+						value = -1.99839716e+18;
+					}
+				}
+				playerBotImpulseScale = 0.649999976;
+			}
+			bulletPenetrationData = {
+				aiBlocksPenetration = "AI_MONSTER_GENERIC AI_MONSTER_ZOMBIE_TIER_1 AI_MONSTER_ZOMBIE_TIER_3 AI_MONSTER_IMP AI_MONSTER_STONE_IMP AI_MONSTER_GARGOYLE AI_MONSTER_PROWLER AI_MONSTER_CURSED_PROWLER AI_MONSTER_HELL_SOLDIER AI_MONSTER_SHOTGUN_SOLDIER AI_MONSTER_CARCASS AI_MONSTER_LOSTSOUL AI_MONSTER_MAX_HEAVY AI_MONSTER_ALL_HEAVY AI_MONSTER_DOOM_HUNTER AI_MONSTER_MARAUDER AI_MONSTER_BARON AI_MONSTER_TYRANT AI_MONSTER_ARCHVILE AI_MONSTER_MAX_SUPER AI_MONSTER_NPC AI_MONSTER_BUFF_POD AI_MONSTER_TENTACLE";
+			}
+			damageName = "#str_damage_sniper_rifle_round";
+			damageSource = "DAMAGESRC_PLASMA_BEAM";
+			hitClientAuthoritative = true;
+			noFeedbackSound = true;
+			noDeath = true;
+			aiDamageMitigation = {
+				num = 25;
+				item[0] = {
+					monsterType = "AI_MONSTER_BUFF_POD";
+					maxDamage = 0;
+					damageScalar = 0;
+				}
+				item[1] = {
+					monsterType = "AI_MONSTER_LOSTSOUL AI_MONSTER_CUEBALL";
+					maxDamage = -1;
+					damageScalar = 0.100000001;
+				}
+				item[2] = {
+					monsterType = "AI_MONSTER_TENTACLE";
+					maxDamage = -1;
+					damageScalar = 0.150000006;
+				}
+				item[3] = {
+					monsterType = "AI_MONSTER_ZOMBIE_TIER_1 AI_MONSTER_IMP AI_MONSTER_STONE_IMP";
+					maxDamage = -1;
+					damageScalar = 0.200000003;
+				}
+				item[4] = {
+					monsterType = "AI_MONSTER_GARGOYLE";
+					maxDamage = -1;
+					damageScalar = 0.300000012;
+				}
+				item[5] = {
+					monsterType = "AI_MONSTER_HELL_SOLDIER AI_MONSTER_DEMONIC_TROOPER";
+					maxDamage = -1;
+					damageScalar = 0.400000006;
+				}
+				item[6] = {
+					monsterType = "AI_MONSTER_ZOMBIE_TIER_3 AI_MONSTER_SHOTGUN_SOLDIER";
+					maxDamage = -1;
+					damageScalar = 0.5;
+				}
+				item[7] = {
+					monsterType = "AI_MONSTER_ZOMBIE_MAYKR";
+					maxDamage = -1;
+					damageScalar = 0.800000012;
+				}
+				item[8] = {
+					monsterType = "AI_MONSTER_PROWLER AI_MONSTER_CURSED_PROWLER AI_MONSTER_PINKY AI_MONSTER_SUPER_TENTACLE";
+					maxDamage = -1;
+					damageScalar = 0.200000003;
+				}
+				item[9] = {
+					monsterType = "AI_MONSTER_CARCASS";
+					maxDamage = -1;
+					damageScalar = 0.239999995;
+				}
+				item[10] = {
+					monsterType = "AI_MONSTER_REVENANT AI_MONSTER_WHIPLASH";
+					maxDamage = -1;
+					damageScalar = 0.400000006;
+				}
+				item[11] = {
+					monsterType = "AI_MONSTER_HELLKNIGHT AI_MONSTER_SPECTRE AI_MONSTER_CACODEMON";
+					maxDamage = -1;
+					damageScalar = 0.5;
+				}
+				item[12] = {
+					monsterType = "AI_MONSTER_DREADKNIGHT AI_MONSTER_ARACHNOTRON";
+					maxDamage = -1;
+					damageScalar = 0.598999977;
+				}
+				item[13] = {
+					monsterType = "AI_MONSTER_MANCUBUS AI_MONSTER_BLOOD_ANGEL";
+					maxDamage = -1;
+					damageScalar = 0.699000001;
+				}
+				item[14] = {
+					monsterType = "AI_MONSTER_PAIN_ELEMENTAL";
+					maxDamage = -1;
+				}
+				item[15] = {
+					monsterType = "AI_MONSTER_CYBER_MANCUBUS";
+					maxDamage = -1;
+					damageScalar = 1.20000005;
+				}
+				item[16] = {
+					monsterType = "AI_MONSTER_MARAUDER AI_MONSTER_MARAUDER_WOLF";
+					maxDamage = -1;
+					damageScalar = 0.453999996;
+				}
+				item[17] = {
+					monsterType = "AI_MONSTER_ARCHVILE";
+					maxDamage = -1;
+					damageScalar = 0.545000017;
+				}
+				item[18] = {
+					monsterType = "AI_MONSTER_BARON AI_MONSTER_ARMORED_BARON";
+					maxDamage = -1;
+					damageScalar = 0.680999994;
+				}
+				item[19] = {
+					monsterType = "AI_MONSTER_DOOM_HUNTER";
+					maxDamage = -1;
+					damageScalar = 0.575999975;
+				}
+				item[20] = {
+					monsterType = "AI_MONSTER_TYRANT";
+					maxDamage = -1;
+					damageScalar = 0.908999979;
+				}
+				item[21] = {
+					monsterType = "AI_MONSTER_GLADIATOR AI_MONSTER_ICON_OF_SIN";
+					maxDamage = -1;
+					damageScalar = 0.400000006;
+				}
+				item[22] = {
+					monsterType = "AI_MONSTER_MAYKR_ANGEL";
+					maxDamage = -1;
+					damageScalar = 0.159999996;
+				}
+				item[23] = {
+					monsterType = "AI_MONSTER_SAMUEL_BOSS";
+					damageScalar = 0.330000013;
+				}
+				item[24] = {
+					monsterType = "AI_MONSTER_ZOMBIE_T1_SCREECHER";
+					damageScalar = 0.100000001;
+				}
+			}
+			radius = 0.100000001;
+			radiusInner = 0.100000001;
+			damageSoundWhenLocalDemonPlayerIsHit = "";
+			damageSoundLoopingStart = "";
+			damageSoundLoopingStop = "";
+			knocksOffArmor = false;
+			damageIcon = "textures/guis/hud/damage_icons/slayer/weapon/weapon_plasma";
+			declGoreBehavior = "gorebehavior/firearm/plasma_rifle_microwave";
+			skillshotHighlightInfo = {
+				fadeTime = 300;
+				color = {
+					r = 1;
+					a = 1;
+				}
+			}
+		}
+		maxDamage = {
+			defaultValue = 50;
+		}
+		minDamage = {
+			defaultValue = 50;
+		}
+		demonPlayerDamageScale = {
+			defaultValue = 0.25;
+		}
+		pvpPlayerDamageScale = 0.4;
+	}
+}

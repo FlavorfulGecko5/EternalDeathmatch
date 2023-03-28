@@ -56,7 +56,23 @@
         "gameresources_patch1/generated/decls":
         [
             "actormodifier/actormodifier/pvp/demon/archvile.decl",
-            "actormodifier/actormodifier/pvp/demon/painelemental.decl"
+            "actormodifier/actormodifier/pvp/demon/painelemental.decl",
+            "ammo/ammo/sharedammopool/cells.decl",
+            "damage/damage/firearm/12_gauge_double.decl",
+            "damage/damage/firearm/bfg_charge_sphere_arc.decl",
+            "damage/damage/firearm/bfg_charge_sphere_arc_splash.decl",
+            "damage/damage/firearm/bfg_charge_sphere_arc_zapping.decl",
+            "damage/damage/firearm/heavy_cannon_bolt_action_cylindrical.decl",
+            "damage/damage/firearm/plasma_rifle_secondary_microwave.decl",
+            "damage/damage/firearm/rocket_launcher_lockon_splash.decl",
+            "damage/damage/firearm/unmaykr.decl",
+            "damage/damage/firearm/unmaykr_bonus_shot.decl",
+            "damage/damage/melee/hammer_slam_aoe_super.decl",
+            "damage/damage/pvp/bronco_purifying_beam.decl",
+            "damage/damage/pvp/bronco_purifying_beam_hazard.decl",
+            "damage/damage/pvp/thunder_lava.decl",
+            "damage/damage/pvp/thunder_pressure_plate.decl",
+            "demoncarddeck/demoncarddeck/pvp/painelemental/deck_2.decl"
         ],
 
         "gameresources_patch2/generated/decls":
