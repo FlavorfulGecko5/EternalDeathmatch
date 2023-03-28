@@ -53,6 +53,12 @@
             "EternalMod/strings/"
         ],
 
+        "gameresources_patch1/generated/decls":
+        [
+            "actormodifier/actormodifier/pvp/demon/archvile.decl",
+            "actormodifier/actormodifier/pvp/demon/painelemental.decl"
+        ],
+
         "gameresources_patch2/generated/decls":
         [
             "actormodifierlistui/actormodifiers_ui.decl",

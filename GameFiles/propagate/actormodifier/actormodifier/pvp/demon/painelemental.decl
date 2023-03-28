@@ -1,0 +1,39 @@
+{
+	edit = {
+		displayName = "#str_decl_actormodifier_become_painelemental_name_GHOST53515";
+		description = "#str_decl_actormodifier_become_painelemental_desc_GHOST53516";
+		entityDef = "player/demonplayer_painelemental";
+		quickSlotGroup = "QUICKSLOTGROUP_DEMON";
+		droppable = false;
+		actions = {
+			num = 1;
+			item[0] = {
+				type = "ACTION_ACTIVATE_DEMON";
+				entityDef = "player/demonplayer_painelemental";
+			}
+		}
+		trigger = {
+			type = "TRIGGER_TYPE_ACTIVATE_DEMON";
+			timerDelay = 0;
+		}
+		lifetime = 1;
+		pvpNormalUpgrades = "demon/painelemental_upgrades";
+		pvpPowerUpgrades = "demon/painelemental_upgrades";
+		uiSlot = "SLOT_DEMON";
+		uiIcon = "art/ui/pvp_playericons/ico_pvp_players_painelemental_hud";
+		uiIconAlt = "art/ui/pvp_playericons/ico_pvp_players_painelemental_hud_dead";
+		uiIconLarge = "art/ui/pvp_playericons/ico_pvp_players_painelemental_large";
+		uiModelDisplay = {
+			scale = 0.0125;
+			offset = {
+				x = 0.0;
+				y = -0.012;
+				z = 0.02;
+			}
+			roll = 0;
+		}
+		bindingAppend = "_painelemental";
+		playableCharacter = "pain_elemental";
+		pvpTutorialCvarValue = 2;
+	}
+}

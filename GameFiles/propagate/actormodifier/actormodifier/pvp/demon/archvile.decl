@@ -1,0 +1,15 @@
+{
+	edit = {
+		displayName = "#str_decl_actormodifier_become_slayer_name_GHOST53519";
+		description = "#str_decl_actormodifier_become_slayer_desc_GHOST53520";
+		entityDef = "player";
+		pvpNormalUpgrades = "slayer/normal_upgrades";
+		pvpPowerUpgrades = "$emb_var# if(ClassicMode, 'slayer/normal_upgrades', 'slayer/power_upgrades' )$";
+		uiSlot = "SLOT_DEMON";
+		uiIcon = "art/ui/pvp_playericons/ico_pvp_players_doomguy_hud";
+		uiIconAlt = "art/ui/pvp_playericons/ico_pvp_players_doomguy_hud_dead";
+		uiIconLarge = "art/ui/pvp_playericons/ico_pvp_players_doomguy";
+		playableCharacter = "slayer";
+		pvpTutorialCvarValue = 4;
+	}
+}
